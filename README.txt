@@ -1,24 +1,17 @@
-SHANERYN | TWO CLASSIC PHOTOGRAPHY CONCEPTS
+SHANERYN — THREE INTERACTIVE CONCEPTS
 
-Open index.html to compare Concept 3A and 3B, or open either concept folder directly.
-Both retain the prior approved homepage / collections layout and interactions; only photos and presentation preview are changed.
+Open index.html from this folder in a desktop browser to compare all three concepts.
 
-3A: ivory gowns, architecture, classic tailoring and neutral tones.
-3B: burgundy velvet, ornate details, fashion-house drama and SHANERYN palette.
-The two concepts have NO PEXELS PHOTO IDs IN COMMON.
+Concept 01: Sabyasachi Neutral (existing interactive prototype, layout retained)
+Concept 02: SHANERYN Signature (existing interactive prototype, layout retained)
+Concept 03: White Fashion House (new interactive prototype based on the approved white-banner mockup)
 
-SOURCE LICENSE: https://www.pexels.com/license/
-Photographs are not SHANERYN products; they are illustrative placeholders, with no endorsement implied.
-For an online view, connect to the internet to load the high-resolution Pexels images.
-Offline, local earlier concept assets are used as fallbacks and are not the same images as the online versions.
-Source IDs and page links are in CLASSIC_IMAGE_SOURCES.csv.
-The selected photo pages were located via Pexels' publicly indexed free-photo results; CDN image delivery has not been tested in this environment.
+Each concept has a Homepage and Collections Page, and a comparison switcher to return to index or switch concepts.
 
-DESIGN REVIEW UX PRIORITIES
-1. Clothing collection mega-menu: all six categories and imagery.
-2. Full-screen lookbook: swipe / keyboard navigation, clothing title.
-3. Save looks to a temporary shortlist (no account needed), then request details.
-4. Collection quick inquiry: WhatsApp or inquiry form using real, confirmed client contact only.
-5. Progressive image loading, separate mobile focal points, reduced-motion accessibility.
+Concept 03 supports hero carousel, collection filtering, searching, saved looks (browser-local), full-screen image viewer, mobile nav and an enquiry-email draft; the fashion film is illustrative.
 
-No checkout, prices, cart, celebrity edit, or payments.
+No pricing/cart/checkout; this is not a production commerce website. Images are illustrative placeholders, not actual SHANERYN products. The selected approved banner appears as the first desktop hero, matching the chosen visual reference.
+
+The included fashion film is a demonstration YouTube embed and requires internet. Concept 01/02 also have external stock image URLs and may require internet for high-resolution imagery; local fallbacks included.
+
+Prepared for client design review.
