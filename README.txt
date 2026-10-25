@@ -1,1 +1,0 @@
-SHANERYN combined concepts: Concept 1 original imagery restored from approved prototype. Concept 2 remains the stock photography review version. Original Concept 1 image assets were derived from design mockups, so genuine high resolution cannot be recovered; no substituted stock photos in Concept 1. Open index.html.

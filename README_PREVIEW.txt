@@ -1,1 +1,0 @@
-The Concept 2 comparison card now displays the ACTUAL Concept 2 HTML using an iframe rather than an outdated static preview image. For a full experience, click Explore Concept 2. The preview requires the prototype and its web images to load; stock photography requires internet. Concept 1 unchanged.
