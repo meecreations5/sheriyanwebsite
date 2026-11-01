@@ -1,0 +1,15 @@
+SHANERYN — Footer contrast correction
+
+FIXED OPTIONAL ALTERNATIVES ONLY:
+- 02_Modern_Atelier_Soft_Blush/index.html
+- 04_White_Banner_Pearl_Ivory/index.html
+
+White Banner Pearl Ivory footer had an inherited light-text colour
+from its earlier dark-footer theme, even though its background was
+changed to pearl white. Text, logo, link, hover, focus and legal text
+now use readable charcoal/taupe colours.
+
+Both approved originals have been preserved byte-for-byte.
+
+Open index.html at the root of the inner SHANERYN_Editorial_Refined_Final_Review folder
+to compare all four versions.

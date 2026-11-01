@@ -1,0 +1,33 @@
+SHANERYN - EDITORIAL REVIEW PACKAGE / FINAL REFINEMENT
+
+1. APPROVED ORIGINALS (HTML UNMODIFIED)
+   01_Modern_Atelier_APPROVED/index.html
+   03_White_Banner_APPROVED/index.html
+
+2. OPTIONAL NEW VERSIONS (REFINED)
+   02_Modern_Atelier_Soft_Blush/index.html
+   04_White_Banner_Pearl_Ivory/index.html
+
+Refinements in OPTIONAL VERSIONS only:
+- Modern Atelier Dresses CTA now selects Dresses rather than All.
+- Fullscreen lookbook now references six packaged images instead of absent .webp files.
+- Modern Atelier carousel has three local source photos.
+- Design comparison links use a compact dropdown instead of a crowded mobile bar.
+- Editorial typography softened and scaled on mobile.
+- Fashion portraits and tailoring-detail photographs chosen to suit the new sections.
+- Updated comparison preview images captured from the actual refreshed HTML.
+- Small compatibility pages handle obsolete cross-concept links in the unchanged originals.
+
+VALIDATION
+- Desktop + mobile visual screenshots captured for both refined alternatives.
+- Interactive Dresses CTA tested for both new versions (Modern filters 1 card; White Banner filters 2).
+- Open full-screen outfit viewer tested for both variants.
+- Local images in new HTML point to packaged image files.
+- Existing approved HTML sources byte-for-byte identical to previous review archive.
+
+CAVEATS
+- Photography remains illustrative, not a SHANERYN product catalogue.
+- The approved original Modern Atelier still uses external image URLs and was intentionally not modified.
+- New variants use image assets derived from existing concept imagery; final source photographs will improve quality.
+- Video and enquiries remain prototype-only; no live business integration.
+- Offline custom fonts may fall back to a locally available serif.
