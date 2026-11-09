@@ -1,0 +1,74 @@
+{
+  "Option_A_Signature_Blush": {
+    "index.html": {
+      "missing_src": [],
+      "missing_links": [],
+      "uses_real_wordmark": true,
+      "footer_logo_large": true,
+      "links_editorial_css": true,
+      "monogram_brand_asset_count": 6,
+      "no_checkout": true,
+      "section_order": [
+        "hero",
+        "occasion",
+        "bespoke",
+        "film",
+        "story",
+        "closure"
+      ],
+      "section_order_ok": true,
+      "founder_chapter": "05 / THE FOUNDER & THE WORLD OF SHANERYN",
+      "founder_disclaimer_present": true
+    },
+    "collections.html": {
+      "missing_src": [],
+      "missing_links": [],
+      "uses_real_wordmark": true,
+      "footer_logo_large": true,
+      "links_editorial_css": true,
+      "monogram_brand_asset_count": 1,
+      "no_checkout": true,
+      "category_count": 7,
+      "search_filter_present": true
+    },
+    "css_syntax_errors": [],
+    "css_missing_assets": [],
+    "js_syntax_ok": true
+  },
+  "Option_B_White_Gallery": {
+    "index.html": {
+      "missing_src": [],
+      "missing_links": [],
+      "uses_real_wordmark": true,
+      "footer_logo_large": true,
+      "links_editorial_css": true,
+      "monogram_brand_asset_count": 6,
+      "no_checkout": true,
+      "section_order": [
+        "hero",
+        "occasion",
+        "bespoke",
+        "film",
+        "story",
+        "closure"
+      ],
+      "section_order_ok": true,
+      "founder_chapter": "05 / THE FOUNDER & THE WORLD OF SHANERYN",
+      "founder_disclaimer_present": true
+    },
+    "collections.html": {
+      "missing_src": [],
+      "missing_links": [],
+      "uses_real_wordmark": true,
+      "footer_logo_large": true,
+      "links_editorial_css": true,
+      "monogram_brand_asset_count": 1,
+      "no_checkout": true,
+      "category_count": 7,
+      "search_filter_present": true
+    },
+    "css_syntax_errors": [],
+    "css_missing_assets": [],
+    "js_syntax_ok": true
+  }
+}
