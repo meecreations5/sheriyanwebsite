@@ -1,0 +1,199 @@
+/* SHANERYN / INVERSE EDITORIAL PALETTE
+   Design-system override only. Original photographs, fonts, layout and interactions stay intact.
+   The true light artwork supplied with the prototype is used for the dark logo. */
+html[data-color-mode="inverse"] { color-scheme: dark; background: #121016; }
+html[data-color-mode="inverse"] body {
+  --ink: #f4edf0;
+  --muted: #c1b0bb;
+  --paper: #121016;
+  --cream: #201a23;
+  --sand: #2b202b;
+  --sand2: #241c26;
+  --line: #51404d;
+  --accent: #d89ab9;
+  --editorial-ink: #f0e8ed;
+  --v3-soft: #1e1a22;
+  --v3-panel: #17141b;
+  --v3-story: #261c27;
+  --v3-caption: #cbb2c1;
+  --v3-hairline: #4a3946;
+  color: var(--ink);
+  background: var(--paper);
+}
+html[data-color-mode="inverse"] ::selection { background: #9b426e; color: #fff; }
+html[data-color-mode="inverse"] a, html[data-color-mode="inverse"] button { -webkit-tap-highlight-color: transparent; }
+html[data-color-mode="inverse"] :is(a,button,input,select,textarea):focus-visible { outline-color: #ecc0d2; }
+
+/* Top navigation and brand identities */
+html[data-color-mode="inverse"] .topline { background: linear-gradient(90deg,#1c161e 8%,#a6066a 50%,#1c161e 92%); }
+html[data-color-mode="inverse"] .site-header {
+  background: rgba(18,15,21,.96) !important;
+  border-bottom: 1px solid rgba(238,203,220,.16) !important;
+}
+html[data-color-mode="inverse"] .site-header.scrolled { box-shadow: 0 12px 30px rgba(0,0,0,.2) !important; }
+.logo-inverse { display: none !important; }
+html[data-color-mode="inverse"] .logo-original { display: none !important; }
+html[data-color-mode="inverse"] .logo-inverse { display: block !important; }
+html[data-color-mode="inverse"] :is(.nav-primary a:hover,.nav-right a:hover,.nav-primary a.active,.underline-link:hover) { color: #f0aacb; }
+html[data-color-mode="inverse"] .heart-count { background: #dab5c8; color: #20161e; }
+html[data-color-mode="inverse"] .mobile-menu { background: #17131a; }
+html[data-color-mode="inverse"] .mobile-menu :is(a,button) { border-color: #45313e; color: #f4edf0; }
+html[data-color-mode="inverse"] .mobile-menu small { color: #cbb2c1; }
+
+/* Hero: rich dark negative space, original photographic colours untouched */
+html[data-color-mode="inverse"] .hero { background: #131017 !important; }
+html[data-color-mode="inverse"] .hero::before {
+  background: linear-gradient(90deg, #131017 0%, #131017 21%, rgba(19,16,23,.96) 33%,rgba(19,16,23,.48) 48%,rgba(19,16,23,.08) 67%,transparent 79%) !important;
+}
+html[data-color-mode="inverse"] .hero::after { opacity: .19; mix-blend-mode: screen; }
+html[data-color-mode="inverse"] .hero h1 { color: #f5e9ef !important; }
+html[data-color-mode="inverse"] .hero-copy { color: #dac5d0 !important; }
+html[data-color-mode="inverse"] .hero-content>.eyebrow { color: #dda4c0; }
+html[data-color-mode="inverse"] .hero-content>.eyebrow::before { background: #b06f91; }
+html[data-color-mode="inverse"] .hero-bottom button { color: #c2aab8; }
+html[data-color-mode="inverse"] .hero-bottom button.active { color: #ffe0ed; border-color: #e4b1c8; }
+html[data-color-mode="inverse"] .hero-progress { background: #715667; }
+html[data-color-mode="inverse"] .hero-progress i { background: #e4b1c8; }
+html[data-color-mode="inverse"] .round-arrow { background: rgba(22,15,22,.64); color: #fff; border-color: rgba(252,232,242,.58); backdrop-filter: blur(8px); }
+html[data-color-mode="inverse"] .round-arrow:hover { background: rgba(166,6,106,.83); }
+html[data-color-mode="inverse"] .hero-caption-vert { color: #f7dfeb; }
+
+/* Typography, calls-to-action and fine rules */
+html[data-color-mode="inverse"] .eyebrow { color: #d89ab9; }
+html[data-color-mode="inverse"] .bodycopy { color: #c4b5c0; }
+html[data-color-mode="inverse"] .filled-btn { background: #f4e8ee !important; color: #241822 !important; border-color: #f4e8ee !important; }
+html[data-color-mode="inverse"] .filled-btn:hover { background: #deb0c7 !important; border-color: #deb0c7 !important; transform: translateY(-2px); }
+html[data-color-mode="inverse"] .outlined-btn { background: transparent; color: #f4e8ee !important; border-color: #bda0b1 !important; }
+html[data-color-mode="inverse"] .outlined-btn:hover { background: #9d376a; border-color: #9d376a !important; color: #fff !important; }
+html[data-color-mode="inverse"] .underline-link { color: #f0dde7; }
+html[data-color-mode="inverse"] .underline-link:hover { color: #f2aaca; }
+
+/* Edit, bespoke, and story chapter */
+html[data-color-mode="inverse"] .occasion-section { background: #17141a !important; }
+html[data-color-mode="inverse"] .occasion-card { background: #382833; box-shadow: 0 13px 42px rgba(0,0,0,.22); }
+html[data-color-mode="inverse"] .occasion-info { color: white; }
+html[data-color-mode="inverse"] .occasion-card::after { background: linear-gradient(transparent 27%,rgba(14,7,14,.78)); }
+html[data-color-mode="inverse"] .micro-note { color: #c2b0bc; }
+html[data-color-mode="inverse"] .bespoke { background: #201a23 !important; border-color: #493643 !important; }
+html[data-color-mode="inverse"] .bespoke::before { opacity: .17; mix-blend-mode: screen; }
+html[data-color-mode="inverse"] .bespoke::after { border-color: rgba(226,163,197,.23); }
+html[data-color-mode="inverse"] .bespoke-copy blockquote { color: #dfb9cb; }
+html[data-color-mode="inverse"] .bespoke-visual>img,
+html[data-color-mode="inverse"] .bespoke-visual .bespoke-inset { border-color: #332630 !important; }
+html[data-color-mode="inverse"] .bespoke-image-seal,
+html[data-color-mode="inverse"] .story-portrait-seal { background: rgba(36,27,37,.95); border-color: #624358; }
+html[data-color-mode="inverse"] .bespoke-image-seal img,
+html[data-color-mode="inverse"] .story-portrait-seal img,
+html[data-color-mode="inverse"] .founder-signoff img,
+html[data-color-mode="inverse"] .closure-mark img { filter: brightness(0) invert(88%) sepia(12%) saturate(540%) hue-rotate(291deg); }
+html[data-color-mode="inverse"] .film { background: #120d12; }
+html[data-color-mode="inverse"] .film::before { background: linear-gradient(90deg,rgba(9,6,11,.90),rgba(9,6,11,.61) 52%,rgba(9,6,11,.18)); }
+html[data-color-mode="inverse"] .film .eyebrow { color: #f0c3d8; }
+html[data-color-mode="inverse"] .film p { color: #ebdbe4; }
+html[data-color-mode="inverse"] .story {
+  background: radial-gradient(ellipse at 92% 76%,rgba(152,55,109,.13),transparent 45%),linear-gradient(130deg,#251c26,#17141b) !important;
+  border-bottom: 1px solid #493643;
+}
+html[data-color-mode="inverse"] .story::before { opacity: .14; mix-blend-mode: screen; }
+html[data-color-mode="inverse"] .story-chapter-ghost { color: rgba(231,157,194,.09); }
+html[data-color-mode="inverse"] .story-background-monogram { opacity: .08; filter: brightness(0) invert(100%); }
+html[data-color-mode="inverse"] .story-copy h2 em { color: #e1b9ce; }
+html[data-color-mode="inverse"] .founder-chapter-label { color: #f4e5ed; }
+html[data-color-mode="inverse"] .founder-chapter-no { color: #db94b7; }
+html[data-color-mode="inverse"] .founder-chapter-separator { color: #bf84a2; }
+html[data-color-mode="inverse"] .founder-pullquote { color: #f1d9e6; }
+html[data-color-mode="inverse"] .founder-pullquote em { color: #eaa9c7; }
+html[data-color-mode="inverse"] .founder-photo-disclaimer { color: #c8b4c0; border-color: #92667e; }
+html[data-color-mode="inverse"] .founder-signoff span { color: #d9a4c0; }
+html[data-color-mode="inverse"] .story-portrait-caption { color: #d2b9c8; }
+html[data-color-mode="inverse"] .story-main,
+html[data-color-mode="inverse"] .story-mini { border-color: #342530 !important; }
+
+/* Closing spread and masthead */
+html[data-color-mode="inverse"] .closure { background: #17141b !important; }
+html[data-color-mode="inverse"] .closure .eyebrow { color: #d99bb9; }
+html[data-color-mode="inverse"] .site-footer { background: #131117 !important; border-color: #4b3846 !important; }
+html[data-color-mode="inverse"] .site-footer::before { opacity: .11; mix-blend-mode: screen; }
+html[data-color-mode="inverse"] .footer-watermark-monogram { opacity: .06; filter: brightness(0) invert(100%); }
+html[data-color-mode="inverse"] .footer-tagline { color: #f4e8ee; }
+html[data-color-mode="inverse"] .footer-description { color: #c2b4be; }
+html[data-color-mode="inverse"] .footer-kicker { color: #df9dbd; }
+html[data-color-mode="inverse"] .footer-col h4 { color: #dba0bd; }
+html[data-color-mode="inverse"] .footer-col a,
+html[data-color-mode="inverse"] .footer-col button { color: #e1d0da; }
+html[data-color-mode="inverse"] .footer-col a:hover,
+html[data-color-mode="inverse"] .footer-col button:hover { color: #f2b2d0; }
+html[data-color-mode="inverse"] .footer-direct,
+html[data-color-mode="inverse"] .footer-bottom { color: #ad9ba7; }
+html[data-color-mode="inverse"] .footer-bottom { border-color: #493643; }
+html[data-color-mode="inverse"] .backtotop { background: #28212a; color: #f4e8ee; border-color: #644e5d; }
+
+/* Collections, tools and editorial lookbook */
+html[data-color-mode="inverse"] .collection-hero { background: #201920 !important; border-color: #493643; }
+html[data-color-mode="inverse"] .collection-hero::before { opacity: .12; mix-blend-mode: screen; }
+html[data-color-mode="inverse"] .collection-hero h1 { color: #f4e8ee; }
+html[data-color-mode="inverse"] .collection-hero p { color: #c6b3c1; }
+html[data-color-mode="inverse"] .collections-hero-folio { color: #bb9aab; }
+html[data-color-mode="inverse"] .collections-main { background: #17141b !important; }
+html[data-color-mode="inverse"] .look-image-btn { background: #322630; }
+html[data-color-mode="inverse"] .look-info h3 { color: #f4e8ee; }
+html[data-color-mode="inverse"] .look-info p { color: #c3adba; }
+html[data-color-mode="inverse"] .look-info button { color: #e8c3d6; }
+html[data-color-mode="inverse"] .catalogue-preview-note { border-left-color: #d69ab8; color: #c4b4bd; }
+html[data-color-mode="inverse"] .filter-btn { background: #201b23; border-color: #604956; color: #f0dfe8; }
+html[data-color-mode="inverse"] .filter-btn[aria-pressed="true"],
+html[data-color-mode="inverse"] .filter-btn:hover { background: #a6066a; color: #fff; border-color: #c34d93; }
+html[data-color-mode="inverse"] .search-input,
+html[data-color-mode="inverse"] .select-filter,
+html[data-color-mode="inverse"] .dialog-small :is(input,select,textarea) {
+  background: #241d27; border-color: #655060; color: #f4e8ee; color-scheme: dark;
+}
+html[data-color-mode="inverse"] :is(.search-input,.dialog-small input,.dialog-small textarea)::placeholder { color: #baa4b3; opacity: 1; }
+html[data-color-mode="inverse"] .look-heart { background: rgba(28,20,29,.88); color: #f6e2ed; }
+html[data-color-mode="inverse"] .look-heart[aria-pressed="true"] { background: #a6066a; color: #fff; }
+html[data-color-mode="inverse"] .empty-state { background: #2e2530; color: #d5c5d0; }
+
+/* All dialogs inherit the dark palette, while photographs and film remain natural. */
+html[data-color-mode="inverse"] .modal { background: rgba(5,3,7,.82); }
+html[data-color-mode="inverse"] .modal-window { background: #201a23; color: #f4e8ee; }
+html[data-color-mode="inverse"] .modal-close { background: #372b37; color: #fff; }
+html[data-color-mode="inverse"] .modal-media { background: #302430; }
+html[data-color-mode="inverse"] .modal-frame-copy p,
+html[data-color-mode="inverse"] .dialog-small .modal-info { color: #c1b0bd; }
+html[data-color-mode="inverse"] .gallery-controls button { background: rgba(31,23,30,.88); color: #fff; }
+html[data-color-mode="inverse"] .saved-list-row { border-color: #54404f; }
+html[data-color-mode="inverse"] .saved-list-row button { color: #efd1e0; }
+html[data-color-mode="inverse"] .toast { background: #84355d; color: #fff; }
+
+/* The control is a real toggle, not a decorative icon. Also accessible on mobile. */
+.color-mode-toggle {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 35px; padding: 5px 10px; color: var(--ink);
+  border: 1px solid var(--line); background: transparent;
+  font-family: var(--sans); font-size: 9px; font-weight: 600;
+  line-height: 1; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap;
+  transition: background .22s,border-color .22s,color .22s;
+}
+.color-mode-toggle:hover { border-color: var(--accent); background: rgba(144,92,123,.08); }
+.color-mode-toggle svg { width: 16px; height: 16px; flex: none; }
+.color-mode-toggle .mode-light-half { fill: currentColor; }
+.color-mode-toggle .mode-circle { fill: none; stroke: currentColor; stroke-width: 1.4; }
+.color-mode-toggle:focus-visible { outline: 2px solid #dfabc4; outline-offset: 3px; }
+html[data-color-mode="inverse"] .color-mode-toggle { color: #f4e8ee; border-color: #695261; }
+html[data-color-mode="inverse"] .color-mode-toggle:hover { background: #342635; border-color: #e8b6cd; }
+@media(max-width:1180px) {
+  .color-mode-toggle { padding: 5px 7px; }
+  .color-mode-label { display: none; }
+}
+@media(max-width:720px) {
+  .color-mode-toggle { width: 34px; height: 34px; min-height: 34px; padding: 6px; }
+  .color-mode-toggle svg { width: 18px; height: 18px; }
+  html[data-color-mode="inverse"] .hero::before {
+    background: linear-gradient(0deg,#131017 0%,rgba(19,16,23,.99) 15%,rgba(19,16,23,.86) 33%,rgba(19,16,23,.27) 61%,transparent 82%) !important;
+  }
+  html[data-color-mode="inverse"] .hero h1 { color: #f4e8ee !important; }
+}
+@media(prefers-reduced-motion: reduce){.color-mode-toggle{transition:none}}
+
+/* Preserve natural colour in the final campaign triptych. */
+html[data-color-mode="inverse"] .closure-image-row img:nth-child(2){filter:saturate(.94) contrast(1.02)!important;}

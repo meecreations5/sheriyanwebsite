@@ -1,0 +1,67 @@
+{
+  "Option_A_Signature_Blush": {
+    "pages": {
+      "index.html": {
+        "css_loaded": true,
+        "js_loaded": true,
+        "button_count": 1,
+        "theme_initialized_before_styles": true,
+        "original_logos": 2,
+        "inverse_logos": 2,
+        "visual_count": 22
+      },
+      "collections.html": {
+        "css_loaded": true,
+        "js_loaded": true,
+        "button_count": 1,
+        "theme_initialized_before_styles": true,
+        "original_logos": 2,
+        "inverse_logos": 2,
+        "visual_count": 7
+      }
+    },
+    "missing_files": [],
+    "css_parse_errors": [],
+    "js_parse_checked": true
+  },
+  "Option_B_White_Gallery": {
+    "pages": {
+      "index.html": {
+        "css_loaded": true,
+        "js_loaded": true,
+        "button_count": 1,
+        "theme_initialized_before_styles": true,
+        "original_logos": 2,
+        "inverse_logos": 2,
+        "visual_count": 22
+      },
+      "collections.html": {
+        "css_loaded": true,
+        "js_loaded": true,
+        "button_count": 1,
+        "theme_initialized_before_styles": true,
+        "original_logos": 2,
+        "inverse_logos": 2,
+        "visual_count": 7
+      }
+    },
+    "missing_files": [],
+    "css_parse_errors": [],
+    "js_parse_checked": true
+  },
+  "entrypoint": {
+    "missing_files": [],
+    "option_links": 4,
+    "inverse_previews": 10
+  },
+  "browser_equivalent_tests": {
+    "viewports_px": [
+      1440,
+      390
+    ],
+    "pages_tested": 8,
+    "switches_verified": 8,
+    "collections_filter_and_modal_verified": 4,
+    "notes": "Browser sandbox blocks direct file and localhost navigation, so rendered using data-inline HTML/CSS/JS and assets. See preview JPGs."
+  }
+}

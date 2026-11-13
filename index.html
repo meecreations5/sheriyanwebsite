@@ -1,45 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#fff">
-<title>SHANERYN — Editorial Treatment V3 / Design Comparison</title>
-<style>
-:root{--magenta:#a6066a;--ink:#30232c;--muted:#766672;--border:#eee5eb}*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{color:inherit;text-decoration:none}
-header{height:98px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);background:#fff}
-header img{width:230px;max-width:80vw;height:auto}main{max-width:1280px;margin:auto;padding:58px 30px 95px}
-.eyebrow{font-size:11px;letter-spacing:.23em;font-weight:600;color:var(--magenta);text-align:center}
-h1{font-family:Georgia,'Times New Roman',serif;text-align:center;font-size:clamp(39px,5.5vw,73px);font-weight:400;letter-spacing:-.045em;line-height:1.06;margin:20px 0 15px}
-.lead{max-width:610px;margin:0 auto 48px;color:var(--muted);font-size:14px;line-height:1.8;text-align:center}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.card{border:1px solid var(--border);background:#fff;overflow:hidden}
-.card>img{width:100%;height:auto;display:block;aspect-ratio:1.645;object-fit:cover}
-.details{padding:26px 28px 32px}.label{color:var(--magenta);font-size:10px;font-weight:700;letter-spacing:.19em}
-h2{font:400 34px Georgia,'Times New Roman',serif;margin:10px 0}p{font-size:13px;line-height:1.8;color:var(--muted)}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.button{font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);padding:13px 18px;display:inline-flex;gap:14px;align-items:center}
-.primary{background:var(--ink);color:white}.primary:hover{background:var(--magenta);border-color:var(--magenta)}.secondary:hover{background:#faf1f6}
-.note{margin-top:48px;text-align:center;font-size:12px;color:var(--muted);line-height:1.8}
-.note b{color:var(--ink)}
-@media(max-width:760px){header{height:76px}header img{width:190px}main{padding:36px 18px 60px}.grid{grid-template-columns:1fr;gap:20px}.details{padding:24px}.lead{margin-bottom:30px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17141b">
+  <meta name="description" content="SHANERYN inverse editorial palette design review. Explore Midnight Gallery and Night Bloom in dark or original light colour mode.">
+  <title>SHANERYN | Inverse Colour Edition</title>
+  <link rel="icon" href="Option_B_White_Gallery/favicon-64.png">
+  <style>
+    :root{--paper:#17141b;--panel:#211b23;--ink:#f4e8ee;--muted:#bbaab6;--line:#493643;--accent:#e1aac6;--brand:#a6066a}
+    *{box-sizing:border-box}
+    html{color-scheme:dark}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    .topline{height:2px;background:linear-gradient(90deg,#1a131b,#a6066a,#1a131b)}
+    header{height:90px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);background:#131017}
+    header img{width:220px;max-width:72vw;height:auto}
+    main{width:min(1310px,calc(100% - 70px));margin:auto;padding:90px 0 95px}
+    .eyebrow{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+    .intro{text-align:center;margin:0 auto 70px;max-width:810px}
+    h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+    h1{font-size:clamp(44px,6vw,80px);letter-spacing:-.045em;line-height:1.02;margin:21px 0 24px}
+    .intro p{font-size:14px;line-height:1.9;color:var(--muted);max-width:530px;margin:0 auto}
+    .rule{width:44px;height:1px;background:var(--accent);margin:27px auto 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .card{background:var(--panel);border:1px solid var(--line);min-width:0}
+    .preview{position:relative;height:365px;background:#291d27;overflow:hidden;border-bottom:1px solid var(--line)}
+    .preview img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .card:hover .preview img{transform:scale(1.035)}
+    .preview::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px #ffffff19}
+    .number{position:absolute;right:20px;bottom:19px;font:400 34px Georgia,serif;color:#fff;background:#140f15bd;padding:12px 15px}
+    .details{padding:28px 31px 34px}
+    .details .eyebrow{font-size:9px}
+    h2{font-size:clamp(31px,3.2vw,44px);letter-spacing:-.02em;line-height:1.08;margin:13px 0}
+    .details p{font-size:13px;color:var(--muted);line-height:1.85;margin:0;max-width:490px;min-height:56px}
+    .actions{display:flex;gap:9px;margin-top:25px;flex-wrap:wrap}
+    .btn{padding:14px 16px;min-height:43px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #977a8c;transition:background .2s}
+    .btn-primary{background:var(--ink);color:#21151d;border-color:var(--ink)}
+    .btn-primary:hover{background:#e3b6cd;border-color:#e3b6cd}
+    .btn-secondary:hover{background:#4b3041}
+    .footnote{font-size:11px;line-height:1.85;text-align:center;color:#ae9caa;max-width:780px;margin:43px auto 0}
+    .legend{margin-top:35px;display:flex;align-items:center;justify-content:center;gap:10px}
+    .legend span{width:15px;height:15px;border:1px solid #ffffff22;border-radius:50%;display:block}
+    .legend small{font-size:10px;letter-spacing:.1em;color:#b49aab;margin-left:7px}
+    @media(max-width:760px){header{height:70px}header img{width:180px}main{width:calc(100% - 36px);padding:54px 0 65px}.intro{margin-bottom:42px}.intro p{font-size:12px}.grid{grid-template-columns:1fr;gap:18px}.preview{height:270px}.details{padding:24px}.details p{min-height:0}h2{font-size:36px}.number{font-size:25px}}
+  </style>
 </head>
 <body>
-<header><img src="Option_B_White_Gallery/assets/brand/shaneryn-wordmark-magenta.png" alt="SHANERYN"></header>
-<main>
-  <div class="eyebrow">DESIGN REVIEW / EDITORIAL TREATMENT V3</div>
-  <h1>Two moods.<br>One SHANERYN.</h1>
-  <p class="lead">The approved six-chapter homepage and Collections page, refined with editorial framing, a subtle textile texture, and the original SHANERYN monogram. Compare both interactive versions below.</p>
-  <div class="grid">
-    <article class="card">
-      <img src="previews/founder_editorial_white_v3.jpg" alt="Founder chapter creative direction in white with an oversized 05, original monogram and fashion portraits">
-      <div class="details"><div class="label">OPTION B / RECOMMENDED</div><h2>White Gallery</h2><p>White-first fashion editorial, soft blush accents, signature magenta, and the strongest emphasis on your original photography.</p><div class="actions"><a class="button primary" href="Option_B_White_Gallery/index.html">Open Homepage ↗</a><a class="button secondary" href="Option_B_White_Gallery/collections.html">Collections ↗</a></div></div>
-    </article>
-    <article class="card">
-      <img src="previews/founder_editorial_blush_v3.jpg" alt="Founder chapter creative direction in pale blush with monogram details and fashion portraits">
-      <div class="details"><div class="label">OPTION A / ALTERNATIVE</div><h2>Signature Blush</h2><p>Soft pink editorial atmosphere with a warmer tactile expression while retaining the same approved content and site structure.</p><div class="actions"><a class="button primary" href="Option_A_Signature_Blush/index.html">Open Homepage ↗</a><a class="button secondary" href="Option_A_Signature_Blush/collections.html">Collections ↗</a></div></div>
-    </article>
-  </div>
-  <p class="note"><b>Design-review prototype.</b> The visuals above are Section 05 art-direction mockups, not browser screenshots. The linked homepage and Collections pages are interactive static prototypes. Verified founder content, official film, final catalogue and live enquiries remain pending.</p>
-</main>
-</body></html>
+  <div class="topline"></div>
+  <header><img src="Option_B_White_Gallery/assets/brand/shaneryn-wordmark-light.png" alt="SHANERYN"></header>
+  <main>
+    <div class="intro">
+      <div class="eyebrow">Design review / Inverse colour edition</div>
+      <h1>The beauty<br>of contrast.</h1>
+      <p>A darker expression of SHANERYN. Quiet editorial spaces, soft ivory typography, and the original campaign imagery. Explore two moods, each with a switch back to the approved light palette.</p>
+      <div class="rule" aria-hidden="true"></div>
+      <div class="legend" aria-label="Inverse palette: midnight, aubergine, soft ivory and signature magenta"><span style="background:#121016"></span><span style="background:#291b26"></span><span style="background:#f4e8ee"></span><span style="background:#a6066a"></span><small>THE INVERSE PALETTE</small></div>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="preview"><img src="previews/inverse_white_home_desktop.jpg" alt="Midnight Gallery homepage preview in charcoal and soft ivory" loading="eager"><span class="number">01</span></div>
+        <div class="details"><div class="eyebrow">Option B / Recommended</div><h2>Midnight Gallery</h2><p>A cooler, near-black editorial atmosphere, designed to keep the fashion photography the centre of attention.</p><div class="actions"><a class="btn btn-primary" href="Option_B_White_Gallery/index.html">Open Homepage ↗</a><a class="btn btn-secondary" href="Option_B_White_Gallery/collections.html">Collections ↗</a></div></div>
+      </article>
+      <article class="card">
+        <div class="preview"><img src="previews/inverse_blush_home_desktop.jpg" alt="Night Bloom homepage preview with warm aubergine surfaces and ivory lettering" loading="eager"><span class="number">02</span></div>
+        <div class="details"><div class="eyebrow">Option A / Alternative</div><h2>Night Bloom</h2><p>A warmer aubergine and muted berry interpretation, retaining the same architecture and photography.</p><div class="actions"><a class="btn btn-primary" href="Option_A_Signature_Blush/index.html">Open Homepage ↗</a><a class="btn btn-secondary" href="Option_A_Signature_Blush/collections.html">Collections ↗</a></div></div>
+      </article>
+    </div>
+    <p class="footnote">Both sites default to Inverse (Dark) mode, unless you have previously selected Original (Light). Use the half-circle colour button in the top navigation to return to the original light design. Your choice is remembered when you move between Homepage and Collections. These remain interactive design prototypes; product catalogue and enquiry backend are not yet production-connected.</p>
+  </main>
+</body>
+</html>

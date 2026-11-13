@@ -1,41 +1,37 @@
-# SHANERYN — Editorial Treatment V3
+# SHANERYN - Inverse Colour Edition
 
-**Start here:** Open the root `index.html`. It presents two approved-structure options with direct links to their Homepage and Collections page.
+**Start here:** Open `index.html` at the top level. It is a visual design-review launcher for two working versions of the SHANERYN website.
 
-## What is included
+## Two inverse colour treatments
 
-- `Option_B_White_Gallery/` — recommended white-first fashion-editorial treatment.
-- `Option_A_Signature_Blush/` — same approved architecture in the original blush-led palette.
-- `previews/founder_editorial_white_v3.jpg` and `previews/founder_editorial_blush_v3.jpg` — visual art-direction mockups of Section 05 (not browser screenshots).
-- `Approved_Originals/` — unchanged previously approved alternative prototypes.
-- `previews/` — earlier V2 screenshots and V3 founder-section art direction.
+| Option | Folder | Inverse mode | Original light mode |
+| --- | --- | --- | --- |
+| B / Recommended | `Option_B_White_Gallery` | Midnight Gallery: near-black charcoal, cool plum, ivory typography | White Gallery |
+| A / Alternative | `Option_A_Signature_Blush` | Night Bloom: warmer aubergine and muted berry, ivory typography | Signature Blush |
 
-## Implemented V3 — all in real HTML/CSS
+Both versions contain a Homepage (`index.html`) and Collections (`collections.html`).
 
-1. Preserved the six approved Homepage sections in order and the Collections page.
-2. Editorial chapter numbering: 01 Introduction, 02 Occasion Edit, 03 Personalised Design, 04 Fashion Film, 05 Founder & World of SHANERYN, 06 Closing Chapter.
-3. Redesigned Section 05 with a strong **05 / THE FOUNDER & THE WORLD OF SHANERYN** chapter heading, oversized background number, art-directed photographic layering, actual brand monogram as watermark/stamp, pale linen texture, editorial quote and source-image disclaimer.
-4. Added a repeatable paper-grain effect and subtle original image colour/contrast treatments **in CSS**. Supplied photographs remain unaltered.
-5. Added a bespoke monogram seal, fine gallery frame lines, image captions, soft textile details, cinematic film treatment and monogram divider.
-6. Kept the large central official footer wordmark and added a very faint genuine monogram behind it.
-7. Applied analogous gallery treatment to the Collections hero and image cards without changing category/search/filter/like/viewer/enquiry JavaScript.
-8. All files are local and can be opened from the file system; no website backend or payment gateway is present.
+## Using colour mode
 
-## Adjusting intensity / design details
+- **Inverse mode is the default.**
+- The half-circle colour button on the top navigation toggles **Dark / Light**. The label describes the mode you will switch *to*.
+- Your selection is saved in browser local storage (`shaneryn_color_mode_v1`) and shared by the Homepage and Collections pages on the same site origin. If storage is blocked by the browser, switching still works on the current page, but it might not persist across pages.
+- Original logo artwork is never recoloured. The site swaps between the supplied `shaneryn-wordmark-light.png` and `shaneryn-wordmark-magenta.png`. Natural image colour is preserved.
+- The inverse styling is separated in `inverse-mode.css` and the toggle in `inverse-mode.js`; the existing `site.css`, `typography-fix.css`, `footer-redesign.css`, `editorial-v3.css` and `site.js` are unchanged.
 
-- `editorial-v3.css` is the isolated styling layer. Comment out its `<link>` in a page to return to the V2 look.
-- The transparent `assets/editorial-paper-grain.png` and `assets/editorial-linen.svg` are original site texture layers. Reduce their `.opacity` in the CSS if needed.
-- Original wordmark: `assets/brand/shaneryn-wordmark-magenta.png`. Original monogram: `assets/brand/shaneryn-monogram.png`.
-- Original photo sources have been preserved in the previously supplied V1 archive; this website uses the V2 optimized copies as `.webp`.
+## Design and prototype scope
 
-## Known content / production gaps
+The approved six-section Homepage sequence, Collections page, seven category controls (All plus six garment categories), image interactions, local saved looks, video placeholder, inquiry prototype, layout, original fashion photography and mobile responsiveness are retained. No checkout is added.
 
-- The seven supplied SHANERYN photographs are real campaign photos, **not confirmed product catalogue items or a verified portrait of the founder**.
-- The twelve look cards below the Collections hero are illustrative placeholder images/names. Replacing them requires confirmed garment photographs and names, categories, codes.
-- The Fashion Film is a placeholder until the official video is supplied.
-- The enquiry form is still a local copy/email-draft prototype, not a connected lead-submission backend. No ecommerce or checkout is enabled.
+The seven actual SHANERYN campaign photos are not confirmed product catalogue records or a founder portrait. The Collections look cards remain illustrative. Fashion film and enquiry backend remain placeholders, as in the source archive.
 
-## Verification
+## Quality checks
 
-- Static validation (image/CSS/JS references, homepage six-section order, correct founder caption, seven category controls, syntax) passed for both options, see `QA_REPORT_V3.json`.
-- Live browser visual acceptance testing could not be completed in this runtime because the available Chromium browser blocks local navigation. Validate visuals/interactions locally in Chrome/Edge after extraction.
+- Verified CSS overrides and real light wordmark at desktop (1440px) and mobile (390px) sizes, both site options and both pages.
+- Checked dark-to-original-and-back switching, colour contrast by inspection, page sizing, image loading, Collections category filtering, and outfit viewer modal colours.
+- Generated eight dark-mode screenshots in `previews/inverse_*.jpg` for comparison.
+- Browser sandbox in the QA environment disallowed direct `file://` and `localhost` navigation, so browser visual tests used self-contained equivalents of the real HTML/CSS/JS and data-inline images. Opening the actual website after extraction is recommended for final deployment acceptance.
+
+## Approved originals
+
+`Approved_Originals/` is retained unchanged from the uploaded archive.
