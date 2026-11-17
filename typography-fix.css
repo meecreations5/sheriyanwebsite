@@ -1,0 +1,34 @@
+
+/* Explicit typography declarations preserve the approved editorial scale
+   across local-file browsers and older CSS shorthand parsers. */
+.mobile-menu a,.mobile-menu button{font-family:var(--serif);font-size:28px;font-weight:400}
+.hero h1{font-family:var(--serif);font-size:clamp(66px,7.1vw,115px);line-height:.98;font-weight:400}
+.section-heading h2{font-family:var(--serif);font-size:clamp(43px,5.1vw,80px);line-height:.98;font-weight:400}
+.occasion-info h3{font-family:var(--serif);font-size:clamp(24px,2vw,36px);line-height:1.03;font-weight:400}
+.bespoke-copy h2,.story-copy h2{font-family:var(--serif);font-size:clamp(54px,5vw,83px);line-height:1.04;font-weight:400}
+.film h2{font-family:var(--serif);font-size:clamp(50px,5.4vw,84px);line-height:1.04;font-weight:400}
+.story::before{font-family:var(--serif);font-size:clamp(120px,19vw,330px);line-height:1;font-weight:400}
+.closure h2{font-family:var(--serif);font-size:clamp(54px,6.1vw,94px);line-height:1.04;font-weight:400}
+.collection-hero h1{font-family:var(--serif);font-size:clamp(58px,6vw,92px);line-height:1.03;font-weight:400}
+.collections-top h2{font-family:var(--serif);font-size:36px;font-weight:400}
+.look-info h3{font-family:var(--serif);font-size:26px;font-weight:400}
+.modal-frame-copy h2{font-family:var(--serif);font-size:clamp(43px,4.5vw,70px);line-height:1.05;font-weight:400}
+.dialog-small h2{font-family:var(--serif);font-size:49px;font-weight:400}
+.video-poster h2{font-family:var(--serif);font-size:clamp(44px,5vw,75px);font-weight:400}
+.saved-list-row span{font-family:var(--serif);font-size:22px;font-weight:400}
+@media(max-width:720px){
+ .hero h1{font-size:clamp(48px,13vw,76px);line-height:.98}
+ .section-heading h2{font-size:52px}
+ .occasion-info h3{font-size:25px}
+ .bespoke-copy h2{font-size:56px}
+ .story-copy h2{font-size:57px}
+ .film h2{font-size:58px}
+ .story::before{font-size:140px}
+ .closure h2{font-size:58px}
+ .collection-hero h1{font-size:61px}
+ .collections-top h2{font-size:30px}
+ .look-info h3{font-size:22px}
+ .modal-frame-copy h2{font-size:48px}
+ .dialog-small h2{font-size:40px}
+}
+@media(max-width:380px){.hero h1{font-size:49px}.occasion-info h3{font-size:21px}}

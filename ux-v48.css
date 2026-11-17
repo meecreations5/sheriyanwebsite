@@ -1,0 +1,105 @@
+/* SHANERYN V4.8 - corrective UX release. Keeps V4.7 visual identity intact. */
+:root { --v48-header-offset:calc(var(--v47-header-height,72px) + 9px); }
+body[data-page="look"] .ld-preference-status {
+  font:400 11px/1.7 var(--sans);color:var(--ep-sub);margin:15px 0 4px;
+}
+body[data-page="look"] .ld-actions { padding-top:7px; }
+body[data-page="look"] .ld-request-note { margin:9px 0 19px; }
+body[data-page="look"] .ld-made { padding-top:23px; }
+body[data-page="look"] .ld-measure-fields-grid input:focus-visible {
+  outline:2px solid var(--ep-accent); outline-offset:1px;
+}
+body[data-page="look"] .ld-sticky-bridge { display:none; }
+body[data-page="look"] .ld-mobile-cta { display:none; }
+@media (min-width:851px) {
+  /* The right-hand column stretches for the gallery duration. No nested scroll. */
+  body[data-page="look"] .ld-details {
+    align-self:stretch; position:relative !important; top:auto !important;
+    overflow:visible !important; max-height:none !important; height:auto !important;
+  }
+  body[data-page="look"] .ld-sticky-bridge {
+    position:sticky; z-index:26; top:var(--v48-header-offset);
+    display:block; height:0; overflow:visible; padding:0; pointer-events:none;
+  }
+  body[data-page="look"] .ld-sticky-bridge-inner {
+    box-sizing:border-box;width:100%;padding:19px clamp(22px,3vw,46px) 20px;
+    background:var(--ep-panel);color:var(--ep-ink);
+    border:1px solid var(--ep-hair);border-top:2px solid var(--ep-accent);
+    box-shadow:0 15px 45px rgba(15,8,15,.11);
+    opacity:0;visibility:hidden; transform:translateY(-12px);
+    transition:opacity .25s ease,transform .25s ease,visibility .25s;
+  }
+  body[data-page="look"].ld-sticky-active .ld-sticky-bridge-inner {
+    opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+  }
+  .ld-sticky-kicker {
+    font:600 9px/1.5 var(--sans);letter-spacing:.15em;color:var(--ep-accent);margin-bottom:11px;
+  }
+  .ld-sticky-identity {display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .ld-sticky-title {font:400 clamp(27px,2.3vw,37px)/1.05 var(--serif);letter-spacing:-.035em;}
+  .ld-sticky-description {font:400 11px/1.7 var(--sans);color:var(--ep-sub);margin-top:4px;}
+  .ld-sticky-swatch {height:23px;width:23px;flex:none;border-radius:50%;border:1px solid var(--ep-hair);}
+  .ld-sticky-size {font:500 11px/1.6 var(--sans);color:var(--ep-sub);margin:13px 0 11px;}
+  .ld-sticky-buttons {display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:8px;}
+  .ld-sticky-request {
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+    padding:10px 13px;min-height:47px;text-decoration:none;
+    font:600 10px/1.4 var(--sans);letter-spacing:.08em;
+    background:var(--ep-ink);color:var(--ep-bg);border:1px solid var(--ep-ink);
+  }
+  .ld-sticky-request:hover {background:var(--ep-accent);border-color:var(--ep-accent);color:#fff;}
+  .ld-sticky-save {
+    display:grid;place-items:center;min-height:47px;border:1px solid var(--ep-hair);
+    background:transparent;color:var(--ep-ink);font-size:20px;cursor:pointer;
+  }
+  .ld-sticky-save[aria-pressed="true"] {color:var(--ep-accent);border-color:var(--ep-accent);}
+  .ld-sticky-request:focus-visible,.ld-sticky-save:focus-visible {outline:2px solid var(--ep-accent);outline-offset:2px;}
+}
+@media (max-width:850px) {
+  body[data-page="look"] .ld-mobile-cta {
+    position:fixed;z-index:90;bottom:0;left:0;right:0;display:flex;
+    align-items:center;justify-content:space-between;gap:14px;
+    padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));
+    background:var(--ep-panel);color:var(--ep-ink);
+    border-top:1px solid var(--ep-hair);box-shadow:0 -6px 30px rgba(13,10,15,.13);
+    opacity:0;visibility:hidden;transform:translateY(100%);pointer-events:none;
+    transition:transform .28s ease,opacity .28s ease,visibility .28s;
+  }
+  body[data-page="look"].ld-mobile-cta-active .ld-mobile-cta {
+    opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+  }
+  .ld-mobile-cta>div {min-width:0;display:grid;gap:2px;}
+  .ld-mobile-cta-label {font:400 22px/1.1 var(--serif);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .ld-mobile-cta small {font:400 10px/1.35 var(--sans);color:var(--ep-sub);}
+  .ld-mobile-cta-button {
+    min-height:46px;display:flex;align-items:center;justify-content:center;gap:13px;
+    background:var(--ep-ink);color:var(--ep-bg);text-decoration:none;
+    padding:13px 17px;font:600 10px/1.25 var(--sans);letter-spacing:.07em;white-space:nowrap;
+  }
+  body[data-page="look"].ld-mobile-cta-active {scroll-padding-bottom:85px;}
+}
+/* Accessibility, clarity and useful reset controls on the Collections page. */
+body[data-page="collections"] .v48-clear-filters {
+  display:inline-flex;min-height:42px;align-items:center;justify-content:center;
+  padding:10px 12px;border:0;border-bottom:1px solid var(--v47-accent);
+  background:none;color:var(--v47-ink);font:500 11px/1.4 var(--sans);
+  cursor:pointer;letter-spacing:.03em;
+}
+body[data-page="collections"] .v48-clear-filters[hidden] {display:none;}
+body[data-page="collections"] .v48-empty-reset {
+  display:inline-flex;margin-top:18px;padding:12px 19px;min-height:44px;
+  border:1px solid var(--v47-line);background:var(--v47-surface);color:var(--v47-ink);cursor:pointer;
+  font:500 11px/1.4 var(--sans);letter-spacing:.04em;
+}
+body[data-page="collections"] .v48-clear-filters:focus-visible,
+body[data-page="collections"] .v48-empty-reset:focus-visible {outline:2px solid var(--v47-accent);outline-offset:2px;}
+.cv3-unit-hint {font:400 11px/1.6 var(--sans);color:var(--ep-sub,var(--muted));margin:10px 0 16px;}
+/* Saved look names and images now navigate to their detail pages. */
+.saved-list-row a {color:inherit;text-decoration:none;display:inline-flex;align-items:center;}
+.saved-list-row a:hover span {text-decoration:underline;text-underline-offset:4px;}
+.saved-list-row a:focus-visible {outline:2px solid var(--ep-accent,#b67fa2);outline-offset:2px;}
+.saved-list-row img {object-fit:contain;}
+@media (prefers-reduced-motion:reduce) {
+  body[data-page="look"] .ld-sticky-bridge-inner,
+  body[data-page="look"] .ld-mobile-cta {transition:none!important;}
+}

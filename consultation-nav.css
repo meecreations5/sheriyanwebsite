@@ -1,0 +1,14 @@
+/* V4.6 - navigation width adjustment for the new Consultation page. */
+@media (min-width:1101px) and (max-width:1440px) {
+ .header-inner{gap:13px}
+ .nav-primary{gap:clamp(11px,1.6vw,26px)}
+ .nav-right{gap:clamp(11px,1.35vw,21px)}
+ .nav-primary a,.nav-right a{font-size:9px;letter-spacing:.07em}
+}
+@media (min-width:1101px) and (max-width:1260px) {
+ .header-inner{grid-template-columns:1fr auto}
+ .nav-primary,.nav-right>a{display:none}
+ .menu-toggle{display:inline-flex}
+ .nav-right{justify-content:flex-end}
+}
+html[data-color-mode="inverse"] .nav-right a.active {color:#e7b7cd}

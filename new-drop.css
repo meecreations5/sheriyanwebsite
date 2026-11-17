@@ -1,0 +1,95 @@
+/* NEW DROP — Chapter 06. A single editorial image and one changing fashion image,
+   inspired by the reference's monumental two-column composition.
+   These visuals are existing SHANERYN campaign assets; no product availability is implied. */
+.new-drop {
+  --nd-bg: #f7f6f5;
+  --nd-fg: #272329;
+  --nd-muted: #706870;
+  --nd-subtle: #927f8c;
+  --nd-line: #ddd4d9;
+  --nd-accent: #a6066a;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: 100%;
+  min-height: 625px;
+  height: clamp(625px, 80svh, 780px);
+  overflow: hidden;
+  background: var(--nd-bg);
+}
+.new-drop-editorial { position: relative; isolation: isolate; min-width: 0; overflow: hidden; background: #36252d; }
+.new-drop-editorial > img { width: 100%; height: 100%; object-fit: cover; object-position: center 34%; transition: transform 1.4s cubic-bezier(.2,.75,.25,1); }
+.new-drop-editorial:hover > img { transform: scale(1.025); }
+.new-drop-editorial::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,rgba(16,10,15,.26) 0%,transparent 26%,transparent 65%,rgba(18,12,17,.46) 100%); }
+.new-drop-image-top { position:absolute;z-index:1;top:36px;left:clamp(26px,3.9vw,58px);font-size:9px;letter-spacing:.24em;font-weight:600;color:#fff; }
+.new-drop-image-bottom { position:absolute;z-index:1;bottom:30px;left:clamp(26px,3.9vw,58px);right:clamp(26px,3.9vw,58px);display:flex;gap:14px;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.18em;color:#fff; }
+.new-drop-image-bottom span:last-child { opacity:.7; }
+.new-drop-showcase { min-width:0;min-height:0;display:flex;flex-direction:column;background:var(--nd-bg);color:var(--nd-fg);padding:clamp(34px,4.2vw,62px) clamp(28px,4.15vw,68px) 31px; }
+.new-drop-heading { flex-shrink:0;text-align:center; }
+.new-drop-kicker { display:block;font-size:9px;font-weight:600;letter-spacing:.23em;color:var(--nd-subtle); }
+.new-drop-heading h2 { font:400 clamp(36px,3.35vw,57px)/1.04 var(--serif);letter-spacing:-.018em;color:var(--nd-fg);margin:12px 0 12px; }
+.new-drop-heading h2 em { font-weight:400;font-style:normal; }
+.new-drop-heading p { font-size:11px;line-height:1.65;color:var(--nd-muted);letter-spacing:.012em; }
+.new-drop-viewer { flex:1;min-height:0;display:grid;grid-template-columns:40px minmax(0,1fr) 40px;align-items:center;gap:2px;margin:6px -14px 0;outline-offset:-2px; }
+.new-drop-image-wrap { min-width:0;min-height:0;height:100%;max-height:480px;display:flex;align-items:center;justify-content:center;overflow:hidden; }
+.new-drop-image-wrap img { display:block;width:auto;height:93%;max-width:min(100%,355px);max-height:475px;object-fit:contain;object-position:center center;
+  -webkit-mask-image:radial-gradient(ellipse 71% 70% at 50% 49%,#000 62%,transparent 100%);
+  mask-image:radial-gradient(ellipse 71% 70% at 50% 49%,#000 62%,transparent 100%);
+  transition:opacity .3s ease,transform .6s cubic-bezier(.2,.7,.3,1); }
+.new-drop-image-wrap img.is-changing { opacity:.15;transform:translateY(7px) scale(.985); }
+.new-drop-arrow { width:40px;height:46px;padding:0;display:grid;place-items:center;border:0;background:transparent;color:var(--nd-fg);transition:color .2s,transform .2s;touch-action:manipulation; }
+.new-drop-arrow svg { width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round; }
+.new-drop-prev:hover { transform:translateX(-3px);color:var(--nd-accent); }
+.new-drop-next:hover { transform:translateX(3px);color:var(--nd-accent); }
+.new-drop-arrow:focus-visible,.new-drop-viewer:focus-visible { outline:2px solid var(--nd-accent);outline-offset:2px; }
+.new-drop-foot { min-height:62px;border-top:1px solid var(--nd-line);display:flex;justify-content:space-between;align-items:center;gap:15px;padding-top:20px; }
+.new-drop-identity { display:flex;flex-direction:column;gap:6px;min-width:0; }
+.new-drop-count { font-size:9px;font-weight:600;letter-spacing:.18em;color:var(--nd-subtle);font-variant-numeric:tabular-nums; }
+.new-drop-look-title { font-size:10px;font-weight:600;letter-spacing:.16em;color:var(--nd-fg); }
+.new-drop-links { display:flex;align-items:center;gap:25px;flex-wrap:wrap;justify-content:flex-end; }
+.new-drop-enquire,.new-drop-collection-link { border:0;background:none;border-bottom:1px solid currentColor;color:var(--nd-fg);display:inline-flex;align-items:center;gap:9px;padding:5px 0 6px;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:color .2s; }
+.new-drop-enquire:hover,.new-drop-collection-link:hover { color:var(--nd-accent); }
+html[data-color-mode="inverse"] .new-drop {
+  --nd-bg:#201a23;
+  --nd-fg:#f3e9ef;
+  --nd-muted:#c8bac5;
+  --nd-subtle:#d2a4bc;
+  --nd-line:#524151;
+  --nd-accent:#e6aaca;
+}
+/* Original Signature Blush is warmer; Original White Gallery remains cool-white. */
+html[data-color-mode="original"] body.theme-blush .new-drop { --nd-bg:#fbf2f8;--nd-fg:#30232c;--nd-line:#eadce5; }
+@media (max-width:1100px) and (min-width:721px) {
+  .new-drop { height:680px; }
+  .new-drop-showcase { padding-left:31px;padding-right:31px; }
+  .new-drop-heading h2 { font-size:clamp(38px,4vw,50px); }
+  .new-drop-links { gap:15px; }
+  .new-drop-image-wrap img { height:87%; }
+}
+@media (max-width:720px) {
+  .new-drop { display:flex;flex-direction:column;height:auto;min-height:0; }
+  .new-drop-editorial { height:clamp(335px,98vw,470px);flex:none; }
+  .new-drop-editorial > img { object-position:center 28%; }
+  .new-drop-image-top { top:23px;left:21px;font-size:8px; }
+  .new-drop-image-bottom { bottom:19px;left:21px;right:21px;font-size:8px; }
+  .new-drop-showcase { padding:37px 24px 31px;min-height:560px; }
+  .new-drop-heading h2 { font-size:45px;margin-top:11px; }
+  .new-drop-heading p { max-width:270px;margin-inline:auto;font-size:11px; }
+  .new-drop-viewer { margin:10px -12px 0; min-height:325px;grid-template-columns:33px minmax(0,1fr) 33px; }
+  .new-drop-arrow { width:33px;height:44px; }
+  .new-drop-image-wrap { max-height:370px; }
+  .new-drop-image-wrap img { max-height:355px;max-width:245px;height:91%; }
+  .new-drop-foot { min-height:69px;align-items:flex-end; }
+  .new-drop-links { gap:15px; }
+  .new-drop-enquire,.new-drop-collection-link { font-size:8px; }
+}
+@media (max-width:410px) {
+  .new-drop-showcase { padding-left:19px;padding-right:19px; }
+  .new-drop-heading h2 { font-size:42px; }
+  .new-drop-links { gap:10px; }
+}
+@media (max-width:350px) {
+  .new-drop-foot { flex-wrap:wrap;align-items:flex-start; }
+  .new-drop-links { justify-content:flex-start; }
+  .new-drop-editorial { height:320px; }
+}
+@media (prefers-reduced-motion:reduce) { .new-drop-image-wrap img,.new-drop-editorial > img,.new-drop-arrow { transition:none!important; } }

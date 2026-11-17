@@ -1,0 +1,68 @@
+
+/* OPTION B — THE WHITE GALLERY
+   SHANERYN's official magenta remains the signature accent.
+   Pure-white negative space, deep plum text, gentle champagne details,
+   and unaltered full-colour campaign photography define the alternative. */
+:root{--ink:#28212a;--muted:#6c6067;--paper:#ffffff;--cream:#fff;--sand:#f7f4f5;--sand2:#faf8f9;--line:#e8e1e6;--accent:#a6066a}
+body{background:#fff;color:var(--ink)}
+.topline{height:2px;background:linear-gradient(90deg,#fff 10%,#a6066a 50%,#fff 90%)}
+.site-header{background:rgba(255,255,255,.97);border-bottom:1px solid #eee9ed}
+.site-header.scrolled{box-shadow:0 8px 20px rgba(34,19,32,.05)}
+.mobile-menu{background:#fff}
+.nav-primary a:hover,.nav-right a:hover,.nav-primary a.active{color:#a6066a}
+.eyebrow{color:#8b426e}
+.underline-link:hover{color:#a6066a}
+.filled-btn{background:#28212a;color:#fff;border-color:#28212a}
+.filled-btn:hover{background:#a6066a;border-color:#a6066a}
+.outlined-btn{border-color:#332b33;color:#332b33}
+.outlined-btn:hover{background:#30232c;color:white}
+.hero{background:#fff}
+.hero::before{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.99) 21%,rgba(255,255,255,.91) 34%,rgba(255,255,255,.58) 43%,rgba(255,255,255,.07) 63%,rgba(255,255,255,0) 75%)}
+.hero h1{color:#262027}
+.hero-copy{color:#635a60}
+.hero-bottom button{color:#71626b}
+.hero-bottom button.active{color:#a6066a;border-color:#a6066a}
+.hero-progress{background:#dccbd5}
+.hero-progress i{background:#a6066a}
+.hero-caption-vert{color:#fff;text-shadow:0 1px 8px #140911}
+.occasion-section{background:#fff}
+.occasion-card{background:#eee7ec}
+.occasion-info{color:#fff}
+.bespoke{background:#fff;border-top:1px solid #f0ebef;border-bottom:1px solid #f0ebef}
+.bespoke-visual>img,.bespoke-visual .bespoke-inset{border-color:#fff}
+.bespoke-copy .mini-rule{background:#a6066a}
+.bespoke-copy blockquote{color:#795d6c}
+.film{background:#140f14}
+.film::before{background:linear-gradient(90deg,rgba(15,10,15,.86),rgba(18,12,17,.53) 52%,rgba(18,12,17,.10))}
+.story{background:#fff;border-bottom:1px solid #f0ebee}
+.story::before{color:rgba(166,6,106,.038)}
+.story-main,.story-mini{filter:none;border-color:#fff}
+.story .script-word{color:#a6066a}
+.closure{background:#fff}
+.closure .eyebrow{color:#a6066a}
+.closure-image-row img:nth-child(2){filter:none}
+.site-footer{background:#fff;border-top:1px solid #ebe4e8}
+.footer-kicker,.footer-rule{color:#a6066a;background-color:#a6066a}
+.footer-kicker{background:transparent}
+.footer-description{color:#746a70}
+.footer-col h4{color:#8e426d}
+.footer-col a,.footer-col button{color:#655963}
+.footer-bottom{border-top-color:#e9e2e7}
+.collection-hero{background:#fff;border-bottom:1px solid #eee6ec}
+.collection-hero h1{color:#262027}
+.collection-hero p{color:#746870}
+.collections-main{background:#fff}
+.look-image-btn{background:#f8f6f7}
+.look-info h3{color:#28212a}
+.filter-btn{background:#fff;border-color:#e8e1e6;color:#604b59}
+.filter-btn[aria-pressed="true"],.filter-btn:hover{color:#fff;background:#a6066a;border-color:#a6066a}
+.catalogue-preview-note{border-left-color:#a6066a;color:#72616d}
+.modal-window{background:#fff}
+.modal-close{background:#fff}
+.backtotop{background:#fff;border-color:#e5d9df}
+@media(max-width:720px){
+ .hero{background:#fff}
+ .hero::before{background:linear-gradient(0deg,#fff 0%,rgba(255,255,255,.99) 15%,rgba(255,255,255,.90) 31%,rgba(255,255,255,.10) 63%,transparent 82%)}
+ .hero h1{color:#28212a}
+ .collection-hero{background:#fff}
+}

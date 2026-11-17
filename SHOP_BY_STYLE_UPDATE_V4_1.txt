@@ -1,0 +1,25 @@
+SHANERYN / Homepage Shop by Style - V4.1
+
+Scope: only the homepage Shop by Style / The Curve Edit section has changed.
+
+Approved reference layout:
+- Four portrait cards across on desktop, two columns on mobile
+- Full-bleed imagery, inset hairline frames, bottom gradient and titles, round arrow links
+- Approved copy: SHOP BY STYLE; THE CURVE EDIT by SHANERYN; THE CELEBRATION COLLECTION;
+  Crafted for the spotlight, cut for your body, made to be lived in all night.
+
+Selected source photography comes from the client-supplied SHANERYN Google Drive fashion folder:
+- Shaneryn6594.jpg --> Starlight editorial
+- Shaneryn7061.jpg --> Fire & Heart editorial
+- Shaneryn6838.jpg --> Blaze editorial
+- Shaneryn6713.jpg --> Sunshine editorial
+
+Optimized local WebP copies are stored under assets/occasion-drive/.
+No third-party image URLs are required. All links point to the existing look detail pages.
+
+Changed: index.html
+Added: occasion-reference.css; assets/occasion-drive/*.webp; this note.
+Other pages, scripts, styling and CMS placeholders remain unchanged.
+
+Validation: asset existence, image validity, stylesheet parsing, page links and JS syntax tested.
+Visual previews are manually composed layout previews, not direct browser screenshots.

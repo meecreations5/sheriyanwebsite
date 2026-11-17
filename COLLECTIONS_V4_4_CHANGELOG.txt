@@ -1,0 +1,16 @@
+SHANERYN COLLECTIONS V4.4 | 17 November 2026
+
+- Removed the entire CATEGORY EDIT / Explore by silhouette category-image block.
+- Preserved Collections hero, search and filters, 3-column desktop grid, saved-look buttons, detail links, footer and other pages.
+- Removed all fixed crop heights on the Collections listing and show full source images at natural aspect ratio on desktop and mobile.
+- Optimized and added six editorial photographs sourced from the client-provided Google Drive folder:
+  Sunshine – Shaneryn6742.jpg
+  Starlight – Shaneryn6594.jpg
+  Fire & Heart – Shaneryn7061.jpg
+  Dawn & Dusk – Shaneryn7258.jpg
+  Urashima Taro – Shaneryn7398.jpg
+  Blaze – Shaneryn6838.jpg
+- For Bellona and Lozen, no verified matching editorial campaign image was found in the Drive folder. The supplied, correctly named full-length studio photos are retained rather than mismatching another garment.
+- Data field catalogueImg switches only the Collections card photo; detail imagery and interactions are unchanged.
+- Removed obsolete Blaze-photo-placeholder note.
+- This is a static front-end prototype; no CMS/enquiry service has been added.
