@@ -1,0 +1,120 @@
+{
+  "cases": [
+    {
+      "page": "index",
+      "width": 390,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "index",
+      "width": 768,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "index",
+      "width": 1440,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "collections",
+      "width": 390,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "collections",
+      "width": 768,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "collections",
+      "width": 1440,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "contact",
+      "width": 768,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "contact",
+      "width": 1440,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "story",
+      "width": 390,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "story",
+      "width": 768,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "story",
+      "width": 1440,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "bespoke",
+      "width": 390,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "bespoke",
+      "width": 768,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "bespoke",
+      "width": 1440,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "look",
+      "width": 390,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "look",
+      "width": 768,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "look",
+      "width": 1440,
+      "menu": true,
+      "script_exceptions": []
+    },
+    {
+      "page": "late-injected-React-markup",
+      "width": 390,
+      "menu": true
+    }
+  ],
+  "failures": [],
+  "passed": 19,
+  "failed": 0
+}

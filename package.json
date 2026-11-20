@@ -1,6 +1,6 @@
 {
   "name": "shaneryn-cms",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,8 @@
     "check:v19": "node scripts/check-v19.js",
     "check:v110": "node scripts/check-v110.js",
     "check:v111": "node scripts/check-v111.js",
-    "check:v112": "node scripts/check-v112.js"
+    "check:v112": "node scripts/check-v112.js",
+    "check:v113": "node scripts/check-v113.js"
   },
   "dependencies": {
     "next": "^16.0.0",

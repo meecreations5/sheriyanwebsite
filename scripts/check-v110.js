@@ -72,7 +72,7 @@ const fail=async (arg,code)=>{await assert.rejects(handler(arg), e=>e.code===cod
  assert.equal(firebaseJson.functions.source,'functions');
  assert.equal(firebaseJson.functions.runtime,'nodejs22');
  assert.equal(fnPkg.engines.node,'22');
- assert.match(pkg.version,/^1\.(?:10|11|12)\.0$/);
+ assert.match(pkg.version,/^1\.(?:10|11|12|13)\.0$/);
  assert.match(functions,/onCall\(/);
  assert.doesNotMatch(ui,/serviceAccount|privateKey|adminsdk/);
  console.log('PASS V1.10: secured callable password reset, Super Admin role check, recent login, no self reset, 5-per-window rate limit, revoke refresh tokens, and UI wiring');

@@ -46,5 +46,5 @@ assert.doesNotMatch(manager,/password:form\.password/);
 assert.match(css,/\.cms-staff-row/);
 assert.match(css,/@media\(max-width:850px\)/);
 const pkg=JSON.parse(read('package.json'));
-assert.ok(['1.11.0','1.12.0'].includes(pkg.version));
+assert.ok(['1.11.0','1.12.0','1.13.0'].includes(pkg.version));
 console.log('PASS V1.11: compact Admin Users, guarded disable, existing login guidance, email password recovery, secure callable fallback, no Firestore passwords');

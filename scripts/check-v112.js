@@ -52,7 +52,7 @@ async function run() {
   assert.match(read('public/site.js'),/function initNav\(\)/);
   assert.match(read('public/site.js'),/btn\.addEventListener\('click'/);
   const pkg=JSON.parse(read('package.json'));
-  assert.equal(pkg.version,'1.12.0');
+  assert.ok(['1.12.0','1.13.0'].includes(pkg.version));
   console.log('PASS V1.12: Firestore Timestamp and nested SDK values converted to plain Client props; existing menu scripts and markup retained');
 }
 run().catch(e=>{console.error(e);process.exit(1)});

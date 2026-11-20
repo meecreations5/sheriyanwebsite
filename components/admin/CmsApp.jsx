@@ -119,9 +119,24 @@ function ResetStaffPassword({staff,onClose}){
    if(result.data?.ok!==true)throw Error('Firebase did not confirm the password reset.');
    setDone(true);setStatus('Password reset successfully. Share the new password privately with the staff member.');
   }catch(error){
-   if(error?.code==='functions/not-found')setStatus('For username-only staff, the secure password-reset service must be deployed once. Ask your developer to follow UPDATE_V1_10.md.');
-   else if(error?.code==='functions/failed-precondition')setStatus(error.message||'Sign out and sign back in as Super Admin before resetting a password.');
-   else setStatus('Password reset failed: '+prettyError(error));
+   const code=String(error?.code||'');
+   if(code==='functions/not-found'){
+    setStatus('Password was NOT changed. The Firebase reset service is not deployed in this project. For an account with a real email, select Send Reset Email. For username-only staff, the resetStaffPassword Cloud Function must be deployed once; changing cms_users will not reset a Firebase password.');
+   }else if(code==='functions/unavailable'){
+    setStatus('Password was NOT changed. The password-reset service cannot be reached right now. Check network access and whether resetStaffPassword is deployed in asia-south1.');
+   }else if(code==='functions/unauthenticated'){
+    setStatus('Password was NOT changed. Sign out, sign back in as Super Admin and retry.');
+   }else if(code==='functions/permission-denied'){
+    setStatus('Password was NOT changed. Only an active Super Admin recorded in cms_users can reset staff passwords. Check this account’s role and status.');
+   }else if(code==='functions/failed-precondition'){
+    setStatus('Password was NOT changed. '+(error.message||'Sign out and sign back in as Super Admin before resetting a password.'));
+   }else if(code==='functions/resource-exhausted'){
+    setStatus('Password was NOT changed. Too many reset attempts have been made. Please retry later.');
+   }else if(code==='functions/internal'){
+    setStatus('Password was NOT changed. The server reported an internal error. Ask your developer to check the resetStaffPassword Cloud Function logs.');
+   }else{
+    setStatus('Password was NOT changed ('+(code||'unknown error')+'): '+prettyError(error));
+   }
   }finally{setBusy(false)}
  }
  return <div className="admin-modal-bg" onClick={onClose}><div className="admin-modal" role="dialog" aria-modal="true" aria-label="Reset staff password" onClick={e=>e.stopPropagation()}>
@@ -141,7 +156,7 @@ function ResetStaffPassword({staff,onClose}){
     <Field label="Confirm new password"><input className="admin-input" type={showPassword?'text':'password'} minLength={12} maxLength={128} autoComplete="new-password" value={confirm} onChange={e=>setConfirm(e.target.value)} required/></Field>
     <div className="admin-flex" style={{marginBottom:14}}><Btn variant="secondary sm" onClick={generate}>Generate Strong Password</Btn><Btn variant="secondary sm" onClick={copyPassword} disabled={!nextPassword}>Copy Password</Btn></div>
     <button type="submit" className="admin-btn" disabled={busy}>{busy?'Saving...':'Save New Password'}</button>
-    <p className="admin-note" style={{marginTop:12}}>This action requires the secure Firebase password-reset service. No password is stored in Firestore.</p>
+    <p className="admin-note" style={{marginTop:12}}>For username-only users, this requires the secure resetStaffPassword service in Firebase. If the service is unavailable, you can create a new staff login in Admin Users and disable the old account. No password is stored in Firestore.</p>
    </form>}
   </>}
   {done&&<div className="admin-flex" style={{marginTop:16}}>{method==='manual'&&<Btn onClick={copyPassword}>Copy New Password</Btn>}<Btn variant="neutral sm" onClick={onClose}>Done</Btn></div>}

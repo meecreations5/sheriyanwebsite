@@ -1,0 +1,12 @@
+{
+  "release": "V1.13",
+  "scope": [
+    "Independent Next.js menu controller for header and mobile dock",
+    "Firebase password-reset error diagnosis and explicit non-success status"
+  ],
+  "live_firebase": false,
+  "nextjs_production_build": false,
+  "browser_menu_tests": 19,
+  "source_test_files_passed": 11,
+  "test_warning": "User-name-only staff password reset still requires deployed resetStaffPassword cloud function."
+}
