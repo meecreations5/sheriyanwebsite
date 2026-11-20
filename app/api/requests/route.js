@@ -1,7 +1,6 @@
-// Public enquiry endpoint: uses the rules-protected Firebase Web SDK.
-// No service-account key, Google Cloud CLI, or Admin SDK is needed.
-import {collection,doc,setDoc,serverTimestamp} from 'firebase/firestore';
-import {publicCmsDb} from '@/lib/firebase-public-server';
+// Public enquiry endpoint. Only this validated server route can write customer requests.
+import {FieldValue} from '@google-cloud/firestore';
+import {adminDb} from '@/lib/cms-admin-server';
 export const runtime='nodejs';
 const send=(value,status=200)=>Response.json(value,{status,headers:{'Cache-Control':'no-store'}});
 const cut=(v,n=1600)=>String(v??'').trim().slice(0,n);
@@ -26,10 +25,10 @@ export async function POST(request){
   const source=cut(input.source,500);if(!source.startsWith('/'))return send({error:'Invalid page'},400);
   const ip=cut(request.headers.get('x-forwarded-for')?.split(',')[0]||request.headers.get('x-real-ip')||'unknown',120);
   if(!permitted(ip))return send({error:'Too many requests; try again later'},429);
-  const ref=doc(collection(publicCmsDb,'cms_requests'));
+  const ref=adminDb().collection('cms_requests').doc();
   const reference=`SH-${kind==='appointment'?'APT':'ENQ'}-${new Date().toISOString().slice(0,10).replaceAll('-','')}-${ref.id.slice(0,6).toUpperCase()}`;
   const fields=Object.fromEntries(Object.entries(f).slice(0,40).filter(([k])=>/^[a-zA-Z][\w-]{0,49}$/.test(k)&&k!=='website').map(([k,v])=>[k,cut(v,1600)]));
-  await setDoc(ref,{reference,kind,status:kind==='appointment'?'requested':'new',name,email,phone,message,fields,source,createdAt:serverTimestamp(),notes:'',assignedTo:'',followUpDate:''});
+  await ref.set({reference,kind,status:kind==='appointment'?'requested':'new',name,email,phone,message,fields,source,createdAt:FieldValue.serverTimestamp(),notes:'',assignedTo:'',followUpDate:''});
   return send({ok:true,reference},201);
  }catch(error){console.error('SHANERYN public request failed:',error.message);return send({error:'Unable to save the request. Please try again.'},503)}
 }

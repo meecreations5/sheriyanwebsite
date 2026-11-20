@@ -1,16 +1,10 @@
 'use client';
 import React,{useEffect,useState,useMemo,useRef} from 'react';
-import {onAuthStateChanged,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,setPersistence,inMemoryPersistence,deleteUser,EmailAuthProvider,reauthenticateWithCredential,updatePassword} from 'firebase/auth';
-import {initializeApp,deleteApp} from 'firebase/app';
-import {getAuth} from 'firebase/auth';
-import {ref as storageRef,uploadBytes,getDownloadURL} from 'firebase/storage';
-import {firebaseAuth,firebaseApp,mediaStorage} from '@/lib/firebase-client';
-import {cmsApi} from '@/lib/cms-client-api';
-import {normalizeAdminUsername,usernameToAuthEmail,resolveAdminLogin,isInternalStaffEmail,validAdminUsername} from '@/lib/admin-identity';
+import {cmsApi,authApi} from '@/lib/cms-client-api';
 import {slugify,productSlug,productPath} from '@/lib/product-paths';
 import {getYoutubeVideoId,isVideoFile,youtubeEmbedUrl} from '@/lib/video-url';
-import {sendPasswordResetEmail} from 'firebase/auth';
-import {getFunctions,httpsCallable} from 'firebase/functions';
+const normalizeAdminUsername=x=>String(x||'').trim().toLowerCase();
+const validAdminUsername=x=>/^[a-z][a-z0-9._-]{2,31}$/.test(normalizeAdminUsername(x));
 
 const NAV=[['dashboard','▦','Dashboard'],['users','♙','Admin Users'],['pages','▤','Page Manager'],['products','◇','Products & Looks'],['categories','▤','Categories'],['collections','▥','Collections'],['forms','≡','Forms'],['enquiries','✉','Enquiries'],['appointments','▣','Appointments'],['media','▧','Media Library'],['settings','⚙','Global Settings']];
 const ROLE_NAMES={super_admin:'Super Admin',editor:'Content Editor',products:'Product Manager',enquiries:'Enquiry Staff',viewer:'Read Only'};
@@ -29,153 +23,138 @@ function Login({onLogin}){
  async function go(e){
   e.preventDefault();setError('');setBusy(true);
   try{
-   const authEmail=resolveAdminLogin(identifier);
-   await signInWithEmailAndPassword(firebaseAuth,authEmail,password);
-   onLogin();
-  }catch(err){
-   const invalid=['auth/invalid-credential','auth/user-not-found','auth/wrong-password','auth/invalid-login-credentials'].includes(err?.code);
-   const legacySuperAdmin=normalizeAdminUsername(identifier)==='superadmin';
-   setError(invalid?(legacySuperAdmin?'Your original Super Admin may use an email login. Enter the email listed in Firebase Authentication > Users with the password you set there. The name superadmin is not automatically linked to that email.':'Incorrect login details. Check the username for staff accounts, or the original email for existing administrators.'):prettyError(err));
-  }finally{setBusy(false)}
- }
- async function forgotPassword(){
-  if(!identifier.includes('@')){setError('Username accounts do not have a recovery email. Ask your Super Admin for account recovery assistance.');return}
-  try{await sendPasswordResetEmail(firebaseAuth,resolveAdminLogin(identifier));setError('If the email account exists, a reset link has been sent.')}catch(err){setError(prettyError(err))}
+   const result=await authApi('login',{username:identifier,password});
+   setPassword('');onLogin(result);
+  }catch(err){setError(prettyError(err))}finally{setBusy(false)}
  }
  return <div className="admin-shell admin-login-wrap"><form className="admin-login" onSubmit={go}>
   <div className="login-logo">SHANERYN</div><div className="login-kicker">CONTENT STUDIO</div>
-  <label htmlFor="login-user">USERNAME OR ORIGINAL ADMIN EMAIL</label>
-  <input id="login-user" type="text" autoComplete="username" value={identifier} onChange={e=>setIdentifier(e.target.value)} required placeholder="Username or Firebase email"/>
+  <label htmlFor="login-user">USERNAME</label>
+  <input id="login-user" type="text" autoComplete="username" value={identifier} onChange={e=>setIdentifier(e.target.value)} required placeholder="e.g. admin"/>
   <label htmlFor="login-pass">PASSWORD</label>
   <input id="login-pass" type="password" autoComplete="current-password" value={password} onChange={e=>setPassword(e.target.value)} required/>
   {error&&<p className="admin-status error" style={{marginTop:15}} role="alert">{error}</p>}
-  <button disabled={busy} type="submit">{busy?'AUTHENTICATING...':'SIGN IN'}</button>
-  <button type="button" style={{marginTop:12,background:'transparent',padding:8,fontSize:12,fontWeight:400}} onClick={forgotPassword}>Forgot password?</button>
-  <p className="login-note">New staff: enter your username. Original Super Admin: enter the email shown in Firebase Authentication, not the CMS display name.</p>
- </form></div>
+  <button disabled={busy} type="submit">{busy?'PLEASE WAIT...':'SIGN IN'}</button>
+  <p className="login-note">Sign in using your CMS username and password. No email needed.</p>
+ </form></div>;
 }
 
-function PasswordChange({onClose}){
- const [currentPassword,setCurrentPassword]=useState(''),[nextPassword,setNextPassword]=useState(''),[confirm,setConfirm]=useState(''),[busy,setBusy]=useState(false),[status,setStatus]=useState(''),[done,setDone]=useState(false);
+function PasswordChange({onClose,onChanged}){
+ const [currentPassword,setCurrentPassword]=useState(''),[nextPassword,setNextPassword]=useState(''),[confirm,setConfirm]=useState(''),[busy,setBusy]=useState(false),[status,setStatus]=useState('');
  async function save(e){
   e.preventDefault();setStatus('');setBusy(true);
   try{
    if(nextPassword.length<12)throw Error('Use a new password with at least 12 characters.');
    if(nextPassword!==confirm)throw Error('New passwords do not match.');
-   const user=firebaseAuth.currentUser;
-   if(!user?.email)throw Error('Please sign in again.');
-   await reauthenticateWithCredential(user,EmailAuthProvider.credential(user.email,currentPassword));
-   await updatePassword(user,nextPassword);
-   setCurrentPassword('');setNextPassword('');setConfirm('');setDone(true);setStatus('Password changed successfully.');
-  }catch(err){setStatus('Could not change password: '+prettyError(err))}finally{setBusy(false)}
+   await authApi('change-password',{currentPassword,newPassword:nextPassword});
+   setCurrentPassword('');setNextPassword('');setConfirm('');onChanged();
+  }catch(err){setStatus(prettyError(err))}finally{setBusy(false)}
  }
  return <div className="admin-modal-bg" onClick={onClose}><div className="admin-modal" role="dialog" aria-modal="true" aria-label="Change password" onClick={e=>e.stopPropagation()}>
   <div className="admin-row"><h2>Change My Password</h2><Btn variant="neutral sm" onClick={onClose}>Close</Btn></div>
-  <p className="admin-subtitle">Change your own password securely, without an email address.</p>
-  {status&&<p role="status" className={'admin-status '+(done?'':'error')}>{status}</p>}
-  {!done&&<form onSubmit={save} autoComplete="off" style={{marginTop:18}}>
+  <p className="admin-subtitle">Change your password. You will sign in again with the new password.</p>
+  {status&&<p role="alert" className="admin-status error">{status}</p>}
+  <form onSubmit={save} autoComplete="off" style={{marginTop:18}}>
    <Field label="Current password"><input className="admin-input" type="password" autoComplete="current-password" value={currentPassword} onChange={e=>setCurrentPassword(e.target.value)} required/></Field>
    <Field label="New password"><input className="admin-input" type="password" autoComplete="new-password" value={nextPassword} onChange={e=>setNextPassword(e.target.value)} minLength={12} required/></Field>
    <Field label="Confirm new password"><input className="admin-input" type="password" autoComplete="new-password" value={confirm} onChange={e=>setConfirm(e.target.value)} minLength={12} required/></Field>
    <button type="submit" disabled={busy} className="admin-btn">{busy?'Saving...':'Change Password'}</button>
-  </form>}
- </div></div>
+  </form>
+ </div></div>;
 }
 
-function ResetStaffPassword({staff,onClose}){
- const realEmail=String(staff.email||'').trim();
- const hasMailbox=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(realEmail)&&!isInternalStaffEmail(realEmail);
- const [method,setMethod]=useState(hasMailbox?'email':'manual');
+function ResetStaffPassword({staff,api,onClose}){
  const [nextPassword,setNextPassword]=useState(''),[confirm,setConfirm]=useState(''),[showPassword,setShowPassword]=useState(false),[busy,setBusy]=useState(false),[status,setStatus]=useState(''),[done,setDone]=useState(false);
  function generate(){
   const alphabet='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#%+-';
   const bytes=new Uint8Array(24);crypto.getRandomValues(bytes);
   const generated=Array.from(bytes,b=>alphabet[b%alphabet.length]).join('');
-  setNextPassword(generated);setConfirm(generated);setShowPassword(true);setStatus('Generated a strong password. Keep it private.');
+  setNextPassword(generated);setConfirm(generated);setShowPassword(true);setStatus('Generated password. Share it privately with staff.');
  }
- async function copyPassword(){
-  if(!nextPassword)return;
-  try{await navigator.clipboard.writeText(nextPassword);setStatus('Password copied. Share it privately with this staff member.');}
-  catch{setStatus('Copy unavailable. Show the password and copy it manually.');}
- }
- async function sendResetLink(){
-  if(!hasMailbox)return;
-  setBusy(true);setStatus('');
-  try{
-   await sendPasswordResetEmail(firebaseAuth,realEmail);
-   setDone(true);setStatus('A password reset link has been requested for '+realEmail+'. The account holder must open the email to finish resetting it.');
-  }catch(error){setStatus('Could not send reset email: '+prettyError(error))}
-  finally{setBusy(false)}
- }
- async function reset(e){
+ async function copyPassword(){if(!nextPassword)return;try{await navigator.clipboard.writeText(nextPassword);setStatus('Password copied.')}catch{setStatus('Copy unavailable. Select the displayed password to copy.') }}
+ async function save(e){
   e.preventDefault();setStatus('');
   if(nextPassword.length<12||nextPassword.length>128){setStatus('Use a password between 12 and 128 characters.');return}
   if(nextPassword!==confirm){setStatus('Passwords do not match.');return}
-  if(!window.confirm('Reset the password for '+(staff.username||staff.email)+'?'))return;
+  if(!window.confirm('Set a new password for '+staff.username+'?'))return;
   setBusy(true);
   try{
-   const call=httpsCallable(getFunctions(firebaseApp,'asia-south1'),'resetStaffPassword');
-   const result=await call({uid:staff.id,newPassword:nextPassword});
-   if(result.data?.ok!==true)throw Error('Firebase did not confirm the password reset.');
-   setDone(true);setStatus('Password reset successfully. Share the new password privately with the staff member.');
-  }catch(error){
-   const code=String(error?.code||'');
-   if(code==='functions/not-found'){
-    setStatus('Password was NOT changed. The Firebase reset service is not deployed in this project. For an account with a real email, select Send Reset Email. For username-only staff, the resetStaffPassword Cloud Function must be deployed once; changing cms_users will not reset a Firebase password.');
-   }else if(code==='functions/unavailable'){
-    setStatus('Password was NOT changed. The password-reset service cannot be reached right now. Check network access and whether resetStaffPassword is deployed in asia-south1.');
-   }else if(code==='functions/unauthenticated'){
-    setStatus('Password was NOT changed. Sign out, sign back in as Super Admin and retry.');
-   }else if(code==='functions/permission-denied'){
-    setStatus('Password was NOT changed. Only an active Super Admin recorded in cms_users can reset staff passwords. Check this account’s role and status.');
-   }else if(code==='functions/failed-precondition'){
-    setStatus('Password was NOT changed. '+(error.message||'Sign out and sign back in as Super Admin before resetting a password.'));
-   }else if(code==='functions/resource-exhausted'){
-    setStatus('Password was NOT changed. Too many reset attempts have been made. Please retry later.');
-   }else if(code==='functions/internal'){
-    setStatus('Password was NOT changed. The server reported an internal error. Ask your developer to check the resetStaffPassword Cloud Function logs.');
-   }else{
-    setStatus('Password was NOT changed ('+(code||'unknown error')+'): '+prettyError(error));
-   }
-  }finally{setBusy(false)}
+   await api('users/'+staff.id+':reset',{method:'POST',body:{password:nextPassword}});
+   setDone(true);setStatus('Password updated. The staff member can now sign in with the new password.');
+  }catch(error){setStatus(prettyError(error))}finally{setBusy(false)}
  }
  return <div className="admin-modal-bg" onClick={onClose}><div className="admin-modal" role="dialog" aria-modal="true" aria-label="Reset staff password" onClick={e=>e.stopPropagation()}>
   <div className="admin-row"><h2>Reset Password</h2><Btn variant="neutral sm" onClick={onClose}>Close</Btn></div>
-  <p className="admin-subtitle">Staff account: <strong>{staff.username||staff.email}</strong></p>
-  {status&&<p className={'admin-status '+(done?'':'error')} role="status">{status}</p>}
-  {!done&&<>
-   {hasMailbox&&<div className="admin-reset-choice" role="group" aria-label="Password reset method">
-    <Btn variant={method==='email'?'':'secondary sm'} onClick={()=>{setMethod('email');setStatus('')}}>Send Reset Email</Btn>
-    <Btn variant={method==='manual'?'':'secondary sm'} onClick={()=>{setMethod('manual');setStatus('')}}>Set New Password</Btn>
-   </div>}
-   {method==='email'?<div className="admin-reset-email-box">
-    <p>A password-reset link will be sent to <strong>{realEmail}</strong>. No old password needed.</p>
-    <button type="button" disabled={busy} onClick={sendResetLink} className="admin-btn">{busy?'Sending...':'Send Reset Email'}</button>
-   </div>:<form onSubmit={reset} autoComplete="off" style={{marginTop:18}}>
-    <Field label="New password"><div className="admin-flex" style={{flexWrap:'nowrap'}}><input className="admin-input" type={showPassword?'text':'password'} minLength={12} maxLength={128} autoComplete="new-password" value={nextPassword} onChange={e=>setNextPassword(e.target.value)} required/><Btn variant="secondary sm" onClick={()=>setShowPassword(v=>!v)}>{showPassword?'Hide':'Show'}</Btn></div></Field>
-    <Field label="Confirm new password"><input className="admin-input" type={showPassword?'text':'password'} minLength={12} maxLength={128} autoComplete="new-password" value={confirm} onChange={e=>setConfirm(e.target.value)} required/></Field>
-    <div className="admin-flex" style={{marginBottom:14}}><Btn variant="secondary sm" onClick={generate}>Generate Strong Password</Btn><Btn variant="secondary sm" onClick={copyPassword} disabled={!nextPassword}>Copy Password</Btn></div>
-    <button type="submit" className="admin-btn" disabled={busy}>{busy?'Saving...':'Save New Password'}</button>
-    <p className="admin-note" style={{marginTop:12}}>For username-only users, this requires the secure resetStaffPassword service in Firebase. If the service is unavailable, you can create a new staff login in Admin Users and disable the old account. No password is stored in Firestore.</p>
-   </form>}
-  </>}
-  {done&&<div className="admin-flex" style={{marginTop:16}}>{method==='manual'&&<Btn onClick={copyPassword}>Copy New Password</Btn>}<Btn variant="neutral sm" onClick={onClose}>Done</Btn></div>}
+  <p className="admin-subtitle">Staff account: <strong>{staff.username}</strong></p>
+  {status&&<p role="status" className={'admin-status '+(done?'':'error')}>{status}</p>}
+  {!done?<form onSubmit={save} autoComplete="off" style={{marginTop:18}}>
+   <Field label="New password"><div className="admin-flex" style={{flexWrap:'nowrap'}}><input className="admin-input" type={showPassword?'text':'password'} minLength={12} maxLength={128} autoComplete="new-password" value={nextPassword} onChange={e=>setNextPassword(e.target.value)} required/><Btn variant="secondary sm" onClick={()=>setShowPassword(v=>!v)}>{showPassword?'Hide':'Show'}</Btn></div></Field>
+   <Field label="Confirm new password"><input className="admin-input" type={showPassword?'text':'password'} minLength={12} maxLength={128} autoComplete="new-password" value={confirm} onChange={e=>setConfirm(e.target.value)} required/></Field>
+   <div className="admin-flex" style={{marginBottom:14}}><Btn variant="secondary sm" onClick={generate}>Generate Strong Password</Btn><Btn variant="secondary sm" onClick={copyPassword} disabled={!nextPassword}>Copy Password</Btn></div>
+   <button type="submit" className="admin-btn" disabled={busy}>{busy?'Saving...':'Save New Password'}</button>
+   <p className="admin-note" style={{marginTop:12}}>Saved securely as a password hash in cms_users. No Firebase Authentication or Cloud Function required.</p>
+  </form>:<div className="admin-flex" style={{marginTop:16}}><Btn onClick={copyPassword}>Copy New Password</Btn><Btn variant="neutral sm" onClick={onClose}>Done</Btn></div>}
  </div></div>;
 }
 
-function MediaPicker({api,onPick,onClose,type='all'}){
+const IMAGE_GUIDES={
+ general:{label:'Photograph',ratio:'3:4',size:'1200 × 1600 px',max:'3 MB recommended'},
+ desktop:{label:'Desktop homepage hero',ratio:'16:9',size:'1920 × 1080 px',max:'3 MB recommended'},
+ mobile:{label:'Mobile homepage hero',ratio:'9:16',size:'1080 × 1920 px',max:'3 MB recommended'},
+ bestseller:{label:'Best Seller section',ratio:'2:3',size:'1200 × 1800 px',max:'3 MB recommended'},
+ catalogue:{label:'Product catalogue / studio',ratio:'3:4',size:'1200 × 1600 px',max:'3 MB recommended'},
+ editorial:{label:'Editorial look photograph',ratio:'2:3',size:'1200 × 1800 px',max:'3 MB recommended'},
+ collection:{label:'Collection / category cover',ratio:'4:3',size:'1600 × 1200 px',max:'3 MB recommended'},
+ social:{label:'Social preview',ratio:'1.91:1',size:'1200 × 630 px',max:'3 MB recommended'},
+ favicon:{label:'Favicon',ratio:'1:1',size:'512 × 512 px',max:'250 KB recommended'},
+ logo:{label:'Official logo',ratio:'Original',size:'At least 1000 px wide',max:'Transparent PNG / WebP recommended'}
+};
+const VIDEO_GUIDE={label:'Video',ratio:'16:9',size:'1920 × 1080 px',max:'50 MB maximum (MP4 or WebM)'};
+function MediaGuide({spec='general',type='image'}){
+ const g=type==='video'?VIDEO_GUIDE:(IMAGE_GUIDES[spec]||IMAGE_GUIDES.general);
+ return <div className="cms-media-guide"><strong>{g.label}</strong><span>Recommended: {g.size} · Ratio {g.ratio}</span><span>{type==='video'?'Formats: MP4, WebM':'Formats: JPG, PNG, WebP, GIF'} · {g.max}</span></div>;
+}
+async function mediaRequest(route,body){
+ const res=await fetch('/api/admin/media/'+route,{method:'POST',credentials:'same-origin',...(body instanceof FormData?{body}:{headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})});
+ const data=await res.json().catch(()=>({error:'Unexpected upload response'}));
+ if(!res.ok)throw Error(data.error||'Media upload failed');return data;
+}
+function MediaPicker({api,onPick,onClose,type='all',spec='general'}){
  const [items,setItems]=useState([]),[busy,setBusy]=useState(false),[status,setStatus]=useState('');
  useEffect(()=>{api('media').then(r=>setItems(Array.isArray(r)?r:[])).catch(e=>setStatus(e.message))},[api]);
  const fileAccept=type==='video'?'video/mp4,video/webm':type==='image'?'image/jpeg,image/png,image/webp,image/gif':'image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm';
  const compatible=x=>type==='all'||(type==='video'?x.contentType?.startsWith('video/'):x.contentType?.startsWith('image/'));
- async function upload(files){const file=files?.[0];if(!file)return;if(!['image/jpeg','image/png','image/webp','image/gif','video/mp4','video/webm'].includes(file.type)||(type==='video'&&!file.type.startsWith('video/'))||(type==='image'&&!file.type.startsWith('image/'))||file.size>50*1024*1024){setStatus('Choose an image or MP4/WebM video smaller than 50 MB.');return}setBusy(true);setStatus('Uploading '+file.name+'…');try{const name=file.name.replace(/[^a-zA-Z0-9.\-_]/g,'_').slice(0,100);const key=`media/${Date.now()}-${crypto.randomUUID()}-${name}`;const target=storageRef(mediaStorage,key);await uploadBytes(target,file,{contentType:file.type,cacheControl:'public,max-age=3600'});const url=await getDownloadURL(target);await api('media',{method:'POST',body:{url,path:key,name:file.name,contentType:file.type}});setItems(old=>[{url,path:key,name:file.name,contentType:file.type},...old]);setStatus('Upload complete. Select the file below.')}catch(e){setStatus('Upload failed: '+prettyError(e))}finally{setBusy(false)}}
- return <div className="admin-modal-bg" onClick={onClose}><div className="admin-modal" onClick={e=>e.stopPropagation()}><div className="admin-row"><h2>Media Library</h2><Btn variant="neutral sm" onClick={onClose}>Close ×</Btn></div><p className="admin-subtitle">Select a file or upload a new one. Images and videos are saved to Firebase Storage.</p><p style={{marginTop:15}}><input type="file" accept={fileAccept} disabled={busy} onChange={e=>upload(e.target.files)}/></p>{status&&<p className="admin-status" style={{marginTop:12}}>{status}</p>}<div className="admin-media-grid">{items.filter(compatible).map((item,i)=><button key={item.id||i} className="admin-media-tile" onClick={()=>{onPick(item.url);onClose()}}>{item.contentType?.startsWith('video/')?<video muted playsInline src={item.url} style={{width:'100%',height:140,objectFit:'cover'}}/>:<img src={item.url} alt={item.name||'Upload'}/>}<span>{item.name||'Image'}</span></button>)}</div></div></div>
+ async function upload(files){
+  const file=files?.[0];if(!file)return;
+  if(!['image/jpeg','image/png','image/webp','image/gif','video/mp4','video/webm'].includes(file.type)||file.size>50*1024*1024){setStatus('Choose a JPG/PNG/WebP/GIF or MP4/WebM file under 50 MB.');return}
+  if(type==='video'&&!file.type.startsWith('video/')||type==='image'&&!file.type.startsWith('image/')){setStatus('Please select the correct media type.');return}
+  setBusy(true);setStatus('Uploading '+file.name+'…');
+  try{
+   let response;
+   if(file.size<=3*1024*1024){const form=new FormData();form.append('file',file);response=await mediaRequest('upload',form)}
+   else{
+    const signed=await mediaRequest('sign',{name:file.name,contentType:file.type,size:file.size});
+    const uploaded=await fetch(signed.url,{method:'PUT',headers:{'Content-Type':file.type},body:file});
+    if(!uploaded.ok)throw Error('Large-file upload failed ('+uploaded.status+'). Check your Firebase Storage bucket CORS configuration.');
+    response=await mediaRequest('complete',{uploadId:signed.uploadId});
+   }
+   setItems(old=>[response.item,...old]);setStatus('Upload complete. Select the image or video below.');
+  }catch(error){setStatus('Upload failed: '+prettyError(error))}finally{setBusy(false)}
+ }
+ return <div className="admin-modal-bg" onClick={onClose}><div className="admin-modal" onClick={e=>e.stopPropagation()}><div className="admin-row"><h2>Media Library</h2><Btn variant="neutral sm" onClick={onClose}>Close ×</Btn></div>
+  <p className="admin-subtitle">Select a file or upload a new one.</p><MediaGuide spec={spec} type={type==='video'?'video':'image'}/>
+  <p style={{marginTop:15}}><input type="file" accept={fileAccept} disabled={busy} onChange={e=>upload(e.target.files)}/></p>
+  {status&&<p className="admin-status" role="status" style={{marginTop:12}}>{status}</p>}
+  <div className="admin-media-grid">{items.filter(compatible).map((item,i)=><button key={item.id||i} className="admin-media-tile" onClick={()=>{onPick(item.url);onClose()}}>{item.contentType?.startsWith('video/')?<video muted playsInline src={item.url} style={{width:'100%',height:140,objectFit:'cover'}}/>:<img src={item.url} alt={item.name||'Upload'}/>}<span>{item.name||'Media'}</span></button>)}</div>
+ </div></div>;
 }
-function MediaField({value,onChange,pick}){
+
+function MediaField({value,onChange,pick,spec='general'}){
  const [showUrl,setShowUrl]=useState(false);
  return <div className="cms-simple-media-field">
+  <MediaGuide spec={spec}/>
   {value?<img className="admin-image-preview" style={{maxWidth:225,marginBottom:10}} src={mediaSrc(value)} alt="Selected image"/>:<div className="cms-image-empty">No photograph selected</div>}
-  <div className="admin-flex"><Btn variant="secondary sm" onClick={()=>pick(onChange,'image')}>{value?'Change Image':'Choose / Upload Image'}</Btn>{value&&<Btn variant="neutral sm" onClick={()=>onChange('')}>Remove</Btn>}<Btn variant="neutral sm" onClick={()=>setShowUrl(x=>!x)}>{showUrl?'Hide URL':'Use Image URL'}</Btn></div>
+  <div className="admin-flex"><Btn variant="secondary sm" onClick={()=>pick(onChange,'image',spec)}>{value?'Change Image':'Choose / Upload Image'}</Btn>{value&&<Btn variant="neutral sm" onClick={()=>onChange('')}>Remove</Btn>}<Btn variant="neutral sm" onClick={()=>setShowUrl(x=>!x)}>{showUrl?'Hide URL':'Use Image URL'}</Btn></div>
   {showUrl&&<div style={{marginTop:8}}><Input value={value} onChange={onChange} placeholder="https://... or assets/image.webp"/></div>}
  </div>;
 }
@@ -190,7 +169,7 @@ function VideoField({value,onChange,pick}){
    <Btn variant={mode==='youtube'?'':'secondary sm'} onClick={()=>{setMode('youtube');if(isVideoFile(value))onChange('')}}>YouTube Link</Btn>
    {value&&<Btn variant="neutral sm" onClick={()=>onChange('')}>Remove video</Btn>}
   </div>
-  {mode==='youtube'?<Field label="Paste a YouTube video link"><Input value={isVideoFile(value)?'':(value||'')} placeholder="https://www.youtube.com/watch?v=..." onChange={onChange}/></Field>:<><p className="admin-note" style={{marginBottom:8}}>MP4 or WebM, up to 50 MB. Upload to Firebase Storage.</p><div className="admin-flex"><Btn variant="secondary" onClick={()=>pick(onChange,'video')}>Select / Upload Video</Btn>{isVideoFile(value)&&<span className="admin-note">Video selected</span>}</div></>}
+  {mode==='youtube'?<Field label="Paste a YouTube video link"><Input value={isVideoFile(value)?'':(value||'')} placeholder="https://www.youtube.com/watch?v=..." onChange={onChange}/></Field>:<><MediaGuide type="video"/><div className="admin-flex"><Btn variant="secondary" onClick={()=>pick(onChange,'video','film')}>Select / Upload Video</Btn>{isVideoFile(value)&&<span className="admin-note">Video selected</span>}</div></>}
   {mode==='youtube'&&value&&!embed&&<p className="admin-status error">Enter a valid YouTube link.</p>}
   {embed&&mode==='youtube'&&<iframe title="YouTube preview" src={embed} loading="lazy" allow="encrypted-media; picture-in-picture" allowFullScreen className="cms-video-preview"/>}
   {mode==='upload'&&isVideoFile(value)&&<video className="cms-video-preview" src={mediaSrc(value)} controls playsInline preload="metadata"/>}
@@ -278,7 +257,7 @@ function Dashboard({api,me,onNavigate,canOpen}){
  useEffect(()=>{refresh()},[]);
  async function seed(){if(!confirm('Import the approved V6.9 baseline into Firestore? Existing records will NOT be overwritten.'))return;setSeeding(true);try{await api('seed',{method:'POST'});setIssue('Baseline imported. Your live website can now be edited from Admin.');refresh()}catch(e){setIssue('Import failed: '+e.message)}finally{setSeeding(false)}}
  const metrics=[['Products',counts.products,'products'],['Website Pages',counts.pages,'pages'],['New Enquiries',counts.enquiries,'enquiries'],['Appointment Requests',counts.appointments,'appointments']].filter(([, ,id])=>canOpen(id));
- return <><div className="admin-header"><div><p className="admin-tagline">YOUR CONTENT, YOUR CONTROL</p><h1>Good day, {me.username}.</h1><p className="admin-subtitle">Manage the complete SHANERYN website without touching code.</p><p className="admin-access-label">Signed in as {ROLE_NAMES[me.role]||me.role}</p></div>{me.role==='super_admin'&&<Btn onClick={seed} disabled={seeding}>{seeding?'Importing…':'Import V6.9 Baseline'}</Btn>}</div>{issue&&<p className="admin-status">{issue}</p>}<div className="admin-metrics">{metrics.map(([name,count,id])=><div className="admin-card" key={name} onClick={()=>onNavigate(id)} style={{cursor:'pointer'}}><p className="admin-metric-label">{name}</p><p className="admin-metric-value">{count}</p></div>)}</div><div className="admin-grid-2"><div className="admin-card"><h2>Quick Actions</h2>{[['Edit Homepage','pages'],['Manage Products','products'],['Review Enquiries','enquiries'],['Manage Booking Requests','appointments'],['Change Social Links','settings'],['Manage Admin Users','users']].filter(([,to])=>canOpen(to)).map(([n,to])=><div className="admin-row" key={n} style={{padding:'12px 0',borderBottom:'1px solid #eee'}}><span>{n}</span><Btn variant="secondary sm" onClick={()=>onNavigate(to)}>Open ↗</Btn></div>)}</div><div className="admin-card"><h2>How publishing works</h2><p>Edit any page, product or setting, then select <strong>Save & Publish</strong>. No approvals or queues. Sections and individual content elements may be hidden without deleting their saved data.</p><div className="admin-divider"/><p className="admin-note">Firebase Authentication and secure Firestore rules protect the CMS. No gcloud, service account key or admin bootstrap script is needed. Page edits keep revision history.</p></div></div></>
+ return <><div className="admin-header"><div><p className="admin-tagline">YOUR CONTENT, YOUR CONTROL</p><h1>Good day, {me.username}.</h1><p className="admin-subtitle">Manage the complete SHANERYN website without touching code.</p><p className="admin-access-label">Signed in as {ROLE_NAMES[me.role]||me.role}</p></div>{me.role==='super_admin'&&<Btn onClick={seed} disabled={seeding}>{seeding?'Importing…':'Import V6.9 Baseline'}</Btn>}</div>{issue&&<p className="admin-status">{issue}</p>}<div className="admin-metrics">{metrics.map(([name,count,id])=><div className="admin-card" key={name} onClick={()=>onNavigate(id)} style={{cursor:'pointer'}}><p className="admin-metric-label">{name}</p><p className="admin-metric-value">{count}</p></div>)}</div><div className="admin-grid-2"><div className="admin-card"><h2>Quick Actions</h2>{[['Edit Homepage','pages'],['Manage Products','products'],['Review Enquiries','enquiries'],['Manage Booking Requests','appointments'],['Change Social Links','settings'],['Manage Admin Users','users']].filter(([,to])=>canOpen(to)).map(([n,to])=><div className="admin-row" key={n} style={{padding:'12px 0',borderBottom:'1px solid #eee'}}><span>{n}</span><Btn variant="secondary sm" onClick={()=>onNavigate(to)}>Open ↗</Btn></div>)}</div><div className="admin-card"><h2>How publishing works</h2><p>Edit any page, product or setting, then select <strong>Save & Publish</strong>. No approvals or queues. Sections and individual content elements may be hidden without deleting their saved data.</p><div className="admin-divider"/><p className="admin-note">Server-managed login and Firestore rules protect the CMS. Staff passwords are hashed in cms_users; only server APIs can edit protected data. Page edits retain revision history.</p></div></div></>
 }
 
 function PageManager({api,pick}){
@@ -303,19 +282,19 @@ function PageManager({api,pick}){
  return <><div className="admin-header"><div><p className="admin-tagline">LIVE VISUAL CONTENT STUDIO</p><h1>Page Manager</h1><p className="admin-subtitle">Every section and individual text, image, link and label can be edited or hidden.</p></div><div className="admin-flex"><Btn variant="secondary" onClick={newPage}>+ New Page</Btn><Btn variant="secondary" onClick={addSection} disabled={!page}>+ Add Section</Btn><Btn onClick={save} disabled={!page||saving}>{saving?'Publishing…':'Save & Publish ↗'}</Btn></div></div>
  {status&&<p className="admin-status">{status}</p>}
  <div className="admin-flex" style={{marginBottom:18}}><div style={{minWidth:250}}><Select value={selected} onChange={setSelected} options={pages.map(p=>({value:p.slug,label:p.name||p.slug}))}/></div>{page&&<><Check label="Page visible" checked={page.visible!==false} onChange={v=>update('visible',v)}/><a href={selected==='index'?'/':'/'+selected} target="_blank" rel="noreferrer" style={{color:'#983f73'}}>View current live page ↗</a></>}</div>
- {page?<><div className="admin-card" style={{marginBottom:18}}><div className="admin-form-row"><Field label="Browser title"><Input value={page.title} onChange={v=>update('title',v)}/></Field><Field label="Page name"><Input value={page.name} onChange={v=>update('name',v)}/></Field></div><Field label="SEO meta description"><TextArea rows={2} value={page.description} onChange={v=>update('description',v)}/></Field><Field label="Social preview image (Open Graph)"><MediaField value={page.socialImage||''} onChange={v=>update('socialImage',v)} pick={pick}/></Field></div>
+ {page?<><div className="admin-card" style={{marginBottom:18}}><div className="admin-form-row"><Field label="Browser title"><Input value={page.title} onChange={v=>update('title',v)}/></Field><Field label="Page name"><Input value={page.name} onChange={v=>update('name',v)}/></Field></div><Field label="SEO meta description"><TextArea rows={2} value={page.description} onChange={v=>update('description',v)}/></Field><Field label="Social preview image (Open Graph)"><MediaField spec="social" value={page.socialImage||''} onChange={v=>update('socialImage',v)} pick={pick}/></Field></div>
  {selected==='index'&&<div className="admin-card cms-simple-panel" style={{marginBottom:18}}>
    <div className="admin-row"><div><h2>Homepage Hero Banner</h2><p className="admin-note">Separate desktop and mobile images. The website automatically shows the right image for each screen.</p></div><span className="admin-pill active">2 image sizes</span></div>
    <div className="admin-grid-2">
-    <Field label="Desktop Banner (wide)"><MediaField value={page.heroImages?.desktop||page.patches?.[page.fields.find(f=>f.kind==='background'&&f.section==='s-000')?.id]?.value||'assets/hero-client-shaneryn7231.jpg'} onChange={v=>update('heroImages',{...page.heroImages,desktop:v})} pick={pick}/><small className="admin-note">Recommended: 1920 × 1080 px</small></Field>
-    <Field label="Mobile Banner (portrait)"><MediaField value={page.heroImages?.mobile||page.heroImages?.desktop||'assets/hero-client-shaneryn7231.jpg'} onChange={v=>update('heroImages',{...page.heroImages,mobile:v})} pick={pick}/><small className="admin-note">Recommended: 900 × 1200 px</small></Field>
+    <Field label="Desktop Banner (wide)"><MediaField spec="desktop" value={page.heroImages?.desktop||page.patches?.[page.fields.find(f=>f.kind==='background'&&f.section==='s-000')?.id]?.value||'assets/hero-client-shaneryn7231.jpg'} onChange={v=>update('heroImages',{...page.heroImages,desktop:v})} pick={pick}/><small className="admin-note">Recommended: 1920 × 1080 px · 16:9</small></Field>
+    <Field label="Mobile Banner (portrait)"><MediaField spec="mobile" value={page.heroImages?.mobile||page.heroImages?.desktop||'assets/hero-client-shaneryn7231.jpg'} onChange={v=>update('heroImages',{...page.heroImages,mobile:v})} pick={pick}/><small className="admin-note">Recommended: 1080 × 1920 px · 9:16</small></Field>
    </div>
    <Field label="Banner image description (accessibility)"><Input value={page.heroImages?.alt||'SHANERYN fashion campaign'} onChange={v=>update('heroImages',{...page.heroImages,alt:v})}/></Field>
    <p className="admin-note">Save & Publish to apply the images. Homepage typography, animation and layout remain unchanged.</p>
   </div>}
  {selected==='index'&&bestSellerPhoto&&<div className="admin-card cms-simple-panel" style={{marginBottom:18}}>
    <div className="admin-row"><div><h2>Homepage Best Seller</h2><p className="admin-note">Your uploaded photograph is displayed here, regardless of which product you link to.</p></div><span className="admin-pill active">Independent image</span></div>
-   <Field label="Best Seller Section Photograph"><MediaField value={page.patches?.[bestSellerPhoto.id]?.value??bestSellerPhoto.value} onChange={value=>updatePatch(bestSellerPhoto.id,{value})} pick={pick}/></Field>
+   <Field label="Best Seller Section Photograph"><MediaField spec="bestseller" value={page.patches?.[bestSellerPhoto.id]?.value??bestSellerPhoto.value} onChange={value=>updatePatch(bestSellerPhoto.id,{value})} pick={pick}/></Field>
    {bestSellerAlt&&<Field label="Image Description (accessibility)"><Input value={page.patches?.[bestSellerAlt.id]?.value??bestSellerAlt.value} onChange={value=>updatePatch(bestSellerAlt.id,{value})}/></Field>}
    <Check label="Show Best Seller Section" checked={page.sectionSettings?.[bestSellerSection.id]?.visible!==false} onChange={visible=>changeSection(bestSellerSection.id,{visible})}/>
    <p className="admin-note">To choose which product opens when visitors click this section, go to Global Settings → Homepage Highlights → Best Seller. Selecting a product never replaces this photograph.</p>
@@ -363,14 +342,14 @@ function ProductManager({api,pick}){
   <Field label="Garment pieces included"><ChipEditor value={item.pieces} onChange={v=>update('pieces',v)} suggestions={['Top','Pant','Skirt','Blouse','Jacket','Gown','Tunic','Dupatta']}/></Field>
   <div className="admin-divider"/><h2>Assign to Collections (optional)</h2><p className="admin-note" style={{marginBottom:12}}>A product has one garment category and may appear in several curated collections.</p>
   {collections.length?<div className="cms-collection-checks">{collections.map(c=><Check key={c.id} label={c.name} checked={(item.collectionIds||[]).includes(c.id)} onChange={v=>update('collectionIds',v?[...(item.collectionIds||[]),c.id]:(item.collectionIds||[]).filter(x=>x!==c.id))}/>)}</div>:<p className="admin-note">No curated collections yet. Create your first one in the Collections menu.</p>}
-  <div className="admin-divider"/><h2>Main Photographs</h2><div className="admin-form-row"><Field label="Collection card (studio photograph)"><MediaField value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Look detail (editorial photograph)"><MediaField value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
+  <div className="admin-divider"/><h2>Main Photographs</h2><div className="admin-form-row"><Field label="Collection card (studio photograph)"><MediaField spec="catalogue" value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Look detail (editorial photograph)"><MediaField spec="editorial" value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
   <div className="admin-divider"/><h2>Visibility & Highlights</h2><div className="cms-checkbox-stack"><Check label="Show on website" checked={item.visible!==false} onChange={v=>update('visible',v)}/><Check label="Featured product" checked={item.featured} onChange={v=>update('featured',v)}/><Check label="Best Seller" checked={item.bestSeller} onChange={v=>update('bestSeller',v)}/></div>
  </div>}
  {tab==='photos'&&<div><h2>Product Gallery</h2><p className="admin-note" style={{marginBottom:14}}>Add photographs in the order customers should see them.</p>
-  <div className="admin-form-row"><Field label="Studio image"><MediaField value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Editorial image"><MediaField value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
+  <div className="admin-form-row"><Field label="Studio image"><MediaField spec="catalogue" value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Editorial image"><MediaField spec="editorial" value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
   <p className="admin-note" style={{marginBottom:16}}>The Homepage Best Seller photograph is managed under Page Manager → Homepage → Best Seller, not here. Product photographs can be changed without altering that section image.</p>
   <div className="admin-row"><h2>Gallery ({item.gallery?.length||0})</h2><Btn variant="secondary sm" onClick={()=>update('gallery',[...(item.gallery||[]),{src:'',alt:'Product photograph'}])}>+ Add Photo</Btn></div>
-  {(item.gallery||[]).map((g,i)=><div className="admin-editor-field" key={i}><div className="admin-row"><strong>Photo {i+1}</strong><div className="admin-flex"><Btn variant="neutral sm" disabled={i===0} onClick={()=>{const a=[...item.gallery];[a[i-1],a[i]]=[a[i],a[i-1]];update('gallery',a)}}>Up</Btn><Btn variant="neutral sm" disabled={i===item.gallery.length-1} onClick={()=>{const a=[...item.gallery];[a[i+1],a[i]]=[a[i],a[i+1]];update('gallery',a)}}>Down</Btn><Btn variant="danger sm" onClick={()=>update('gallery',item.gallery.filter((_,j)=>j!==i))}>Remove</Btn></div></div><MediaField value={g.src} onChange={v=>update('gallery',item.gallery.map((x,j)=>j===i?{...x,src:v}:x))} pick={pick}/><Input value={g.alt} placeholder="Describe photo" onChange={v=>update('gallery',item.gallery.map((x,j)=>j===i?{...x,alt:v}:x))}/></div>)}
+  {(item.gallery||[]).map((g,i)=><div className="admin-editor-field" key={i}><div className="admin-row"><strong>Photo {i+1}</strong><div className="admin-flex"><Btn variant="neutral sm" disabled={i===0} onClick={()=>{const a=[...item.gallery];[a[i-1],a[i]]=[a[i],a[i-1]];update('gallery',a)}}>Up</Btn><Btn variant="neutral sm" disabled={i===item.gallery.length-1} onClick={()=>{const a=[...item.gallery];[a[i+1],a[i]]=[a[i],a[i+1]];update('gallery',a)}}>Down</Btn><Btn variant="danger sm" onClick={()=>update('gallery',item.gallery.filter((_,j)=>j!==i))}>Remove</Btn></div></div><MediaField spec="editorial" value={g.src} onChange={v=>update('gallery',item.gallery.map((x,j)=>j===i?{...x,src:v}:x))} pick={pick}/><Input value={g.alt} placeholder="Describe photo" onChange={v=>update('gallery',item.gallery.map((x,j)=>j===i?{...x,alt:v}:x))}/></div>)}
   <div className="admin-divider"/><h2>Optional Video</h2><VideoField value={item.video} onChange={v=>update('video',v)} pick={pick}/>
  </div>}
  {tab==='advanced'&&<div><p className="admin-note" style={{marginBottom:12}}>Optional product settings. Normally you can leave these unchanged.</p>
@@ -402,7 +381,7 @@ function CategoryManager({api,pick}){
  <div className="admin-split"><div className="admin-card">{items.map(x=><button key={x.id} className={'admin-section-btn '+(selected===x.id?'selected':'')} onClick={()=>setSelected(x.id)}><strong>{x.name}</strong><span className="admin-section-counter">{products.filter(p=>p.cat===x.name||p.categoryId===x.id).length} products - {x.visible?'Visible':'Hidden'}</span></button>)}</div>
  {item&&<div className="admin-card"><h2>{item.name||'New Category'}</h2><Field label="Category Name"><Input value={item.name} onChange={v=>update('name',v)} placeholder="e.g. Pant Sets"/></Field>
  <Field label="Description"><TextArea value={item.copy} onChange={v=>update('copy',v)} placeholder="Short description for this category"/></Field>
- <Field label="Category Photograph"><MediaField value={item.image} onChange={v=>update('image',v)} pick={pick}/></Field>
+ <Field label="Category Photograph"><MediaField spec="collection" value={item.image} onChange={v=>update('image',v)} pick={pick}/></Field>
  <Check label="Show this category" checked={item.visible} onChange={v=>update('visible',v)}/>
  <div className="admin-divider"/><details><summary>More options</summary><Field label="Display Order"><Input type="number" value={item.sortOrder} onChange={v=>update('sortOrder',Number(v))}/></Field><small className="admin-note">Internal URL key: {item.id||slugify(item.name)}</small></details>
  <p className="admin-note" style={{marginTop:14}}>Category changes update product filters. You can rename a category without manually editing every product.</p></div>}</div></>;
@@ -424,7 +403,7 @@ function CollectionManager({api,pick}){
  <div className="admin-split"><div className="admin-card">{items.map(x=><button key={x.id} className={'admin-section-btn '+(selected===x.id?'selected':'')} onClick={()=>setSelected(x.id)}><strong>{x.name}</strong><span className="admin-section-counter">{x.productIds?.length||0} products - {x.visible?'Visible':'Hidden'}</span></button>)}{!items.length&&<p className="admin-empty">No curated collections yet. Create a Festive Edit, Evening Edit or another collection.</p>}</div>
  {item&&<div className="admin-card"><h2>{item.name||'New Collection'}</h2><Field label="Collection Name"><Input value={item.name} onChange={v=>update('name',v)} placeholder="e.g. The Festive Edit"/></Field>
  <Field label="Short Description"><TextArea value={item.description} onChange={v=>update('description',v)}/></Field>
- <Field label="Cover Photograph"><MediaField value={item.image} onChange={v=>update('image',v)} pick={pick}/></Field>
+ <Field label="Cover Photograph"><MediaField spec="collection" value={item.image} onChange={v=>update('image',v)} pick={pick}/></Field>
  <Check label="Show this collection" checked={item.visible} onChange={v=>update('visible',v)}/>
  <div className="admin-divider"/><h2>Select Products</h2><MultiProductPicker products={products} selected={item.productIds||[]} onChange={v=>update('productIds',v)}/>
  <div className="admin-divider"/><details><summary>More options</summary><Field label="Display Order"><Input type="number" value={item.sortOrder} onChange={v=>update('sortOrder',Number(v))}/></Field><small className="admin-note">URL: /collections/{item.id||slugify(item.name)}</small></details>
@@ -460,7 +439,7 @@ function SettingsManager({api,pick}){
  {status&&<p className="admin-status">{status}</p>}{data&&<div className="admin-grid-2">
   <div className="admin-card"><h2>Contact & WhatsApp</h2>{[['email','Studio Email'],['phone','Phone'],['whatsapp','WhatsApp Number'],['address','Studio Address'],['mapsUrl','Google Maps Link']].map(([k,label])=><Field key={k} label={label}>{k==='address'?<TextArea value={data.contact?.[k]} onChange={v=>set('contact',k,v)}/>:<Input value={data.contact?.[k]} onChange={v=>set('contact',k,v)}/>}</Field>)}<p className="admin-note">Enter only verified business details. All pages will use the same contact information.</p></div>
   <div className="admin-card"><h2>Social Media</h2>{[['instagram','Instagram'],['facebook','Facebook'],['youtube','YouTube'],['linkedin','LinkedIn']].map(([k,label])=><Field key={k} label={label}><Input value={data.social?.[k]} onChange={v=>set('social',k,v)} placeholder={'Official '+label+' profile URL'}/></Field>)}</div>
-  <div className="admin-card"><h2>Brand Appearance</h2><Field label="Official Logo"><MediaField value={data.branding?.logo} onChange={v=>set('branding','logo',v)} pick={pick}/></Field><Field label="Favicon"><MediaField value={data.branding?.favicon} onChange={v=>set('branding','favicon',v)} pick={pick}/></Field><Field label="Magenta Accent"><Input value={data.branding?.accent} onChange={v=>set('branding','accent',v)} placeholder="#c33583"/></Field><Field label="Founder LinkedIn"><Input value={data.founderLinkedin} onChange={v=>setData(old=>({...old,founderLinkedin:v}))}/></Field></div>
+  <div className="admin-card"><h2>Brand Appearance</h2><Field label="Official Logo"><MediaField spec="logo" value={data.branding?.logo} onChange={v=>set('branding','logo',v)} pick={pick}/></Field><Field label="Favicon"><MediaField spec="favicon" value={data.branding?.favicon} onChange={v=>set('branding','favicon',v)} pick={pick}/></Field><Field label="Magenta Accent"><Input value={data.branding?.accent} onChange={v=>set('branding','accent',v)} placeholder="#c33583"/></Field><Field label="Founder LinkedIn"><Input value={data.founderLinkedin} onChange={v=>setData(old=>({...old,founderLinkedin:v}))}/></Field></div>
   <div className="admin-card"><h2>Homepage Highlights</h2><p className="admin-note" style={{marginBottom:12}}>Select looks by name and photograph. You do not need to know product IDs.</p>
    <Field label="Best Seller — Linked Product"><Select value={data.home?.bestSellerId||''} options={[{value:'',label:'Choose linked product'},...products.filter(p=>p.visible!==false).map(p=>({value:p.id,label:p.title+' - '+p.cat}))]} onChange={v=>set('home','bestSellerId',v)}/></Field>
    {products.find(p=>p.id===data.home?.bestSellerId)&&<div className="cms-featured-preview"><img src={mediaSrc(products.find(p=>p.id===data.home.bestSellerId)?.catalogueImg||products.find(p=>p.id===data.home.bestSellerId)?.img)} alt="Linked product thumbnail only"/><span>Linked product: {products.find(p=>p.id===data.home.bestSellerId)?.title}<br/><small>Opens {productPath(products.find(p=>p.id===data.home.bestSellerId))}</small></span></div>}
@@ -471,31 +450,24 @@ function SettingsManager({api,pick}){
   <div className="admin-card"><h2>Search Engine Settings</h2><Field label="Website Name"><Input value={data.seo?.siteName} onChange={v=>set('seo','siteName',v)}/></Field><Field label="Default Meta Description"><TextArea value={data.seo?.defaultDescription} onChange={v=>set('seo','defaultDescription',v)}/></Field></div>
  </div>}</>;
 }
-function MediaManager({api,pick}){const [items,setItems]=useState([]),[status,setStatus]=useState('');useEffect(()=>{api('media').then(setItems).catch(e=>setStatus(e.message))},[api]);return <><div className="admin-header"><div><h1>Media Library</h1><p className="admin-subtitle">Upload product, campaign and editorial photographs once; reuse their URLs throughout the CMS.</p></div><Btn onClick={()=>pick(()=>{})}>+ Upload Image</Btn></div>{status&&<p className="admin-status">{status}</p>}<div className="admin-card"><div className="admin-media-grid">{items.map(x=><button key={x.id} className="admin-media-tile" title="Copy image URL" onClick={()=>{navigator.clipboard.writeText(x.url);setStatus('Image URL copied')}}>{x.contentType?.startsWith('video/')?<video muted playsInline src={x.url} style={{width:'100%',height:140,objectFit:'cover'}}/>:<img src={x.url} alt={x.name||'Media'}/>}<span>{x.name||'Image'} · Copy URL</span></button>)}</div>{!items.length&&<p className="admin-empty">No Firebase uploads yet. The approved V6.9 photographs are already available in the website's local assets folder.</p>}</div></>}
+function MediaManager({api,pick}){const [items,setItems]=useState([]),[status,setStatus]=useState('');useEffect(()=>{api('media').then(setItems).catch(e=>setStatus(e.message))},[api]);return <><div className="admin-header"><div><h1>Media Library</h1><p className="admin-subtitle">Upload product, campaign and editorial photographs once; reuse their URLs throughout the CMS.</p></div><Btn onClick={()=>pick(()=>{api('media').then(setItems).catch(e=>setStatus(e.message))},'all','general')}>+ Upload Media</Btn></div>{status&&<p className="admin-status">{status}</p>}<div className="admin-card"><div className="admin-media-grid">{items.map(x=><button key={x.id} className="admin-media-tile" title="Copy image URL" onClick={()=>{navigator.clipboard.writeText(x.url);setStatus('Image URL copied')}}>{x.contentType?.startsWith('video/')?<video muted playsInline src={x.url} style={{width:'100%',height:140,objectFit:'cover'}}/>:<img src={x.url} alt={x.name||'Media'}/>}<span>{x.name||'Image'} · Copy URL</span></button>)}</div>{!items.length&&<p className="admin-empty">No Firebase uploads yet. The approved V6.9 photographs are already available in the website's local assets folder.</p>}</div></>}
 function UserManager({api,me}){
  const initial={username:'',password:'',role:'editor'};
  const [users,setUsers]=useState([]),[form,setForm]=useState(initial),[status,setStatus]=useState(''),[busy,setBusy]=useState(false),[creating,setCreating]=useState(false),[showPassword,setShowPassword]=useState(false),[resetTarget,setResetTarget]=useState(null),[updatingId,setUpdatingId]=useState('');
  const roles=[{value:'editor',label:'Content Editor'},{value:'products',label:'Product Manager'},{value:'enquiries',label:'Enquiry / Appointment Staff'},{value:'viewer',label:'Read Only'},{value:'super_admin',label:'Super Admin'}];
  async function load(){try{setUsers(await api('users'))}catch(e){setStatus(e.message)}}
  useEffect(()=>{load()},[api]);
- async function add(e){e.preventDefault();setBusy(true);setStatus('');
-  const username=normalizeAdminUsername(form.username);let secondaryApp,secondaryAuth,created;
+ async function add(e){
+  e.preventDefault();setBusy(true);setStatus('');
+  const username=normalizeAdminUsername(form.username);
   try{
-   if(!validAdminUsername(username))throw Error('Username must be 3-32 characters; use letters, numbers, dots, underscores or hyphens.');
-   if(users.some(u=>normalizeAdminUsername(u.username)===username))throw Error('This username is already in use.');
-   if(form.password.length<12)throw Error('Use a password with at least 12 characters.');
-   // Firebase Authentication uses a generated internal identifier. No email is required in the staff form.
-   const email=usernameToAuthEmail(username);
-   secondaryApp=initializeApp(firebaseApp.options,'shaneryn-staff-create-'+Date.now());
-   secondaryAuth=getAuth(secondaryApp);
-   await setPersistence(secondaryAuth,inMemoryPersistence);
-   created=await createUserWithEmailAndPassword(secondaryAuth,email,form.password);
-   try{await api('users',{method:'POST',body:{uid:created.user.uid,email,username,loginType:'username',role:form.role}})}
-   catch(err){try{await deleteUser(created.user)}catch{throw Error('Firebase account created but CMS permissions failed. Ask your developer to reconcile the account. Original error: '+err.message)}throw err}
+   if(!validAdminUsername(username))throw Error('Username must be 3-32 characters, starting with a letter.');
+   if(users.some(u=>normalizeAdminUsername(u.username)===username))throw Error('This username already exists.');
+   if(form.password.length<12)throw Error('Use a password of at least 12 characters.');
+   await api('users',{method:'POST',body:{username,password:form.password,role:form.role}});
    setForm(initial);setCreating(false);setShowPassword(false);
-   setStatus('User '+username+' created successfully. Give them their username and password privately.');await load();
-  }catch(err){setStatus(err?.code==='auth/email-already-in-use'?'This username is already registered in Firebase. Try another username.':'Could not create user: '+prettyError(err))}
-  finally{if(secondaryAuth){try{await signOut(secondaryAuth)}catch{}}if(secondaryApp){try{await deleteApp(secondaryApp)}catch{}}setBusy(false)}
+   setStatus('User '+username+' created. Share their password privately.');await load();
+  }catch(error){setStatus('Could not create user: '+prettyError(error))}finally{setBusy(false)}
  }
  async function update(user,patch){
   if(user.id===me.uid){setStatus('You cannot change or disable your own Super Admin account here.');return}
@@ -506,7 +478,7 @@ function UserManager({api,me}){
   finally{setUpdatingId('')}
  }
  const activeCount=users.filter(u=>u.active).length;
- return <><div className="admin-header cms-users-header"><div><h1>Admin Users</h1><p className="admin-subtitle">Create accounts, reset passwords or control access. No Firebase UID or email entry required.</p></div><Btn onClick={()=>{setCreating(v=>!v);setStatus('')}}>{creating?'Close Form':'+ Create User'}</Btn></div>
+ return <><div className="admin-header cms-users-header"><div><h1>Admin Users</h1><p className="admin-subtitle">Create accounts, reset passwords or control access. Username, password and role only. No email or UID required.</p></div><Btn onClick={()=>{setCreating(v=>!v);setStatus('')}}>{creating?'Close Form':'+ Create User'}</Btn></div>
  {status&&<p className="admin-status" role="status">{status}</p>}
  {creating&&<div className="admin-card cms-staff-create"><div className="admin-row"><h2>Create Staff Account</h2><Btn variant="neutral sm" onClick={()=>setCreating(false)}>Cancel</Btn></div>
   <form onSubmit={add} autoComplete="off" className="cms-staff-form">
@@ -519,7 +491,7 @@ function UserManager({api,me}){
  <div className="admin-card"><div className="admin-row cms-staff-list-heading"><h2>Staff Accounts</h2><span className="admin-note">{activeCount} active · {users.length} total</span></div>
  {users.map(user=><div className="cms-staff-row" key={user.id}>
   <div className="cms-staff-identity"><div className="cms-staff-name"><strong>{user.username||user.email}</strong>{user.id===me.uid&&<span className="admin-pill">You</span>}<span className={'admin-pill '+(user.active?'active':'')}>{user.active?'Active':'Disabled'}</span></div>
-   <p className="admin-note">{ROLE_NAMES[user.role]||user.role}{user.loginType==='username'||isInternalStaffEmail(user.email)?' · Username login':' · Email login'}</p>
+   <p className="admin-note">{ROLE_NAMES[user.role]||user.role} · Username login</p>
   </div>
   {user.id!==me.uid?<div className="cms-staff-actions">
    <Btn variant="secondary sm" onClick={()=>setResetTarget(user)} disabled={updatingId===user.id}>Reset Password</Btn>
@@ -527,21 +499,23 @@ function UserManager({api,me}){
    <details className="cms-staff-permissions"><summary>Access Role</summary><div className="cms-staff-permissions-select"><Select value={user.role} options={roles} disabled={updatingId===user.id} onChange={v=>update(user,{role:v})}/></div></details>
   </div>:<p className="admin-note cms-staff-self-note">Use the account menu to change your password.</p>}
  </div>)}{!users.length&&<p className="admin-empty">Your staff accounts will appear here. Click Create User to add one.</p>}
- <p className="admin-note" style={{marginTop:14}}>Passwords cannot be viewed in this list. Firebase Authentication verifies them securely. For an original email-based admin, Reset Password can send an email link; username-only accounts use the secure reset service.</p>
- </div>{resetTarget&&<ResetStaffPassword staff={resetTarget} onClose={()=>setResetTarget(null)}/>}</>;
+ <p className="admin-note" style={{marginTop:14}}>Existing passwords cannot be viewed. Super Admin can securely set a new password for staff without any Firebase Authentication reset service.</p>
+ </div>{resetTarget&&<ResetStaffPassword staff={resetTarget} api={api} onClose={()=>setResetTarget(null)}/>}</>;
 }
 
 export default function CmsApp(){
  const [session,setSession]=useState(undefined),[me,setMe]=useState(null),[screen,setScreen]=useState('dashboard'),[error,setError]=useState(''),[picker,setPicker]=useState(null),[changePassword,setChangePassword]=useState(false);
  const api=React.useCallback(cmsApi,[]);
- useEffect(()=>onAuthStateChanged(firebaseAuth,user=>setSession(user)),[]);
- useEffect(()=>{if(!session){setMe(null);setError('');return}setError('');api('me').then(setMe).catch(e=>{setError(e.message);setMe(null)})},[session,api]);
+ useEffect(()=>{let alive=true;authApi('me').then(user=>{if(alive){setMe(user);setSession(user)}}).catch(()=>{if(alive){setMe(null);setSession(null)}});return()=>{alive=false}},[]);
  useEffect(()=>{document.title='SHANERYN | Content Studio'},[]);
- const pick=(callback,type='all')=>setPicker({onPick:callback,type});
- const allowed=(view)=>view==='dashboard'||me?.role==='super_admin'||(view==='pages'&&['editor','viewer'].includes(me?.role))||(['products','categories','collections','media'].includes(view)&&['editor','products'].includes(me?.role))||(['enquiries','appointments'].includes(view)&&me?.role==='enquiries')||(['forms','settings'].includes(view)&&me?.role==='editor');
+ useEffect(()=>{const expired=()=>{setMe(null);setSession(null)};window.addEventListener('shaneryn-session-expired',expired);return()=>window.removeEventListener('shaneryn-session-expired',expired)},[]);
+ const pick=(callback,type='all',spec='general')=>setPicker({onPick:callback,type,spec});
+ async function logout(){try{await authApi('logout')}finally{setMe(null);setSession(null);setScreen('dashboard')}}
+ function login(user){setMe(user);setSession(user);setScreen('dashboard');setError('')}
+ const allowed=(view)=>view==='dashboard'||me?.role==='super_admin'||(view==='pages'&&['editor','viewer'].includes(me?.role))||(['products','categories','collections','media'].includes(view)&&['editor','products','viewer'].includes(me?.role))||(['enquiries','appointments'].includes(view)&&me?.role==='enquiries')||(['forms','settings'].includes(view)&&['editor','viewer'].includes(me?.role));
  const availableNav=NAV.filter(([key])=>allowed(key));
- if(session===undefined)return <div className="admin-shell admin-login-wrap"><div style={{color:'white'}}>Loading secure admin…</div></div>;
- if(!session)return <Login onLogin={()=>{setError('');setScreen('dashboard')}}/>;
- if(!me)return <div className="admin-shell admin-login-wrap"><div className="admin-login"><div className="login-logo">SHANERYN</div><p className="login-note">{error||'Checking administrator permissions…'}</p><button onClick={()=>signOut(firebaseAuth)}>Sign out</button></div></div>;
- return <div className="admin-shell"><div className="admin-main-layout"><aside className="admin-sidebar"><div><div className="admin-wordmark">SHANERYN</div><div className="admin-subword">CONTENT STUDIO</div></div><div className="admin-mobile-nav"><label htmlFor="admin-mobile-module">Admin menu <small>({ROLE_NAMES[me.role]||me.role})</small></label><select id="admin-mobile-module" aria-label="Choose admin module" value={screen} onChange={e=>setScreen(e.target.value)}>{availableNav.map(([key,,name])=><option key={key} value={key}>{name}</option>)}</select><div className="admin-mobile-actions"><button type="button" onClick={()=>setChangePassword(true)}>Change Password</button><a href="/" target="_blank" rel="noreferrer">View Website ↗</a><button type="button" onClick={()=>signOut(firebaseAuth)}>Sign out</button></div></div><nav aria-label="Admin modules">{availableNav.map(([key,icon,name])=><button key={key} className={'admin-navitem '+(screen===key?'active':'')} onClick={()=>setScreen(key)}><span className="admin-navicon">{icon}</span>{name}</button>)}</nav><div className="admin-sidebar-footer"><strong>{me.username}</strong><br/>{me.role.replace('_',' ')}<div style={{marginTop:12}}><button className="admin-navitem" onClick={()=>setChangePassword(true)}>Change Password</button><button className="admin-navitem" onClick={()=>signOut(firebaseAuth)}>↩ Sign Out</button></div><a href="/" target="_blank" rel="noreferrer" style={{color:'#d79bb9'}}>View Website ↗</a></div></aside><main className="admin-main">{screen==='dashboard'?<Dashboard api={api} me={me} onNavigate={setScreen} canOpen={allowed}/>:screen==='pages'?<PageManager api={api} pick={pick}/>:screen==='products'?<ProductManager api={api} pick={pick}/>:screen==='categories'?<CategoryManager api={api} pick={pick}/>:screen==='collections'?<CollectionManager api={api} pick={pick}/>:screen==='forms'?<FormManager api={api}/>:screen==='enquiries'?<RequestsManager api={api} kind="enquiry"/>:screen==='appointments'?<RequestsManager api={api} kind="appointment"/>:screen==='media'?<MediaManager api={api} pick={pick}/>:screen==='settings'?<SettingsManager api={api} pick={pick}/>:screen==='users'?<UserManager api={api} me={me}/>:null}</main></div>{picker&&<MediaPicker api={api} type={picker.type} onPick={picker.onPick} onClose={()=>setPicker(null)}/>} {changePassword&&<PasswordChange onClose={()=>setChangePassword(false)}/>}</div>
+ if(session===undefined)return <div className="admin-shell admin-login-wrap"><div style={{color:'white'}}>Loading admin…</div></div>;
+ if(!session)return <Login onLogin={login}/>;
+ if(!me)return <div className="admin-shell admin-login-wrap"><div className="admin-login"><div className="login-logo">SHANERYN</div><p className="login-note">{error||'Checking permissions…'}</p><button onClick={logout}>Sign out</button></div></div>;
+ return <div className="admin-shell"><div className="admin-main-layout"><aside className="admin-sidebar"><div><div className="admin-wordmark">SHANERYN</div><div className="admin-subword">CONTENT STUDIO</div></div><div className="admin-mobile-nav"><label htmlFor="admin-mobile-module">Admin menu <small>({ROLE_NAMES[me.role]||me.role})</small></label><select id="admin-mobile-module" aria-label="Choose admin module" value={screen} onChange={e=>setScreen(e.target.value)}>{availableNav.map(([key,,name])=><option key={key} value={key}>{name}</option>)}</select><div className="admin-mobile-actions"><button type="button" onClick={()=>setChangePassword(true)}>Change Password</button><a href="/" target="_blank" rel="noreferrer">View Website ↗</a><button type="button" onClick={logout}>Sign out</button></div></div><nav aria-label="Admin modules">{availableNav.map(([key,icon,name])=><button key={key} className={'admin-navitem '+(screen===key?'active':'')} onClick={()=>setScreen(key)}><span className="admin-navicon">{icon}</span>{name}</button>)}</nav><div className="admin-sidebar-footer"><strong>{me.username}</strong><br/>{me.role.replace('_',' ')}<div style={{marginTop:12}}><button className="admin-navitem" onClick={()=>setChangePassword(true)}>Change Password</button><button className="admin-navitem" onClick={logout}>↩ Sign Out</button></div><a href="/" target="_blank" rel="noreferrer" style={{color:'#d79bb9'}}>View Website ↗</a></div></aside><main className="admin-main">{screen==='dashboard'?<Dashboard api={api} me={me} onNavigate={setScreen} canOpen={allowed}/>:screen==='pages'?<PageManager api={api} pick={pick}/>:screen==='products'?<ProductManager api={api} pick={pick}/>:screen==='categories'?<CategoryManager api={api} pick={pick}/>:screen==='collections'?<CollectionManager api={api} pick={pick}/>:screen==='forms'?<FormManager api={api}/>:screen==='enquiries'?<RequestsManager api={api} kind="enquiry"/>:screen==='appointments'?<RequestsManager api={api} kind="appointment"/>:screen==='media'?<MediaManager api={api} pick={pick}/>:screen==='settings'?<SettingsManager api={api} pick={pick}/>:screen==='users'?<UserManager api={api} me={me}/>:null}</main></div>{picker&&<MediaPicker api={api} type={picker.type} spec={picker.spec} onPick={picker.onPick} onClose={()=>setPicker(null)}/>} {changePassword&&<PasswordChange onClose={()=>setChangePassword(false)} onChanged={()=>{setChangePassword(false);setSession(null);setMe(null)}}/>}</div>;
 }

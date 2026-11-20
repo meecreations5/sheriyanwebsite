@@ -1,31 +1,25 @@
 {
   "name": "shaneryn-cms",
-  "version": "1.13.0",
+  "version": "1.17.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "node scripts/check.js",
-    "check:urls": "node scripts/check-product-routes.js",
-    "check:cms": "node scripts/check-v15.js",
-    "check:v16": "node scripts/check-v16.js",
-    "check:v17": "node scripts/check-v17.js",
-    "check:v18": "node scripts/check-v18.js",
-    "check:v19": "node scripts/check-v19.js",
-    "check:v110": "node scripts/check-v110.js",
-    "check:v111": "node scripts/check-v111.js",
-    "check:v112": "node scripts/check-v112.js",
-    "check:v113": "node scripts/check-v113.js"
+    "check": "node tests/check-v117.mjs && node tests/test-cms-server-mock.mjs && node tests/test-v117-cms-users-only.mjs && node tests/test-v116-login-session.mjs",
+    "check:urls": "node tests/check-public-routes.mjs",
+    "check:cms": "npm run check"
   },
   "dependencies": {
-    "next": "^16.0.0",
+    "next": "^16.4.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "firebase": "^12.0.0",
-    "cheerio": "^1.0.0"
+    "cheerio": "^1.0.0",
+    "@google-cloud/firestore": "^9.4.1",
+    "@google-cloud/storage": "^9.0.0"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=22.0.0"
   }
 }
