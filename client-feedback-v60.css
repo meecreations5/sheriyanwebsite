@@ -1,0 +1,6 @@
+/* SHANERYN V6.0 - final homepage fine tuning, layered over approved V5.9. */
+/* Bottom-align the Best Seller text inside its 32% grid column.
+   The already-approved horizontal left alignment and mobile stack are unchanged. */
+body[data-page="home"] .best-seller-v4 .best-seller-text {
+  justify-content: flex-end !important;
+}

@@ -1,0 +1,282 @@
+/* SHANERYN V5.6 — precise client final-leg revisions.
+   Loaded after V5.5. Only the home hero, founder chapter, and Services/Bespoke
+   composition are modified. The seven-section order and site behaviour remain.
+*/
+
+/* 01 / HERO: one original photograph; only the two-line brand promise and CTA.
+   Desktop reference: natural photo spanning left to right, waist-level editorial
+   crop, lower-centre type. Mobile reference: full portrait, lower-left type. */
+body[data-page="home"] .home-v4-hero.hero-v54-single {
+  background:#22181b !important;
+}
+body[data-page="home"] .home-v4-hero.hero-v54-single .hero-image {
+  background-size:cover !important;
+  background-position:center 48% !important;
+  mask-image:none !important;
+  -webkit-mask-image:none !important;
+}
+body[data-page="home"] .home-v4-hero.hero-v54-single::before,
+html[data-color-mode="inverse"] body[data-page="home"] .home-v4-hero.hero-v54-single::before {
+  background:linear-gradient(0deg,rgba(11,7,10,.61) 0%,rgba(11,7,10,.31) 25%,transparent 58%) !important;
+}
+body[data-page="home"] .home-v4-hero.hero-v54-single .hero-content {
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  max-width:none !important;
+  height:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+  display:block !important;
+  pointer-events:none;
+}
+body[data-page="home"] .hero-v54-single .hero-v54-copy {
+  position:absolute;
+  left:38%;
+  bottom:clamp(35px,5.5vh,68px);
+  width:auto;
+  max-width:calc(100% - 41%);
+  display:flex;
+  align-items:flex-start;
+  flex-direction:column;
+  pointer-events:auto;
+}
+body[data-page="home"] .hero-v54-single .hero-tagline {
+  margin:0 0 clamp(14px,1.45vw,24px) !important;
+  max-width:none !important;
+  color:#fff !important;
+  font:400 clamp(59px,5.1vw,96px)/.995 var(--serif) !important;
+  letter-spacing:-.055em !important;
+  text-shadow:0 2px 22px rgba(0,0,0,.18) !important;
+  white-space:nowrap;
+  text-align:left;
+}
+body[data-page="home"] .hero-v54-single .hero-tagline em {font-style:normal !important;font-weight:400 !important}
+body[data-page="home"] .hero-v54-single .hero-v54-cta {
+  align-self:center;
+  min-height:49px;
+  padding:13px 21px;
+  gap:30px;
+  background:rgba(36,24,32,.84);
+  border:1px solid rgba(255,255,255,.62);
+  color:#fff;
+}
+body[data-page="home"] .hero-v54-single .hero-v54-cta:is(:hover,:focus-visible) {background:#fff;color:#2c1d27}
+
+/* 05 / FOUNDER: prevent the 45%+55%+gap grid overflow in V5.5, and match
+   the reference's image/letter size and lower-set editorial composition. */
+@media(min-width:1001px) {
+  body[data-page="home"] .founder-v55 {
+    padding:clamp(36px,3.4vw,60px) 0 !important;
+  }
+  body[data-page="home"] .founder-v55 .founder-v55-layout {
+    width:min(1400px,calc(100% - 116px)) !important;
+    max-width:1400px !important;
+    grid-template-columns:minmax(0,.94fr) minmax(0,1fr) !important;
+    gap:clamp(24px,3.4vw,64px) !important;
+    min-height:clamp(625px,51vw,800px) !important;
+    align-items:stretch !important;
+  }
+  body[data-page="home"] .founder-v55 .founder-v55-visual {
+    width:100% !important;
+    height:clamp(625px,51vw,800px) !important;
+  }
+  body[data-page="home"] .founder-v55 .founder-v55-vertical-title {
+    left:clamp(32px,6.5vw,102px) !important;
+    top:50% !important;
+    font-size:clamp(210px,17vw,268px) !important;
+    line-height:.83 !important;
+    letter-spacing:-.048em !important;
+  }
+  body[data-page="home"] .founder-v55 .founder-photo {
+    left:38.5% !important;
+    top:26% !important;
+    width:min(315px,58%) !important;
+    aspect-ratio: .73 !important;
+    height:auto !important;
+  }
+  body[data-page="home"] .founder-v55 .founder-photo-full {
+    object-position:center 44% !important;
+  }
+  body[data-page="home"] .founder-v55 .founder-v55-copy {
+    align-self:end !important;
+    padding-bottom:clamp(18px,2.4vw,36px) !important;
+  }
+  body[data-page="home"] .founder-v55 .founder-greeting {
+    width:165px;
+    margin-bottom:16px;
+  }
+  body[data-page="home"] .founder-v55 .founder-letter p,
+  html[data-color-mode="inverse"] body[data-page="home"] .founder-v55 .founder-letter p {
+    font-size:clamp(10px,.71vw,11px);
+    line-height:1.85;
+    letter-spacing:.13em;
+    margin-bottom:16px;
+  }
+  body[data-page="home"] .founder-v55 .founder-letter .founder-lotsa {margin:20px 0 7px}
+  body[data-page="home"] .founder-v55 .founder-signature {width:205px}
+  body[data-page="home"] .founder-v55 .founder-links {margin-top:28px}
+}
+
+/* 06 / SERVICES: preserve the approved Bespoke → Colour → Personal ordering
+   and three adjacent service cards, but restore the original two-image Bespoke
+   collage, overlapping inset, and monogram within its featured first card. */
+body[data-page="home"] .home-services-grid {
+  grid-template-columns:2.05fr 1fr 1fr;
+  gap:clamp(12px,1.35vw,22px);
+}
+body[data-page="home"] .home-service-card--bespoke {
+  display:grid;
+  grid-template-columns:minmax(0,50%) minmax(0,50%);
+  min-height:580px;
+  overflow:hidden;
+  background:var(--home-paper);
+}
+body[data-page="home"] .home-service-bespoke-visual {
+  position:relative;
+  height:100%;
+  min-height:480px;
+  width:100%;
+  overflow:hidden;
+  isolation:isolate;
+  background:var(--home-paper);
+}
+body[data-page="home"] .home-service-bespoke-primary {
+  position:absolute;
+  left:12px;
+  top:21px;
+  width:80%;
+  height:91%;
+  object-fit:cover;
+  object-position:49% center;
+  border:5px solid var(--home-paper);
+  box-sizing:border-box;
+}
+body[data-page="home"] .home-service-bespoke-inset {
+  position:absolute;
+  bottom:23px;
+  right:7px;
+  width:56%;
+  height:auto;
+  aspect-ratio:1.18/1;
+  object-fit:cover;
+  object-position:center;
+  box-sizing:border-box;
+  border:5px solid var(--home-paper);
+  box-shadow:0 11px 33px rgba(37,24,34,.18);
+  z-index:1;
+}
+body[data-page="home"] .home-service-bespoke-seal {
+  display:grid;
+  place-items:center;
+  position:absolute;
+  z-index:2;
+  top:24px;
+  right:2px;
+  width:56px;
+  height:62px;
+  background:var(--home-paper);
+  border:1px solid var(--home-line);
+}
+body[data-page="home"] .home-service-bespoke-seal img {
+  height:40px;
+  width:auto;
+  object-fit:contain;
+}
+body[data-page="home"] .home-service-card--bespoke .home-service-copy {
+  align-self:stretch;
+  justify-content:center;
+  min-width:0;
+  padding:clamp(26px,2.1vw,40px) clamp(17px,2vw,32px);
+}
+body[data-page="home"] .home-service-card--bespoke .home-service-copy h3 {
+  font-size:clamp(34px,3.08vw,56px);
+  line-height:1.07;
+  letter-spacing:-.047em;
+  margin-bottom:18px;
+}
+body[data-page="home"] .home-service-card--bespoke .home-service-copy h3 em {
+  font-style:italic;
+  font-weight:400;
+}
+body[data-page="home"] .home-service-bespoke-rule {
+  width:41px;
+  height:2px;
+  background:var(--home-accent);
+  display:block;
+  margin:0 0 20px;
+}
+body[data-page="home"] .home-service-card--bespoke .home-service-copy p {
+  font-size:12px;
+  line-height:1.85;
+  margin-bottom:18px;
+}
+body[data-page="home"] .home-service-bespoke-copy blockquote {
+  font:italic 17px/1.5 var(--serif);
+  color:var(--home-accent);
+  margin:0 0 25px;
+}
+body[data-page="home"] .home-service-card--bespoke .home-service-link {margin-top:auto}
+
+/* Tablets: keep the bespoke original split structure legible and show the
+   remaining two service cards as equal neighbours in the same Services chapter. */
+@media(max-width:1100px) and (min-width:768px) {
+  body[data-page="home"] .home-services-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-page="home"] .home-service-card--bespoke {grid-column:1/-1;grid-template-columns:1fr 1fr;min-height:500px}
+  body[data-page="home"] .home-service-bespoke-visual {min-height:500px}
+  body[data-page="home"] .home-service-card--bespoke .home-service-copy h3 {font-size:clamp(42px,5vw,59px)}
+  body[data-page="home"] .hero-v54-single .hero-v54-copy {left:32%;max-width:66%}
+  body[data-page="home"] .hero-v54-single .hero-tagline {font-size:clamp(57px,6.6vw,76px) !important}
+}
+/* On phones, the existing side-swipe Services UX remains; the Bespoke card
+   becomes a two-photo editorial collage above its copy, not a generic image. */
+@media(max-width:767px) {
+  body[data-page="home"] .home-v4-hero.hero-v54-single .hero-image {
+    background-size:cover !important;
+    background-position:center 12% !important;
+  }
+  body[data-page="home"] .home-v4-hero.hero-v54-single::before,
+  html[data-color-mode="inverse"] body[data-page="home"] .home-v4-hero.hero-v54-single::before {
+    background:linear-gradient(0deg,rgba(8,5,8,.76) 0%,rgba(8,5,8,.32) 27%,transparent 59%) !important;
+  }
+  body[data-page="home"] .home-v4-hero.hero-v54-single .hero-content {
+    position:absolute !important;
+    inset:0 !important;
+    display:block !important;
+    padding:0 !important;
+  }
+  body[data-page="home"] .hero-v54-single .hero-v54-copy {
+    left:clamp(18px,5.1vw,30px);
+    right:18px;
+    bottom:clamp(30px,5vh,52px);
+    width:auto;
+    max-width:none;
+    align-items:flex-start;
+  }
+  body[data-page="home"] .hero-v54-single .hero-tagline {
+    font-size:clamp(45px,10.6vw,65px) !important;
+    line-height:1.02 !important;
+    white-space:normal;
+    margin:0 0 19px !important;
+  }
+  body[data-page="home"] .hero-v54-single .hero-v54-cta {
+    align-self:flex-start;
+    min-height:49px;
+    padding:12px 17px;
+    font-size:9px;
+    gap:34px;
+  }
+  body[data-page="home"] .home-services-grid {display:flex;grid-template-columns:none}
+  body[data-page="home"] .home-service-card--bespoke {display:flex;flex-direction:column;min-height:0}
+  body[data-page="home"] .home-service-bespoke-visual {width:100%;min-height:0;height:315px;flex:0 0 315px}
+  body[data-page="home"] .home-service-bespoke-primary {left:10px;top:12px;width:79%;height:88%;border-width:5px}
+  body[data-page="home"] .home-service-bespoke-inset {right:7px;bottom:12px;width:53%;height:auto;aspect-ratio:1.18/1;border-width:5px}
+  body[data-page="home"] .home-service-bespoke-seal {top:16px;right:6px;width:52px;height:59px}
+  body[data-page="home"] .home-service-card--bespoke .home-service-copy {padding:23px 23px 27px}
+  body[data-page="home"] .home-service-card--bespoke .home-service-copy h3 {font-size:clamp(34px,8.3vw,45px)}
+  body[data-page="home"] .home-service-bespoke-copy blockquote {font-size:18px}
+}
+@media(max-width:350px) {
+  body[data-page="home"] .hero-v54-single .hero-tagline {font-size:43px !important}
+  body[data-page="home"] .home-service-bespoke-visual {height:285px;flex-basis:285px}
+}

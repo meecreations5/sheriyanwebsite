@@ -1,0 +1,34 @@
+{
+  "baseline": "V6.2",
+  "pages": 11,
+  "page_main_section_counts": {
+    "index.html": 7,
+    "story.html": 2,
+    "bespoke.html": 3
+  },
+  "gallery_photos": 17,
+  "service_cards": 3,
+  "missing_local_references": [],
+  "duplicate_ids": {},
+  "js_syntax_errors": {},
+  "removed_navigation_links": {
+    "bespoke.html": 0,
+    "collection.html": 0,
+    "collections.html": 0,
+    "consultation.html": 0,
+    "contact.html": 0,
+    "film.html": 0,
+    "index.html": 0,
+    "look.html": 0,
+    "new-drop.html": 0,
+    "story.html": 0,
+    "testimonials.html": 0
+  },
+  "redirects": {
+    "new-drop.html": "collections.html",
+    "consultation.html": "bespoke.html#services"
+  },
+  "gallery_js": "open, next, close verified in local inline browser rendering",
+  "viewport_overflow": "0px in tested 320, 390, 1440 for index/story/bespoke except not all combos completed",
+  "visual_qa_limitations": "Browser navigation blocked by administrator. Used inline page rendering; full live end-to-end test not performed."
+}

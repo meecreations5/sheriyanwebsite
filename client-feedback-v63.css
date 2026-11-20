@@ -1,0 +1,481 @@
+/* SHANERYN V6.3 – globally legible section labels and consolidated inner pages. */
+/* Scale the shared small headings, including THE COLLECTION, without enlarging CTAs. */
+body[data-page] .eyebrow, body[data-page] .ep-kicker,
+body[data-page="home"] .occasion-reference .occasion-ref-title > .eyebrow {
+  font-size:clamp(13px,1.05vw,15px) !important;
+  line-height:1.55 !important;
+  letter-spacing:.145em;
+}
+@media(max-width:720px){
+ body[data-page] .eyebrow,body[data-page] .ep-kicker,
+ body[data-page="home"] .occasion-reference .occasion-ref-title > .eyebrow {
+   font-size:12.5px !important;line-height:1.5 !important;
+ }
+}
+/* The approved homepage remains visually unchanged apart from its section labels. */
+body[data-page="story-page"] .v63-story-main,
+body[data-page="bespoke-page"] .v63-bespoke-main { min-width:0; }
+
+/* Exact homepage Founder treatment reused on Our Story. */
+/* SHANERYN V5.5 — client feedback: edge-to-edge hero, editorial founder, magenta footer.
+   Scoped overrides keep all other approved V5.4 functionality intact. */
+
+/* 01 / Hero: photograph spans the complete width, with no solid-colour left panel or fade mask. */
+body[data-page="story-page"] .home-v4-hero.hero-v54-single {
+  width:100%; max-width:100%; background:#2c2326 !important; overflow:hidden;
+}
+body[data-page="story-page"] .home-v4-hero.hero-v54-single .hero-image {
+  inset:0 !important;
+  width:100%; height:100%;
+  background-size:cover !important;
+  background-position:center 10% !important;
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+  opacity:1 !important;
+}
+body[data-page="story-page"] .home-v4-hero.hero-v54-single::before,
+html[data-color-mode="inverse"] body[data-page="story-page"] .home-v4-hero.hero-v54-single::before {
+  background:linear-gradient(90deg,rgba(17,12,19,.68) 0%,rgba(17,12,19,.42) 30%,rgba(17,12,19,.08) 65%,transparent 100%) !important;
+}
+body[data-page="story-page"] .hero-v54-single .hero-tagline { color:#fff !important; text-shadow:0 2px 24px rgba(0,0,0,.35) !important; }
+body[data-page="story-page"] .hero-v54-single .hero-v54-description { color:#fff !important; text-shadow:0 1px 12px rgba(0,0,0,.35) !important; }
+body[data-page="story-page"] .hero-v54-single .hero-v54-cta { background:rgba(28,20,28,.78); border-color:rgba(255,255,255,.85); color:#fff; }
+body[data-page="story-page"] .hero-v54-single .hero-v54-cta:is(:hover,:focus-visible) { background:#fff; color:#261b23; }
+
+/* 05 / Founder: large vertical lowercase chapter word + overlaid city portrait + personal letter. */
+body[data-page="story-page"] .founder-v55,
+html[data-color-mode="inverse"] body[data-page="story-page"] .founder-v55 {
+  position:relative;
+  overflow:hidden;
+  padding:clamp(50px,4.2vw,68px) 0 !important;
+  background:#171319 !important;
+  color:#eee7eb !important;
+  border:0 !important;
+}
+body[data-page="story-page"] .founder-v55::before,
+body[data-page="story-page"] .founder-v55::after { content:none !important; }
+body[data-page="story-page"] .founder-v55 .founder-v55-layout {
+  display:grid !important;
+  grid-template-columns:minmax(0,45%) minmax(0,55%) !important;
+  align-items:center;
+  gap:clamp(28px,4.8vw,88px) !important;
+  width:min(1400px,calc(100% - 100px));
+  max-width:1400px;
+  min-height:clamp(560px,45vw,680px);
+}
+body[data-page="story-page"] .founder-v55 .founder-v55-visual {
+  min-width:0;
+  position:relative;
+  height:clamp(560px,45vw,680px);
+  isolation:isolate;
+}
+body[data-page="story-page"] .founder-v55 .founder-v55-vertical-title {
+  position:absolute;
+  left:-.035em;
+  top:50%;
+  transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;
+  font:400 clamp(130px,12vw,200px)/.81 var(--serif);
+  letter-spacing:-.06em;
+  color:#92888b !important;
+  text-transform:lowercase;
+  white-space:nowrap;
+  margin:0;
+  z-index:0;
+  user-select:none;
+}
+body[data-page="story-page"] .founder-v55 .founder-photo {
+  position:absolute;
+  top:22%;
+  left:27%;
+  width:min(320px,66%);
+  aspect-ratio:511 / 775;
+  margin:0;
+  z-index:1;
+  overflow:hidden;
+  background:#2a2327;
+}
+body[data-page="story-page"] .founder-v55 .founder-photo-full {
+  display:block;
+  width:100%; height:100% !important;
+  max-height:100% !important;
+  object-fit:cover !important;
+  object-position:center 45% !important;
+  filter:none !important;
+}
+body[data-page="story-page"] .founder-v55 .founder-photo figcaption {display:none}
+body[data-page="story-page"] .founder-v55 .founder-v55-copy {
+  position:relative;
+  z-index:2;
+  width:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+  color:#e5dde3 !important;
+}
+body[data-page="story-page"] .founder-v55 .founder-letter {
+  border:0 !important;
+  padding:0 !important;
+  max-width:640px;
+}
+body[data-page="story-page"] .founder-v55 .founder-greeting {
+  width:170px;
+  min-width:0;
+  max-width:52%;
+  margin:0 0 23px;
+}
+body[data-page="story-page"] .founder-v55 .founder-letter p,
+html[data-color-mode="inverse"] body[data-page="story-page"] .founder-v55 .founder-letter p {
+  color:#e7dfe5 !important;
+  font:500 clamp(10px,.75vw,11px)/1.9 var(--sans);
+  letter-spacing:.15em;
+  max-width:590px;
+  margin:0 0 19px;
+}
+body[data-page="story-page"] .founder-v55 .founder-letter .founder-lotsa {letter-spacing:.19em; margin:24px 0 8px}
+body[data-page="story-page"] .founder-v55 .founder-signature {width:210px; max-width:55%; height:auto; margin:0}
+body[data-page="story-page"] .founder-v55 .founder-links {gap:28px; margin-top:32px; flex-wrap:wrap}
+body[data-page="story-page"] .founder-v55 .founder-links .pending-link,
+body[data-page="story-page"] .founder-v55 .founder-links a {
+  color:#d8cbd3 !important;
+  border-color:#8b7a86;
+  font-size:9px;
+  letter-spacing:.075em;
+}
+body[data-page="story-page"] .founder-v55 .founder-links a:hover {color:#f2bad3 !important}
+
+/* Footer: always display the original official magenta artwork, even in inverse mode. */
+.site-footer .footer-logo .logo-original,
+html[data-color-mode="inverse"] .site-footer .footer-logo .logo-original {display:block !important}
+.site-footer .footer-logo .logo-inverse,
+html[data-color-mode="inverse"] .site-footer .footer-logo .logo-inverse {display:none !important}
+
+@media(max-width:1000px) {
+  body[data-page="story-page"] .founder-v55 .founder-v55-layout {grid-template-columns:1fr !important; gap:14px !important; width:calc(100% - 80px); min-height:0}
+  body[data-page="story-page"] .founder-v55 .founder-v55-visual {height:590px; width:min(640px,100%); margin:0 auto}
+  body[data-page="story-page"] .founder-v55 .founder-v55-vertical-title {font-size:clamp(140px,19vw,190px)}
+  body[data-page="story-page"] .founder-v55 .founder-photo {top:17%; left:27%; width:min(300px,60%)}
+  body[data-page="story-page"] .founder-v55 .founder-v55-copy {width:min(650px,100%) !important; margin:0 auto !important}
+  body[data-page="story-page"] .founder-v55 .founder-letter p {font-size:11px;line-height:1.9}
+}
+@media(max-width:767px) {
+  body[data-page="story-page"] .home-v4-hero.hero-v54-single .hero-image {background-position:center 15% !important; background-size:cover !important}
+  body[data-page="story-page"] .home-v4-hero.hero-v54-single::before,
+  html[data-color-mode="inverse"] body[data-page="story-page"] .home-v4-hero.hero-v54-single::before {
+    background:linear-gradient(0deg,rgba(12,8,13,.84) 0%,rgba(12,8,13,.46) 28%,rgba(12,8,13,.06) 61%,transparent 100%) !important;
+  }
+  body[data-page="story-page"] .founder-v55 {padding:30px 0 72px !important}
+  body[data-page="story-page"] .founder-v55 .founder-v55-layout {display:flex !important; flex-direction:column; align-items:stretch; gap:18px !important; width:calc(100% - 40px); max-width:600px}
+  body[data-page="story-page"] .founder-v55 .founder-v55-visual {width:100%; height:clamp(380px,112vw,520px); min-height:0; margin:0}
+  body[data-page="story-page"] .founder-v55 .founder-v55-vertical-title {font-size:clamp(94px,23vw,132px) !important;top:49%;left:-1%;letter-spacing:-.055em;}
+  body[data-page="story-page"] .founder-v55 .founder-photo {top:12%;left:31%;width:min(230px,65%);height:auto;}
+  body[data-page="story-page"] .founder-v55 .founder-v55-copy {padding:0 !important; width:100% !important;}
+  body[data-page="story-page"] .founder-v55 .founder-greeting {width:166px;max-width:55%;margin-bottom:19px}
+  body[data-page="story-page"] .founder-v55 .founder-letter p {font-size:10px !important; letter-spacing:.12em; line-height:1.9; margin-bottom:18px}
+  body[data-page="story-page"] .founder-v55 .founder-letter .founder-lotsa {margin-top:24px}
+  body[data-page="story-page"] .founder-v55 .founder-signature {width:194px;max-width:58%}
+  body[data-page="story-page"] .founder-v55 .founder-links {display:flex;gap:22px;margin-top:27px}
+}
+@media(max-width:350px) {
+  body[data-page="story-page"] .founder-v55 .founder-v55-layout {width:calc(100% - 28px)}
+  body[data-page="story-page"] .founder-v55 .founder-v55-visual {height:370px}
+  body[data-page="story-page"] .founder-v55 .founder-v55-vertical-title {font-size:90px !important}
+  body[data-page="story-page"] .founder-v55 .founder-photo {width:64%;left:31%;top:9%}
+  body[data-page="story-page"] .founder-v55 .founder-letter p {font-size:9.6px !important;letter-spacing:.1em}
+}
+
+/* Approved homepage Bespoke treatment reused on inner Bespoke page. */
+/* SHANERYN V5.7 - one editorial Bespoke chapter, not a Services carousel.
+ * Restore the original site's overlapping fabric photographs and monogram,
+ * with reference-aligned size, image/copy balance and mobile stacking.
+ * All rules are homepage-only; other site pages remain unchanged. */
+body[data-page="bespoke-page"] .bespoke-v57 {
+  padding:clamp(74px,7vw,120px) 0 !important;
+  background:var(--home-paper) !important;
+  color:var(--home-ink);
+  scroll-margin-top:var(--v47-header-height,76px);
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-inner {
+  width:min(1540px,calc(100% - 52px));max-width:none;
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  gap:clamp(48px,6vw,106px);
+  align-items:center;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {
+  width:100%;height:clamp(420px,39vw,610px);min-width:0;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual>img {
+  width:83%;height:91%;object-fit:cover;object-position:center;
+  box-sizing:border-box;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual .bespoke-inset {
+  position:absolute;right:0;bottom:0;width:45%;height:46%;
+  object-fit:cover;object-position:center;
+  box-sizing:border-box;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-image-seal {right:4%;top:16px}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy {min-width:0}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy>.eyebrow {
+  font:600 10px/1.6 var(--sans);letter-spacing:.23em;
+  color:var(--home-accent);
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {
+  font:400 clamp(58px,5.3vw,89px)/1.04 var(--serif);
+  max-width:650px;letter-spacing:-.052em;
+  color:var(--home-ink);margin:25px 0 30px;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 em {
+  font-style:italic;font-weight:400;display:block;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy .mini-rule {
+  width:46px;height:2px;background:var(--home-accent);margin:0 0 29px;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy .bodycopy {
+  color:var(--home-sub);max-width:500px;font-size:14px;line-height:1.95;
+  margin:0 0 26px;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy blockquote {
+  max-width:540px;margin:0 0 34px;
+  font:italic clamp(19px,1.7vw,25px)/1.55 var(--serif);
+  color:var(--home-accent);
+}
+body[data-page="bespoke-page"] .bespoke-v57 .outlined-btn {display:inline-flex;gap:25px;align-items:center}
+@media (max-width:980px) and (min-width:721px) {
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-inner {gap:35px;width:calc(100% - 50px)}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {height:clamp(350px,48vw,460px)}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {font-size:clamp(45px,5.8vw,63px)}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy .bodycopy {font-size:12px}
+}
+@media (max-width:720px) {
+  body[data-page="bespoke-page"] .bespoke-v57 {padding:54px 0 74px !important}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-inner {
+    display:flex;flex-direction:column;align-items:stretch;
+    gap:32px;width:calc(100% - 36px);
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {
+    width:100%;height:clamp(315px,95vw,480px);max-height:none;
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual>img {width:83%;height:91%;border-width:5px}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual .bespoke-inset {
+    width:46%;height:46%;border-width:5px;
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-image-seal {top:12px;right:1%;width:65px;height:76px}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-image-seal img {height:45px}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {
+    font-size:clamp(47px,12vw,65px);margin:18px 0 25px;
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy .mini-rule {margin-bottom:21px}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy .bodycopy {
+    font-size:13px;line-height:1.85;max-width:100%;margin-bottom:22px;
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy blockquote {font-size:19px;margin-bottom:29px}
+}
+@media(max-width:360px) {
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {height:300px}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {font-size:45px}
+}
+
+/* Approved homepage Bespoke treatment reused on inner Bespoke page. */
+/* SHANERYN V5.9 — targeted approved client feedback.
+ * The Best Seller desktop layout is 32:68; phones retain the approved stack.
+ * Bespoke retains V5.7 overlapping image composition with the new bridal photos.
+ * Closure's approved sentence is the actual h2 (not a subtitle/paragraph).
+ * All selectors are homepage-only, preserving the inner pages and prior approvals.
+ */
+@media(min-width:721px) {
+  body[data-page="bespoke-page"] .best-seller-v4 {
+    display:grid!important;
+    grid-template-columns:32% 68%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+  body[data-page="bespoke-page"] .best-seller-v4 .best-seller-text {
+    padding:clamp(26px,3.7vw,68px);
+    min-width:0;
+  }
+  body[data-page="bespoke-page"] .best-seller-v4 .best-seller-text h2 {
+    font-size:clamp(42px,4.35vw,77px);
+    overflow-wrap:normal;
+  }
+  body[data-page="bespoke-page"] .best-seller-v4 .best-seller-text p {
+    font-size:clamp(19px,2.0vw,29px);
+  }
+}
+/* Portrait images: large bridal look with second editorial portrait overlaid. */
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {
+  height:clamp(520px,49vw,735px);
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual>img:not(.bespoke-inset) {
+  width:78%;
+  height:94%;
+  object-fit:cover;
+  object-position:center 36%;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual .bespoke-inset {
+  width:45%;
+  height:43%;
+  object-fit:cover;
+  object-position:48% 40%;
+}
+body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {
+  max-width:680px;
+  font-size:clamp(49px,4.8vw,81px);
+}
+/* Keep the closing message as the primary, editorial headline. */
+body[data-page="bespoke-page"] .closure #closure-heading.closure-v59-heading {
+  width:min(1180px,100%);
+  max-width:1180px;
+  margin:clamp(20px,2.4vw,32px) auto clamp(28px,3.1vw,44px);
+  font-size:clamp(46px,5.1vw,83px);
+  line-height:1.09;
+  letter-spacing:-.035em;
+  text-wrap:balance;
+}
+body[data-page="bespoke-page"] .closure #closure-heading.closure-v59-heading em {
+  display:block;
+  font-weight:400;
+}
+@media(max-width:980px) and (min-width:721px) {
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {
+    height:clamp(430px,60vw,575px);
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {
+    font-size:clamp(44px,5vw,55px);
+  }
+}
+@media(max-width:720px) {
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {
+    height:clamp(390px,112vw,535px);
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual>img:not(.bespoke-inset) {
+    width:79%;height:94%;
+    object-position:center 34%;
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual .bespoke-inset {
+    width:45%;height:42%;
+  }
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {
+    font-size:clamp(40px,10.9vw,61px);
+    line-height:1.05;
+    overflow-wrap:normal;
+  }
+  body[data-page="bespoke-page"] .closure #closure-heading.closure-v59-heading {
+    font-size:clamp(37px,9.5vw,56px);
+    line-height:1.08;
+    width:100%;
+    letter-spacing:-.03em;
+    margin:20px auto 29px;
+  }
+}
+@media(max-width:360px) {
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-visual {height:360px;}
+  body[data-page="bespoke-page"] .bespoke-v57 .bespoke-copy h2 {font-size:39px;}
+  body[data-page="bespoke-page"] .closure #closure-heading.closure-v59-heading {font-size:36px;}
+}
+
+/* Approved homepage Bespoke treatment reused on inner Bespoke page. */
+/* SHANERYN V6.0 - final homepage fine tuning, layered over approved V5.9. */
+/* Bottom-align the Best Seller text inside its 32% grid column.
+   The already-approved horizontal left alignment and mobile stack are unchanged. */
+body[data-page="bespoke-page"] .best-seller-v4 .best-seller-text {
+  justify-content: flex-end !important;
+}
+
+body[data-page="bespoke-page"]{--home-paper:var(--ep-bg);--home-panel:var(--ep-quiet);--home-ink:var(--ep-ink);--home-sub:var(--ep-sub);--home-accent:var(--ep-accent)}
+body[data-page="bespoke-page"] .bespoke-v4{background:var(--home-paper) !important;color:var(--home-ink)}
+body[data-page="bespoke-page"] .bespoke-v4 .bespoke-copy .bodycopy {color:var(--home-sub)}
+body[data-page="bespoke-page"] .bespoke-v4 .bespoke-copy .outlined-btn {border:1px solid var(--home-ink);color:var(--home-ink)}
+body[data-page="bespoke-page"] .bespoke-v4 .bespoke-copy .outlined-btn:hover {background:var(--home-ink);color:var(--home-paper)}
+body[data-page="bespoke-page"] .bespoke-v4 .bespoke-copy > .eyebrow {color:var(--home-accent)}
+/* Explicitly prevent a background mismatch in the founder replica on either theme. */
+body[data-page="story-page"] .v63-story-founder {background:#171319 !important;scroll-margin-top:76px}
+body[data-page="story-page"] .v63-words {scroll-margin-top:76px}
+body[data-page="bespoke-page"] .v63-bespoke-intro {scroll-margin-top:76px}
+
+/* Combined Bespoke services: three restrained, portrait-led editorial cards. */
+body[data-page="bespoke-page"] .v63-services,
+body[data-page="bespoke-page"] .v63-gallery {background:var(--ep-bg);color:var(--ep-ink);padding:clamp(75px,7.4vw,116px) 0;scroll-margin-top:76px}
+body[data-page="bespoke-page"] .v63-services {border-top:1px solid var(--ep-hair)}
+body[data-page="bespoke-page"] .v63-gallery {background:var(--ep-quiet);border-top:1px solid var(--ep-hair)}
+body[data-page="bespoke-page"] .v63-section-head {display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:38px}
+body[data-page="bespoke-page"] .v63-section-head h2 {font:400 clamp(54px,5.3vw,92px)/1.06 var(--serif);letter-spacing:-.048em;margin:17px 0 0;max-width:820px}
+body[data-page="bespoke-page"] .v63-section-head h2 em {font-style:italic;font-weight:400}
+body[data-page="bespoke-page"] .v63-section-head > p {max-width:270px;font:400 15px/1.7 var(--sans);color:var(--ep-sub);margin:0 0 6px}
+body[data-page="bespoke-page"] .v63-service-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(15px,2vw,30px)}
+body[data-page="bespoke-page"] .v63-service-card {min-width:0;display:flex;flex-direction:column;border:1px solid var(--ep-hair);background:var(--ep-panel)}
+body[data-page="bespoke-page"] .v63-service-photo {position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:#1d151d}
+body[data-page="bespoke-page"] .v63-service-photo img {width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+body[data-page="bespoke-page"] .v63-service-card:hover .v63-service-photo img {transform:scale(1.025)}
+body[data-page="bespoke-page"] .v63-photo-index {position:absolute;bottom:18px;left:20px;color:white;text-shadow:0 1px 6px #000b;font:600 11px/1 var(--sans);letter-spacing:.18em}
+body[data-page="bespoke-page"] .v63-service-body {display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:clamp(23px,2vw,36px)}
+body[data-page="bespoke-page"] .v63-service-body .ep-kicker{font-size:11px !important}
+body[data-page="bespoke-page"] .v63-service-body h3 {font:400 clamp(30px,2.55vw,44px)/1.08 var(--serif);letter-spacing:-.028em;margin:16px 0 12px}
+body[data-page="bespoke-page"] .v63-service-body p {font:400 14px/1.75 var(--sans);color:var(--ep-sub);margin:0 0 28px;max-width:360px}
+body[data-page="bespoke-page"] .v63-service-link {display:inline-flex;align-items:center;justify-content:space-between;gap:15px;margin-top:auto;border-bottom:1px solid var(--ep-ink);padding:0 0 7px;font:600 10px/1.6 var(--sans);letter-spacing:.10em;text-transform:uppercase;color:var(--ep-ink)}
+body[data-page="bespoke-page"] .v63-service-link:hover {color:var(--ep-accent);border-color:var(--ep-accent)}
+
+/* Past work archive: original aspect ratio is maintained for every photograph. */
+body[data-page="bespoke-page"] .v63-gallery-columns {columns:4;column-gap:clamp(10px,1.8vw,25px)}
+body[data-page="bespoke-page"] .v63-work-item {position:relative;width:100%;height:auto;min-height:0;display:block;break-inside:avoid;overflow:hidden;border:0;padding:0;margin:0 0 clamp(10px,1.8vw,25px);background:#1a151b;cursor:zoom-in}
+body[data-page="bespoke-page"] .v63-work-item img {display:block;width:100%;height:auto;object-fit:contain;opacity:1;transition:transform .5s ease,opacity .3s}
+body[data-page="bespoke-page"] .v63-work-item:hover img {transform:scale(1.016);opacity:.87}
+body[data-page="bespoke-page"] .v63-work-overlay {position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;gap:10px;padding:30px 15px 12px;color:#fff;font:600 10px/1.4 var(--sans);letter-spacing:.14em;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent)}
+body[data-page="bespoke-page"] .v63-gallery-note {font-size:12px;line-height:1.6;color:var(--ep-sub);margin-top:12px}
+/* Accessible native dialog gallery; no third-party UI, no autoplay. */
+body[data-page="bespoke-page"] .v63-work-dialog {border:0;padding:0;max-width:none;max-height:none;width:min(100vw,1000px);height:min(94dvh,960px);background:transparent;color:#fff;box-shadow:none;overflow:visible}
+body[data-page="bespoke-page"] .v63-work-dialog::backdrop {background:rgba(10,8,13,.94)}
+body[data-page="bespoke-page"] .v63-work-dialog-shell {height:100%;display:flex;flex-direction:column;position:relative;align-items:center;justify-content:center;gap:12px}
+body[data-page="bespoke-page"] .v63-work-dialog-shell img {display:block;width:auto;height:auto;max-width:min(94vw,900px);max-height:calc(94dvh - 104px);object-fit:contain}
+body[data-page="bespoke-page"] .v63-close {position:absolute;z-index:2;right:2%;top:0;width:48px;height:48px;font-size:32px;line-height:1;background:rgba(28,22,30,.78);border:1px solid #ffffff70;color:#fff;cursor:pointer}
+body[data-page="bespoke-page"] .v63-work-dialog-footer {display:flex;align-items:center;justify-content:center;gap:36px;font:600 12px/1.4 var(--sans);letter-spacing:.17em;color:#fff}
+body[data-page="bespoke-page"] .v63-work-dialog-footer button {border:1px solid #ffffff80;background:#211c25;color:white;width:46px;height:42px;font-size:22px;cursor:pointer}
+body[data-page="bespoke-page"] :is(.v63-close,.v63-work-dialog-footer button,.v63-work-item,.v63-service-link):focus-visible {outline:2px solid var(--ep-accent);outline-offset:4px}
+
+/* Existing product-personalisation workflow stays available only on demand. */
+body[data-page="bespoke-page"] .v63-guide-wrap {background:var(--ep-bg);padding:0 0 60px}
+body[data-page="bespoke-page"] .v63-guide {width:min(1280px,calc(100% - 48px));margin:0 auto;border-top:1px solid var(--ep-hair);border-bottom:1px solid var(--ep-hair)}
+body[data-page="bespoke-page"] .v63-guide summary {cursor:pointer;list-style:none;display:grid;grid-template-columns:1fr auto;gap:10px 28px;align-items:center;padding:29px 0}
+body[data-page="bespoke-page"] .v63-guide summary::-webkit-details-marker {display:none}
+body[data-page="bespoke-page"] .v63-guide summary > .ep-kicker {grid-column:1/-1;color:var(--ep-accent)}
+body[data-page="bespoke-page"] .v63-guide summary strong {font:400 clamp(25px,3vw,39px)/1.15 var(--serif)}
+body[data-page="bespoke-page"] .v63-guide-open {font:600 10px/1.6 var(--sans);letter-spacing:.13em;color:var(--ep-ink);border-bottom:1px solid currentColor;padding-bottom:6px;white-space:nowrap}
+body[data-page="bespoke-page"] .v63-guide[open] .v63-guide-open {opacity:.65}
+body[data-page="bespoke-page"] .v63-guide-content {padding:0 0 45px}
+body[data-page="bespoke-page"] .v63-guide-content .cv3-measurement {background:transparent;padding:40px 0}
+body[data-page="bespoke-page"] #measurement-studio {scroll-margin-top:90px}
+
+@media(max-width:1020px){
+ body[data-page="bespoke-page"] .v63-service-grid {gap:14px}
+ body[data-page="bespoke-page"] .v63-service-body {padding:20px}
+ body[data-page="bespoke-page"] .v63-service-body h3 {font-size:30px}
+ body[data-page="bespoke-page"] .v63-gallery-columns {columns:3}
+}
+@media(max-width:760px){
+ body[data-page="bespoke-page"] .v63-section-head {display:block;margin-bottom:27px}
+ body[data-page="bespoke-page"] .v63-section-head h2 {font-size:clamp(43px,9.5vw,63px)}
+ body[data-page="bespoke-page"] .v63-section-head > p {margin:14px 0 0;max-width:none}
+ body[data-page="bespoke-page"] .v63-service-grid {grid-template-columns:1fr;gap:20px}
+ body[data-page="bespoke-page"] .v63-service-card {display:grid;grid-template-columns:minmax(0,41%) minmax(0,59%)}
+ body[data-page="bespoke-page"] .v63-service-photo {height:100%;aspect-ratio:auto}
+ body[data-page="bespoke-page"] .v63-service-body {padding:22px}
+ body[data-page="bespoke-page"] .v63-service-body h3 {font-size:clamp(29px,5vw,42px)}
+ body[data-page="bespoke-page"] .v63-gallery-columns {columns:2;column-gap:10px}
+ body[data-page="bespoke-page"] .v63-work-item {margin-bottom:10px}
+ body[data-page="bespoke-page"] .v63-services,body[data-page="bespoke-page"] .v63-gallery {padding:65px 0}
+}
+@media(max-width:460px){
+ body[data-page="bespoke-page"] .v63-service-card {grid-template-columns:minmax(0,1fr);display:flex}
+ body[data-page="bespoke-page"] .v63-service-photo {aspect-ratio:4/3;height:auto}
+ body[data-page="bespoke-page"] .v63-service-body {padding:22px 20px 25px}
+ body[data-page="bespoke-page"] .v63-service-body h3 {font-size:34px}
+ body[data-page="bespoke-page"] .v63-service-link {font-size:9.5px}
+ body[data-page="bespoke-page"] .v63-guide {width:calc(100% - 36px)}
+ body[data-page="bespoke-page"] .v63-guide summary {grid-template-columns:1fr;gap:14px}
+ body[data-page="bespoke-page"] .v63-guide summary > .ep-kicker {grid-column:auto}
+ body[data-page="bespoke-page"] .v63-guide-open {justify-self:start}
+ body[data-page="bespoke-page"] .v63-work-overlay {padding:22px 9px 8px;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page="bespoke-page"] .v63-service-photo img,body[data-page="bespoke-page"] .v63-work-item img {transition:none}
+}

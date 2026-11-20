@@ -1,0 +1,198 @@
+/* Homepage Collection / Shop by Style. Matches the approved four-card
+   reference composition. All four campaign images originate from the
+   SHANERYN Google Drive fashion folder and are exported here as webp. */
+body[data-page="home"] .occasion-reference{
+  background:#17141a!important;
+  color:#f5eef2!important;
+  padding:50px 0 54px!important;
+}
+html[data-color-mode="original"] body[data-page="home"] .occasion-reference{
+  background:#faf7f5!important;
+  color:#302831!important;
+}
+body[data-page="home"] .occasion-reference .occasion-ref-wrap{
+  width:min(1640px,calc(100% - 124px));
+  max-width:none;
+  margin:0 auto;
+}
+.occasion-reference .occasion-ref-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:36px;
+  margin:0 0 16px;
+}
+.occasion-reference .occasion-ref-title{min-width:0}
+.occasion-reference .occasion-ref-title>.eyebrow{
+  display:block;
+  margin:0 0 12px;
+  font:600 10px/1.6 var(--sans);
+  letter-spacing:.20em;
+  color:#d887b3;
+}
+html[data-color-mode="original"] .occasion-reference .occasion-ref-title>.eyebrow{color:#985374}
+body[data-page="home"] .occasion-reference .occasion-ref-title h2{
+  font:400 clamp(47px,5.25vw,83px)/1.02 var(--serif);
+  letter-spacing:-.033em;
+  color:inherit;
+  margin:0 0 18px;
+  max-width:initial;
+  white-space:normal;
+}
+body[data-page="home"] .occasion-reference .occasion-ref-title h2 em{
+  font:400 .45em/1.12 var(--serif);
+  color:inherit;
+  opacity:.94;
+  white-space:nowrap;
+  font-style:normal;
+  letter-spacing:-.02em;
+}
+.occasion-reference .occasion-ref-underline{
+  display:block;
+  width:55px;
+  height:1px;
+  background:#be277d;
+}
+.occasion-reference .occasion-ref-all{
+  color:inherit;
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  margin:0 0 17px;
+  padding:0 0 8px;
+  border-bottom:1px solid rgba(238,218,229,.82);
+  font:600 9px/1.3 var(--sans);
+  letter-spacing:.18em;
+  white-space:nowrap;
+  text-decoration:none;
+}
+html[data-color-mode="original"] .occasion-reference .occasion-ref-all{border-color:#44353e}
+.occasion-reference .occasion-ref-all:hover{color:#e8a3c5;border-color:#e8a3c5}
+.occasion-reference .occasion-ref-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  align-items:stretch;
+}
+.occasion-reference .occasion-ref-card{
+  position:relative;
+  isolation:isolate;
+  display:block;
+  min-width:0;
+  width:100%;
+  aspect-ratio:.72;
+  overflow:hidden;
+  background:#2b2228;
+  color:#fff;
+  text-decoration:none;
+}
+.occasion-reference .occasion-ref-card>img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;height:100%;
+  object-fit:cover!important;
+  object-position:center center;
+  filter:none!important;
+  transform:scale(1);
+  transition:transform 950ms cubic-bezier(.18,.68,.22,1);
+}
+.occasion-reference .occasion-ref-card:hover>img,
+.occasion-reference .occasion-ref-card:focus-visible>img{transform:scale(1.035)}
+.occasion-reference .occasion-ref-card::before{
+  content:"";
+  pointer-events:none;
+  position:absolute;
+  z-index:2;
+  inset:10px;
+  border:1px solid rgba(255,255,255,.25);
+}
+.occasion-reference .occasion-ref-card::after{
+  content:"";
+  pointer-events:none;
+  position:absolute;
+  z-index:1;
+  inset:20% 0 0;
+  background:linear-gradient(to bottom,transparent 8%,rgba(9,5,10,.04) 37%,rgba(9,5,10,.78) 100%);
+}
+.occasion-reference .occasion-ref-copy{
+  position:absolute;
+  z-index:3;
+  inset:auto 21px 27px 23px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:8px;
+  color:#fff;
+}
+.occasion-reference .occasion-ref-name{display:block;min-width:0}
+.occasion-reference .occasion-ref-name small{
+  display:block;
+  margin-bottom:9px;
+  font:600 9px/1.3 var(--sans);
+  letter-spacing:.10em;
+  color:#fff;
+  text-transform:uppercase;
+}
+.occasion-reference .occasion-ref-name strong{
+  display:block;
+  font:400 clamp(26px,2.4vw,38px)/.99 var(--serif);
+  letter-spacing:-.028em;
+  color:#fff;
+  font-weight:400;
+}
+.occasion-reference .occasion-ref-arrow{
+  flex:none;
+  width:39px;height:39px;
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font:400 19px/1 var(--sans);
+  color:#fff;
+  transition:background .25s ease,color .25s ease;
+}
+.occasion-reference .occasion-ref-card:hover .occasion-ref-arrow{background:#fff;color:#20151d}
+.occasion-reference .occasion-ref-note{
+  font:400 11px/1.6 var(--sans);
+  color:#ddd0da;
+  margin:18px 0 0 auto;
+  max-width:690px;
+  text-align:right;
+}
+html[data-color-mode="original"] .occasion-reference .occasion-ref-note{color:#67565d}
+@media(max-width:1180px){
+  body[data-page="home"] .occasion-reference .occasion-ref-wrap{width:calc(100% - 68px)}
+  body[data-page="home"] .occasion-reference .occasion-ref-title h2{font-size:clamp(45px,5.6vw,71px)}
+  .occasion-reference .occasion-ref-copy{inset:auto 15px 21px 16px}
+  .occasion-reference .occasion-ref-name strong{font-size:clamp(22px,2.6vw,33px)}
+  .occasion-reference .occasion-ref-arrow{width:34px;height:34px}
+}
+@media(max-width:860px){
+  body[data-page="home"] .occasion-reference{padding:66px 0 72px!important}
+  .occasion-reference .occasion-ref-heading{display:block;margin-bottom:22px}
+  body[data-page="home"] .occasion-reference .occasion-ref-title h2{font-size:clamp(41px,7vw,66px)}
+  .occasion-reference .occasion-ref-all{margin:18px 0 0}
+  .occasion-reference .occasion-ref-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  .occasion-reference .occasion-ref-card{aspect-ratio:.73}
+  .occasion-reference .occasion-ref-name strong{font-size:clamp(25px,4vw,35px)}
+  .occasion-reference .occasion-ref-note{max-width:none;text-align:left}
+}
+@media(max-width:560px){
+  body[data-page="home"] .occasion-reference .occasion-ref-wrap{width:calc(100% - 32px)}
+  body[data-page="home"] .occasion-reference .occasion-ref-title h2{font-size:clamp(38px,10vw,55px);line-height:1.07}
+  body[data-page="home"] .occasion-reference .occasion-ref-title h2 em{display:block;margin-top:3px;font-size:.57em}
+  .occasion-reference .occasion-ref-grid{gap:8px}
+  .occasion-reference .occasion-ref-card{aspect-ratio:.66}
+  .occasion-reference .occasion-ref-card::before{inset:7px}
+  .occasion-reference .occasion-ref-copy{inset:auto 11px 16px 12px;gap:4px}
+  .occasion-reference .occasion-ref-name small{font-size:7px;letter-spacing:.04em;margin-bottom:6px}
+  .occasion-reference .occasion-ref-name strong{font-size:clamp(19px,5vw,25px);letter-spacing:-.02em}
+  .occasion-reference .occasion-ref-arrow{width:28px;height:28px;font-size:14px}
+  .occasion-reference .occasion-ref-all{font-size:9px;letter-spacing:.11em}
+  .occasion-reference .occasion-ref-note{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .occasion-reference .occasion-ref-card>img,
+  .occasion-reference .occasion-ref-arrow{transition:none}
+}

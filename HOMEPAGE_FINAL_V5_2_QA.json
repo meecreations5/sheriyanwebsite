@@ -1,0 +1,87 @@
+{
+  "release": "SHANERYN Client Homepage V5.2",
+  "source": "sheriyanwebsite(1).zip, uploaded 19 Nov 2026",
+  "homepage_sections": [
+    "hero",
+    "occasion",
+    "best-seller",
+    "film",
+    "story",
+    "services",
+    "closure"
+  ],
+  "client_services": [
+    "Bespoke Tailoring",
+    "Colour Analysis",
+    "Personal Style Consultation"
+  ],
+  "viewport_qa": {
+    "desktop": {
+      "width": 1440,
+      "section_order_ok": true,
+      "three_service_cards_ok": true,
+      "service_links": [
+        "bespoke.html",
+        "consultation.html#color-analysis",
+        "consultation.html#personal-style"
+      ],
+      "collection_photos_loaded": true,
+      "local_resources_loaded": 56,
+      "uncaught_page_errors": [],
+      "no_horizontal_page_overflow": true,
+      "mobile_swipe_row": null
+    },
+    "mobile": {
+      "width": 390,
+      "section_order_ok": true,
+      "three_service_cards_ok": true,
+      "service_links": [
+        "bespoke.html",
+        "consultation.html#color-analysis",
+        "consultation.html#personal-style"
+      ],
+      "collection_photos_loaded": true,
+      "local_resources_loaded": 54,
+      "uncaught_page_errors": [],
+      "no_horizontal_page_overflow": true,
+      "mobile_swipe_row": true
+    },
+    "tablet": {
+      "width": 768,
+      "section_order_ok": true,
+      "three_service_cards_ok": true,
+      "service_links": [
+        "bespoke.html",
+        "consultation.html#color-analysis",
+        "consultation.html#personal-style"
+      ],
+      "collection_photos_loaded": true,
+      "local_resources_loaded": 55,
+      "uncaught_page_errors": [],
+      "no_horizontal_page_overflow": true,
+      "mobile_swipe_row": null
+    },
+    "small-mobile": {
+      "width": 320,
+      "section_order_ok": true,
+      "three_service_cards_ok": true,
+      "service_links": [
+        "bespoke.html",
+        "consultation.html#color-analysis",
+        "consultation.html#personal-style"
+      ],
+      "collection_photos_loaded": true,
+      "local_resources_loaded": 54,
+      "uncaught_page_errors": [],
+      "no_horizontal_page_overflow": true,
+      "mobile_swipe_row": true
+    }
+  },
+  "asset_and_link_verification": "PASS (local assets/paths present; service hashes exist on dedicated consultation page)",
+  "notes": [
+    "Chromium QA uses in-memory routing because this environment restricts local browser navigation.",
+    "The single external Google Fonts request is blocked by the test router; it is not a missing project asset.",
+    "On touch-width viewports the third service card image loads lazily when it enters the swipe viewport.",
+    "Real deployment, enquiry email clients and physical mobile devices still require final acceptance."
+  ]
+}

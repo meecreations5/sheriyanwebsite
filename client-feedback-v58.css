@@ -1,0 +1,42 @@
+/* SHANERYN V5.8: static homepage fashion-film image and tidy Bespoke copy.
+ * Leaves the approved page composition and film.html video functionality intact. */
+body[data-page="home"] .film-v58-static .film-v58-still {
+  background-position:center center !important;
+  background-size:cover !important;
+  opacity:1 !important;
+  transform:none !important;
+  transition:none !important;
+  animation:none !important;
+  filter:none !important;
+  will-change:auto !important;
+}
+body[data-page="home"] .film-v58-static .film-content {
+  pointer-events:auto;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-copy .bodycopy {
+  margin-bottom:32px;
+}
+@media(max-width:720px){
+  body[data-page="home"] .film-v58-static .film-v58-still {
+    background-position:68% center !important;
+  }
+  body[data-page="home"] .bespoke-v57 .bespoke-copy .bodycopy {
+    margin-bottom:27px;
+  }
+}
+
+/* Keep the Starlight caption legible across the warm floor and deep-red ottoman
+ * without obscuring the outfit or introducing a hard-edged label bar. */
+body[data-page="home"] .best-seller-v4 .best-seller-image::after {
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:clamp(90px,13vw,158px);
+  background:linear-gradient(to top,rgba(242,229,222,.80),rgba(242,229,222,0));
+  pointer-events:none;
+  z-index:1;
+}
+body[data-page="home"] .best-seller-v4 .best-image-caption {
+  z-index:2;
+  color:#271d22;
+}

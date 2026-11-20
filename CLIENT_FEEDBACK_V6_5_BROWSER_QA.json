@@ -1,0 +1,59 @@
+{
+  "method": "Inline browser DOM rendering, local resource substitution, no HTTP navigation",
+  "results": [
+    {
+      "page": "collections.html",
+      "width": 1440,
+      "errors": [],
+      "numCards": 8,
+      "allProduct": true,
+      "overflow": false
+    },
+    {
+      "page": "collections.html",
+      "width": 390,
+      "errors": [],
+      "numCards": 8,
+      "allProduct": true,
+      "overflow": false
+    },
+    {
+      "page": "collection.html",
+      "width": 1440,
+      "errors": [],
+      "heroSrc": "assets/product-detail/sunshine/01.webp",
+      "categoryCards": 2,
+      "allProduct": true,
+      "overflow": false
+    },
+    {
+      "page": "collection.html",
+      "width": 390,
+      "errors": [],
+      "heroSrc": "assets/product-detail/sunshine/01.webp",
+      "categoryCards": 2,
+      "allProduct": true,
+      "overflow": false
+    },
+    {
+      "page": "look.html",
+      "width": 1440,
+      "errors": [],
+      "bespokeLinkRemoved": true,
+      "accordionsRemoved": true,
+      "buyNow": "BUY IT NOW\n\u2197",
+      "measurementOpens": true,
+      "overflow": false
+    },
+    {
+      "page": "look.html",
+      "width": 390,
+      "errors": [],
+      "bespokeLinkRemoved": true,
+      "accordionsRemoved": true,
+      "buyNow": "BUY IT NOW\n\u2197",
+      "measurementOpens": true,
+      "overflow": false
+    }
+  ]
+}

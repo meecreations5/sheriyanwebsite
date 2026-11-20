@@ -1,0 +1,27 @@
+/* SHANERYN V6.5 - product studio photographs only on the two collection pages.
+   Preserve the full outfit, including garment hems and shoes, at every viewport. */
+body[data-page="collections"] .collection-hero-image {
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#efebeb;
+}
+body[data-page="collection-edit"] .ep-collection-image {
+  background:#efebeb;
+}
+body[data-page="collection-edit"] .ep-collection-image>img {
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+body[data-page="collection-edit"] .ep-card>a {
+  aspect-ratio:2/3;
+  background:#f1eeee;
+}
+body[data-page="collection-edit"] .ep-card img {
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+@media(max-width:720px){
+  body[data-page="collections"] .collection-hero-image {object-fit:contain!important;}
+  body[data-page="collection-edit"] .ep-card>a {aspect-ratio:auto;}
+  body[data-page="collection-edit"] .ep-collection-image>img {display:block;position:static;width:100%;height:auto!important;object-fit:contain!important;}
+}

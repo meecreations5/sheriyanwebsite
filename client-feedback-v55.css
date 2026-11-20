@@ -1,0 +1,165 @@
+/* SHANERYN V5.5 — client feedback: edge-to-edge hero, editorial founder, magenta footer.
+   Scoped overrides keep all other approved V5.4 functionality intact. */
+
+/* 01 / Hero: photograph spans the complete width, with no solid-colour left panel or fade mask. */
+body[data-page="home"] .home-v4-hero.hero-v54-single {
+  width:100%; max-width:100%; background:#2c2326 !important; overflow:hidden;
+}
+body[data-page="home"] .home-v4-hero.hero-v54-single .hero-image {
+  inset:0 !important;
+  width:100%; height:100%;
+  background-size:cover !important;
+  background-position:center 10% !important;
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+  opacity:1 !important;
+}
+body[data-page="home"] .home-v4-hero.hero-v54-single::before,
+html[data-color-mode="inverse"] body[data-page="home"] .home-v4-hero.hero-v54-single::before {
+  background:linear-gradient(90deg,rgba(17,12,19,.68) 0%,rgba(17,12,19,.42) 30%,rgba(17,12,19,.08) 65%,transparent 100%) !important;
+}
+body[data-page="home"] .hero-v54-single .hero-tagline { color:#fff !important; text-shadow:0 2px 24px rgba(0,0,0,.35) !important; }
+body[data-page="home"] .hero-v54-single .hero-v54-description { color:#fff !important; text-shadow:0 1px 12px rgba(0,0,0,.35) !important; }
+body[data-page="home"] .hero-v54-single .hero-v54-cta { background:rgba(28,20,28,.78); border-color:rgba(255,255,255,.85); color:#fff; }
+body[data-page="home"] .hero-v54-single .hero-v54-cta:is(:hover,:focus-visible) { background:#fff; color:#261b23; }
+
+/* 05 / Founder: large vertical lowercase chapter word + overlaid city portrait + personal letter. */
+body[data-page="home"] .founder-v55,
+html[data-color-mode="inverse"] body[data-page="home"] .founder-v55 {
+  position:relative;
+  overflow:hidden;
+  padding:clamp(50px,4.2vw,68px) 0 !important;
+  background:#171319 !important;
+  color:#eee7eb !important;
+  border:0 !important;
+}
+body[data-page="home"] .founder-v55::before,
+body[data-page="home"] .founder-v55::after { content:none !important; }
+body[data-page="home"] .founder-v55 .founder-v55-layout {
+  display:grid !important;
+  grid-template-columns:minmax(0,45%) minmax(0,55%) !important;
+  align-items:center;
+  gap:clamp(28px,4.8vw,88px) !important;
+  width:min(1400px,calc(100% - 100px));
+  max-width:1400px;
+  min-height:clamp(560px,45vw,680px);
+}
+body[data-page="home"] .founder-v55 .founder-v55-visual {
+  min-width:0;
+  position:relative;
+  height:clamp(560px,45vw,680px);
+  isolation:isolate;
+}
+body[data-page="home"] .founder-v55 .founder-v55-vertical-title {
+  position:absolute;
+  left:-.035em;
+  top:50%;
+  transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;
+  font:400 clamp(130px,12vw,200px)/.81 var(--serif);
+  letter-spacing:-.06em;
+  color:#92888b !important;
+  text-transform:lowercase;
+  white-space:nowrap;
+  margin:0;
+  z-index:0;
+  user-select:none;
+}
+body[data-page="home"] .founder-v55 .founder-photo {
+  position:absolute;
+  top:22%;
+  left:27%;
+  width:min(320px,66%);
+  aspect-ratio:511 / 775;
+  margin:0;
+  z-index:1;
+  overflow:hidden;
+  background:#2a2327;
+}
+body[data-page="home"] .founder-v55 .founder-photo-full {
+  display:block;
+  width:100%; height:100% !important;
+  max-height:100% !important;
+  object-fit:cover !important;
+  object-position:center 45% !important;
+  filter:none !important;
+}
+body[data-page="home"] .founder-v55 .founder-photo figcaption {display:none}
+body[data-page="home"] .founder-v55 .founder-v55-copy {
+  position:relative;
+  z-index:2;
+  width:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+  color:#e5dde3 !important;
+}
+body[data-page="home"] .founder-v55 .founder-letter {
+  border:0 !important;
+  padding:0 !important;
+  max-width:640px;
+}
+body[data-page="home"] .founder-v55 .founder-greeting {
+  width:170px;
+  min-width:0;
+  max-width:52%;
+  margin:0 0 23px;
+}
+body[data-page="home"] .founder-v55 .founder-letter p,
+html[data-color-mode="inverse"] body[data-page="home"] .founder-v55 .founder-letter p {
+  color:#e7dfe5 !important;
+  font:500 clamp(10px,.75vw,11px)/1.9 var(--sans);
+  letter-spacing:.15em;
+  max-width:590px;
+  margin:0 0 19px;
+}
+body[data-page="home"] .founder-v55 .founder-letter .founder-lotsa {letter-spacing:.19em; margin:24px 0 8px}
+body[data-page="home"] .founder-v55 .founder-signature {width:210px; max-width:55%; height:auto; margin:0}
+body[data-page="home"] .founder-v55 .founder-links {gap:28px; margin-top:32px; flex-wrap:wrap}
+body[data-page="home"] .founder-v55 .founder-links .pending-link,
+body[data-page="home"] .founder-v55 .founder-links a {
+  color:#d8cbd3 !important;
+  border-color:#8b7a86;
+  font-size:9px;
+  letter-spacing:.075em;
+}
+body[data-page="home"] .founder-v55 .founder-links a:hover {color:#f2bad3 !important}
+
+/* Footer: always display the original official magenta artwork, even in inverse mode. */
+.site-footer .footer-logo .logo-original,
+html[data-color-mode="inverse"] .site-footer .footer-logo .logo-original {display:block !important}
+.site-footer .footer-logo .logo-inverse,
+html[data-color-mode="inverse"] .site-footer .footer-logo .logo-inverse {display:none !important}
+
+@media(max-width:1000px) {
+  body[data-page="home"] .founder-v55 .founder-v55-layout {grid-template-columns:1fr !important; gap:14px !important; width:calc(100% - 80px); min-height:0}
+  body[data-page="home"] .founder-v55 .founder-v55-visual {height:590px; width:min(640px,100%); margin:0 auto}
+  body[data-page="home"] .founder-v55 .founder-v55-vertical-title {font-size:clamp(140px,19vw,190px)}
+  body[data-page="home"] .founder-v55 .founder-photo {top:17%; left:27%; width:min(300px,60%)}
+  body[data-page="home"] .founder-v55 .founder-v55-copy {width:min(650px,100%) !important; margin:0 auto !important}
+  body[data-page="home"] .founder-v55 .founder-letter p {font-size:11px;line-height:1.9}
+}
+@media(max-width:767px) {
+  body[data-page="home"] .home-v4-hero.hero-v54-single .hero-image {background-position:center 15% !important; background-size:cover !important}
+  body[data-page="home"] .home-v4-hero.hero-v54-single::before,
+  html[data-color-mode="inverse"] body[data-page="home"] .home-v4-hero.hero-v54-single::before {
+    background:linear-gradient(0deg,rgba(12,8,13,.84) 0%,rgba(12,8,13,.46) 28%,rgba(12,8,13,.06) 61%,transparent 100%) !important;
+  }
+  body[data-page="home"] .founder-v55 {padding:30px 0 72px !important}
+  body[data-page="home"] .founder-v55 .founder-v55-layout {display:flex !important; flex-direction:column; align-items:stretch; gap:18px !important; width:calc(100% - 40px); max-width:600px}
+  body[data-page="home"] .founder-v55 .founder-v55-visual {width:100%; height:clamp(380px,112vw,520px); min-height:0; margin:0}
+  body[data-page="home"] .founder-v55 .founder-v55-vertical-title {font-size:clamp(94px,23vw,132px) !important;top:49%;left:-1%;letter-spacing:-.055em;}
+  body[data-page="home"] .founder-v55 .founder-photo {top:12%;left:31%;width:min(230px,65%);height:auto;}
+  body[data-page="home"] .founder-v55 .founder-v55-copy {padding:0 !important; width:100% !important;}
+  body[data-page="home"] .founder-v55 .founder-greeting {width:166px;max-width:55%;margin-bottom:19px}
+  body[data-page="home"] .founder-v55 .founder-letter p {font-size:10px !important; letter-spacing:.12em; line-height:1.9; margin-bottom:18px}
+  body[data-page="home"] .founder-v55 .founder-letter .founder-lotsa {margin-top:24px}
+  body[data-page="home"] .founder-v55 .founder-signature {width:194px;max-width:58%}
+  body[data-page="home"] .founder-v55 .founder-links {display:flex;gap:22px;margin-top:27px}
+}
+@media(max-width:350px) {
+  body[data-page="home"] .founder-v55 .founder-v55-layout {width:calc(100% - 28px)}
+  body[data-page="home"] .founder-v55 .founder-v55-visual {height:370px}
+  body[data-page="home"] .founder-v55 .founder-v55-vertical-title {font-size:90px !important}
+  body[data-page="home"] .founder-v55 .founder-photo {width:64%;left:31%;top:9%}
+  body[data-page="home"] .founder-v55 .founder-letter p {font-size:9.6px !important;letter-spacing:.1em}
+}

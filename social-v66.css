@@ -1,0 +1,27 @@
+/* V6.6 social footer; matches the approved inverse-only SHANERYN palette. */
+.site-footer .v66-social {
+  display:flex; justify-content:center; align-items:center; flex-wrap:wrap;
+  gap:13px; margin:18px auto 0; padding:0; width:100%;
+}
+.site-footer .v66-social-icon {
+  width:42px; height:42px; flex:0 0 42px; display:inline-flex;
+  align-items:center; justify-content:center; border:1px solid #66505e;
+  border-radius:50%; color:#e6becf; background:transparent;
+  text-decoration:none; transition:color .2s,border-color .2s,background-color .2s,transform .2s;
+}
+.site-footer .v66-social-icon svg {
+  display:block; width:20px; height:20px; fill:none; stroke:currentColor;
+  stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round;
+}
+.site-footer a.v66-social-icon:hover { color:#f3c5df; border-color:#cc619e; background:#382531; transform:translateY(-2px); }
+.site-footer a.v66-social-icon:focus-visible { outline:2px solid #eb9ac5; outline-offset:4px; }
+.site-footer .v66-social-icon.is-pending { opacity:.56; cursor:default; }
+@media(max-width:767px) {
+  .site-footer .v66-social {gap:12px;margin-top:15px;}
+  .site-footer .v66-social-icon {width:42px;height:42px;flex-basis:42px;}
+  .v5-tabbar-item[data-v5-tab="whatsapp"] svg {stroke-width:1.7;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .site-footer .v66-social-icon {transition:none;}
+  .site-footer a.v66-social-icon:hover {transform:none;}
+}

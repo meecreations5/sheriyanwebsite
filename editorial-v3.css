@@ -1,0 +1,293 @@
+/* SHANERYN — V3 Editorial Treatment
+   Applied after the approved V2 prototype CSS. Original campaign photographs
+   and exact supplied SHANERYN wordmark/monogram are never altered in source.
+   The paper/fabric grain is a subtle, removable overlay. */
+:root{
+  --signature-magenta:#a6066a;
+  --signature-blush:#fcf0f9;
+  --editorial-ink:#30232c;
+  --editorial-grain:url('assets/editorial-paper-grain.png');
+  --editorial-weave:url('assets/editorial-linen.svg');
+}
+body.theme-white{
+  --v3-soft:#faf7f8; --v3-panel:#fff; --v3-story:#f9f5f7;
+  --v3-caption:#806773; --v3-hairline:#e7dae2;
+}
+body.theme-blush{
+  --v3-soft:#fcf2f8; --v3-panel:#fff9fd; --v3-story:#f8ebf4;
+  --v3-caption:#855c76; --v3-hairline:#e7ccdd;
+}
+/* Keep the official identity and approved site map unchanged. */
+.eyebrow{letter-spacing:.22em}
+.hero,.occasion-card,.bespoke,.film,.story,.closure,.site-footer,.collection-hero,
+.look-image-btn{isolation:isolate}
+/* 01 — Editorially framed hero without retouching the photograph. */
+.hero::after{
+  content:"";position:absolute;z-index:1;inset:0;
+  background-image:var(--editorial-grain);background-repeat:repeat;
+  opacity:.42;mix-blend-mode:multiply;pointer-events:none;
+}
+.hero-image{filter:saturate(.94) contrast(1.035);will-change:opacity}
+.hero-editorial-stamp{
+  position:absolute;z-index:3;right:2.2%;top:29px;
+  color:#fff;font-size:9px;letter-spacing:.28em;font-weight:600;
+  writing-mode:vertical-rl;text-shadow:0 2px 9px #250e23a8;
+}
+.hero-content>.eyebrow{display:inline-flex;align-items:center;gap:15px}
+.hero-content>.eyebrow::before{content:"";display:block;width:35px;height:1px;background:var(--signature-magenta)}
+.hero .hero-content h1{text-wrap:balance}
+/* 02 — Gallery picture frame, understated film grain and corner hairline. */
+.occasion-section{position:relative}
+.section-heading{position:relative}
+.section-heading::after{
+  content:"";position:absolute;left:0;bottom:-16px;width:55px;height:1px;
+  background:var(--signature-magenta);opacity:.7;
+}
+.occasion-card{border-radius:0;box-shadow:0 12px 35px rgba(43,24,34,.045)}
+.occasion-card::before{
+  content:"";position:absolute;z-index:2;inset:10px;
+  border:1px solid rgba(255,255,255,.38);
+  background-image:var(--editorial-grain);
+  opacity:.51;pointer-events:none;
+}
+.occasion-card img{filter:saturate(.95) contrast(1.03)}
+.occasion-card:hover img,.occasion-card:focus-visible img{filter:saturate(1.0) contrast(1.025);transform:scale(1.045)}
+.occasion-card::after{inset:20% 0 0;background:linear-gradient(transparent 32%,rgba(20,9,17,.65))}
+.occasion-card .occasion-info{z-index:3}
+.occasion-arrow{border-width:1px}
+/* 03 — Textile-finish backdrop and an authentic monogram detail. */
+.bespoke{position:relative;overflow:hidden;background:var(--v3-soft)!important}
+.bespoke::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:var(--editorial-weave),var(--editorial-grain);
+  background-repeat:repeat;opacity:.74;
+}
+.bespoke::after{
+  content:"";position:absolute;right:-145px;top:-180px;width:430px;height:430px;
+  border:1px solid rgba(166,6,106,.12);border-radius:50%;pointer-events:none;
+}
+.bespoke-inner{position:relative;z-index:1}
+.bespoke-visual{isolation:isolate}
+.bespoke-visual>img{filter:saturate(.87) contrast(1.03);border-color:var(--v3-panel)!important}
+.bespoke-visual .bespoke-inset{border-color:var(--v3-panel)!important;filter:saturate(.88) contrast(1.02)}
+.bespoke-image-seal{
+  position:absolute;display:flex;align-items:center;justify-content:center;
+  width:86px;height:104px;top:16px;right:5%;z-index:3;
+  background:rgba(255,252,254,.95);border:1px solid rgba(166,6,106,.16);
+  box-shadow:0 10px 32px #3b182619;
+}
+.bespoke-image-seal img{height:55px;width:auto;object-fit:contain}
+.bespoke-copy .mini-rule{height:2px;width:48px}
+/* 04 — Cinematic contrast. The actual film is still pending. */
+.film::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background-image:var(--editorial-grain);opacity:.54;
+  pointer-events:none;mix-blend-mode:screen;
+}
+.film-bg{filter:contrast(1.08) saturate(.88)}
+.film-edge-caption{
+  position:absolute;right:4%;top:30px;z-index:2;color:#fff9;
+  font-size:9px;letter-spacing:.27em;line-height:1.5;
+}
+.film h2{text-shadow:0 1px 22px rgba(0,0,0,.24)}
+.play-button{backdrop-filter:blur(4px)}
+/* 05 — The founder chapter becomes SHANERYN's editorial signature. */
+.story{
+  position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 92% 78%,rgba(166,6,106,.055),transparent 45%),
+             linear-gradient(130deg,var(--v3-story),var(--v3-panel))!important;
+  padding:118px 0 125px;
+}
+.story::before{
+  content:""!important;position:absolute;inset:0;width:auto;height:auto;left:0;top:0;
+  z-index:0;pointer-events:none;
+  background-image:var(--editorial-weave),var(--editorial-grain);
+  background-repeat:repeat;opacity:.62;font-size:0!important;
+}
+.story::after{
+  content:"";position:absolute;top:40px;right:4%;width:60px;height:1px;
+  background:var(--signature-magenta);opacity:.5;
+}
+.story-chapter-ghost{
+  position:absolute;top:2%;left:-3%;z-index:0;
+  color:rgba(166,6,106,.048);font:400 clamp(245px,32vw,520px)/.9 var(--serif);
+  letter-spacing:-.12em;pointer-events:none;white-space:nowrap;
+}
+.story-background-monogram{
+  position:absolute;right:-35px;bottom:-115px;z-index:0;
+  height:min(670px,83%);width:auto;opacity:.037;pointer-events:none;
+}
+.story-inner{position:relative;z-index:1;grid-template-columns:1.02fr .98fr;gap:8%;align-items:center}
+.story-visual{height:560px;margin-top:8px;margin-left:1%;isolation:isolate}
+.story-main{
+  border:9px solid var(--v3-panel)!important;filter:saturate(.91) contrast(1.04)!important;
+  box-shadow:0 24px 70px rgba(49,20,37,.12);
+  object-position:center 27%;
+}
+.story-mini{
+  border:8px solid var(--v3-panel)!important;filter:saturate(.93) contrast(1.02)!important;
+  box-shadow:0 18px 50px rgba(49,20,37,.15);object-position:center 18%;
+}
+.story-portrait-caption{
+  position:absolute;left:3%;bottom:0;font-size:9px;letter-spacing:.15em;
+  color:var(--v3-caption);z-index:3;display:flex;gap:28px;align-items:center;
+}
+.story-portrait-caption b{font-size:10px;font-weight:500}
+.story-portrait-seal{
+  position:absolute;right:2%;top:9%;z-index:3;
+  width:84px;height:104px;background:rgba(255,253,254,.96);
+  display:flex;align-items:center;justify-content:center;border:1px solid var(--v3-hairline);
+  box-shadow:0 12px 35px rgba(33,9,22,.11);
+}
+.story-portrait-seal img{height:64px;width:auto;object-fit:contain}
+.story-copy{padding-right:0;min-width:0}
+.founder-chapter-lockup{display:flex;align-items:center;gap:17px;max-width:100%;margin-bottom:31px}
+.founder-chapter-no{
+  font:400 60px/.83 var(--serif);letter-spacing:-.07em;color:var(--signature-magenta);
+}
+.founder-chapter-separator{
+  display:block;width:auto;height:auto;font:400 36px/1 var(--serif);color:rgba(166,6,106,.6);flex:none;transform:none
+}
+.founder-chapter-label{
+  font-size:10px;line-height:1.75;letter-spacing:.155em;font-weight:600;
+  color:var(--editorial-ink);max-width:230px;
+}
+.founder-overline{color:var(--signature-magenta)!important}
+.story-copy h2{font:400 clamp(49px,4.7vw,79px)/1.03 var(--serif);margin:16px 0 21px;letter-spacing:-.033em}
+.story-copy h2 em{color:#77435f;font-weight:400}
+.founder-copy-rule{height:1px;width:53px;background:var(--signature-magenta);margin:0 0 23px}
+.story-copy .bodycopy{max-width:395px;margin:0 0 16px;line-height:1.85}
+.founder-pullquote{
+  font:400 clamp(28px,2.6vw,43px)/1.10 var(--serif);
+  letter-spacing:-.025em;color:#523847;margin:16px 0 18px;
+}
+.founder-pullquote em{color:var(--signature-magenta)}
+.founder-photo-disclaimer{
+  color:#8a7481;font-size:10.5px;line-height:1.65;max-width:380px;
+  border-left:1px solid rgba(166,6,106,.3);padding-left:12px;
+}
+.founder-signoff{display:flex;gap:12px;align-items:center;margin:22px 0 24px}
+.founder-signoff img{width:auto;height:37px;object-fit:contain}
+.founder-signoff span{font-size:9px;letter-spacing:.22em;color:var(--signature-magenta)}
+.story-copy .underline-link{font-size:10px}
+/* 06 — Monogram chapter break leading into a quieter closing. */
+.closure{position:relative;background:var(--v3-panel)!important}
+.closure-mark{display:flex;justify-content:center;align-items:center;gap:17px;margin:-37px auto 31px}
+.closure-mark span{width:54px;height:1px;background:rgba(166,6,106,.31)}
+.closure-mark img{height:38px;width:auto;object-fit:contain}
+.closure-image-row{position:relative}
+.closure-image-row::after{
+  content:"";inset:0;position:absolute;pointer-events:none;
+  background-image:var(--editorial-grain);opacity:.35;
+}
+.closure-image-row img{filter:saturate(.94) contrast(1.02)}
+/* The centred large footer wordmark stays dominant. The authentic watermark is secondary. */
+.site-footer{
+  position:relative;overflow:hidden;background:var(--v3-panel)!important;
+  border-top:1px solid var(--v3-hairline)!important;
+}
+.site-footer::before{
+  content:"";position:absolute;inset:0;z-index:0;opacity:.34;pointer-events:none;
+  background-image:var(--editorial-grain);
+}
+.footer-watermark-monogram{
+  position:absolute;left:50%;top:3px;transform:translateX(-50%);
+  width:350px;max-width:80%;height:auto;opacity:.025;
+  pointer-events:none;z-index:0;
+}
+.site-footer>.wrap{position:relative;z-index:1}
+.footer-logo img{width:min(550px,87vw)!important;max-width:100%}
+.footer-kicker{letter-spacing:.25em}
+.footer-masthead{padding-top:7px}
+.footer-rule{width:48px}
+.footer-grid{margin-top:49px}
+.footer-col a,.footer-col button{transition:color .2s}
+/* The Collections page inherits the same gallery and image vocabulary. */
+.collection-hero{position:relative;isolation:isolate}
+.collection-hero::before{
+  content:"";position:absolute;z-index:0;inset:0 45% 0 0;
+  background-image:var(--editorial-weave),var(--editorial-grain);
+  opacity:.58;pointer-events:none;
+}
+.collection-hero-copy{position:relative;z-index:1}
+.collection-hero .eyebrow{color:var(--signature-magenta)}
+.collections-hero-folio{margin-top:20px;font-size:9px;letter-spacing:.20em;color:#997484}
+.collection-hero-image{filter:saturate(.93) contrast(1.03)}
+.collections-main{background:var(--v3-panel)!important}
+.collections-main .collections-top{padding-bottom:10px;border-bottom:1px solid var(--v3-hairline)}
+.look-image-btn{position:relative}
+.look-image-btn::after{
+  content:"";position:absolute;inset:9px;z-index:2;pointer-events:none;
+  border:1px solid rgba(255,255,255,.54);
+  background-image:var(--editorial-grain);opacity:.4;
+}
+.look-image-btn img{filter:saturate(.94) contrast(1.03)}
+.look-image-btn:hover img{filter:saturate(1.01) contrast(1.03)}
+.look-info p{letter-spacing:.04em}
+.collection-hero .collection-hero-copy h1{text-wrap:balance}
+@media(max-width:1200px){
+  .story-inner{gap:6%}
+  .story-copy h2{font-size:clamp(47px,5vw,69px)}
+  .story-visual{height:510px}
+  .story-portrait-seal{right:0}
+}
+@media(max-width:900px){
+  .story{padding:77px 0 87px}
+  .story-inner{grid-template-columns:1fr 1fr;gap:4%}
+  .story-visual{height:440px}
+  .story-portrait-seal{width:65px;height:82px}
+  .story-portrait-seal img{height:49px}
+  .founder-chapter-no{font-size:52px}
+  .founder-chapter-label{font-size:9px}
+  .story-copy h2{font-size:49px}
+  .founder-pullquote{font-size:30px}
+}
+@media(max-width:720px){
+  .hero-editorial-stamp{top:20px;right:17px;font-size:7px}
+  .hero-content>.eyebrow::before{width:22px}
+  .occasion-card::before{inset:6px}
+  .occasion-card::after{background:linear-gradient(transparent 12%,rgba(12,7,10,.68))}
+  .bespoke{padding:69px 0 72px}
+  .bespoke::after{width:220px;height:220px;top:-110px;right:-100px}
+  .bespoke-image-seal{height:79px;width:67px;top:12px;right:0}
+  .bespoke-image-seal img{height:49px}
+  .film-edge-caption{right:20px;top:15px;font-size:7px}
+  .story{padding:71px 0 81px}
+  .story-chapter-ghost{font-size:250px;top:20px;left:-18px}
+  .story-background-monogram{height:380px;bottom:-66px;right:-40px}
+  .story-inner{display:flex;flex-direction:column;gap:23px}
+  .story-visual{width:100%;height:445px;margin:0}
+  .story-main{width:77%;height:84%;border-width:6px!important}
+  .story-mini{height:45%;width:42%;bottom:9%;right:0;border-width:6px!important}
+  .story-portrait-seal{top:14px;right:3px;width:62px;height:83px}
+  .story-portrait-seal img{height:51px}
+  .story-portrait-caption{left:2%;bottom:6px;font-size:7px;gap:14px}
+  .story-copy{width:100%;padding:0 1%;margin:0}
+  .founder-chapter-lockup{margin:0 0 25px;gap:13px}
+  .founder-chapter-no{font-size:59px}
+  .founder-chapter-label{font-size:9px}
+  .story-copy h2{font-size:clamp(48px,11.2vw,64px);margin:15px 0 19px}
+  .founder-copy-rule{margin-bottom:21px}
+  .story-copy .bodycopy{max-width:100%}
+  .founder-pullquote{font-size:37px}
+  .founder-photo-disclaimer{font-size:10px}
+  .founder-signoff{margin:22px 0}
+  .closure-mark{margin:-36px auto 24px}
+  .closure-mark img{height:31px}
+  .closure-mark span{width:41px}
+  .footer-watermark-monogram{width:260px;top:8px}
+  .footer-logo img{width:min(365px,89vw)!important}
+  .collection-hero::before{inset:0}
+  .collection-hero-copy{padding-top:43px;padding-bottom:45px}
+  .collections-hero-folio{margin-top:10px}
+}
+@media(max-width:380px){
+ .story-visual{height:390px}
+ .story-copy h2{font-size:47px}
+ .founder-chapter-label{font-size:8px;letter-spacing:.12em}
+ .story-portrait-caption{font-size:6.5px}
+ .hero-editorial-stamp{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-image,.occasion-card img,.look-image-btn img{will-change:auto}
+}

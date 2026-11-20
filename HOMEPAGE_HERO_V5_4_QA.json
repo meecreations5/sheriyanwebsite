@@ -1,0 +1,26 @@
+{
+  "release": "V5.4",
+  "source": "SHANERYN_V5_3_Full_Website.zip",
+  "screens_tested": [
+    "1440x900 inverse/original",
+    "768x1024 inverse",
+    "390x844 inverse/original",
+    "320x700 inverse"
+  ],
+  "checks": {
+    "one_client_uploaded_hero_photo": true,
+    "hero_auto_rotating_carousel_removed": true,
+    "no_large_logo_in_hero": true,
+    "navbar_logo_preserved": true,
+    "hero_cta_visible": true,
+    "closure_three_look_images_removed": true,
+    "closure_title_and_both_ctas_preserved": true,
+    "seven_home_sections_in_order": true,
+    "mobile_collection_two_column_grid_preserved": true,
+    "no_page_javascript_errors_in_routed_browser_qa": true,
+    "no_horizontal_overflow_at_tested_widths": true,
+    "client_uploaded_photo_copied_without_altering_bytes": true,
+    "dedicated_story_page_unchanged": true
+  },
+  "note": "Routed local-browser preview; final deployed-device and live-font smoke testing still recommended."
+}

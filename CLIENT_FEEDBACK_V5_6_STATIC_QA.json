@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "seven_sections_correct_order": true,
+    "hero_exact_two_line_copy": true,
+    "hero_one_image": true,
+    "hero_one_cta": true,
+    "hero_no_big_logo": true,
+    "hero_no_description": true,
+    "three_services": true,
+    "service_order": true,
+    "bespoke_two_original_photos": true,
+    "bespoke_original_monogram": true,
+    "mobile_collection_4_looks": true,
+    "founder_content_preserved": true,
+    "footer_original_magenta": true,
+    "v56_is_homepage_scoped": true,
+    "new_css_no_parse_errors": true,
+    "home_relative_assets_exist": true,
+    "js_files_syntax_valid": true,
+    "all_key_js_unchanged_from_v55": true
+  },
+  "all_passed": true,
+  "css_parse_errors": [],
+  "missing_local_refs": [],
+  "js_errors": [],
+  "js_file_count": 15
+}

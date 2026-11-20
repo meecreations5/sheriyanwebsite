@@ -1,0 +1,90 @@
+/* SHANERYN V5.7 - one editorial Bespoke chapter, not a Services carousel.
+ * Restore the original site's overlapping fabric photographs and monogram,
+ * with reference-aligned size, image/copy balance and mobile stacking.
+ * All rules are homepage-only; other site pages remain unchanged. */
+body[data-page="home"] .bespoke-v57 {
+  padding:clamp(74px,7vw,120px) 0 !important;
+  background:var(--home-paper) !important;
+  color:var(--home-ink);
+  scroll-margin-top:var(--v47-header-height,76px);
+}
+body[data-page="home"] .bespoke-v57 .bespoke-inner {
+  width:min(1540px,calc(100% - 52px));max-width:none;
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  gap:clamp(48px,6vw,106px);
+  align-items:center;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-visual {
+  width:100%;height:clamp(420px,39vw,610px);min-width:0;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-visual>img {
+  width:83%;height:91%;object-fit:cover;object-position:center;
+  box-sizing:border-box;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-visual .bespoke-inset {
+  position:absolute;right:0;bottom:0;width:45%;height:46%;
+  object-fit:cover;object-position:center;
+  box-sizing:border-box;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-image-seal {right:4%;top:16px}
+body[data-page="home"] .bespoke-v57 .bespoke-copy {min-width:0}
+body[data-page="home"] .bespoke-v57 .bespoke-copy>.eyebrow {
+  font:600 10px/1.6 var(--sans);letter-spacing:.23em;
+  color:var(--home-accent);
+}
+body[data-page="home"] .bespoke-v57 .bespoke-copy h2 {
+  font:400 clamp(58px,5.3vw,89px)/1.04 var(--serif);
+  max-width:650px;letter-spacing:-.052em;
+  color:var(--home-ink);margin:25px 0 30px;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-copy h2 em {
+  font-style:italic;font-weight:400;display:block;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-copy .mini-rule {
+  width:46px;height:2px;background:var(--home-accent);margin:0 0 29px;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-copy .bodycopy {
+  color:var(--home-sub);max-width:500px;font-size:14px;line-height:1.95;
+  margin:0 0 26px;
+}
+body[data-page="home"] .bespoke-v57 .bespoke-copy blockquote {
+  max-width:540px;margin:0 0 34px;
+  font:italic clamp(19px,1.7vw,25px)/1.55 var(--serif);
+  color:var(--home-accent);
+}
+body[data-page="home"] .bespoke-v57 .outlined-btn {display:inline-flex;gap:25px;align-items:center}
+@media (max-width:980px) and (min-width:721px) {
+  body[data-page="home"] .bespoke-v57 .bespoke-inner {gap:35px;width:calc(100% - 50px)}
+  body[data-page="home"] .bespoke-v57 .bespoke-visual {height:clamp(350px,48vw,460px)}
+  body[data-page="home"] .bespoke-v57 .bespoke-copy h2 {font-size:clamp(45px,5.8vw,63px)}
+  body[data-page="home"] .bespoke-v57 .bespoke-copy .bodycopy {font-size:12px}
+}
+@media (max-width:720px) {
+  body[data-page="home"] .bespoke-v57 {padding:54px 0 74px !important}
+  body[data-page="home"] .bespoke-v57 .bespoke-inner {
+    display:flex;flex-direction:column;align-items:stretch;
+    gap:32px;width:calc(100% - 36px);
+  }
+  body[data-page="home"] .bespoke-v57 .bespoke-visual {
+    width:100%;height:clamp(315px,95vw,480px);max-height:none;
+  }
+  body[data-page="home"] .bespoke-v57 .bespoke-visual>img {width:83%;height:91%;border-width:5px}
+  body[data-page="home"] .bespoke-v57 .bespoke-visual .bespoke-inset {
+    width:46%;height:46%;border-width:5px;
+  }
+  body[data-page="home"] .bespoke-v57 .bespoke-image-seal {top:12px;right:1%;width:65px;height:76px}
+  body[data-page="home"] .bespoke-v57 .bespoke-image-seal img {height:45px}
+  body[data-page="home"] .bespoke-v57 .bespoke-copy h2 {
+    font-size:clamp(47px,12vw,65px);margin:18px 0 25px;
+  }
+  body[data-page="home"] .bespoke-v57 .bespoke-copy .mini-rule {margin-bottom:21px}
+  body[data-page="home"] .bespoke-v57 .bespoke-copy .bodycopy {
+    font-size:13px;line-height:1.85;max-width:100%;margin-bottom:22px;
+  }
+  body[data-page="home"] .bespoke-v57 .bespoke-copy blockquote {font-size:19px;margin-bottom:29px}
+}
+@media(max-width:360px) {
+  body[data-page="home"] .bespoke-v57 .bespoke-visual {height:300px}
+  body[data-page="home"] .bespoke-v57 .bespoke-copy h2 {font-size:45px}
+}

@@ -1,0 +1,15 @@
+/* SHANERYN V6.1 — Final hero placement. Preserve approved single image,
+   tagline and CTA while bottom-left aligning the desktop text block. */
+@media (min-width:768px) {
+  body[data-page="home"] .hero-v54-single .hero-v54-copy {
+    left:clamp(28px,5vw,86px) !important;
+    right:auto !important;
+    bottom:clamp(32px,5.5vh,68px) !important;
+    width:auto !important;
+    max-width:calc(100% - 2 * clamp(28px,5vw,86px)) !important;
+    align-items:flex-start !important;
+  }
+}
+body[data-page="home"] .hero-v54-single .hero-v54-cta {
+  align-self:flex-start !important;
+}

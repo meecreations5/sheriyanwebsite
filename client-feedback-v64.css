@@ -1,0 +1,27 @@
+/* SHANERYN V6.4 - approved inverse-only and the first-chapter Bespoke form. */
+html[data-color-mode="inverse"] { color-scheme:dark; }
+/* Safety fallback: even cached old toggles cannot appear. */
+.color-mode-toggle,[data-color-mode-toggle] {display:none!important;}
+body[data-page="bespoke-page"] .v64-stitch-types{margin:22px 0 25px;border-top:1px solid var(--ep-hair);padding-top:18px;}
+body[data-page="bespoke-page"] .v64-stitch-label{display:block;color:var(--ep-accent);font:600 11px/1.6 var(--sans);letter-spacing:.17em;margin-bottom:11px;}
+body[data-page="bespoke-page"] .v64-stitch-types ul{list-style:none;display:flex;flex-wrap:wrap;gap:9px;padding:0;margin:0;}
+body[data-page="bespoke-page"] .v64-stitch-types li{border:1px solid var(--ep-hair);color:var(--ep-ink);font:500 12px/1.5 var(--sans);letter-spacing:.025em;padding:8px 10px;}
+body[data-page="bespoke-page"] .v64-stitch-types small{font-size:inherit;color:var(--ep-sub);}
+body[data-page="bespoke-page"] .v64-bespoke-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;}
+body[data-page="bespoke-page"] .v64-measure-jump{color:var(--ep-ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:7px;font:600 11px/1.5 var(--sans);letter-spacing:.07em;white-space:nowrap;}
+body[data-page="bespoke-page"] .v64-measure-jump:hover{color:var(--ep-accent);}
+body[data-page="bespoke-page"] .v64-measure-wrap{background:var(--ep-bg);padding:clamp(35px,4.5vw,65px) 0 55px;border-top:1px solid var(--ep-hair);}
+body[data-page="bespoke-page"] .v64-measure-wrap .cv3-measurement{background:transparent;padding:22px 0;border:0;}
+body[data-page="bespoke-page"] #measurement-studio{scroll-margin-top:95px;}
+body[data-page="bespoke-page"] .cv3-measure-intro h2{max-width:520px;}
+body[data-page="look"] .v64-measure-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch;}
+body[data-page="look"] .v64-measure-actions button{min-height:40px;}
+body[data-page="look"] .ld-enquire-measures{background:#e9d4df;border:1px solid #e9d4df;color:#261821;font:700 11px/1.4 var(--sans);letter-spacing:.055em;padding:12px 10px;cursor:pointer;}
+body[data-page="look"] .ld-enquire-measures:hover{background:#f9e8f0;}
+body[data-page="look"] .ld-bespoke-link{display:inline-block;margin-top:16px;}
+body[data-page="contact-page"] .v64-garment-field{display:block;margin:12px 0;}
+@media(max-width:720px){body[data-page="bespoke-page"] .v64-stitch-types ul{gap:7px;}
+ body[data-page="bespoke-page"] .v64-stitch-types li{font-size:11px;padding:7px 9px;}
+ body[data-page="bespoke-page"] .v64-bespoke-actions{align-items:flex-start;flex-direction:column;gap:18px;}
+ body[data-page="bespoke-page"] .v64-measure-wrap{padding:28px 0 45px;}
+}

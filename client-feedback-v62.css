@@ -1,0 +1,87 @@
+/* SHANERYN V6.2 | Final copy and legibility refinements.
+   Shared across all pages, loaded after existing client feedback CSS.
+   Do not enlarge micro-labels on garments, buttons, nav or form inputs. */
+
+/* A slightly more visible section-label system across the website. */
+body[data-page] .eyebrow,
+body[data-page] .ep-kicker {
+  font-size: 12px;
+  line-height: 1.55;
+  letter-spacing: .17em;
+}
+
+/* The Fashion Film label should be noticeably readable against its still. */
+body[data-page="home"] .film-v4 .film-v4-copy > .eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .13em;
+}
+
+/* Make descriptive copy easier to read while keeping the editorial hierarchy. */
+body[data-page] .bodycopy,
+body[data-page] .ep-description,
+body[data-page] .ep-narrative-copy > p,
+body[data-page] .ep-collection-copy > p,
+body[data-page] .ep-philosophy p,
+body[data-page] .ep-step-grid p,
+body[data-page] .co-hero-lead p,
+body[data-page] .co-intro > p,
+body[data-page] .co-service-copy p,
+body[data-page] .co-process-head p,
+body[data-page] .co-closing p,
+body[data-page] .ld-description {
+  font-size: 15px;
+  line-height: 1.85;
+}
+body[data-page] .ep-smallnote,
+body[data-page] .ep-support-copy,
+body[data-page] .ep-section-row > p,
+body[data-page] .co-process-steps p,
+body[data-page="home"] .occasion-ref-note {
+  font-size: 13px;
+  line-height: 1.8;
+}
+/* Override more-specific historical homepage/mobile size rules. */
+body[data-page="home"] .bespoke-v57 .bespoke-copy .bodycopy {
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Replace the Closure's old all-caps chapter label with an italic editorial line. */
+body[data-page="home"] .closure .closure-v62-kicker {
+  display: block;
+  font: italic 400 clamp(16px, 1.7vw, 22px)/1.3 var(--serif);
+  letter-spacing: .01em;
+  text-transform: none;
+}
+body[data-page="home"] .closure .closure-v62-kicker em {font-style:italic;}
+
+/* The footer masthead now starts with the official wordmark. */
+.site-footer .footer-masthead .footer-logo { margin-top: 2px; }
+
+@media (max-width: 720px) {
+  body[data-page] .eyebrow,
+  body[data-page] .ep-kicker {font-size: 11.5px;letter-spacing:.14em;line-height:1.5;}
+  body[data-page="home"] .film-v4 .film-v4-copy > .eyebrow {font-size:13.5px;}
+  body[data-page] .bodycopy,
+  body[data-page] .ep-description,
+  body[data-page] .ep-narrative-copy > p,
+  body[data-page] .ep-collection-copy > p,
+  body[data-page] .ep-philosophy p,
+  body[data-page] .ep-step-grid p,
+  body[data-page] .co-hero-lead p,
+  body[data-page] .co-intro > p,
+  body[data-page] .co-service-copy p,
+  body[data-page] .co-process-head p,
+  body[data-page] .co-closing p,
+  body[data-page] .ld-description {font-size:14px;line-height:1.8;}
+  body[data-page="look"] .ld-description {font-size:14px !important;}
+  body[data-page="home"] .bespoke-v57 .bespoke-copy .bodycopy {font-size:14px;line-height:1.8;}
+  body[data-page] .ep-smallnote,
+  body[data-page] .ep-support-copy,
+  body[data-page] .ep-section-row > p,
+  body[data-page] .co-process-steps p,
+  body[data-page="home"] .occasion-ref-note {font-size:13px;line-height:1.75;}
+  body[data-page="home"] .closure .closure-v62-kicker {font-size:16px;}
+}

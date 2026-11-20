@@ -1,0 +1,28 @@
+{
+  "baseline": "V6.0",
+  "status": "PASS_STATIC",
+  "home_section_sequence": [
+    "hero",
+    "occasion",
+    "best-seller",
+    "film",
+    "story",
+    "bespoke",
+    "closure"
+  ],
+  "changes": {
+    "heroDesktopLeftBottom": true,
+    "heroMobileLeftBottomPreserved": true,
+    "preferredSizeRemoved": true,
+    "mainBuyIt": true,
+    "stickyBuyIt": true,
+    "mobileBuyIt": true,
+    "quickLookBuyIt": true,
+    "enquiryRoutingPreserved": true,
+    "madeToMeasurePreserved": true
+  },
+  "htmlPages": 11,
+  "jsChecked": 15,
+  "missingLocalAssets": 0,
+  "limitation": "Interactive browser navigation blocked by local Chromium administrator policy; visual and end-to-end runtime checks not executed"
+}

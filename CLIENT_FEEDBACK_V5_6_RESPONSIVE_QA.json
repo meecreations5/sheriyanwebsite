@@ -1,0 +1,839 @@
+{
+  "responsive": [
+    {
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "heroHeading": "Confidence!Stitched in.",
+      "heroHasDescription": false,
+      "sections": [
+        "hero",
+        "occasion",
+        "best-seller",
+        "film",
+        "story",
+        "services",
+        "closure"
+      ],
+      "hero": {
+        "x": 0,
+        "y": 78,
+        "w": 1440,
+        "h": 846
+      },
+      "heroText": {
+        "x": 547,
+        "y": 659,
+        "w": 319,
+        "h": 216
+      },
+      "heroImageBg": "50% 48%",
+      "founder": {
+        "x": 0,
+        "y": 3609,
+        "w": 1440,
+        "h": 855
+      },
+      "founderVisual": {
+        "x": 58,
+        "y": 3669,
+        "w": 618,
+        "h": 734
+      },
+      "founderPhoto": {
+        "x": 296,
+        "y": 3860,
+        "w": 315,
+        "h": 432
+      },
+      "founderLetter": {
+        "x": 725,
+        "y": 3965,
+        "w": 657,
+        "h": 439
+      },
+      "services": {
+        "x": 0,
+        "y": 4464,
+        "w": 1440,
+        "h": 1157
+      },
+      "bespokeCard": {
+        "x": 62,
+        "y": 4811,
+        "w": 646,
+        "h": 688
+      },
+      "bespokeVisual": {
+        "x": 63,
+        "y": 4812,
+        "w": 322,
+        "h": 686
+      },
+      "serviceCount": 3,
+      "serviceImages": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ],
+      "serviceCards": [
+        {
+          "href": "bespoke.html",
+          "w": 646,
+          "h": 688
+        },
+        {
+          "href": "consultation.html#color-analysis",
+          "w": 315,
+          "h": 688
+        },
+        {
+          "href": "consultation.html#personal-style",
+          "w": 315,
+          "h": 688
+        }
+      ],
+      "footerMagenta": "block",
+      "footerWhite": "none",
+      "collectionCards": 4,
+      "collectionGrid": "314.953px 314.969px 314.953px 314.969px",
+      "heroPhotoPresent": true,
+      "founderInViewport": true,
+      "pageErrors": [],
+      "size": "1440x900",
+      "mode": "inverse",
+      "checks": {
+        "sectionOrder": true,
+        "heroCopy": true,
+        "noHorizontalOverflow": true,
+        "threeServices": true,
+        "bespokeAssets": true,
+        "footerOfficialMagenta": true,
+        "noPageErrors": true,
+        "fourCollectionLooks": true,
+        "heroAsset": true
+      }
+    },
+    {
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "heroHeading": "Confidence!Stitched in.",
+      "heroHasDescription": false,
+      "sections": [
+        "hero",
+        "occasion",
+        "best-seller",
+        "film",
+        "story",
+        "services",
+        "closure"
+      ],
+      "hero": {
+        "x": 0,
+        "y": 78,
+        "w": 1440,
+        "h": 846
+      },
+      "heroText": {
+        "x": 547,
+        "y": 659,
+        "w": 319,
+        "h": 216
+      },
+      "heroImageBg": "50% 48%",
+      "founder": {
+        "x": 0,
+        "y": 3609,
+        "w": 1440,
+        "h": 832
+      },
+      "founderVisual": {
+        "x": 58,
+        "y": 3658,
+        "w": 618,
+        "h": 734
+      },
+      "founderPhoto": {
+        "x": 296,
+        "y": 3849,
+        "w": 315,
+        "h": 432
+      },
+      "founderLetter": {
+        "x": 725,
+        "y": 3958,
+        "w": 657,
+        "h": 434
+      },
+      "services": {
+        "x": 0,
+        "y": 4441,
+        "w": 1440,
+        "h": 1157
+      },
+      "bespokeCard": {
+        "x": 62,
+        "y": 4788,
+        "w": 646,
+        "h": 688
+      },
+      "bespokeVisual": {
+        "x": 63,
+        "y": 4789,
+        "w": 322,
+        "h": 686
+      },
+      "serviceCount": 3,
+      "serviceImages": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ],
+      "serviceCards": [
+        {
+          "href": "bespoke.html",
+          "w": 646,
+          "h": 688
+        },
+        {
+          "href": "consultation.html#color-analysis",
+          "w": 315,
+          "h": 688
+        },
+        {
+          "href": "consultation.html#personal-style",
+          "w": 315,
+          "h": 688
+        }
+      ],
+      "footerMagenta": "block",
+      "footerWhite": "none",
+      "collectionCards": 4,
+      "collectionGrid": "314.953px 314.969px 314.953px 314.969px",
+      "heroPhotoPresent": true,
+      "founderInViewport": true,
+      "pageErrors": [],
+      "size": "1440x900",
+      "mode": "original",
+      "checks": {
+        "sectionOrder": true,
+        "heroCopy": true,
+        "noHorizontalOverflow": true,
+        "threeServices": true,
+        "bespokeAssets": true,
+        "footerOfficialMagenta": true,
+        "noPageErrors": true,
+        "fourCollectionLooks": true,
+        "heroAsset": true
+      }
+    },
+    {
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "heroHeading": "Confidence!Stitched in.",
+      "heroHasDescription": false,
+      "sections": [
+        "hero",
+        "occasion",
+        "best-seller",
+        "film",
+        "story",
+        "services",
+        "closure"
+      ],
+      "hero": {
+        "x": 0,
+        "y": 78,
+        "w": 1024,
+        "h": 771
+      },
+      "heroText": {
+        "x": 328,
+        "y": 605,
+        "w": 293,
+        "h": 198
+      },
+      "heroImageBg": "50% 48%",
+      "founder": {
+        "x": 0,
+        "y": 3004,
+        "w": 1024,
+        "h": 725
+      },
+      "founderVisual": {
+        "x": 58,
+        "y": 3054,
+        "w": 423,
+        "h": 625
+      },
+      "founderPhoto": {
+        "x": 221,
+        "y": 3216,
+        "w": 245,
+        "h": 336
+      },
+      "founderLetter": {
+        "x": 516,
+        "y": 3215,
+        "w": 450,
+        "h": 463
+      },
+      "services": {
+        "x": 0,
+        "y": 3729,
+        "w": 1024,
+        "h": 1650
+      },
+      "bespokeCard": {
+        "x": 34,
+        "y": 4001,
+        "w": 956,
+        "h": 502
+      },
+      "bespokeVisual": {
+        "x": 35,
+        "y": 4002,
+        "w": 477,
+        "h": 500
+      },
+      "serviceCount": 3,
+      "serviceImages": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ],
+      "serviceCards": [
+        {
+          "href": "bespoke.html",
+          "w": 956,
+          "h": 502
+        },
+        {
+          "href": "consultation.html#color-analysis",
+          "w": 471,
+          "h": 771
+        },
+        {
+          "href": "consultation.html#personal-style",
+          "w": 471,
+          "h": 771
+        }
+      ],
+      "footerMagenta": "block",
+      "footerWhite": "none",
+      "collectionCards": 4,
+      "collectionGrid": "229.016px 229.031px 229.031px 229.031px",
+      "heroPhotoPresent": true,
+      "founderInViewport": true,
+      "pageErrors": [],
+      "size": "1024x820",
+      "mode": "inverse",
+      "checks": {
+        "sectionOrder": true,
+        "heroCopy": true,
+        "noHorizontalOverflow": true,
+        "threeServices": true,
+        "bespokeAssets": true,
+        "footerOfficialMagenta": true,
+        "noPageErrors": true,
+        "fourCollectionLooks": true,
+        "heroAsset": true
+      }
+    },
+    {
+      "viewport": 768,
+      "scrollWidth": 768,
+      "heroHeading": "Confidence!Stitched in.",
+      "heroHasDescription": false,
+      "sections": [
+        "hero",
+        "occasion",
+        "best-seller",
+        "film",
+        "story",
+        "services",
+        "closure"
+      ],
+      "hero": {
+        "x": 0,
+        "y": 78,
+        "w": 768,
+        "h": 846
+      },
+      "heroText": {
+        "x": 246,
+        "y": 698,
+        "w": 247,
+        "h": 176
+      },
+      "heroImageBg": "50% 48%",
+      "founder": {
+        "x": 0,
+        "y": 3817,
+        "w": 768,
+        "h": 1139
+      },
+      "founderVisual": {
+        "x": 64,
+        "y": 3867,
+        "w": 640,
+        "h": 590
+      },
+      "founderPhoto": {
+        "x": 237,
+        "y": 3967,
+        "w": 300,
+        "h": 455
+      },
+      "founderLetter": {
+        "x": 59,
+        "y": 4471,
+        "w": 650,
+        "h": 435
+      },
+      "services": {
+        "x": 0,
+        "y": 4956,
+        "w": 768,
+        "h": 1490
+      },
+      "bespokeCard": {
+        "x": 34,
+        "y": 5219,
+        "w": 700,
+        "h": 502
+      },
+      "bespokeVisual": {
+        "x": 35,
+        "y": 5220,
+        "w": 349,
+        "h": 500
+      },
+      "serviceCount": 3,
+      "serviceImages": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ],
+      "serviceCards": [
+        {
+          "href": "bespoke.html",
+          "w": 700,
+          "h": 502
+        },
+        {
+          "href": "consultation.html#color-analysis",
+          "w": 344,
+          "h": 623
+        },
+        {
+          "href": "consultation.html#personal-style",
+          "w": 344,
+          "h": 623
+        }
+      ],
+      "footerMagenta": "block",
+      "footerWhite": "none",
+      "collectionCards": 4,
+      "collectionGrid": "345px 345px",
+      "heroPhotoPresent": true,
+      "founderInViewport": true,
+      "pageErrors": [],
+      "size": "768x900",
+      "mode": "inverse",
+      "checks": {
+        "sectionOrder": true,
+        "heroCopy": true,
+        "noHorizontalOverflow": true,
+        "threeServices": true,
+        "bespokeAssets": true,
+        "footerOfficialMagenta": true,
+        "noPageErrors": true,
+        "fourCollectionLooks": true,
+        "heroAsset": true
+      }
+    },
+    {
+      "viewport": 390,
+      "scrollWidth": 390,
+      "heroHeading": "Confidence!Stitched in.",
+      "heroHasDescription": false,
+      "sections": [
+        "hero",
+        "occasion",
+        "best-seller",
+        "film",
+        "story",
+        "services",
+        "closure"
+      ],
+      "hero": {
+        "x": 0,
+        "y": 62,
+        "w": 390,
+        "h": 714
+      },
+      "heroText": {
+        "x": 20,
+        "y": 574,
+        "w": 352,
+        "h": 160
+      },
+      "heroImageBg": "50% 12%",
+      "founder": {
+        "x": 0,
+        "y": 3446,
+        "w": 390,
+        "h": 1116
+      },
+      "founderVisual": {
+        "x": 20,
+        "y": 3496,
+        "w": 350,
+        "h": 437
+      },
+      "founderPhoto": {
+        "x": 129,
+        "y": 3549,
+        "w": 227,
+        "h": 345
+      },
+      "founderLetter": {
+        "x": 20,
+        "y": 3951,
+        "w": 350,
+        "h": 561
+      },
+      "services": {
+        "x": 0,
+        "y": 4562,
+        "w": 390,
+        "h": 1071
+      },
+      "bespokeCard": {
+        "x": 18,
+        "y": 4825,
+        "w": 312,
+        "h": 709
+      },
+      "bespokeVisual": {
+        "x": 19,
+        "y": 4826,
+        "w": 310,
+        "h": 315
+      },
+      "serviceCount": 3,
+      "serviceImages": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ],
+      "serviceCards": [
+        {
+          "href": "bespoke.html",
+          "w": 312,
+          "h": 709
+        },
+        {
+          "href": "consultation.html#color-analysis",
+          "w": 312,
+          "h": 709
+        },
+        {
+          "href": "consultation.html#personal-style",
+          "w": 312,
+          "h": 709
+        }
+      ],
+      "footerMagenta": "block",
+      "footerWhite": "none",
+      "collectionCards": 4,
+      "collectionGrid": "174px 174px",
+      "heroPhotoPresent": true,
+      "founderInViewport": true,
+      "pageErrors": [],
+      "size": "390x844",
+      "mode": "inverse",
+      "checks": {
+        "sectionOrder": true,
+        "heroCopy": true,
+        "noHorizontalOverflow": true,
+        "threeServices": true,
+        "bespokeAssets": true,
+        "footerOfficialMagenta": true,
+        "noPageErrors": true,
+        "fourCollectionLooks": true,
+        "heroAsset": true
+      }
+    },
+    {
+      "viewport": 390,
+      "scrollWidth": 390,
+      "heroHeading": "Confidence!Stitched in.",
+      "heroHasDescription": false,
+      "sections": [
+        "hero",
+        "occasion",
+        "best-seller",
+        "film",
+        "story",
+        "services",
+        "closure"
+      ],
+      "hero": {
+        "x": 0,
+        "y": 62,
+        "w": 390,
+        "h": 714
+      },
+      "heroText": {
+        "x": 20,
+        "y": 574,
+        "w": 352,
+        "h": 160
+      },
+      "heroImageBg": "50% 12%",
+      "founder": {
+        "x": 0,
+        "y": 3446,
+        "w": 390,
+        "h": 1109
+      },
+      "founderVisual": {
+        "x": 20,
+        "y": 3476,
+        "w": 350,
+        "h": 437
+      },
+      "founderPhoto": {
+        "x": 129,
+        "y": 3529,
+        "w": 227,
+        "h": 345
+      },
+      "founderLetter": {
+        "x": 20,
+        "y": 3931,
+        "w": 350,
+        "h": 552
+      },
+      "services": {
+        "x": 0,
+        "y": 4555,
+        "w": 390,
+        "h": 1071
+      },
+      "bespokeCard": {
+        "x": 18,
+        "y": 4818,
+        "w": 312,
+        "h": 709
+      },
+      "bespokeVisual": {
+        "x": 19,
+        "y": 4819,
+        "w": 310,
+        "h": 315
+      },
+      "serviceCount": 3,
+      "serviceImages": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ],
+      "serviceCards": [
+        {
+          "href": "bespoke.html",
+          "w": 312,
+          "h": 709
+        },
+        {
+          "href": "consultation.html#color-analysis",
+          "w": 312,
+          "h": 709
+        },
+        {
+          "href": "consultation.html#personal-style",
+          "w": 312,
+          "h": 709
+        }
+      ],
+      "footerMagenta": "block",
+      "footerWhite": "none",
+      "collectionCards": 4,
+      "collectionGrid": "174px 174px",
+      "heroPhotoPresent": true,
+      "founderInViewport": true,
+      "pageErrors": [],
+      "size": "390x844",
+      "mode": "original",
+      "checks": {
+        "sectionOrder": true,
+        "heroCopy": true,
+        "noHorizontalOverflow": true,
+        "threeServices": true,
+        "bespokeAssets": true,
+        "footerOfficialMagenta": true,
+        "noPageErrors": true,
+        "fourCollectionLooks": true,
+        "heroAsset": true
+      }
+    },
+    {
+      "viewport": 320,
+      "scrollWidth": 320,
+      "heroHeading": "Confidence!Stitched in.",
+      "heroHasDescription": false,
+      "sections": [
+        "hero",
+        "occasion",
+        "best-seller",
+        "film",
+        "story",
+        "services",
+        "closure"
+      ],
+      "hero": {
+        "x": 0,
+        "y": 62,
+        "w": 320,
+        "h": 590
+      },
+      "heroText": {
+        "x": 18,
+        "y": 460,
+        "w": 284,
+        "h": 156
+      },
+      "heroImageBg": "50% 12%",
+      "founder": {
+        "x": 0,
+        "y": 2978,
+        "w": 320,
+        "h": 1049
+      },
+      "founderVisual": {
+        "x": 14,
+        "y": 3028,
+        "w": 292,
+        "h": 370
+      },
+      "founderPhoto": {
+        "x": 105,
+        "y": 3061,
+        "w": 187,
+        "h": 283
+      },
+      "founderLetter": {
+        "x": 14,
+        "y": 3416,
+        "w": 292,
+        "h": 561
+      },
+      "services": {
+        "x": 0,
+        "y": 4027,
+        "w": 320,
+        "h": 1090
+      },
+      "bespokeCard": {
+        "x": 18,
+        "y": 4312,
+        "w": 256,
+        "h": 706
+      },
+      "bespokeVisual": {
+        "x": 19,
+        "y": 4313,
+        "w": 254,
+        "h": 285
+      },
+      "serviceCount": 3,
+      "serviceImages": [
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        },
+        {
+          "loaded": true
+        }
+      ],
+      "serviceCards": [
+        {
+          "href": "bespoke.html",
+          "w": 256,
+          "h": 706
+        },
+        {
+          "href": "consultation.html#color-analysis",
+          "w": 256,
+          "h": 706
+        },
+        {
+          "href": "consultation.html#personal-style",
+          "w": 256,
+          "h": 706
+        }
+      ],
+      "footerMagenta": "block",
+      "footerWhite": "none",
+      "collectionCards": 4,
+      "collectionGrid": "140px 140px",
+      "heroPhotoPresent": true,
+      "founderInViewport": true,
+      "pageErrors": [],
+      "size": "320x720",
+      "mode": "inverse",
+      "checks": {
+        "sectionOrder": true,
+        "heroCopy": true,
+        "noHorizontalOverflow": true,
+        "threeServices": true,
+        "bespokeAssets": true,
+        "footerOfficialMagenta": true,
+        "noPageErrors": true,
+        "fourCollectionLooks": true,
+        "heroAsset": true
+      }
+    }
+  ],
+  "mode": "offline inline-asset browser layout test",
+  "note": "Navigating to local webpages is disabled by browser policy; HTML/CSS/image QA rendered through page.set_content without external URLs."
+}
