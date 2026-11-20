@@ -1,0 +1,155 @@
+{
+  "enquiry": {
+    "id": "enquiry",
+    "title": "Contact Enquiry",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your name",
+        "type": "text",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "email",
+        "label": "Your email",
+        "type": "email",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone number",
+        "type": "tel",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "interest",
+        "label": "I'm interested in",
+        "type": "select",
+        "required": false,
+        "visible": true,
+        "options": [
+          "Look Details",
+          "Collections",
+          "Bespoke / Customisation",
+          "Styling Enquiry",
+          "General Enquiry"
+        ]
+      },
+      {
+        "name": "garmentType",
+        "label": "Garment type",
+        "type": "select",
+        "required": false,
+        "visible": true,
+        "options": [
+          "Occasion Wear",
+          "Bridal Wear (Women)",
+          "Bridal Wear (Men)",
+          "Formal Corporate Wear"
+        ]
+      },
+      {
+        "name": "look",
+        "label": "Selected look / reference",
+        "type": "text",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "message",
+        "label": "Your message",
+        "type": "textarea",
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "appointment": {
+    "id": "appointment",
+    "title": "Book an Appointment",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your name",
+        "type": "text",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "email",
+        "label": "Email address",
+        "type": "email",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "phone",
+        "label": "Phone number",
+        "type": "tel",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "service",
+        "label": "What would you like to discuss?",
+        "type": "select",
+        "required": true,
+        "visible": true,
+        "options": [
+          "Bespoke Couture",
+          "Occasion Wear",
+          "Bridal Wear (Women)",
+          "Bridal Wear (Men)",
+          "Formal Corporate Wear",
+          "Colour Analysis",
+          "Personal Style Consultation",
+          "Occasion Styling",
+          "Other Consultation"
+        ]
+      },
+      {
+        "name": "date",
+        "label": "Preferred date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "label": "Preferred time",
+        "type": "time",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "mode",
+        "label": "Appointment type",
+        "type": "select",
+        "required": true,
+        "visible": true,
+        "options": [
+          "Video consultation",
+          "Studio appointment (subject to confirmation)",
+          "Phone consultation"
+        ]
+      },
+      {
+        "name": "timezone",
+        "label": "Your time zone",
+        "type": "text",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "notes",
+        "label": "Tell us more",
+        "type": "textarea",
+        "required": false,
+        "visible": true
+      }
+    ]
+  }
+}

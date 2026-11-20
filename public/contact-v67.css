@@ -1,0 +1,118 @@
+/* SHANERYN V6.7 | Private appointment and Contact Us social row.
+   Intentionally inherits the approved inverse-only palette. */
+body[data-page="contact-page"] .v67-appointment-jump {
+  display:inline-flex; align-items:center; justify-content:space-between; gap:18px;
+  margin:0 0 34px; padding:12px 0; width:max-content; max-width:100%;
+  text-decoration:none; font:600 11px/1.4 var(--sans); letter-spacing:.16em;
+  border-bottom:1px solid var(--ep-accent); color:var(--ep-ink);
+}
+body[data-page="contact-page"] .v67-appointment-jump:hover,
+body[data-page="contact-page"] .v67-appointment-jump:focus-visible{color:var(--ep-accent);}
+body[data-page="contact-page"] .v67-appointment-section {
+  background:var(--ep-quiet); color:var(--ep-ink); border-top:1px solid var(--ep-hair);
+  border-bottom:1px solid var(--ep-hair); scroll-margin-top:85px;
+}
+body[data-page="contact-page"] .v67-appointment-layout {
+  display:grid; grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);
+  gap:clamp(42px,7vw,120px); padding-top:clamp(66px,8vw,126px);
+  padding-bottom:clamp(66px,8vw,126px); align-items:start;
+}
+body[data-page="contact-page"] .v67-book-editorial{position:relative;min-width:0;}
+body[data-page="contact-page"] .v67-book-editorial h2 {
+  font:400 clamp(55px,6.1vw,108px)/1.01 var(--serif); letter-spacing:-.052em;
+  margin:23px 0 32px; overflow-wrap:anywhere;
+}
+body[data-page="contact-page"] .v67-book-editorial h2 em{font-weight:400;color:var(--ep-accent);}
+body[data-page="contact-page"] .v67-book-editorial>p:not(.v67-book-note){
+  font:400 clamp(14px,1.2vw,17px)/1.95 var(--sans);color:var(--ep-sub);max-width:415px;
+}
+body[data-page="contact-page"] .v67-book-signature {
+  font:400 clamp(100px,18vw,245px)/.8 var(--serif); color:var(--ep-accent);
+  opacity:.12; margin:30px 0 -15px; user-select:none;
+}
+body[data-page="contact-page"] .v67-book-note {
+  border-left:2px solid var(--ep-accent); padding:4px 0 4px 20px;
+  max-width:400px; color:var(--ep-sub); font:400 13px/1.9 var(--sans);
+}
+body[data-page="contact-page"] .v67-appointment-form {
+  padding:clamp(28px,3vw,52px); border:1px solid var(--ep-hair);
+  background:var(--ep-panel); min-width:0;
+}
+body[data-page="contact-page"] .v67-appointment-form>.ep-kicker {display:block;margin-bottom:28px;}
+body[data-page="contact-page"] .v67-book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 24px;}
+body[data-page="contact-page"] .v67-appointment-form label {
+  display:flex;flex-direction:column; gap:10px; min-width:0;
+  margin-bottom:26px; color:var(--ep-ink);
+  font:600 11px/1.5 var(--sans); letter-spacing:.08em; text-transform:uppercase;
+}
+body[data-page="contact-page"] .v67-appointment-form label>span {display:inline;color:var(--ep-accent);}
+body[data-page="contact-page"] .v67-appointment-form input,
+body[data-page="contact-page"] .v67-appointment-form select,
+body[data-page="contact-page"] .v67-appointment-form textarea {
+  box-sizing:border-box;min-width:0;width:100%;border-radius:0;
+  border:0;border-bottom:1px solid var(--ep-hair);background:transparent;
+  color:var(--ep-ink);min-height:43px;padding:8px 0 12px;
+  font:400 15px/1.4 var(--sans); letter-spacing:normal; text-transform:none;
+  outline:none;color-scheme:dark;
+}
+body[data-page="contact-page"] .v67-appointment-form select option {background:var(--ep-panel);color:var(--ep-ink);}
+body[data-page="contact-page"] .v67-appointment-form input::placeholder,
+body[data-page="contact-page"] .v67-appointment-form textarea::placeholder{color:var(--ep-sub);opacity:.77;}
+body[data-page="contact-page"] .v67-appointment-form :is(input,select,textarea):focus-visible {
+  border-bottom-color:var(--ep-accent);outline:2px solid var(--ep-accent);outline-offset:4px;
+}
+body[data-page="contact-page"] .v67-appointment-form :is(input,select,textarea)[aria-invalid="true"] {border-bottom-color:#dc6e84;}
+body[data-page="contact-page"] .v67-appointment-form textarea {min-height:105px;resize:vertical;line-height:1.65;}
+body[data-page="contact-page"] .v67-book-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:8px 0 8px;}
+body[data-page="contact-page"] .v67-book-actions .ep-solid-btn{min-height:54px;}
+body[data-page="contact-page"] .v67-appointment-status {min-height:1.8em;font:400 13px/1.65 var(--sans);color:var(--ep-accent);margin:10px 0;}
+body[data-page="contact-page"] .v67-appointment-form>.ep-smallnote{margin:14px 0 0;}
+/* Contact page now uses the exact same social icons as the footer. */
+body[data-page="contact-page"] .v67-contact-social {
+  display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:20px 0 14px;
+}
+body[data-page="contact-page"] .v67-contact-social .v66-social-icon {
+  box-sizing:border-box;width:47px;height:47px;flex:0 0 47px;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:#e6becf;background:transparent;border:1px solid #66505e;
+  border-radius:50%;text-decoration:none;
+  transition:color .2s,border-color .2s,background-color .2s,transform .2s;
+}
+body[data-page="contact-page"] .v67-contact-social .v66-social-icon svg {
+  display:block;width:21px;height:21px;fill:none;stroke:currentColor;
+  stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;
+}
+body[data-page="contact-page"] .v67-contact-social a.v66-social-icon:hover{
+  color:#f3c5df;border-color:#cc619e;background:#382531;transform:translateY(-2px);
+}
+body[data-page="contact-page"] .v67-contact-social a.v66-social-icon:focus-visible{
+  outline:2px solid #eb9ac5;outline-offset:4px;
+}
+body[data-page="contact-page"] .v67-contact-social .v66-social-icon.is-pending{opacity:.56;cursor:default;}
+body[data-page="contact-page"] .v67-social-note {max-width:280px;font-size:12px;line-height:1.65;color:var(--ep-sub);}
+body[data-page="contact-page"] .v67-email-pending {color:var(--ep-sub);font:400 16px/1.6 var(--sans);margin:8px 0 38px;}
+body[data-page="contact-page"] #v67-contact-email .cv3-email{margin-bottom:42px;}
+@media(max-width:1000px){
+ body[data-page="contact-page"] .v67-appointment-layout{gap:40px;}
+ body[data-page="contact-page"] .v67-book-grid{gap:2px 16px;}
+ body[data-page="contact-page"] .v67-appointment-form{padding:25px;}
+}
+@media(max-width:767px){
+ body[data-page="contact-page"] .v67-appointment-layout{grid-template-columns:1fr;gap:30px;padding-top:75px;padding-bottom:75px;}
+ body[data-page="contact-page"] .v67-book-editorial h2{font-size:clamp(58px,12vw,80px);margin:18px 0 21px;}
+ body[data-page="contact-page"] .v67-book-signature{display:none;}
+ body[data-page="contact-page"] .v67-book-note{margin:22px 0 8px;}
+ body[data-page="contact-page"] .v67-book-grid{gap:0 16px;}
+ body[data-page="contact-page"] .v67-appointment-form{padding:25px 22px;}
+}
+@media(max-width:480px){
+ body[data-page="contact-page"] .v67-book-grid{grid-template-columns:1fr;}
+ body[data-page="contact-page"] .v67-appointment-form{padding:23px 17px;}
+ body[data-page="contact-page"] .v67-appointment-section{scroll-margin-top:65px;}
+ body[data-page="contact-page"] .v67-book-actions{align-items:flex-start;flex-direction:column;gap:16px;}
+ body[data-page="contact-page"] .v67-book-actions .ep-solid-btn{width:100%;}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page="contact-page"] .v67-contact-social .v66-social-icon{transition:none;}
+ body[data-page="contact-page"] .v67-contact-social a.v66-social-icon:hover{transform:none;}
+}

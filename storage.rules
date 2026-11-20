@@ -1,0 +1,17 @@
+rules_version = '2';
+service firebase.storage {
+ match /b/{bucket}/o {
+  function mediaStaff() {
+   return request.auth != null
+     && firestore.exists(/databases/(default)/documents/cms_users/$(request.auth.uid))
+     && firestore.get(/databases/(default)/documents/cms_users/$(request.auth.uid)).data.active == true
+     && firestore.get(/databases/(default)/documents/cms_users/$(request.auth.uid)).data.role in ['super_admin','editor','products'];
+  }
+  match /media/{allPaths=**} {
+   allow read: if true;
+   allow create,update: if mediaStaff() && request.resource.size < 52428800 && request.resource.contentType.matches('(image/(jpeg|png|webp|gif)|video/(mp4|webm))');
+   allow delete: if mediaStaff();
+  }
+  match /{allPaths=**} {allow read,write: if false;}
+ }
+}

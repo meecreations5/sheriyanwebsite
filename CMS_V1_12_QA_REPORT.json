@@ -1,0 +1,38 @@
+{
+  "version": "1.12.0",
+  "issue": "Next.js Server -> Client prop serialization rejects Firebase Timestamp updatedAt; menu JS may fail to initialize",
+  "tests": {
+    "check": "PASS",
+    "check:urls": "PASS",
+    "check:cms": "PASS",
+    "check:v16": "PASS",
+    "check:v17": "PASS",
+    "check:v18": "PASS",
+    "check:v19": "PASS",
+    "check:v110": "PASS",
+    "check:v111": "PASS",
+    "check:v112": "PASS",
+    "menu_browser": [
+      "PASS menu navigation: index 390 errors: []",
+      "PASS menu navigation: index 1440 errors: []",
+      "PASS menu navigation: collections 390 errors: []",
+      "PASS menu navigation: collections 1440 errors: []",
+      "PASS menu navigation: contact 390 errors: []",
+      "PASS menu navigation: contact 1440 errors: []"
+    ]
+  },
+  "changed_files": [
+    "package.json",
+    "UPDATE_V1_12.md",
+    "scripts/check-v111.js",
+    "scripts/check-v110.js",
+    "scripts/check-v112.js",
+    "components/LegacyPage.jsx",
+    "lib/plain-client-data.js"
+  ],
+  "limits": [
+    "No live Firebase project connection exercised",
+    "No full Next.js production build because node_modules are not available",
+    "Browser menu tested using baseline markup and legacy scripts, not deployed Next.js"
+  ]
+}

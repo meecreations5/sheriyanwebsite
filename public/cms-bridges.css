@@ -1,0 +1,29 @@
+/* CMS additions do not override the approved V6.9 SHANERYN layout. */
+.cms-honeypot{position:absolute!important;left:-10000px!important;opacity:0!important;pointer-events:none!important}
+.cms-extra-field{display:flex;flex-direction:column;gap:.45rem;margin:1rem 0;font:inherit}
+.cms-extra-field input,.cms-extra-field select,.cms-extra-field textarea{width:100%;background:transparent;color:inherit;border:1px solid rgba(179,168,181,.38);padding:1rem}
+.cms-new-section{padding:clamp(4rem,9vw,9rem) max(5%,2rem);background:#171219;color:#e8dfeb}
+.cms-new-section h2{font:400 clamp(2.1rem,4.4vw,5rem)/1.13 Georgia,serif;max-width:23ch}
+.cms-new-section p{font-size:1.05rem;line-height:1.8;max-width:62ch}
+.cms-new-section .cms-gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.cms-new-section img{max-width:100%;object-fit:cover}
+.cms-split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.cms-split img{max-height:750px;object-fit:cover;width:100%}
+.cms-new-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.cms-new-cards article{padding:2rem;border:1px solid #544252}
+.cms-new-section details{border-bottom:1px solid #544252;padding:1.2rem 0}
+@media(max-width:700px){.cms-split{grid-template-columns:1fr;gap:1rem}.cms-new-section .cms-gallery-grid{grid-template-columns:repeat(2,1fr)}.cms-new-cards{grid-template-columns:1fr}}
+
+/* V1.6: curated collections are independent of garment category filters. */
+.cms-curated-showcase{padding:clamp(44px,6vw,100px) 0;background:#17131a;color:#f6edf3}
+.cms-curated-showcase .wrap{max-width:1440px;margin:0 auto;padding:0 clamp(17px,4vw,60px)}
+.cms-curated-showcase h2{font:normal clamp(32px,4vw,64px)/1.1 Georgia,serif;margin:10px 0 8px}
+.cms-curated-showcase p{color:#c2b5bf;margin-bottom:22px}
+.cms-curated-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.cms-curated-card{display:block;overflow:hidden;color:#f8eaf1!important;text-decoration:none;background:#241d26}
+.cms-curated-card img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .35s ease}
+.cms-curated-card:hover img{transform:scale(1.02)}
+.cms-curated-name{padding:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cms-curated-name strong{font-size:15px;font-weight:500}
+.cms-curated-name small{font-size:11px;color:#dc99b9}
+@media(max-width:620px){.cms-curated-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cms-curated-name{display:block;padding:10px}.cms-curated-name strong,.cms-curated-name small{display:block}.cms-curated-name small{margin-top:5px}}

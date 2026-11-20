@@ -1,0 +1,30 @@
+{
+  "name": "shaneryn-cms",
+  "version": "1.12.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check": "node scripts/check.js",
+    "check:urls": "node scripts/check-product-routes.js",
+    "check:cms": "node scripts/check-v15.js",
+    "check:v16": "node scripts/check-v16.js",
+    "check:v17": "node scripts/check-v17.js",
+    "check:v18": "node scripts/check-v18.js",
+    "check:v19": "node scripts/check-v19.js",
+    "check:v110": "node scripts/check-v110.js",
+    "check:v111": "node scripts/check-v111.js",
+    "check:v112": "node scripts/check-v112.js"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "firebase": "^12.0.0",
+    "cheerio": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

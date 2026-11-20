@@ -1,0 +1,4083 @@
+{
+ "slug": "bespoke",
+ "name": "Bespoke",
+ "title": "SHANERYN | Bespoke and Customisation",
+ "description": "SHANERYN Bespoke Couture Customization, personal styling services, and an archive of past work.",
+ "visible": true,
+ "bodyHtml": "<a class=\"v47-skip-link\" data-cms-href=\"f00001\" data-cms-text-refs=\"f00255\" data-cms-visibility=\"f00147\" href=\"#main-content\"><!--cms:f00255-->Skip to main content<!--/cms:f00255--></a><div class=\"topline\"></div><header class=\"site-header\" id=\"site-header\"><div class=\"header-inner\">\n<nav aria-label=\"Main menu\" class=\"nav-primary\" data-cms-aria_label=\"f00002\"><a data-cms-href=\"f00003\" data-cms-text-refs=\"f00256\" data-cms-visibility=\"f00148\" href=\"collections.html\"><!--cms:f00256-->Collections<!--/cms:f00256--></a><a aria-current=\"page\" class=\"active\" data-cms-href=\"f00004\" data-cms-text-refs=\"f00257\" data-cms-visibility=\"f00149\" href=\"bespoke.html\"><!--cms:f00257-->Bespoke<!--/cms:f00257--></a></nav>\n<a aria-label=\"SHANERYN Home\" class=\"brand\" data-cms-aria_label=\"f00006\" data-cms-href=\"f00005\" data-cms-visibility=\"f00150\" href=\"index.html\"><img alt=\"SHANERYN\" class=\"logo-original\" data-cms-alt=\"f00008\" data-cms-src=\"f00007\" data-cms-visibility=\"f00151\" height=\"55\" src=\"assets/brand/shaneryn-wordmark-magenta.png\" width=\"215\"/><img alt=\"\" aria-hidden=\"true\" class=\"logo-inverse\" data-cms-src=\"f00009\" data-cms-visibility=\"f00152\" height=\"55\" src=\"assets/brand/shaneryn-wordmark-light.png\" width=\"215\"/></a>\n<nav aria-label=\"Additional links\" class=\"nav-right\" data-cms-aria_label=\"f00010\"><a data-cms-href=\"f00011\" data-cms-text-refs=\"f00258\" data-cms-visibility=\"f00153\" href=\"story.html\"><!--cms:f00258-->Our Story<!--/cms:f00258--></a><a data-cms-href=\"f00012\" data-cms-text-refs=\"f00259\" data-cms-visibility=\"f00154\" href=\"bespoke.html#services\"><!--cms:f00259-->Styling Services<!--/cms:f00259--></a><button aria-controls=\"mobile-menu\" aria-expanded=\"false\" aria-label=\"Open menu\" class=\"icon-button menu-toggle v47-menu-toggle\" data-cms-aria_label=\"f00013\" data-cms-visibility=\"f00155\" id=\"menu-toggle\" type=\"button\"><span aria-hidden=\"true\" class=\"v47-menu-label\" data-cms-text-refs=\"f00260\"><!--cms:f00260-->Menu<!--/cms:f00260--></span><svg aria-hidden=\"true\" viewbox=\"0 0 24 24\"><path d=\"M3 7h18M3 12h18M3 17h18\"></path></svg></button><button aria-label=\"View saved looks\" class=\"icon-button\" data-cms-aria_label=\"f00014\" data-cms-visibility=\"f00156\" data-open-saved=\"\" type=\"button\"><svg aria-hidden=\"true\" viewbox=\"0 0 24 24\"><path d=\"M20.3 8.2c0 5.5-8.3 11.4-8.3 11.4S3.7 13.7 3.7 8.2a4.7 4.7 0 0 1 8.3-2.8 4.7 4.7 0 0 1 8.3 2.8Z\"></path></svg><span class=\"heart-count\" data-cms-text-refs=\"f00261\" data-saved-count=\"\"><!--cms:f00261-->0<!--/cms:f00261--></span></button></nav></div></header>\n<nav aria-hidden=\"true\" aria-label=\"Explore SHANERYN\" class=\"mobile-menu\" data-cms-aria_label=\"f00015\" id=\"mobile-menu\"><a data-cms-href=\"f00016\" data-cms-text-refs=\"f00262\" data-cms-visibility=\"f00157\" href=\"index.html\"><!--cms:f00262-->Homepage<!--/cms:f00262--><small data-cms-text-refs=\"f00263\"><!--cms:f00263-->01<!--/cms:f00263--></small></a><a data-cms-href=\"f00017\" data-cms-text-refs=\"f00264\" data-cms-visibility=\"f00158\" href=\"index.html#occasion\"><!--cms:f00264-->Shop by Style<!--/cms:f00264--><small data-cms-text-refs=\"f00265\"><!--cms:f00265-->02<!--/cms:f00265--></small></a><a data-cms-href=\"f00018\" data-cms-text-refs=\"f00266\" data-cms-visibility=\"f00159\" href=\"collections.html\"><!--cms:f00266-->Collections<!--/cms:f00266--><small data-cms-text-refs=\"f00267\"><!--cms:f00267-->03<!--/cms:f00267--></small></a><a aria-current=\"page\" data-cms-href=\"f00019\" data-cms-text-refs=\"f00268\" data-cms-visibility=\"f00160\" href=\"bespoke.html\"><!--cms:f00268-->Bespoke<!--/cms:f00268--><small data-cms-text-refs=\"f00269\"><!--cms:f00269-->04<!--/cms:f00269--></small></a><a data-cms-href=\"f00020\" data-cms-text-refs=\"f00270\" data-cms-visibility=\"f00161\" href=\"bespoke.html#services\"><!--cms:f00270-->Styling Services<!--/cms:f00270--><small data-cms-text-refs=\"f00271\"><!--cms:f00271-->05<!--/cms:f00271--></small></a><a data-cms-href=\"f00021\" data-cms-text-refs=\"f00272\" data-cms-visibility=\"f00162\" href=\"story.html\"><!--cms:f00272-->Our Story<!--/cms:f00272--><small data-cms-text-refs=\"f00273\"><!--cms:f00273-->06<!--/cms:f00273--></small></a><a data-cms-href=\"f00022\" data-cms-text-refs=\"f00274\" data-cms-visibility=\"f00163\" href=\"film.html\"><!--cms:f00274-->Fashion Film<!--/cms:f00274--><small data-cms-text-refs=\"f00275\"><!--cms:f00275-->07<!--/cms:f00275--></small></a><a data-cms-href=\"f00023\" data-cms-text-refs=\"f00276\" data-cms-visibility=\"f00164\" href=\"testimonials.html\"><!--cms:f00276-->Testimonials<!--/cms:f00276--><small data-cms-text-refs=\"f00277\"><!--cms:f00277-->08<!--/cms:f00277--></small></a><a data-cms-href=\"f00024\" data-cms-text-refs=\"f00278\" data-cms-visibility=\"f00165\" href=\"contact.html\"><!--cms:f00278-->Contact<!--/cms:f00278--><small data-cms-text-refs=\"f00279\"><!--cms:f00279-->09<!--/cms:f00279--></small></a><button data-cms-text-refs=\"f00280\" data-cms-visibility=\"f00166\" data-open-saved=\"\" type=\"button\"><!--cms:f00280-->Saved Looks <!--/cms:f00280--><small data-cms-text-refs=\"f00281\"><!--cms:f00281-->♥<!--/cms:f00281--></small></button><button data-cms-text-refs=\"f00282\" data-cms-visibility=\"f00167\" data-open-inquiry=\"\" type=\"button\"><!--cms:f00282-->Enquire <!--/cms:f00282--><small data-cms-text-refs=\"f00283\"><!--cms:f00283-->↗<!--/cms:f00283--></small></button></nav><div class=\"v47-menu-scrim\" hidden=\"\" id=\"v47-menu-scrim\"></div><main class=\"v63-bespoke-main\" id=\"main-content\">\n<section aria-labelledby=\"bespoke-heading\" class=\"bespoke bespoke-v4 bespoke-v57 v63-bespoke-intro\" data-cms-section=\"s-000\" id=\"bespoke-introduction\">\n<div class=\"wrap bespoke-inner\">\n<div class=\"bespoke-visual reveal\">\n<span aria-hidden=\"true\" class=\"bespoke-image-seal\"><img alt=\"\" data-cms-src=\"f00025\" data-cms-visibility=\"f00168\" loading=\"lazy\" src=\"assets/brand/shaneryn-monogram.png\"/></span>\n<img alt=\"Editorial bridal couture photograph of two models in embellished occasionwear\" data-cms-alt=\"f00027\" data-cms-src=\"f00026\" data-cms-visibility=\"f00169\" decoding=\"async\" loading=\"eager\" src=\"assets/bespoke-bridal-secondary.png\"/>\n<img alt=\"Rose-pink embroidered bridal couture look, seated portrait\" class=\"bespoke-inset\" data-cms-alt=\"f00029\" data-cms-src=\"f00028\" data-cms-visibility=\"f00170\" decoding=\"async\" loading=\"lazy\" src=\"assets/bespoke-bridal-primary.png\"/>\n</div>\n<div class=\"bespoke-copy reveal\">\n<span class=\"eyebrow\" data-cms-text-refs=\"f00284\"><!--cms:f00284-->03 / PERSONALISED DESIGN<!--/cms:f00284--></span>\n<h2 data-cms-text-refs=\"f00285\" id=\"bespoke-heading\"><!--cms:f00285-->Bespoke Couture <!--/cms:f00285--><em data-cms-text-refs=\"f00286\"><!--cms:f00286-->Customization<!--/cms:f00286--></em></h2>\n<div aria-hidden=\"true\" class=\"mini-rule\"></div>\n<p class=\"bodycopy\" data-cms-text-refs=\"f00287\"><!--cms:f00287-->We create pieces for your moments, your style and your way of dressing.<!--/cms:f00287--></p>\n<div aria-label=\"What we stitch\" class=\"v64-stitch-types\" data-cms-aria_label=\"f00030\"><span class=\"v64-stitch-label\" data-cms-text-refs=\"f00288\"><!--cms:f00288-->WE STITCH<!--/cms:f00288--></span><ul><li data-cms-text-refs=\"f00289\"><!--cms:f00289-->Occasion Wear<!--/cms:f00289--></li><li data-cms-text-refs=\"f00290\"><!--cms:f00290-->Bridal Wear <!--/cms:f00290--><small data-cms-text-refs=\"f00291\"><!--cms:f00291-->(Men &amp; Women)<!--/cms:f00291--></small></li><li data-cms-text-refs=\"f00292\"><!--cms:f00292-->Formal Corporate Wear<!--/cms:f00292--></li></ul></div>\n<div class=\"v64-bespoke-actions\"><a class=\"outlined-btn\" data-cms-href=\"f00031\" data-cms-text-refs=\"f00293\" data-cms-visibility=\"f00171\" href=\"contact.html?interest=Bespoke%20%2F%20Customisation\"><!--cms:f00293-->ENQUIRE ABOUT BESPOKE <!--/cms:f00293--><span aria-hidden=\"true\" data-cms-text-refs=\"f00294\"><!--cms:f00294-->↗<!--/cms:f00294--></span></a><a class=\"v64-measure-jump\" data-cms-href=\"f00032\" data-cms-text-refs=\"f00295\" data-cms-visibility=\"f00172\" href=\"#measurement-studio\"><!--cms:f00295-->MEASUREMENT FORM <!--/cms:f00295--><span aria-hidden=\"true\" data-cms-text-refs=\"f00296\"><!--cms:f00296-->↗<!--/cms:f00296--></span></a></div><nav aria-label=\"On this bespoke page\" class=\"v69-bespoke-shortcuts\" data-cms-aria_label=\"f00033\"><a data-cms-href=\"f00034\" data-cms-text-refs=\"f00297\" data-cms-visibility=\"f00173\" href=\"#measurement-studio\"><!--cms:f00297-->Measurements<!--/cms:f00297--></a><a data-cms-href=\"f00035\" data-cms-text-refs=\"f00298\" data-cms-visibility=\"f00174\" href=\"#services\"><!--cms:f00298-->Services<!--/cms:f00298--></a><a data-cms-href=\"f00036\" data-cms-text-refs=\"f00299\" data-cms-visibility=\"f00175\" href=\"#past-work\"><!--cms:f00299-->Past work<!--/cms:f00299--></a></nav>\n</div>\n</div>\n</section>\n<!-- Visible, opt-in measurement form positioned immediately after the editorial intro. -->\n<div class=\"v64-measure-wrap\" id=\"measurement-guide\"><section class=\"cv3-measurement\" data-cms-section=\"s-001\" id=\"measurement-studio\"><div class=\"wrap cv3-measure-wrap\"><div class=\"cv3-measure-intro\"><span class=\"ep-kicker\" data-cms-text-refs=\"f00300\"><!--cms:f00300-->MADE TO MEASURE / INTERACTIVE GUIDE<!--/cms:f00300--></span><h2 data-cms-text-refs=\"f00301\"><!--cms:f00301-->Your <!--/cms:f00301--><em data-cms-text-refs=\"f00302\"><!--cms:f00302-->measurements.<!--/cms:f00302--></em></h2><p data-cms-text-refs=\"f00303\"><!--cms:f00303-->Choose a garment type or SHANERYN look and add the measurements you know.<!--/cms:f00303--></p><small data-cms-text-refs=\"f00304\"><!--cms:f00304-->Measurements are used only within this page to prepare your personal request. No fitting is confirmed or booked online.<!--/cms:f00304--></small></div><div class=\"cv3-measure-panel\"><div aria-label=\"Measurement type\" class=\"cv3-measure-choice\" data-cms-aria_label=\"f00037\" role=\"group\"><button aria-pressed=\"true\" data-cms-text-refs=\"f00305\" data-cms-visibility=\"f00176\" data-measure-mode=\"garment\" type=\"button\"><!--cms:f00305-->CUSTOM GARMENT<!--/cms:f00305--></button><button aria-pressed=\"false\" data-cms-text-refs=\"f00306\" data-cms-visibility=\"f00177\" data-measure-mode=\"look\" type=\"button\"><!--cms:f00306-->SHANERYN LOOK<!--/cms:f00306--></button></div><p aria-live=\"polite\" class=\"v49-measure-mode-help\" data-cms-text-refs=\"f00307\" id=\"v49-measure-mode-help\"><!--cms:f00307-->Start with a garment type for new bespoke ideas, or choose an existing SHANERYN look for personalisation.<!--/cms:f00307--></p><label class=\"cv3-measure-select\" data-cms-text-refs=\"f00308\"><!--cms:f00308-->Choose your piece<!--/cms:f00308--><select aria-label=\"Choose garment or look\" data-cms-aria_label=\"f00038\" id=\"measure-select\"></select></label><div class=\"cv3-unit-row\"><span data-cms-text-refs=\"f00309\"><!--cms:f00309-->Measurements in<!--/cms:f00309--></span><label data-cms-text-refs=\"f00310\"><input checked=\"\" name=\"measure-unit\" type=\"radio\" value=\"in\"/><!--cms:f00310--> Inches<!--/cms:f00310--></label><label data-cms-text-refs=\"f00311\"><input name=\"measure-unit\" type=\"radio\" value=\"cm\"/><!--cms:f00311--> Centimetres<!--/cms:f00311--></label></div><p aria-live=\"polite\" class=\"cv3-unit-hint\" data-cms-text-refs=\"f00312\" id=\"cv3-unit-hint\"><!--cms:f00312-->Measurements remain here until you leave the page.<!--/cms:f00312--></p><details class=\"v49-measuring-guide\"><summary data-cms-text-refs=\"f00313\"><!--cms:f00313-->How to measure yourself <!--/cms:f00313--><span aria-hidden=\"true\" data-cms-text-refs=\"f00314\"><!--cms:f00314-->+<!--/cms:f00314--></span></summary><div><p data-cms-text-refs=\"f00315\"><!--cms:f00315-->Use a soft measuring tape and stand naturally. Keep the tape level and comfortable, without pulling it tight.<!--/cms:f00315--></p><p data-cms-text-refs=\"f00316\"><!--cms:f00316-->Record the measurement at the point indicated by the field label. The SHANERYN team will confirm the appropriate fitting requirements with you.<!--/cms:f00316--></p></div></details><form autocomplete=\"off\" id=\"cv3-measure-form\"><div id=\"cv3-measure-fields\"></div><button class=\"ep-solid-btn\" data-cms-text-refs=\"f00317\" data-cms-visibility=\"f00178\" type=\"submit\"><!--cms:f00317-->REVIEW MEASUREMENTS <!--/cms:f00317--><span data-cms-text-refs=\"f00318\"><!--cms:f00318-->↗<!--/cms:f00318--></span></button><p class=\"ep-smallnote\" data-cms-text-refs=\"f00319\"><!--cms:f00319-->Please use a flexible measuring tape. The studio confirms fit details during consultation.<!--/cms:f00319--></p></form><div aria-live=\"polite\" class=\"cv3-measure-review\" hidden=\"\" id=\"cv3-measure-review\" role=\"status\"><h3 data-cms-text-refs=\"f00320\"><!--cms:f00320-->Measurement overview<!--/cms:f00320--></h3><pre id=\"cv3-measure-summary\"></pre><button class=\"ep-outline-btn\" data-cms-text-refs=\"f00321\" data-cms-visibility=\"f00179\" id=\"cv3-measure-copy\" type=\"button\"><!--cms:f00321-->COPY SUMMARY ↗<!--/cms:f00321--></button><span class=\"cv3-measure-status\" id=\"cv3-measure-status\"></span><small data-cms-text-refs=\"f00322\"><!--cms:f00322-->Copying is optional. No measurements are transmitted by this website.<!--/cms:f00322--></small><div class=\"v51-bespoke-handoff\"><p data-cms-text-refs=\"f00323\"><!--cms:f00323-->Ready to discuss your preferences? Continue with this summary in a personal email draft. You can edit the details before sending.<!--/cms:f00323--></p><button class=\"v51-main-action\" data-cms-text-refs=\"f00324\" data-cms-visibility=\"f00180\" id=\"v51-bespoke-enquire\" type=\"button\"><!--cms:f00324-->PREPARE BESPOKE REQUEST <!--/cms:f00324--><span aria-hidden=\"true\" data-cms-text-refs=\"f00325\"><!--cms:f00325-->↗<!--/cms:f00325--></span></button></div></div></div></div></section></div>\n<section aria-labelledby=\"v63-services-title\" class=\"v63-services\" data-cms-section=\"s-002\" id=\"services\">\n<div class=\"wrap v63-section-head\"><div><span class=\"ep-kicker\" data-cms-text-refs=\"f00326\"><!--cms:f00326-->PERSONAL STYLING / 01 — 03<!--/cms:f00326--></span><h2 data-cms-text-refs=\"f00327\" id=\"v63-services-title\"><!--cms:f00327-->Services, <!--/cms:f00327--><em data-cms-text-refs=\"f00328\"><!--cms:f00328-->considered for you.<!--/cms:f00328--></em></h2></div>\n<p data-cms-text-refs=\"f00329\"><!--cms:f00329-->Three ways to explore your individual style.<!--/cms:f00329--></p></div>\n<div class=\"wrap v63-service-grid\"><article class=\"v63-service-card\" id=\"color-analysis\">\n<a aria-label=\"Enquire about Color Analysis\" class=\"v63-service-photo\" data-cms-aria_label=\"f00040\" data-cms-href=\"f00039\" data-cms-visibility=\"f00181\" href=\"contact.html?interest=Color%20Analysis\">\n<img alt=\"Fashion editorial portrait featuring purple occasionwear\" data-cms-alt=\"f00042\" data-cms-src=\"f00041\" data-cms-visibility=\"f00182\" decoding=\"async\" loading=\"lazy\" src=\"assets/brand/Shaneryn6838.webp\"/><span class=\"v63-photo-index\" data-cms-text-refs=\"f00330\"><!--cms:f00330-->01 / 03<!--/cms:f00330--></span></a>\n<div class=\"v63-service-body\"><span class=\"ep-kicker\" data-cms-text-refs=\"f00331\"><!--cms:f00331-->01 / THE SERVICE<!--/cms:f00331--></span>\n<h3 data-cms-text-refs=\"f00332\"><!--cms:f00332-->Color Analysis<!--/cms:f00332--></h3><p data-cms-text-refs=\"f00333\"><!--cms:f00333-->Explore colours that feel true to you, and how they shape what you wear.<!--/cms:f00333--></p>\n<a class=\"v63-service-link\" data-cms-href=\"f00043\" data-cms-text-refs=\"f00334\" data-cms-visibility=\"f00183\" href=\"contact.html?interest=Color%20Analysis\"><!--cms:f00334-->ENQUIRE ABOUT THIS SERVICE <!--/cms:f00334--><span aria-hidden=\"true\" data-cms-text-refs=\"f00335\"><!--cms:f00335-->↗<!--/cms:f00335--></span></a>\n</div></article>\n<article class=\"v63-service-card\" id=\"personal-style\">\n<a aria-label=\"Enquire about Personal Style Consultation\" class=\"v63-service-photo\" data-cms-aria_label=\"f00045\" data-cms-href=\"f00044\" data-cms-visibility=\"f00184\" href=\"contact.html?interest=Personal%20Style%20Consultation\">\n<img alt=\"Monochrome SHANERYN fashion editorial portrait\" data-cms-alt=\"f00047\" data-cms-src=\"f00046\" data-cms-visibility=\"f00185\" decoding=\"async\" loading=\"lazy\" src=\"assets/brand/Shaneryn6594.webp\"/><span class=\"v63-photo-index\" data-cms-text-refs=\"f00336\"><!--cms:f00336-->02 / 03<!--/cms:f00336--></span></a>\n<div class=\"v63-service-body\"><span class=\"ep-kicker\" data-cms-text-refs=\"f00337\"><!--cms:f00337-->02 / THE SERVICE<!--/cms:f00337--></span>\n<h3 data-cms-text-refs=\"f00338\"><!--cms:f00338-->Personal Style Consultation<!--/cms:f00338--></h3><p data-cms-text-refs=\"f00339\"><!--cms:f00339-->Discover silhouettes, comfort and an expression that feels like your own.<!--/cms:f00339--></p>\n<a class=\"v63-service-link\" data-cms-href=\"f00048\" data-cms-text-refs=\"f00340\" data-cms-visibility=\"f00186\" href=\"contact.html?interest=Personal%20Style%20Consultation\"><!--cms:f00340-->ENQUIRE ABOUT THIS SERVICE <!--/cms:f00340--><span aria-hidden=\"true\" data-cms-text-refs=\"f00341\"><!--cms:f00341-->↗<!--/cms:f00341--></span></a>\n</div></article>\n<article class=\"v63-service-card\" id=\"occasion-styling\">\n<a aria-label=\"Enquire about Occasion Styling\" class=\"v63-service-photo\" data-cms-aria_label=\"f00050\" data-cms-href=\"f00049\" data-cms-visibility=\"f00187\" href=\"contact.html?interest=Occasion%20Styling\">\n<img alt=\"Fashion editorial with a statement occasion look\" data-cms-alt=\"f00052\" data-cms-src=\"f00051\" data-cms-visibility=\"f00188\" decoding=\"async\" loading=\"lazy\" src=\"assets/brand/Shaneryn6713.webp\"/><span class=\"v63-photo-index\" data-cms-text-refs=\"f00342\"><!--cms:f00342-->03 / 03<!--/cms:f00342--></span></a>\n<div class=\"v63-service-body\"><span class=\"ep-kicker\" data-cms-text-refs=\"f00343\"><!--cms:f00343-->03 / THE SERVICE<!--/cms:f00343--></span>\n<h3 data-cms-text-refs=\"f00344\"><!--cms:f00344-->Occasion Styling<!--/cms:f00344--></h3><p data-cms-text-refs=\"f00345\"><!--cms:f00345-->Thoughtful one-to-one styling for celebrations, weddings and special moments.<!--/cms:f00345--></p>\n<a class=\"v63-service-link\" data-cms-href=\"f00053\" data-cms-text-refs=\"f00346\" data-cms-visibility=\"f00189\" href=\"contact.html?interest=Occasion%20Styling\"><!--cms:f00346-->ENQUIRE ABOUT THIS SERVICE <!--/cms:f00346--><span aria-hidden=\"true\" data-cms-text-refs=\"f00347\"><!--cms:f00347-->↗<!--/cms:f00347--></span></a>\n</div></article></div></section>\n<section aria-labelledby=\"v63-gallery-title\" class=\"v63-gallery\" data-cms-section=\"s-003\" id=\"past-work\">\n<div class=\"wrap v63-section-head\"><div><span class=\"ep-kicker\" data-cms-text-refs=\"f00348\"><!--cms:f00348-->THE ARCHIVE / PAST WORK<!--/cms:f00348--></span><h2 data-cms-text-refs=\"f00349\" id=\"v63-gallery-title\"><!--cms:f00349-->Past <!--/cms:f00349--><em data-cms-text-refs=\"f00350\"><!--cms:f00350-->work.<!--/cms:f00350--></em></h2></div>\n<p data-cms-text-refs=\"f00351\"><!--cms:f00351-->Selected photographs from earlier creative work.<!--/cms:f00351--></p></div>\n<div class=\"wrap v63-gallery-columns\"><button aria-label=\"View past work photograph 1 of 17: Fashion editorial in a flowing yellow couture gown\" class=\"v63-work-item\" data-cms-aria_label=\"f00054\" data-cms-visibility=\"f00190\" data-work-index=\"0\" type=\"button\"><img alt=\"Fashion editorial in a flowing yellow couture gown\" data-cms-alt=\"f00056\" data-cms-src=\"f00055\" data-cms-visibility=\"f00191\" decoding=\"async\" height=\"1066\" loading=\"lazy\" src=\"assets/past-work/past-work-01.webp\" width=\"800\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00352\"><!--cms:f00352-->01 / VIEW<!--/cms:f00352--></span><span data-cms-text-refs=\"f00353\"><!--cms:f00353-->↗<!--/cms:f00353--></span></span></button>\n<button aria-label=\"View past work photograph 2 of 17: Past work with sculptural floral couture detailing\" class=\"v63-work-item\" data-cms-aria_label=\"f00057\" data-cms-visibility=\"f00192\" data-work-index=\"1\" type=\"button\"><img alt=\"Past work with sculptural floral couture detailing\" data-cms-alt=\"f00059\" data-cms-src=\"f00058\" data-cms-visibility=\"f00193\" decoding=\"async\" height=\"1066\" loading=\"lazy\" src=\"assets/past-work/past-work-02.webp\" width=\"800\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00354\"><!--cms:f00354-->02 / VIEW<!--/cms:f00354--></span><span data-cms-text-refs=\"f00355\"><!--cms:f00355-->↗<!--/cms:f00355--></span></span></button>\n<button aria-label=\"View past work photograph 3 of 17: Embellished black evening ensemble\" class=\"v63-work-item\" data-cms-aria_label=\"f00060\" data-cms-visibility=\"f00194\" data-work-index=\"2\" type=\"button\"><img alt=\"Embellished black evening ensemble\" data-cms-alt=\"f00062\" data-cms-src=\"f00061\" data-cms-visibility=\"f00195\" decoding=\"async\" height=\"1280\" loading=\"lazy\" src=\"assets/past-work/past-work-03.webp\" width=\"660\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00356\"><!--cms:f00356-->03 / VIEW<!--/cms:f00356--></span><span data-cms-text-refs=\"f00357\"><!--cms:f00357-->↗<!--/cms:f00357--></span></span></button>\n<button aria-label=\"View past work photograph 4 of 17: Couture editorial styled on a vintage automobile\" class=\"v63-work-item\" data-cms-aria_label=\"f00063\" data-cms-visibility=\"f00196\" data-work-index=\"3\" type=\"button\"><img alt=\"Couture editorial styled on a vintage automobile\" data-cms-alt=\"f00065\" data-cms-src=\"f00064\" data-cms-visibility=\"f00197\" decoding=\"async\" height=\"1066\" loading=\"lazy\" src=\"assets/past-work/past-work-04.webp\" width=\"800\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00358\"><!--cms:f00358-->04 / VIEW<!--/cms:f00358--></span><span data-cms-text-refs=\"f00359\"><!--cms:f00359-->↗<!--/cms:f00359--></span></span></button>\n<button aria-label=\"View past work photograph 5 of 17: Pink embroidered traditional occasionwear\" class=\"v63-work-item\" data-cms-aria_label=\"f00066\" data-cms-visibility=\"f00198\" data-work-index=\"4\" type=\"button\"><img alt=\"Pink embroidered traditional occasionwear\" data-cms-alt=\"f00068\" data-cms-src=\"f00067\" data-cms-visibility=\"f00199\" decoding=\"async\" height=\"1280\" loading=\"lazy\" src=\"assets/past-work/past-work-05.webp\" width=\"856\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00360\"><!--cms:f00360-->05 / VIEW<!--/cms:f00360--></span><span data-cms-text-refs=\"f00361\"><!--cms:f00361-->↗<!--/cms:f00361--></span></span></button>\n<button aria-label=\"View past work photograph 6 of 17: Blue satin occasion dress\" class=\"v63-work-item\" data-cms-aria_label=\"f00069\" data-cms-visibility=\"f00200\" data-work-index=\"5\" type=\"button\"><img alt=\"Blue satin occasion dress\" data-cms-alt=\"f00071\" data-cms-src=\"f00070\" data-cms-visibility=\"f00201\" decoding=\"async\" height=\"450\" loading=\"lazy\" src=\"assets/past-work/past-work-06.webp\" width=\"337\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00362\"><!--cms:f00362-->06 / VIEW<!--/cms:f00362--></span><span data-cms-text-refs=\"f00363\"><!--cms:f00363-->↗<!--/cms:f00363--></span></span></button>\n<button aria-label=\"View past work photograph 7 of 17: Embellished dark evening look\" class=\"v63-work-item\" data-cms-aria_label=\"f00072\" data-cms-visibility=\"f00202\" data-work-index=\"6\" type=\"button\"><img alt=\"Embellished dark evening look\" data-cms-alt=\"f00074\" data-cms-src=\"f00073\" data-cms-visibility=\"f00203\" decoding=\"async\" height=\"759\" loading=\"lazy\" src=\"assets/past-work/past-work-07.webp\" width=\"499\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00364\"><!--cms:f00364-->07 / VIEW<!--/cms:f00364--></span><span data-cms-text-refs=\"f00365\"><!--cms:f00365-->↗<!--/cms:f00365--></span></span></button>\n<button aria-label=\"View past work photograph 8 of 17: Red embellished celebration dress\" class=\"v63-work-item\" data-cms-aria_label=\"f00075\" data-cms-visibility=\"f00204\" data-work-index=\"7\" type=\"button\"><img alt=\"Red embellished celebration dress\" data-cms-alt=\"f00077\" data-cms-src=\"f00076\" data-cms-visibility=\"f00205\" decoding=\"async\" height=\"720\" loading=\"lazy\" src=\"assets/past-work/past-work-08.webp\" width=\"540\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00366\"><!--cms:f00366-->08 / VIEW<!--/cms:f00366--></span><span data-cms-text-refs=\"f00367\"><!--cms:f00367-->↗<!--/cms:f00367--></span></span></button>\n<button aria-label=\"View past work photograph 9 of 17: Stage performance in a purple evening costume\" class=\"v63-work-item\" data-cms-aria_label=\"f00078\" data-cms-visibility=\"f00206\" data-work-index=\"8\" type=\"button\"><img alt=\"Stage performance in a purple evening costume\" data-cms-alt=\"f00080\" data-cms-src=\"f00079\" data-cms-visibility=\"f00207\" decoding=\"async\" height=\"500\" loading=\"lazy\" src=\"assets/past-work/past-work-09.webp\" width=\"350\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00368\"><!--cms:f00368-->09 / VIEW<!--/cms:f00368--></span><span data-cms-text-refs=\"f00369\"><!--cms:f00369-->↗<!--/cms:f00369--></span></span></button>\n<button aria-label=\"View past work photograph 10 of 17: White bridal or formal occasion gown\" class=\"v63-work-item\" data-cms-aria_label=\"f00081\" data-cms-visibility=\"f00208\" data-work-index=\"9\" type=\"button\"><img alt=\"White bridal or formal occasion gown\" data-cms-alt=\"f00083\" data-cms-src=\"f00082\" data-cms-visibility=\"f00209\" decoding=\"async\" height=\"720\" loading=\"lazy\" src=\"assets/past-work/past-work-10.webp\" width=\"540\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00370\"><!--cms:f00370-->10 / VIEW<!--/cms:f00370--></span><span data-cms-text-refs=\"f00371\"><!--cms:f00371-->↗<!--/cms:f00371--></span></span></button>\n<button aria-label=\"View past work photograph 11 of 17: Editorial pink couture look with floral accents\" class=\"v63-work-item\" data-cms-aria_label=\"f00084\" data-cms-visibility=\"f00210\" data-work-index=\"10\" type=\"button\"><img alt=\"Editorial pink couture look with floral accents\" data-cms-alt=\"f00086\" data-cms-src=\"f00085\" data-cms-visibility=\"f00211\" decoding=\"async\" height=\"1066\" loading=\"lazy\" src=\"assets/past-work/past-work-11.webp\" width=\"800\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00372\"><!--cms:f00372-->11 / VIEW<!--/cms:f00372--></span><span data-cms-text-refs=\"f00373\"><!--cms:f00373-->↗<!--/cms:f00373--></span></span></button>\n<button aria-label=\"View past work photograph 12 of 17: Blue-green stage costume in a dance scene\" class=\"v63-work-item\" data-cms-aria_label=\"f00087\" data-cms-visibility=\"f00212\" data-work-index=\"11\" type=\"button\"><img alt=\"Blue-green stage costume in a dance scene\" data-cms-alt=\"f00089\" data-cms-src=\"f00088\" data-cms-visibility=\"f00213\" decoding=\"async\" height=\"800\" loading=\"lazy\" src=\"assets/past-work/past-work-12.webp\" width=\"1200\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00374\"><!--cms:f00374-->12 / VIEW<!--/cms:f00374--></span><span data-cms-text-refs=\"f00375\"><!--cms:f00375-->↗<!--/cms:f00375--></span></span></button>\n<button aria-label=\"View past work photograph 13 of 17: Peach occasion gown at a red-carpet event\" class=\"v63-work-item\" data-cms-aria_label=\"f00090\" data-cms-visibility=\"f00214\" data-work-index=\"12\" type=\"button\"><img alt=\"Peach occasion gown at a red-carpet event\" data-cms-alt=\"f00092\" data-cms-src=\"f00091\" data-cms-visibility=\"f00215\" decoding=\"async\" height=\"600\" loading=\"lazy\" src=\"assets/past-work/past-work-13.webp\" width=\"400\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00376\"><!--cms:f00376-->13 / VIEW<!--/cms:f00376--></span><span data-cms-text-refs=\"f00377\"><!--cms:f00377-->↗<!--/cms:f00377--></span></span></button>\n<button aria-label=\"View past work photograph 14 of 17: Stage performance in a blue costume\" class=\"v63-work-item\" data-cms-aria_label=\"f00093\" data-cms-visibility=\"f00216\" data-work-index=\"13\" type=\"button\"><img alt=\"Stage performance in a blue costume\" data-cms-alt=\"f00095\" data-cms-src=\"f00094\" data-cms-visibility=\"f00217\" decoding=\"async\" height=\"456\" loading=\"lazy\" src=\"assets/past-work/past-work-14.webp\" width=\"329\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00378\"><!--cms:f00378-->14 / VIEW<!--/cms:f00378--></span><span data-cms-text-refs=\"f00379\"><!--cms:f00379-->↗<!--/cms:f00379--></span></span></button>\n<button aria-label=\"View past work photograph 15 of 17: Red occasion look at an event\" class=\"v63-work-item\" data-cms-aria_label=\"f00096\" data-cms-visibility=\"f00218\" data-work-index=\"14\" type=\"button\"><img alt=\"Red occasion look at an event\" data-cms-alt=\"f00098\" data-cms-src=\"f00097\" data-cms-visibility=\"f00219\" decoding=\"async\" height=\"640\" loading=\"lazy\" src=\"assets/past-work/past-work-15.webp\" width=\"480\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00380\"><!--cms:f00380-->15 / VIEW<!--/cms:f00380--></span><span data-cms-text-refs=\"f00381\"><!--cms:f00381-->↗<!--/cms:f00381--></span></span></button>\n<button aria-label=\"View past work photograph 16 of 17: Embellished white and gold occasion ensemble\" class=\"v63-work-item\" data-cms-aria_label=\"f00099\" data-cms-visibility=\"f00220\" data-work-index=\"15\" type=\"button\"><img alt=\"Embellished white and gold occasion ensemble\" data-cms-alt=\"f00101\" data-cms-src=\"f00100\" data-cms-visibility=\"f00221\" decoding=\"async\" height=\"1280\" loading=\"lazy\" src=\"assets/past-work/past-work-16.webp\" width=\"960\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00382\"><!--cms:f00382-->16 / VIEW<!--/cms:f00382--></span><span data-cms-text-refs=\"f00383\"><!--cms:f00383-->↗<!--/cms:f00383--></span></span></button>\n<button aria-label=\"View past work photograph 17 of 17: Editorial fashion styled beside a classic car\" class=\"v63-work-item\" data-cms-aria_label=\"f00102\" data-cms-visibility=\"f00222\" data-work-index=\"16\" type=\"button\"><img alt=\"Editorial fashion styled beside a classic car\" data-cms-alt=\"f00104\" data-cms-src=\"f00103\" data-cms-visibility=\"f00223\" decoding=\"async\" height=\"1280\" loading=\"lazy\" src=\"assets/past-work/past-work-17.webp\" width=\"890\"/><span aria-hidden=\"true\" class=\"v63-work-overlay\"><span data-cms-text-refs=\"f00384\"><!--cms:f00384-->17 / VIEW<!--/cms:f00384--></span><span data-cms-text-refs=\"f00385\"><!--cms:f00385-->↗<!--/cms:f00385--></span></span></button></div>\n<p class=\"wrap v63-gallery-note\" data-cms-text-refs=\"f00386\"><!--cms:f00386-->Original archival photographs; visual quality varies across the collection.<!--/cms:f00386--></p>\n<dialog aria-label=\"Past work photograph viewer\" class=\"v63-work-dialog\" data-cms-aria_label=\"f00105\" id=\"v63-work-dialog\">\n<div class=\"v63-work-dialog-shell\"><button aria-label=\"Close image viewer\" class=\"v63-close\" data-cms-aria_label=\"f00106\" data-cms-text-refs=\"f00387\" data-cms-visibility=\"f00224\" data-work-close=\"\" type=\"button\"><!--cms:f00387-->×<!--/cms:f00387--></button>\n<img alt=\"Fashion editorial in a flowing yellow couture gown\" data-cms-alt=\"f00108\" data-cms-src=\"f00107\" data-cms-visibility=\"f00225\" id=\"v63-work-expanded\" src=\"assets/past-work/past-work-01.webp\"/>\n<div class=\"v63-work-dialog-footer\"><button aria-label=\"Previous photograph\" data-cms-aria_label=\"f00109\" data-cms-text-refs=\"f00388\" data-cms-visibility=\"f00226\" data-work-prev=\"\" type=\"button\"><!--cms:f00388-->←<!--/cms:f00388--></button>\n<span aria-live=\"polite\" data-cms-text-refs=\"f00389\" id=\"v63-work-count\"><!--cms:f00389-->01 / 17<!--/cms:f00389--></span>\n<button aria-label=\"Next photograph\" data-cms-aria_label=\"f00110\" data-cms-text-refs=\"f00390\" data-cms-visibility=\"f00227\" data-work-next=\"\" type=\"button\"><!--cms:f00390-->→<!--/cms:f00390--></button></div></div></dialog>\n</section>\n</main><footer class=\"site-footer\" id=\"footer\">\n<img alt=\"\" aria-hidden=\"true\" class=\"footer-watermark-monogram\" data-cms-src=\"f00111\" data-cms-visibility=\"f00228\" loading=\"lazy\" src=\"assets/brand/shaneryn-monogram.png\"/>\n<div class=\"wrap\">\n<nav aria-label=\"Footer navigation\" class=\"footer-grid\" data-cms-aria_label=\"f00112\">\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00391\"><!--cms:f00391-->Explore<!--/cms:f00391--></h4>\n<a data-cms-href=\"f00113\" data-cms-text-refs=\"f00392\" data-cms-visibility=\"f00229\" href=\"index.html\"><!--cms:f00392-->Homepage<!--/cms:f00392--></a><a data-cms-href=\"f00114\" data-cms-text-refs=\"f00393\" data-cms-visibility=\"f00230\" href=\"collections.html\"><!--cms:f00393-->Collections<!--/cms:f00393--></a><a data-cms-href=\"f00115\" data-cms-text-refs=\"f00394\" data-cms-visibility=\"f00231\" href=\"index.html#occasion\"><!--cms:f00394-->Shop by Style<!--/cms:f00394--></a></div>\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00395\"><!--cms:f00395-->The World<!--/cms:f00395--></h4>\n<a data-cms-href=\"f00116\" data-cms-text-refs=\"f00396\" data-cms-visibility=\"f00232\" href=\"story.html\"><!--cms:f00396-->Our Story<!--/cms:f00396--></a><a data-cms-href=\"f00117\" data-cms-text-refs=\"f00397\" data-cms-visibility=\"f00233\" href=\"bespoke.html\"><!--cms:f00397-->Bespoke<!--/cms:f00397--></a><a data-cms-href=\"f00118\" data-cms-text-refs=\"f00398\" data-cms-visibility=\"f00234\" href=\"bespoke.html#services\"><!--cms:f00398-->Styling Services<!--/cms:f00398--></a><a data-cms-href=\"f00119\" data-cms-text-refs=\"f00399\" data-cms-visibility=\"f00235\" href=\"film.html\"><!--cms:f00399-->Fashion Film<!--/cms:f00399--></a><a data-cms-href=\"f00120\" data-cms-text-refs=\"f00400\" data-cms-visibility=\"f00236\" href=\"testimonials.html\"><!--cms:f00400-->Testimonials<!--/cms:f00400--></a></div>\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00401\"><!--cms:f00401-->Connect<!--/cms:f00401--></h4>\n<a data-cms-href=\"f00121\" data-cms-text-refs=\"f00402\" data-cms-visibility=\"f00237\" href=\"contact.html\"><!--cms:f00402-->Request Details<!--/cms:f00402--></a>\n<button data-cms-text-refs=\"f00403\" data-cms-visibility=\"f00238\" data-open-saved=\"\" type=\"button\"><!--cms:f00403-->Saved Looks<!--/cms:f00403--></button>\n<p class=\"footer-direct\" data-cms-text-refs=\"f00404 f00405\"><!--cms:f00404-->Personal enquiries only<!--/cms:f00404--><br/><!--cms:f00405-->No online checkout<!--/cms:f00405--></p>\n<a data-cms-href=\"f00122\" data-cms-text-refs=\"f00406\" data-cms-visibility=\"f00239\" href=\"mailto:info@shenerian.com\"><!--cms:f00406-->info@shenerian.com<!--/cms:f00406--></a></div>\n</nav><div class=\"footer-masthead\">\n<a aria-label=\"SHANERYN — back to homepage\" class=\"footer-logo\" data-cms-aria_label=\"f00124\" data-cms-href=\"f00123\" data-cms-visibility=\"f00240\" href=\"index.html\">\n<img alt=\"SHANERYN\" class=\"logo-original\" data-cms-alt=\"f00126\" data-cms-src=\"f00125\" data-cms-visibility=\"f00241\" decoding=\"async\" height=\"129\" loading=\"lazy\" src=\"assets/brand/shaneryn-wordmark-magenta.png\" width=\"490\"/><img alt=\"\" aria-hidden=\"true\" class=\"logo-inverse\" data-cms-src=\"f00127\" data-cms-visibility=\"f00242\" height=\"129\" loading=\"lazy\" src=\"assets/brand/shaneryn-wordmark-light.png\" width=\"490\"/>\n</a>\n<span aria-hidden=\"true\" class=\"footer-rule\"></span>\n</div>\n<div class=\"footer-bottom\"><span data-cms-text-refs=\"f00407\"><!--cms:f00407-->© 2026 SHANERYN<!--/cms:f00407--></span><span data-cms-text-refs=\"f00408\"><!--cms:f00408-->Personal enquiries only · No online checkout<!--/cms:f00408--></span></div>\n</div>\n</footer><button aria-label=\"Back to top\" class=\"backtotop\" data-cms-aria_label=\"f00128\" data-cms-text-refs=\"f00409\" data-cms-visibility=\"f00243\" id=\"backtotop\" type=\"button\"><!--cms:f00409-->↑<!--/cms:f00409--></button><div aria-live=\"polite\" class=\"toast\" id=\"toast\" role=\"status\"></div><div aria-label=\"SHANERYN outfit enquiry\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00129\" hidden=\"\" id=\"inquiry-modal\" role=\"dialog\"><div class=\"modal-window dialog-small\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00130\" data-cms-text-refs=\"f00410\" data-cms-visibility=\"f00244\" type=\"button\"><!--cms:f00410-->×<!--/cms:f00410--></button><span class=\"eyebrow\" data-cms-text-refs=\"f00411\"><!--cms:f00411-->PERSONAL ENQUIRY<!--/cms:f00411--></span><h2 data-cms-text-refs=\"f00412\"><!--cms:f00412-->Begin a Conversation.<!--/cms:f00412--></h2><p class=\"bodycopy\" data-cms-text-refs=\"f00413\"><!--cms:f00413-->Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit it automatically.<!--/cms:f00413--></p><form id=\"inquiry-form\"><label data-cms-text-refs=\"f00414\" for=\"inquiry-name\"><!--cms:f00414-->Your name<!--/cms:f00414--></label><input autocomplete=\"name\" data-cms-placeholder=\"f00131\" id=\"inquiry-name\" name=\"name\" placeholder=\"Your name\" required=\"\"/><label data-cms-text-refs=\"f00415\" for=\"inquiry-email\"><!--cms:f00415-->Email address<!--/cms:f00415--></label><input autocomplete=\"email\" data-cms-placeholder=\"f00132\" id=\"inquiry-email\" name=\"email\" placeholder=\"you@example.com\" required=\"\" type=\"email\"/><label data-cms-text-refs=\"f00416\" for=\"inquiry-look\"><!--cms:f00416-->Collection or look reference<!--/cms:f00416--></label><input data-cms-placeholder=\"f00133\" id=\"inquiry-look\" name=\"look\" placeholder=\"e.g. SH-PS-01\"/><label data-cms-text-refs=\"f00417\" for=\"inquiry-garment\"><!--cms:f00417-->Garment type (optional)<!--/cms:f00417--></label><select id=\"inquiry-garment\" name=\"garmentType\"><option data-cms-text-refs=\"f00418\" value=\"\"><!--cms:f00418-->Please select if relevant<!--/cms:f00418--></option><option data-cms-text-refs=\"f00419\" value=\"Occasion Wear\"><!--cms:f00419-->Occasion Wear<!--/cms:f00419--></option><option data-cms-text-refs=\"f00420\" value=\"Bridal Wear (Women)\"><!--cms:f00420-->Bridal Wear (Women)<!--/cms:f00420--></option><option data-cms-text-refs=\"f00421\" value=\"Bridal Wear (Men)\"><!--cms:f00421-->Bridal Wear (Men)<!--/cms:f00421--></option><option data-cms-text-refs=\"f00422\" value=\"Formal Corporate Wear\"><!--cms:f00422-->Formal Corporate Wear<!--/cms:f00422--></option></select><label data-cms-text-refs=\"f00423\" for=\"inquiry-message\"><!--cms:f00423-->What would you like to know?<!--/cms:f00423--></label><textarea data-cms-placeholder=\"f00134\" id=\"inquiry-message\" name=\"message\" placeholder=\"Tell us about your occasion or requirements\"></textarea><div class=\"modal-actions\"><button class=\"filled-btn\" data-cms-text-refs=\"f00424\" data-cms-visibility=\"f00245\" type=\"submit\"><!--cms:f00424-->Copy Enquiry ↗<!--/cms:f00424--></button><button class=\"outlined-btn\" data-cms-text-refs=\"f00425\" data-cms-visibility=\"f00246\" id=\"open-email\" type=\"button\"><!--cms:f00425-->Open Email Draft ↗<!--/cms:f00425--></button></div></form><p class=\"modal-info\" data-cms-text-refs=\"f00426\"><!--cms:f00426-->Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until CMS integration.<!--/cms:f00426--></p></div></div>\n<div aria-label=\"Saved looks\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00135\" hidden=\"\" id=\"saved-modal\" role=\"dialog\"><div class=\"modal-window dialog-small\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00136\" data-cms-text-refs=\"f00427\" data-cms-visibility=\"f00247\" type=\"button\"><!--cms:f00427-->×<!--/cms:f00427--></button><span class=\"eyebrow\" data-cms-text-refs=\"f00428\"><!--cms:f00428-->YOUR EDIT<!--/cms:f00428--></span><h2 data-cms-text-refs=\"f00429\"><!--cms:f00429-->Saved Looks.<!--/cms:f00429--></h2><p class=\"bodycopy\" data-cms-text-refs=\"f00430\"><!--cms:f00430-->A shortlist saved locally in your browser; no sign-in required.<!--/cms:f00430--></p><div class=\"saved-list\" id=\"saved-list\"></div><a class=\"outlined-btn\" data-close-modal=\"\" data-cms-href=\"f00137\" data-cms-text-refs=\"f00431\" data-cms-visibility=\"f00248\" href=\"collections.html\"><!--cms:f00431-->Explore Collections ↗<!--/cms:f00431--></a></div></div>\n<div aria-label=\"Full screen outfit viewer\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00138\" hidden=\"\" id=\"look-modal\" role=\"dialog\"><div class=\"modal-window\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00139\" data-cms-text-refs=\"f00432\" data-cms-visibility=\"f00249\" type=\"button\"><!--cms:f00432-->×<!--/cms:f00432--></button><div class=\"modal-frame\"><div class=\"modal-media\"><img alt=\"Outfit\" data-cms-alt=\"f00141\" data-cms-src=\"f00140\" data-cms-visibility=\"f00250\" id=\"look-modal-image\" src=\"assets/visual_13.jpg\"/><div class=\"gallery-controls\"><button aria-label=\"Previous look\" data-cms-aria_label=\"f00142\" data-cms-text-refs=\"f00433\" data-cms-visibility=\"f00251\" data-look-step=\"-1\" type=\"button\"><!--cms:f00433-->←<!--/cms:f00433--></button><button aria-label=\"Next look\" data-cms-aria_label=\"f00143\" data-cms-text-refs=\"f00434\" data-cms-visibility=\"f00252\" data-look-step=\"1\" type=\"button\"><!--cms:f00434-->→<!--/cms:f00434--></button></div></div><div class=\"modal-frame-copy\"><span class=\"eyebrow\" data-cms-text-refs=\"f00435\"><!--cms:f00435-->THE SHANERYN LOOKBOOK<!--/cms:f00435--></span><h2 data-cms-text-refs=\"f00436\" id=\"look-modal-title\"><!--cms:f00436-->Selected look<!--/cms:f00436--></h2><p data-cms-text-refs=\"f00437\" id=\"look-modal-code\"><!--cms:f00437-->Look reference<!--/cms:f00437--></p><p data-cms-text-refs=\"f00438\" id=\"look-modal-description\"><!--cms:f00438-->An editorial presentation of the look.<!--/cms:f00438--></p><p class=\"eyebrow\" data-cms-text-refs=\"f00439\" id=\"look-modal-position\"><!--cms:f00439-->1 / 12<!--/cms:f00439--></p><button class=\"outlined-btn\" data-cms-text-refs=\"f00440\" data-cms-visibility=\"f00253\" id=\"look-modal-inquiry\" type=\"button\"><!--cms:f00440-->Enquire About This Look ↗<!--/cms:f00440--></button></div></div></div></div>\n<div aria-label=\"Fashion film\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00144\" hidden=\"\" id=\"film-modal\" role=\"dialog\"><div class=\"modal-window\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00145\" data-cms-text-refs=\"f00441\" data-cms-visibility=\"f00254\" type=\"button\"><!--cms:f00441-->×<!--/cms:f00441--></button><div class=\"video-poster\" id=\"film-placeholder\"><div><span class=\"eyebrow\" data-cms-text-refs=\"f00442\"><!--cms:f00442-->SHANERYN / FASHION IN MOTION<!--/cms:f00442--></span><h2 data-cms-text-refs=\"f00443\"><!--cms:f00443-->Stories in Motion<!--/cms:f00443--></h2><p data-cms-text-refs=\"f00444\"><!--cms:f00444-->The SHANERYN film will appear here once the approved video is available.<!--/cms:f00444--></p></div></div><iframe allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" class=\"video-frame\" data-cms-title=\"f00146\" hidden=\"\" id=\"film-iframe\" title=\"SHANERYN fashion film\"></iframe></div></div>",
+ "fields": [
+  {
+   "id": "f00001",
+   "kind": "href",
+   "value": "#main-content",
+   "visible": true,
+   "section": "other",
+   "tag": "a",
+   "label": "a / href: Skip to main content"
+  },
+  {
+   "id": "f00002",
+   "kind": "aria-label",
+   "value": "Main menu",
+   "visible": true,
+   "section": "header",
+   "tag": "nav",
+   "label": "nav / aria-label: Collections Bespoke"
+  },
+  {
+   "id": "f00003",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Collections"
+  },
+  {
+   "id": "f00004",
+   "kind": "href",
+   "value": "bespoke.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Bespoke"
+  },
+  {
+   "id": "f00005",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: "
+  },
+  {
+   "id": "f00006",
+   "kind": "aria-label",
+   "value": "SHANERYN Home",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / aria-label: "
+  },
+  {
+   "id": "f00007",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-magenta.png",
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "img / src: SHANERYN"
+  },
+  {
+   "id": "f00008",
+   "kind": "alt",
+   "value": "SHANERYN",
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "img / alt: SHANERYN"
+  },
+  {
+   "id": "f00009",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-light.png",
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "img / src: photo"
+  },
+  {
+   "id": "f00010",
+   "kind": "aria-label",
+   "value": "Additional links",
+   "visible": true,
+   "section": "header",
+   "tag": "nav",
+   "label": "nav / aria-label: Our Story Styling Services Menu 0"
+  },
+  {
+   "id": "f00011",
+   "kind": "href",
+   "value": "story.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Our Story"
+  },
+  {
+   "id": "f00012",
+   "kind": "href",
+   "value": "bespoke.html#services",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Styling Services"
+  },
+  {
+   "id": "f00013",
+   "kind": "aria-label",
+   "value": "Open menu",
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "button / aria-label: Menu"
+  },
+  {
+   "id": "f00014",
+   "kind": "aria-label",
+   "value": "View saved looks",
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "button / aria-label: 0"
+  },
+  {
+   "id": "f00015",
+   "kind": "aria-label",
+   "value": "Explore SHANERYN",
+   "visible": true,
+   "section": "other",
+   "tag": "nav",
+   "label": "nav / aria-label: Homepage 01 Shop by Style 02 Collections 03 Besp"
+  },
+  {
+   "id": "f00016",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Homepage 01"
+  },
+  {
+   "id": "f00017",
+   "kind": "href",
+   "value": "index.html#occasion",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Shop by Style 02"
+  },
+  {
+   "id": "f00018",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Collections 03"
+  },
+  {
+   "id": "f00019",
+   "kind": "href",
+   "value": "bespoke.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Bespoke 04"
+  },
+  {
+   "id": "f00020",
+   "kind": "href",
+   "value": "bespoke.html#services",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Styling Services 05"
+  },
+  {
+   "id": "f00021",
+   "kind": "href",
+   "value": "story.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Our Story 06"
+  },
+  {
+   "id": "f00022",
+   "kind": "href",
+   "value": "film.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Fashion Film 07"
+  },
+  {
+   "id": "f00023",
+   "kind": "href",
+   "value": "testimonials.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Testimonials 08"
+  },
+  {
+   "id": "f00024",
+   "kind": "href",
+   "value": "contact.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Contact 09"
+  },
+  {
+   "id": "f00025",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-monogram.png",
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "img / src: photo"
+  },
+  {
+   "id": "f00026",
+   "kind": "src",
+   "value": "assets/bespoke-bridal-secondary.png",
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "img / src: Editorial bridal couture photograph of two model"
+  },
+  {
+   "id": "f00027",
+   "kind": "alt",
+   "value": "Editorial bridal couture photograph of two models in embellished occasionwear",
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "img / alt: Editorial bridal couture photograph of two model"
+  },
+  {
+   "id": "f00028",
+   "kind": "src",
+   "value": "assets/bespoke-bridal-primary.png",
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "img / src: Rose-pink embroidered bridal couture look, seate"
+  },
+  {
+   "id": "f00029",
+   "kind": "alt",
+   "value": "Rose-pink embroidered bridal couture look, seated portrait",
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "img / alt: Rose-pink embroidered bridal couture look, seate"
+  },
+  {
+   "id": "f00030",
+   "kind": "aria-label",
+   "value": "What we stitch",
+   "visible": true,
+   "section": "s-000",
+   "tag": "div",
+   "label": "div / aria-label: WE STITCH Occasion Wear Bridal Wear (Men & Women"
+  },
+  {
+   "id": "f00031",
+   "kind": "href",
+   "value": "contact.html?interest=Bespoke%20%2F%20Customisation",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / href: ENQUIRE ABOUT BESPOKE ↗"
+  },
+  {
+   "id": "f00032",
+   "kind": "href",
+   "value": "#measurement-studio",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / href: MEASUREMENT FORM ↗"
+  },
+  {
+   "id": "f00033",
+   "kind": "aria-label",
+   "value": "On this bespoke page",
+   "visible": true,
+   "section": "s-000",
+   "tag": "nav",
+   "label": "nav / aria-label: Measurements Services Past work"
+  },
+  {
+   "id": "f00034",
+   "kind": "href",
+   "value": "#measurement-studio",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / href: Measurements"
+  },
+  {
+   "id": "f00035",
+   "kind": "href",
+   "value": "#services",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / href: Services"
+  },
+  {
+   "id": "f00036",
+   "kind": "href",
+   "value": "#past-work",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / href: Past work"
+  },
+  {
+   "id": "f00037",
+   "kind": "aria-label",
+   "value": "Measurement type",
+   "visible": true,
+   "section": "s-001",
+   "tag": "div",
+   "label": "div / aria-label: CUSTOM GARMENT SHANERYN LOOK"
+  },
+  {
+   "id": "f00038",
+   "kind": "aria-label",
+   "value": "Choose garment or look",
+   "visible": true,
+   "section": "s-001",
+   "tag": "select",
+   "label": "select / aria-label: "
+  },
+  {
+   "id": "f00039",
+   "kind": "href",
+   "value": "contact.html?interest=Color%20Analysis",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / href: 01 / 03"
+  },
+  {
+   "id": "f00040",
+   "kind": "aria-label",
+   "value": "Enquire about Color Analysis",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / aria-label: 01 / 03"
+  },
+  {
+   "id": "f00041",
+   "kind": "src",
+   "value": "assets/brand/Shaneryn6838.webp",
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "img / src: Fashion editorial portrait featuring purple occa"
+  },
+  {
+   "id": "f00042",
+   "kind": "alt",
+   "value": "Fashion editorial portrait featuring purple occasionwear",
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "img / alt: Fashion editorial portrait featuring purple occa"
+  },
+  {
+   "id": "f00043",
+   "kind": "href",
+   "value": "contact.html?interest=Color%20Analysis",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / href: ENQUIRE ABOUT THIS SERVICE ↗"
+  },
+  {
+   "id": "f00044",
+   "kind": "href",
+   "value": "contact.html?interest=Personal%20Style%20Consultation",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / href: 02 / 03"
+  },
+  {
+   "id": "f00045",
+   "kind": "aria-label",
+   "value": "Enquire about Personal Style Consultation",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / aria-label: 02 / 03"
+  },
+  {
+   "id": "f00046",
+   "kind": "src",
+   "value": "assets/brand/Shaneryn6594.webp",
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "img / src: Monochrome SHANERYN fashion editorial portrait"
+  },
+  {
+   "id": "f00047",
+   "kind": "alt",
+   "value": "Monochrome SHANERYN fashion editorial portrait",
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "img / alt: Monochrome SHANERYN fashion editorial portrait"
+  },
+  {
+   "id": "f00048",
+   "kind": "href",
+   "value": "contact.html?interest=Personal%20Style%20Consultation",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / href: ENQUIRE ABOUT THIS SERVICE ↗"
+  },
+  {
+   "id": "f00049",
+   "kind": "href",
+   "value": "contact.html?interest=Occasion%20Styling",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / href: 03 / 03"
+  },
+  {
+   "id": "f00050",
+   "kind": "aria-label",
+   "value": "Enquire about Occasion Styling",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / aria-label: 03 / 03"
+  },
+  {
+   "id": "f00051",
+   "kind": "src",
+   "value": "assets/brand/Shaneryn6713.webp",
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "img / src: Fashion editorial with a statement occasion look"
+  },
+  {
+   "id": "f00052",
+   "kind": "alt",
+   "value": "Fashion editorial with a statement occasion look",
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "img / alt: Fashion editorial with a statement occasion look"
+  },
+  {
+   "id": "f00053",
+   "kind": "href",
+   "value": "contact.html?interest=Occasion%20Styling",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / href: ENQUIRE ABOUT THIS SERVICE ↗"
+  },
+  {
+   "id": "f00054",
+   "kind": "aria-label",
+   "value": "View past work photograph 1 of 17: Fashion editorial in a flowing yellow couture gown",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 01 / VIEW ↗"
+  },
+  {
+   "id": "f00055",
+   "kind": "src",
+   "value": "assets/past-work/past-work-01.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Fashion editorial in a flowing yellow couture go"
+  },
+  {
+   "id": "f00056",
+   "kind": "alt",
+   "value": "Fashion editorial in a flowing yellow couture gown",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Fashion editorial in a flowing yellow couture go"
+  },
+  {
+   "id": "f00057",
+   "kind": "aria-label",
+   "value": "View past work photograph 2 of 17: Past work with sculptural floral couture detailing",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 02 / VIEW ↗"
+  },
+  {
+   "id": "f00058",
+   "kind": "src",
+   "value": "assets/past-work/past-work-02.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Past work with sculptural floral couture detaili"
+  },
+  {
+   "id": "f00059",
+   "kind": "alt",
+   "value": "Past work with sculptural floral couture detailing",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Past work with sculptural floral couture detaili"
+  },
+  {
+   "id": "f00060",
+   "kind": "aria-label",
+   "value": "View past work photograph 3 of 17: Embellished black evening ensemble",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 03 / VIEW ↗"
+  },
+  {
+   "id": "f00061",
+   "kind": "src",
+   "value": "assets/past-work/past-work-03.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Embellished black evening ensemble"
+  },
+  {
+   "id": "f00062",
+   "kind": "alt",
+   "value": "Embellished black evening ensemble",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Embellished black evening ensemble"
+  },
+  {
+   "id": "f00063",
+   "kind": "aria-label",
+   "value": "View past work photograph 4 of 17: Couture editorial styled on a vintage automobile",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 04 / VIEW ↗"
+  },
+  {
+   "id": "f00064",
+   "kind": "src",
+   "value": "assets/past-work/past-work-04.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Couture editorial styled on a vintage automobile"
+  },
+  {
+   "id": "f00065",
+   "kind": "alt",
+   "value": "Couture editorial styled on a vintage automobile",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Couture editorial styled on a vintage automobile"
+  },
+  {
+   "id": "f00066",
+   "kind": "aria-label",
+   "value": "View past work photograph 5 of 17: Pink embroidered traditional occasionwear",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 05 / VIEW ↗"
+  },
+  {
+   "id": "f00067",
+   "kind": "src",
+   "value": "assets/past-work/past-work-05.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Pink embroidered traditional occasionwear"
+  },
+  {
+   "id": "f00068",
+   "kind": "alt",
+   "value": "Pink embroidered traditional occasionwear",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Pink embroidered traditional occasionwear"
+  },
+  {
+   "id": "f00069",
+   "kind": "aria-label",
+   "value": "View past work photograph 6 of 17: Blue satin occasion dress",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 06 / VIEW ↗"
+  },
+  {
+   "id": "f00070",
+   "kind": "src",
+   "value": "assets/past-work/past-work-06.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Blue satin occasion dress"
+  },
+  {
+   "id": "f00071",
+   "kind": "alt",
+   "value": "Blue satin occasion dress",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Blue satin occasion dress"
+  },
+  {
+   "id": "f00072",
+   "kind": "aria-label",
+   "value": "View past work photograph 7 of 17: Embellished dark evening look",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 07 / VIEW ↗"
+  },
+  {
+   "id": "f00073",
+   "kind": "src",
+   "value": "assets/past-work/past-work-07.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Embellished dark evening look"
+  },
+  {
+   "id": "f00074",
+   "kind": "alt",
+   "value": "Embellished dark evening look",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Embellished dark evening look"
+  },
+  {
+   "id": "f00075",
+   "kind": "aria-label",
+   "value": "View past work photograph 8 of 17: Red embellished celebration dress",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 08 / VIEW ↗"
+  },
+  {
+   "id": "f00076",
+   "kind": "src",
+   "value": "assets/past-work/past-work-08.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Red embellished celebration dress"
+  },
+  {
+   "id": "f00077",
+   "kind": "alt",
+   "value": "Red embellished celebration dress",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Red embellished celebration dress"
+  },
+  {
+   "id": "f00078",
+   "kind": "aria-label",
+   "value": "View past work photograph 9 of 17: Stage performance in a purple evening costume",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 09 / VIEW ↗"
+  },
+  {
+   "id": "f00079",
+   "kind": "src",
+   "value": "assets/past-work/past-work-09.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Stage performance in a purple evening costume"
+  },
+  {
+   "id": "f00080",
+   "kind": "alt",
+   "value": "Stage performance in a purple evening costume",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Stage performance in a purple evening costume"
+  },
+  {
+   "id": "f00081",
+   "kind": "aria-label",
+   "value": "View past work photograph 10 of 17: White bridal or formal occasion gown",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 10 / VIEW ↗"
+  },
+  {
+   "id": "f00082",
+   "kind": "src",
+   "value": "assets/past-work/past-work-10.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: White bridal or formal occasion gown"
+  },
+  {
+   "id": "f00083",
+   "kind": "alt",
+   "value": "White bridal or formal occasion gown",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: White bridal or formal occasion gown"
+  },
+  {
+   "id": "f00084",
+   "kind": "aria-label",
+   "value": "View past work photograph 11 of 17: Editorial pink couture look with floral accents",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 11 / VIEW ↗"
+  },
+  {
+   "id": "f00085",
+   "kind": "src",
+   "value": "assets/past-work/past-work-11.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Editorial pink couture look with floral accents"
+  },
+  {
+   "id": "f00086",
+   "kind": "alt",
+   "value": "Editorial pink couture look with floral accents",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Editorial pink couture look with floral accents"
+  },
+  {
+   "id": "f00087",
+   "kind": "aria-label",
+   "value": "View past work photograph 12 of 17: Blue-green stage costume in a dance scene",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 12 / VIEW ↗"
+  },
+  {
+   "id": "f00088",
+   "kind": "src",
+   "value": "assets/past-work/past-work-12.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Blue-green stage costume in a dance scene"
+  },
+  {
+   "id": "f00089",
+   "kind": "alt",
+   "value": "Blue-green stage costume in a dance scene",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Blue-green stage costume in a dance scene"
+  },
+  {
+   "id": "f00090",
+   "kind": "aria-label",
+   "value": "View past work photograph 13 of 17: Peach occasion gown at a red-carpet event",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 13 / VIEW ↗"
+  },
+  {
+   "id": "f00091",
+   "kind": "src",
+   "value": "assets/past-work/past-work-13.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Peach occasion gown at a red-carpet event"
+  },
+  {
+   "id": "f00092",
+   "kind": "alt",
+   "value": "Peach occasion gown at a red-carpet event",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Peach occasion gown at a red-carpet event"
+  },
+  {
+   "id": "f00093",
+   "kind": "aria-label",
+   "value": "View past work photograph 14 of 17: Stage performance in a blue costume",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 14 / VIEW ↗"
+  },
+  {
+   "id": "f00094",
+   "kind": "src",
+   "value": "assets/past-work/past-work-14.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Stage performance in a blue costume"
+  },
+  {
+   "id": "f00095",
+   "kind": "alt",
+   "value": "Stage performance in a blue costume",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Stage performance in a blue costume"
+  },
+  {
+   "id": "f00096",
+   "kind": "aria-label",
+   "value": "View past work photograph 15 of 17: Red occasion look at an event",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 15 / VIEW ↗"
+  },
+  {
+   "id": "f00097",
+   "kind": "src",
+   "value": "assets/past-work/past-work-15.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Red occasion look at an event"
+  },
+  {
+   "id": "f00098",
+   "kind": "alt",
+   "value": "Red occasion look at an event",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Red occasion look at an event"
+  },
+  {
+   "id": "f00099",
+   "kind": "aria-label",
+   "value": "View past work photograph 16 of 17: Embellished white and gold occasion ensemble",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 16 / VIEW ↗"
+  },
+  {
+   "id": "f00100",
+   "kind": "src",
+   "value": "assets/past-work/past-work-16.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Embellished white and gold occasion ensemble"
+  },
+  {
+   "id": "f00101",
+   "kind": "alt",
+   "value": "Embellished white and gold occasion ensemble",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Embellished white and gold occasion ensemble"
+  },
+  {
+   "id": "f00102",
+   "kind": "aria-label",
+   "value": "View past work photograph 17 of 17: Editorial fashion styled beside a classic car",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: 17 / VIEW ↗"
+  },
+  {
+   "id": "f00103",
+   "kind": "src",
+   "value": "assets/past-work/past-work-17.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Editorial fashion styled beside a classic car"
+  },
+  {
+   "id": "f00104",
+   "kind": "alt",
+   "value": "Editorial fashion styled beside a classic car",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Editorial fashion styled beside a classic car"
+  },
+  {
+   "id": "f00105",
+   "kind": "aria-label",
+   "value": "Past work photograph viewer",
+   "visible": true,
+   "section": "s-003",
+   "tag": "dialog",
+   "label": "dialog / aria-label: × ← 01 / 17 →"
+  },
+  {
+   "id": "f00106",
+   "kind": "aria-label",
+   "value": "Close image viewer",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00107",
+   "kind": "src",
+   "value": "assets/past-work/past-work-01.webp",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / src: Fashion editorial in a flowing yellow couture go"
+  },
+  {
+   "id": "f00108",
+   "kind": "alt",
+   "value": "Fashion editorial in a flowing yellow couture gown",
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "img / alt: Fashion editorial in a flowing yellow couture go"
+  },
+  {
+   "id": "f00109",
+   "kind": "aria-label",
+   "value": "Previous photograph",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: ←"
+  },
+  {
+   "id": "f00110",
+   "kind": "aria-label",
+   "value": "Next photograph",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / aria-label: →"
+  },
+  {
+   "id": "f00111",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-monogram.png",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / src: photo"
+  },
+  {
+   "id": "f00112",
+   "kind": "aria-label",
+   "value": "Footer navigation",
+   "visible": true,
+   "section": "footer",
+   "tag": "nav",
+   "label": "nav / aria-label: Explore Homepage Collections Shop by Style The W"
+  },
+  {
+   "id": "f00113",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Homepage"
+  },
+  {
+   "id": "f00114",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Collections"
+  },
+  {
+   "id": "f00115",
+   "kind": "href",
+   "value": "index.html#occasion",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Shop by Style"
+  },
+  {
+   "id": "f00116",
+   "kind": "href",
+   "value": "story.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Our Story"
+  },
+  {
+   "id": "f00117",
+   "kind": "href",
+   "value": "bespoke.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Bespoke"
+  },
+  {
+   "id": "f00118",
+   "kind": "href",
+   "value": "bespoke.html#services",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Styling Services"
+  },
+  {
+   "id": "f00119",
+   "kind": "href",
+   "value": "film.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Fashion Film"
+  },
+  {
+   "id": "f00120",
+   "kind": "href",
+   "value": "testimonials.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Testimonials"
+  },
+  {
+   "id": "f00121",
+   "kind": "href",
+   "value": "contact.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Request Details"
+  },
+  {
+   "id": "f00122",
+   "kind": "href",
+   "value": "mailto:info@shenerian.com",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: info@shenerian.com"
+  },
+  {
+   "id": "f00123",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: "
+  },
+  {
+   "id": "f00124",
+   "kind": "aria-label",
+   "value": "SHANERYN — back to homepage",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / aria-label: "
+  },
+  {
+   "id": "f00125",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-magenta.png",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / src: SHANERYN"
+  },
+  {
+   "id": "f00126",
+   "kind": "alt",
+   "value": "SHANERYN",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / alt: SHANERYN"
+  },
+  {
+   "id": "f00127",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-light.png",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / src: photo"
+  },
+  {
+   "id": "f00128",
+   "kind": "aria-label",
+   "value": "Back to top",
+   "visible": true,
+   "section": "other",
+   "tag": "button",
+   "label": "button / aria-label: ↑"
+  },
+  {
+   "id": "f00129",
+   "kind": "aria-label",
+   "value": "SHANERYN outfit enquiry",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × PERSONAL ENQUIRY Begin a Conversation. Prepare"
+  },
+  {
+   "id": "f00130",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00131",
+   "kind": "placeholder",
+   "value": "Your name",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "input",
+   "label": "input / placeholder: "
+  },
+  {
+   "id": "f00132",
+   "kind": "placeholder",
+   "value": "you@example.com",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "input",
+   "label": "input / placeholder: "
+  },
+  {
+   "id": "f00133",
+   "kind": "placeholder",
+   "value": "e.g. SH-PS-01",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "input",
+   "label": "input / placeholder: "
+  },
+  {
+   "id": "f00134",
+   "kind": "placeholder",
+   "value": "Tell us about your occasion or requirements",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "textarea",
+   "label": "textarea / placeholder: "
+  },
+  {
+   "id": "f00135",
+   "kind": "aria-label",
+   "value": "Saved looks",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × YOUR EDIT Saved Looks. A shortlist saved local"
+  },
+  {
+   "id": "f00136",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00137",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "a",
+   "label": "a / href: Explore Collections ↗"
+  },
+  {
+   "id": "f00138",
+   "kind": "aria-label",
+   "value": "Full screen outfit viewer",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × ← → THE SHANERYN LOOKBOOK Selected look Look r"
+  },
+  {
+   "id": "f00139",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00140",
+   "kind": "src",
+   "value": "assets/visual_13.jpg",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "img",
+   "label": "img / src: Outfit"
+  },
+  {
+   "id": "f00141",
+   "kind": "alt",
+   "value": "Outfit",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "img",
+   "label": "img / alt: Outfit"
+  },
+  {
+   "id": "f00142",
+   "kind": "aria-label",
+   "value": "Previous look",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ←"
+  },
+  {
+   "id": "f00143",
+   "kind": "aria-label",
+   "value": "Next look",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: →"
+  },
+  {
+   "id": "f00144",
+   "kind": "aria-label",
+   "value": "Fashion film",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × SHANERYN / FASHION IN MOTION Stories in Motion"
+  },
+  {
+   "id": "f00145",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00146",
+   "kind": "title",
+   "value": "SHANERYN fashion film",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "iframe",
+   "label": "iframe / title: "
+  },
+  {
+   "id": "f00147",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "other",
+   "tag": "a",
+   "label": "Button / Link / Image — Skip to main content"
+  },
+  {
+   "id": "f00148",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Collections"
+  },
+  {
+   "id": "f00149",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Bespoke"
+  },
+  {
+   "id": "f00150",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — SHANERYN Home"
+  },
+  {
+   "id": "f00151",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "Button / Link / Image — SHANERYN"
+  },
+  {
+   "id": "f00152",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "Button / Link / Image — img"
+  },
+  {
+   "id": "f00153",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Our Story"
+  },
+  {
+   "id": "f00154",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Styling Services"
+  },
+  {
+   "id": "f00155",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "Button / Link / Image — Menu"
+  },
+  {
+   "id": "f00156",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "Button / Link / Image — 0"
+  },
+  {
+   "id": "f00157",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Homepage 01"
+  },
+  {
+   "id": "f00158",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Shop by Style 02"
+  },
+  {
+   "id": "f00159",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Collections 03"
+  },
+  {
+   "id": "f00160",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Bespoke 04"
+  },
+  {
+   "id": "f00161",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Styling Services 05"
+  },
+  {
+   "id": "f00162",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Our Story 06"
+  },
+  {
+   "id": "f00163",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Fashion Film 07"
+  },
+  {
+   "id": "f00164",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Testimonials 08"
+  },
+  {
+   "id": "f00165",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Contact 09"
+  },
+  {
+   "id": "f00166",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "Button / Link / Image — Saved Looks ♥"
+  },
+  {
+   "id": "f00167",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "Button / Link / Image — Enquire ↗"
+  },
+  {
+   "id": "f00168",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "Button / Link / Image — img"
+  },
+  {
+   "id": "f00169",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "Button / Link / Image — Editorial bridal couture photograph of two models in embellished occasionwear"
+  },
+  {
+   "id": "f00170",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "Button / Link / Image — Rose-pink embroidered bridal couture look, seated portrait"
+  },
+  {
+   "id": "f00171",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "Button / Link / Image — ENQUIRE ABOUT BESPOKE ↗"
+  },
+  {
+   "id": "f00172",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "Button / Link / Image — MEASUREMENT FORM ↗"
+  },
+  {
+   "id": "f00173",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "Button / Link / Image — Measurements"
+  },
+  {
+   "id": "f00174",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "Button / Link / Image — Services"
+  },
+  {
+   "id": "f00175",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "Button / Link / Image — Past work"
+  },
+  {
+   "id": "f00176",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — CUSTOM GARMENT"
+  },
+  {
+   "id": "f00177",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — SHANERYN LOOK"
+  },
+  {
+   "id": "f00178",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — REVIEW MEASUREMENTS ↗"
+  },
+  {
+   "id": "f00179",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — COPY SUMMARY ↗"
+  },
+  {
+   "id": "f00180",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — PREPARE BESPOKE REQUEST ↗"
+  },
+  {
+   "id": "f00181",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "Button / Link / Image — 01 / 03"
+  },
+  {
+   "id": "f00182",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "Button / Link / Image — Fashion editorial portrait featuring purple occasionwear"
+  },
+  {
+   "id": "f00183",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "Button / Link / Image — ENQUIRE ABOUT THIS SERVICE ↗"
+  },
+  {
+   "id": "f00184",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "Button / Link / Image — 02 / 03"
+  },
+  {
+   "id": "f00185",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "Button / Link / Image — Monochrome SHANERYN fashion editorial portrait"
+  },
+  {
+   "id": "f00186",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "Button / Link / Image — ENQUIRE ABOUT THIS SERVICE ↗"
+  },
+  {
+   "id": "f00187",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "Button / Link / Image — 03 / 03"
+  },
+  {
+   "id": "f00188",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "img",
+   "label": "Button / Link / Image — Fashion editorial with a statement occasion look"
+  },
+  {
+   "id": "f00189",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "Button / Link / Image — ENQUIRE ABOUT THIS SERVICE ↗"
+  },
+  {
+   "id": "f00190",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 01 / VIEW ↗"
+  },
+  {
+   "id": "f00191",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Fashion editorial in a flowing yellow couture gown"
+  },
+  {
+   "id": "f00192",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 02 / VIEW ↗"
+  },
+  {
+   "id": "f00193",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Past work with sculptural floral couture detailing"
+  },
+  {
+   "id": "f00194",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 03 / VIEW ↗"
+  },
+  {
+   "id": "f00195",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Embellished black evening ensemble"
+  },
+  {
+   "id": "f00196",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 04 / VIEW ↗"
+  },
+  {
+   "id": "f00197",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Couture editorial styled on a vintage automobile"
+  },
+  {
+   "id": "f00198",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 05 / VIEW ↗"
+  },
+  {
+   "id": "f00199",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Pink embroidered traditional occasionwear"
+  },
+  {
+   "id": "f00200",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 06 / VIEW ↗"
+  },
+  {
+   "id": "f00201",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Blue satin occasion dress"
+  },
+  {
+   "id": "f00202",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 07 / VIEW ↗"
+  },
+  {
+   "id": "f00203",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Embellished dark evening look"
+  },
+  {
+   "id": "f00204",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 08 / VIEW ↗"
+  },
+  {
+   "id": "f00205",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Red embellished celebration dress"
+  },
+  {
+   "id": "f00206",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 09 / VIEW ↗"
+  },
+  {
+   "id": "f00207",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Stage performance in a purple evening costume"
+  },
+  {
+   "id": "f00208",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 10 / VIEW ↗"
+  },
+  {
+   "id": "f00209",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — White bridal or formal occasion gown"
+  },
+  {
+   "id": "f00210",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 11 / VIEW ↗"
+  },
+  {
+   "id": "f00211",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Editorial pink couture look with floral accents"
+  },
+  {
+   "id": "f00212",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 12 / VIEW ↗"
+  },
+  {
+   "id": "f00213",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Blue-green stage costume in a dance scene"
+  },
+  {
+   "id": "f00214",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 13 / VIEW ↗"
+  },
+  {
+   "id": "f00215",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Peach occasion gown at a red-carpet event"
+  },
+  {
+   "id": "f00216",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 14 / VIEW ↗"
+  },
+  {
+   "id": "f00217",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Stage performance in a blue costume"
+  },
+  {
+   "id": "f00218",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 15 / VIEW ↗"
+  },
+  {
+   "id": "f00219",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Red occasion look at an event"
+  },
+  {
+   "id": "f00220",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 16 / VIEW ↗"
+  },
+  {
+   "id": "f00221",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Embellished white and gold occasion ensemble"
+  },
+  {
+   "id": "f00222",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — 17 / VIEW ↗"
+  },
+  {
+   "id": "f00223",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Editorial fashion styled beside a classic car"
+  },
+  {
+   "id": "f00224",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00225",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "img",
+   "label": "Button / Link / Image — Fashion editorial in a flowing yellow couture gown"
+  },
+  {
+   "id": "f00226",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — ←"
+  },
+  {
+   "id": "f00227",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "Button / Link / Image — →"
+  },
+  {
+   "id": "f00228",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "Button / Link / Image — img"
+  },
+  {
+   "id": "f00229",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Homepage"
+  },
+  {
+   "id": "f00230",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Collections"
+  },
+  {
+   "id": "f00231",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Shop by Style"
+  },
+  {
+   "id": "f00232",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Our Story"
+  },
+  {
+   "id": "f00233",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Bespoke"
+  },
+  {
+   "id": "f00234",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Styling Services"
+  },
+  {
+   "id": "f00235",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Fashion Film"
+  },
+  {
+   "id": "f00236",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Testimonials"
+  },
+  {
+   "id": "f00237",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Request Details"
+  },
+  {
+   "id": "f00238",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "button",
+   "label": "Button / Link / Image — Saved Looks"
+  },
+  {
+   "id": "f00239",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — info@shenerian.com"
+  },
+  {
+   "id": "f00240",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — SHANERYN — back to homepage"
+  },
+  {
+   "id": "f00241",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "Button / Link / Image — SHANERYN"
+  },
+  {
+   "id": "f00242",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "Button / Link / Image — img"
+  },
+  {
+   "id": "f00243",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "other",
+   "tag": "button",
+   "label": "Button / Link / Image — ↑"
+  },
+  {
+   "id": "f00244",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00245",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — Copy Enquiry ↗"
+  },
+  {
+   "id": "f00246",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — Open Email Draft ↗"
+  },
+  {
+   "id": "f00247",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00248",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "a",
+   "label": "Button / Link / Image — Explore Collections ↗"
+  },
+  {
+   "id": "f00249",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00250",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "img",
+   "label": "Button / Link / Image — Outfit"
+  },
+  {
+   "id": "f00251",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ←"
+  },
+  {
+   "id": "f00252",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — →"
+  },
+  {
+   "id": "f00253",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — Enquire About This Look ↗"
+  },
+  {
+   "id": "f00254",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00255",
+   "kind": "text",
+   "value": "Skip to main content",
+   "visible": true,
+   "section": "other",
+   "tag": "a",
+   "label": "a / Skip to main content"
+  },
+  {
+   "id": "f00256",
+   "kind": "text",
+   "value": "Collections",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Collections"
+  },
+  {
+   "id": "f00257",
+   "kind": "text",
+   "value": "Bespoke",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Bespoke"
+  },
+  {
+   "id": "f00258",
+   "kind": "text",
+   "value": "Our Story",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Our Story"
+  },
+  {
+   "id": "f00259",
+   "kind": "text",
+   "value": "Styling Services",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Styling Services"
+  },
+  {
+   "id": "f00260",
+   "kind": "text",
+   "value": "Menu",
+   "visible": true,
+   "section": "header",
+   "tag": "span",
+   "label": "span / Menu"
+  },
+  {
+   "id": "f00261",
+   "kind": "text",
+   "value": "0",
+   "visible": true,
+   "section": "header",
+   "tag": "span",
+   "label": "span / 0"
+  },
+  {
+   "id": "f00262",
+   "kind": "text",
+   "value": "Homepage",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Homepage"
+  },
+  {
+   "id": "f00263",
+   "kind": "text",
+   "value": "01",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 01"
+  },
+  {
+   "id": "f00264",
+   "kind": "text",
+   "value": "Shop by Style",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Shop by Style"
+  },
+  {
+   "id": "f00265",
+   "kind": "text",
+   "value": "02",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 02"
+  },
+  {
+   "id": "f00266",
+   "kind": "text",
+   "value": "Collections",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Collections"
+  },
+  {
+   "id": "f00267",
+   "kind": "text",
+   "value": "03",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 03"
+  },
+  {
+   "id": "f00268",
+   "kind": "text",
+   "value": "Bespoke",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Bespoke"
+  },
+  {
+   "id": "f00269",
+   "kind": "text",
+   "value": "04",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 04"
+  },
+  {
+   "id": "f00270",
+   "kind": "text",
+   "value": "Styling Services",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Styling Services"
+  },
+  {
+   "id": "f00271",
+   "kind": "text",
+   "value": "05",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 05"
+  },
+  {
+   "id": "f00272",
+   "kind": "text",
+   "value": "Our Story",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Our Story"
+  },
+  {
+   "id": "f00273",
+   "kind": "text",
+   "value": "06",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 06"
+  },
+  {
+   "id": "f00274",
+   "kind": "text",
+   "value": "Fashion Film",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Fashion Film"
+  },
+  {
+   "id": "f00275",
+   "kind": "text",
+   "value": "07",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 07"
+  },
+  {
+   "id": "f00276",
+   "kind": "text",
+   "value": "Testimonials",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Testimonials"
+  },
+  {
+   "id": "f00277",
+   "kind": "text",
+   "value": "08",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 08"
+  },
+  {
+   "id": "f00278",
+   "kind": "text",
+   "value": "Contact",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Contact"
+  },
+  {
+   "id": "f00279",
+   "kind": "text",
+   "value": "09",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 09"
+  },
+  {
+   "id": "f00280",
+   "kind": "text",
+   "value": "Saved Looks ",
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "button / Saved Looks"
+  },
+  {
+   "id": "f00281",
+   "kind": "text",
+   "value": "♥",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / ♥"
+  },
+  {
+   "id": "f00282",
+   "kind": "text",
+   "value": "Enquire ",
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "button / Enquire"
+  },
+  {
+   "id": "f00283",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / ↗"
+  },
+  {
+   "id": "f00284",
+   "kind": "text",
+   "value": "03 / PERSONALISED DESIGN",
+   "visible": true,
+   "section": "s-000",
+   "tag": "span",
+   "label": "span / 03 / PERSONALISED DESIGN"
+  },
+  {
+   "id": "f00285",
+   "kind": "text",
+   "value": "Bespoke Couture ",
+   "visible": true,
+   "section": "s-000",
+   "tag": "h2",
+   "label": "h2 / Bespoke Couture"
+  },
+  {
+   "id": "f00286",
+   "kind": "text",
+   "value": "Customization",
+   "visible": true,
+   "section": "s-000",
+   "tag": "em",
+   "label": "em / Customization"
+  },
+  {
+   "id": "f00287",
+   "kind": "text",
+   "value": "We create pieces for your moments, your style and your way of dressing.",
+   "visible": true,
+   "section": "s-000",
+   "tag": "p",
+   "label": "p / We create pieces for your moments, your style and your way of dressing."
+  },
+  {
+   "id": "f00288",
+   "kind": "text",
+   "value": "WE STITCH",
+   "visible": true,
+   "section": "s-000",
+   "tag": "span",
+   "label": "span / WE STITCH"
+  },
+  {
+   "id": "f00289",
+   "kind": "text",
+   "value": "Occasion Wear",
+   "visible": true,
+   "section": "s-000",
+   "tag": "li",
+   "label": "li / Occasion Wear"
+  },
+  {
+   "id": "f00290",
+   "kind": "text",
+   "value": "Bridal Wear ",
+   "visible": true,
+   "section": "s-000",
+   "tag": "li",
+   "label": "li / Bridal Wear"
+  },
+  {
+   "id": "f00291",
+   "kind": "text",
+   "value": "(Men & Women)",
+   "visible": true,
+   "section": "s-000",
+   "tag": "small",
+   "label": "small / (Men & Women)"
+  },
+  {
+   "id": "f00292",
+   "kind": "text",
+   "value": "Formal Corporate Wear",
+   "visible": true,
+   "section": "s-000",
+   "tag": "li",
+   "label": "li / Formal Corporate Wear"
+  },
+  {
+   "id": "f00293",
+   "kind": "text",
+   "value": "ENQUIRE ABOUT BESPOKE ",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / ENQUIRE ABOUT BESPOKE"
+  },
+  {
+   "id": "f00294",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-000",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00295",
+   "kind": "text",
+   "value": "MEASUREMENT FORM ",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / MEASUREMENT FORM"
+  },
+  {
+   "id": "f00296",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-000",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00297",
+   "kind": "text",
+   "value": "Measurements",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / Measurements"
+  },
+  {
+   "id": "f00298",
+   "kind": "text",
+   "value": "Services",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / Services"
+  },
+  {
+   "id": "f00299",
+   "kind": "text",
+   "value": "Past work",
+   "visible": true,
+   "section": "s-000",
+   "tag": "a",
+   "label": "a / Past work"
+  },
+  {
+   "id": "f00300",
+   "kind": "text",
+   "value": "MADE TO MEASURE / INTERACTIVE GUIDE",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / MADE TO MEASURE / INTERACTIVE GUIDE"
+  },
+  {
+   "id": "f00301",
+   "kind": "text",
+   "value": "Your ",
+   "visible": true,
+   "section": "s-001",
+   "tag": "h2",
+   "label": "h2 / Your"
+  },
+  {
+   "id": "f00302",
+   "kind": "text",
+   "value": "measurements.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "em",
+   "label": "em / measurements."
+  },
+  {
+   "id": "f00303",
+   "kind": "text",
+   "value": "Choose a garment type or SHANERYN look and add the measurements you know.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / Choose a garment type or SHANERYN look and add the measurements you know."
+  },
+  {
+   "id": "f00304",
+   "kind": "text",
+   "value": "Measurements are used only within this page to prepare your personal request. No fitting is confirmed or booked online.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "small",
+   "label": "small / Measurements are used only within this page to prepare your personal request. No fitting is confirmed or bo"
+  },
+  {
+   "id": "f00305",
+   "kind": "text",
+   "value": "CUSTOM GARMENT",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / CUSTOM GARMENT"
+  },
+  {
+   "id": "f00306",
+   "kind": "text",
+   "value": "SHANERYN LOOK",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / SHANERYN LOOK"
+  },
+  {
+   "id": "f00307",
+   "kind": "text",
+   "value": "Start with a garment type for new bespoke ideas, or choose an existing SHANERYN look for personalisation.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / Start with a garment type for new bespoke ideas, or choose an existing SHANERYN look for personalisation."
+  },
+  {
+   "id": "f00308",
+   "kind": "text",
+   "value": "Choose your piece",
+   "visible": true,
+   "section": "s-001",
+   "tag": "label",
+   "label": "label / Choose your piece"
+  },
+  {
+   "id": "f00309",
+   "kind": "text",
+   "value": "Measurements in",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / Measurements in"
+  },
+  {
+   "id": "f00310",
+   "kind": "text",
+   "value": " Inches",
+   "visible": true,
+   "section": "s-001",
+   "tag": "label",
+   "label": "label / Inches"
+  },
+  {
+   "id": "f00311",
+   "kind": "text",
+   "value": " Centimetres",
+   "visible": true,
+   "section": "s-001",
+   "tag": "label",
+   "label": "label / Centimetres"
+  },
+  {
+   "id": "f00312",
+   "kind": "text",
+   "value": "Measurements remain here until you leave the page.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / Measurements remain here until you leave the page."
+  },
+  {
+   "id": "f00313",
+   "kind": "text",
+   "value": "How to measure yourself ",
+   "visible": true,
+   "section": "s-001",
+   "tag": "summary",
+   "label": "summary / How to measure yourself"
+  },
+  {
+   "id": "f00314",
+   "kind": "text",
+   "value": "+",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / +"
+  },
+  {
+   "id": "f00315",
+   "kind": "text",
+   "value": "Use a soft measuring tape and stand naturally. Keep the tape level and comfortable, without pulling it tight.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / Use a soft measuring tape and stand naturally. Keep the tape level and comfortable, without pulling it tight."
+  },
+  {
+   "id": "f00316",
+   "kind": "text",
+   "value": "Record the measurement at the point indicated by the field label. The SHANERYN team will confirm the appropriate fitting requirements with you.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / Record the measurement at the point indicated by the field label. The SHANERYN team will confirm the appropriat"
+  },
+  {
+   "id": "f00317",
+   "kind": "text",
+   "value": "REVIEW MEASUREMENTS ",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / REVIEW MEASUREMENTS"
+  },
+  {
+   "id": "f00318",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00319",
+   "kind": "text",
+   "value": "Please use a flexible measuring tape. The studio confirms fit details during consultation.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / Please use a flexible measuring tape. The studio confirms fit details during consultation."
+  },
+  {
+   "id": "f00320",
+   "kind": "text",
+   "value": "Measurement overview",
+   "visible": true,
+   "section": "s-001",
+   "tag": "h3",
+   "label": "h3 / Measurement overview"
+  },
+  {
+   "id": "f00321",
+   "kind": "text",
+   "value": "COPY SUMMARY ↗",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / COPY SUMMARY ↗"
+  },
+  {
+   "id": "f00322",
+   "kind": "text",
+   "value": "Copying is optional. No measurements are transmitted by this website.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "small",
+   "label": "small / Copying is optional. No measurements are transmitted by this website."
+  },
+  {
+   "id": "f00323",
+   "kind": "text",
+   "value": "Ready to discuss your preferences? Continue with this summary in a personal email draft. You can edit the details before sending.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / Ready to discuss your preferences? Continue with this summary in a personal email draft. You can edit the detai"
+  },
+  {
+   "id": "f00324",
+   "kind": "text",
+   "value": "PREPARE BESPOKE REQUEST ",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / PREPARE BESPOKE REQUEST"
+  },
+  {
+   "id": "f00325",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00326",
+   "kind": "text",
+   "value": "PERSONAL STYLING / 01 — 03",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / PERSONAL STYLING / 01 — 03"
+  },
+  {
+   "id": "f00327",
+   "kind": "text",
+   "value": "Services, ",
+   "visible": true,
+   "section": "s-002",
+   "tag": "h2",
+   "label": "h2 / Services,"
+  },
+  {
+   "id": "f00328",
+   "kind": "text",
+   "value": "considered for you.",
+   "visible": true,
+   "section": "s-002",
+   "tag": "em",
+   "label": "em / considered for you."
+  },
+  {
+   "id": "f00329",
+   "kind": "text",
+   "value": "Three ways to explore your individual style.",
+   "visible": true,
+   "section": "s-002",
+   "tag": "p",
+   "label": "p / Three ways to explore your individual style."
+  },
+  {
+   "id": "f00330",
+   "kind": "text",
+   "value": "01 / 03",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / 01 / 03"
+  },
+  {
+   "id": "f00331",
+   "kind": "text",
+   "value": "01 / THE SERVICE",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / 01 / THE SERVICE"
+  },
+  {
+   "id": "f00332",
+   "kind": "text",
+   "value": "Color Analysis",
+   "visible": true,
+   "section": "s-002",
+   "tag": "h3",
+   "label": "h3 / Color Analysis"
+  },
+  {
+   "id": "f00333",
+   "kind": "text",
+   "value": "Explore colours that feel true to you, and how they shape what you wear.",
+   "visible": true,
+   "section": "s-002",
+   "tag": "p",
+   "label": "p / Explore colours that feel true to you, and how they shape what you wear."
+  },
+  {
+   "id": "f00334",
+   "kind": "text",
+   "value": "ENQUIRE ABOUT THIS SERVICE ",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / ENQUIRE ABOUT THIS SERVICE"
+  },
+  {
+   "id": "f00335",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00336",
+   "kind": "text",
+   "value": "02 / 03",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / 02 / 03"
+  },
+  {
+   "id": "f00337",
+   "kind": "text",
+   "value": "02 / THE SERVICE",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / 02 / THE SERVICE"
+  },
+  {
+   "id": "f00338",
+   "kind": "text",
+   "value": "Personal Style Consultation",
+   "visible": true,
+   "section": "s-002",
+   "tag": "h3",
+   "label": "h3 / Personal Style Consultation"
+  },
+  {
+   "id": "f00339",
+   "kind": "text",
+   "value": "Discover silhouettes, comfort and an expression that feels like your own.",
+   "visible": true,
+   "section": "s-002",
+   "tag": "p",
+   "label": "p / Discover silhouettes, comfort and an expression that feels like your own."
+  },
+  {
+   "id": "f00340",
+   "kind": "text",
+   "value": "ENQUIRE ABOUT THIS SERVICE ",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / ENQUIRE ABOUT THIS SERVICE"
+  },
+  {
+   "id": "f00341",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00342",
+   "kind": "text",
+   "value": "03 / 03",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / 03 / 03"
+  },
+  {
+   "id": "f00343",
+   "kind": "text",
+   "value": "03 / THE SERVICE",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / 03 / THE SERVICE"
+  },
+  {
+   "id": "f00344",
+   "kind": "text",
+   "value": "Occasion Styling",
+   "visible": true,
+   "section": "s-002",
+   "tag": "h3",
+   "label": "h3 / Occasion Styling"
+  },
+  {
+   "id": "f00345",
+   "kind": "text",
+   "value": "Thoughtful one-to-one styling for celebrations, weddings and special moments.",
+   "visible": true,
+   "section": "s-002",
+   "tag": "p",
+   "label": "p / Thoughtful one-to-one styling for celebrations, weddings and special moments."
+  },
+  {
+   "id": "f00346",
+   "kind": "text",
+   "value": "ENQUIRE ABOUT THIS SERVICE ",
+   "visible": true,
+   "section": "s-002",
+   "tag": "a",
+   "label": "a / ENQUIRE ABOUT THIS SERVICE"
+  },
+  {
+   "id": "f00347",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00348",
+   "kind": "text",
+   "value": "THE ARCHIVE / PAST WORK",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / THE ARCHIVE / PAST WORK"
+  },
+  {
+   "id": "f00349",
+   "kind": "text",
+   "value": "Past ",
+   "visible": true,
+   "section": "s-003",
+   "tag": "h2",
+   "label": "h2 / Past"
+  },
+  {
+   "id": "f00350",
+   "kind": "text",
+   "value": "work.",
+   "visible": true,
+   "section": "s-003",
+   "tag": "em",
+   "label": "em / work."
+  },
+  {
+   "id": "f00351",
+   "kind": "text",
+   "value": "Selected photographs from earlier creative work.",
+   "visible": true,
+   "section": "s-003",
+   "tag": "p",
+   "label": "p / Selected photographs from earlier creative work."
+  },
+  {
+   "id": "f00352",
+   "kind": "text",
+   "value": "01 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 01 / VIEW"
+  },
+  {
+   "id": "f00353",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00354",
+   "kind": "text",
+   "value": "02 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 02 / VIEW"
+  },
+  {
+   "id": "f00355",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00356",
+   "kind": "text",
+   "value": "03 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 03 / VIEW"
+  },
+  {
+   "id": "f00357",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00358",
+   "kind": "text",
+   "value": "04 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 04 / VIEW"
+  },
+  {
+   "id": "f00359",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00360",
+   "kind": "text",
+   "value": "05 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 05 / VIEW"
+  },
+  {
+   "id": "f00361",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00362",
+   "kind": "text",
+   "value": "06 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 06 / VIEW"
+  },
+  {
+   "id": "f00363",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00364",
+   "kind": "text",
+   "value": "07 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 07 / VIEW"
+  },
+  {
+   "id": "f00365",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00366",
+   "kind": "text",
+   "value": "08 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 08 / VIEW"
+  },
+  {
+   "id": "f00367",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00368",
+   "kind": "text",
+   "value": "09 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 09 / VIEW"
+  },
+  {
+   "id": "f00369",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00370",
+   "kind": "text",
+   "value": "10 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 10 / VIEW"
+  },
+  {
+   "id": "f00371",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00372",
+   "kind": "text",
+   "value": "11 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 11 / VIEW"
+  },
+  {
+   "id": "f00373",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00374",
+   "kind": "text",
+   "value": "12 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 12 / VIEW"
+  },
+  {
+   "id": "f00375",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00376",
+   "kind": "text",
+   "value": "13 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 13 / VIEW"
+  },
+  {
+   "id": "f00377",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00378",
+   "kind": "text",
+   "value": "14 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 14 / VIEW"
+  },
+  {
+   "id": "f00379",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00380",
+   "kind": "text",
+   "value": "15 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 15 / VIEW"
+  },
+  {
+   "id": "f00381",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00382",
+   "kind": "text",
+   "value": "16 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 16 / VIEW"
+  },
+  {
+   "id": "f00383",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00384",
+   "kind": "text",
+   "value": "17 / VIEW",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 17 / VIEW"
+  },
+  {
+   "id": "f00385",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00386",
+   "kind": "text",
+   "value": "Original archival photographs; visual quality varies across the collection.",
+   "visible": true,
+   "section": "s-003",
+   "tag": "p",
+   "label": "p / Original archival photographs; visual quality varies across the collection."
+  },
+  {
+   "id": "f00387",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00388",
+   "kind": "text",
+   "value": "←",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / ←"
+  },
+  {
+   "id": "f00389",
+   "kind": "text",
+   "value": "01 / 17",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / 01 / 17"
+  },
+  {
+   "id": "f00390",
+   "kind": "text",
+   "value": "→",
+   "visible": true,
+   "section": "s-003",
+   "tag": "button",
+   "label": "button / →"
+  },
+  {
+   "id": "f00391",
+   "kind": "text",
+   "value": "Explore",
+   "visible": true,
+   "section": "footer",
+   "tag": "h4",
+   "label": "h4 / Explore"
+  },
+  {
+   "id": "f00392",
+   "kind": "text",
+   "value": "Homepage",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Homepage"
+  },
+  {
+   "id": "f00393",
+   "kind": "text",
+   "value": "Collections",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Collections"
+  },
+  {
+   "id": "f00394",
+   "kind": "text",
+   "value": "Shop by Style",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Shop by Style"
+  },
+  {
+   "id": "f00395",
+   "kind": "text",
+   "value": "The World",
+   "visible": true,
+   "section": "footer",
+   "tag": "h4",
+   "label": "h4 / The World"
+  },
+  {
+   "id": "f00396",
+   "kind": "text",
+   "value": "Our Story",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Our Story"
+  },
+  {
+   "id": "f00397",
+   "kind": "text",
+   "value": "Bespoke",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Bespoke"
+  },
+  {
+   "id": "f00398",
+   "kind": "text",
+   "value": "Styling Services",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Styling Services"
+  },
+  {
+   "id": "f00399",
+   "kind": "text",
+   "value": "Fashion Film",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Fashion Film"
+  },
+  {
+   "id": "f00400",
+   "kind": "text",
+   "value": "Testimonials",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Testimonials"
+  },
+  {
+   "id": "f00401",
+   "kind": "text",
+   "value": "Connect",
+   "visible": true,
+   "section": "footer",
+   "tag": "h4",
+   "label": "h4 / Connect"
+  },
+  {
+   "id": "f00402",
+   "kind": "text",
+   "value": "Request Details",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Request Details"
+  },
+  {
+   "id": "f00403",
+   "kind": "text",
+   "value": "Saved Looks",
+   "visible": true,
+   "section": "footer",
+   "tag": "button",
+   "label": "button / Saved Looks"
+  },
+  {
+   "id": "f00404",
+   "kind": "text",
+   "value": "Personal enquiries only",
+   "visible": true,
+   "section": "footer",
+   "tag": "p",
+   "label": "p / Personal enquiries only"
+  },
+  {
+   "id": "f00405",
+   "kind": "text",
+   "value": "No online checkout",
+   "visible": true,
+   "section": "footer",
+   "tag": "p",
+   "label": "p / No online checkout"
+  },
+  {
+   "id": "f00406",
+   "kind": "text",
+   "value": "info@shenerian.com",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / info@shenerian.com"
+  },
+  {
+   "id": "f00407",
+   "kind": "text",
+   "value": "© 2026 SHANERYN",
+   "visible": true,
+   "section": "footer",
+   "tag": "span",
+   "label": "span / © 2026 SHANERYN"
+  },
+  {
+   "id": "f00408",
+   "kind": "text",
+   "value": "Personal enquiries only · No online checkout",
+   "visible": true,
+   "section": "footer",
+   "tag": "span",
+   "label": "span / Personal enquiries only · No online checkout"
+  },
+  {
+   "id": "f00409",
+   "kind": "text",
+   "value": "↑",
+   "visible": true,
+   "section": "other",
+   "tag": "button",
+   "label": "button / ↑"
+  },
+  {
+   "id": "f00410",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00411",
+   "kind": "text",
+   "value": "PERSONAL ENQUIRY",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / PERSONAL ENQUIRY"
+  },
+  {
+   "id": "f00412",
+   "kind": "text",
+   "value": "Begin a Conversation.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Begin a Conversation."
+  },
+  {
+   "id": "f00413",
+   "kind": "text",
+   "value": "Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit it automatically.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit"
+  },
+  {
+   "id": "f00414",
+   "kind": "text",
+   "value": "Your name",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Your name"
+  },
+  {
+   "id": "f00415",
+   "kind": "text",
+   "value": "Email address",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Email address"
+  },
+  {
+   "id": "f00416",
+   "kind": "text",
+   "value": "Collection or look reference",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Collection or look reference"
+  },
+  {
+   "id": "f00417",
+   "kind": "text",
+   "value": "Garment type (optional)",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Garment type (optional)"
+  },
+  {
+   "id": "f00418",
+   "kind": "text",
+   "value": "Please select if relevant",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Please select if relevant"
+  },
+  {
+   "id": "f00419",
+   "kind": "text",
+   "value": "Occasion Wear",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Occasion Wear"
+  },
+  {
+   "id": "f00420",
+   "kind": "text",
+   "value": "Bridal Wear (Women)",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Bridal Wear (Women)"
+  },
+  {
+   "id": "f00421",
+   "kind": "text",
+   "value": "Bridal Wear (Men)",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Bridal Wear (Men)"
+  },
+  {
+   "id": "f00422",
+   "kind": "text",
+   "value": "Formal Corporate Wear",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Formal Corporate Wear"
+  },
+  {
+   "id": "f00423",
+   "kind": "text",
+   "value": "What would you like to know?",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / What would you like to know?"
+  },
+  {
+   "id": "f00424",
+   "kind": "text",
+   "value": "Copy Enquiry ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / Copy Enquiry ↗"
+  },
+  {
+   "id": "f00425",
+   "kind": "text",
+   "value": "Open Email Draft ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / Open Email Draft ↗"
+  },
+  {
+   "id": "f00426",
+   "kind": "text",
+   "value": "Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until CMS integration.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until "
+  },
+  {
+   "id": "f00427",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00428",
+   "kind": "text",
+   "value": "YOUR EDIT",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / YOUR EDIT"
+  },
+  {
+   "id": "f00429",
+   "kind": "text",
+   "value": "Saved Looks.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Saved Looks."
+  },
+  {
+   "id": "f00430",
+   "kind": "text",
+   "value": "A shortlist saved locally in your browser; no sign-in required.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / A shortlist saved locally in your browser; no sign-in required."
+  },
+  {
+   "id": "f00431",
+   "kind": "text",
+   "value": "Explore Collections ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "a",
+   "label": "a / Explore Collections ↗"
+  },
+  {
+   "id": "f00432",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00433",
+   "kind": "text",
+   "value": "←",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ←"
+  },
+  {
+   "id": "f00434",
+   "kind": "text",
+   "value": "→",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / →"
+  },
+  {
+   "id": "f00435",
+   "kind": "text",
+   "value": "THE SHANERYN LOOKBOOK",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / THE SHANERYN LOOKBOOK"
+  },
+  {
+   "id": "f00436",
+   "kind": "text",
+   "value": "Selected look",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Selected look"
+  },
+  {
+   "id": "f00437",
+   "kind": "text",
+   "value": "Look reference",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / Look reference"
+  },
+  {
+   "id": "f00438",
+   "kind": "text",
+   "value": "An editorial presentation of the look.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / An editorial presentation of the look."
+  },
+  {
+   "id": "f00439",
+   "kind": "text",
+   "value": "1 / 12",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / 1 / 12"
+  },
+  {
+   "id": "f00440",
+   "kind": "text",
+   "value": "Enquire About This Look ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / Enquire About This Look ↗"
+  },
+  {
+   "id": "f00441",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00442",
+   "kind": "text",
+   "value": "SHANERYN / FASHION IN MOTION",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / SHANERYN / FASHION IN MOTION"
+  },
+  {
+   "id": "f00443",
+   "kind": "text",
+   "value": "Stories in Motion",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Stories in Motion"
+  },
+  {
+   "id": "f00444",
+   "kind": "text",
+   "value": "The SHANERYN film will appear here once the approved video is available.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / The SHANERYN film will appear here once the approved video is available."
+  }
+ ],
+ "sections": [
+  {
+   "id": "s-000",
+   "title": "Bespoke Couture Customization",
+   "visible": true,
+   "order": 0,
+   "originalId": "bespoke-introduction",
+   "parent": false
+  },
+  {
+   "id": "s-001",
+   "title": "Your measurements.",
+   "visible": true,
+   "order": 1,
+   "originalId": "measurement-studio",
+   "parent": false
+  },
+  {
+   "id": "s-002",
+   "title": "Services, considered for you.",
+   "visible": true,
+   "order": 2,
+   "originalId": "services",
+   "parent": false
+  },
+  {
+   "id": "s-003",
+   "title": "Past work.",
+   "visible": true,
+   "order": 3,
+   "originalId": "past-work",
+   "parent": false
+  }
+ ],
+ "styles": [
+  "site.css",
+  "typography-fix.css",
+  "footer-redesign.css",
+  "white-gallery.css",
+  "editorial-v3.css",
+  "inverse-mode.css",
+  "new-drop.css",
+  "editorial-pages.css",
+  "collective-v3.css",
+  "consultation-nav.css",
+  "desktop-v47.css",
+  "ux-v48.css",
+  "desktop-v49.css",
+  "mobile-v5.css",
+  "signature-v51.css",
+  "client-feedback-v55.css",
+  "client-feedback-v62.css",
+  "client-feedback-v63.css",
+  "client-feedback-v64.css",
+  "social-v66.css",
+  "mobile-inner-v69.css"
+ ],
+ "scripts": [
+  "look-data.js",
+  "contact-config.js",
+  "site-config.js",
+  "site.js",
+  "inverse-mode.js",
+  "feedback-v3.js",
+  "desktop-v47.js",
+  "ux-v48.js",
+  "desktop-v49.js",
+  "mobile-v5.js",
+  "signature-v51.js",
+  "client-feedback-v63.js",
+  "social-v66.js"
+ ],
+ "updatedAt": null,
+ "bodyAttrs": {
+  "class": "theme-white",
+  "data-page": "bespoke-page"
+ }
+}

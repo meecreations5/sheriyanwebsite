@@ -1,0 +1,25 @@
+{
+  "version": "1.9.0",
+  "baseVersion": "1.8.0",
+  "tests": {
+    "seedInventory": "passed: 9 pages, 2527 fields, 34 sections, 8 looks",
+    "cleanProductURLs": "passed",
+    "existingCMSV15": "passed",
+    "categoryCollectionV16": "passed",
+    "adminNavigationV17": "passed",
+    "bestSellerV18": "passed",
+    "usernameOnlyV19": "passed",
+    "syntax": "passed: 50 JS/JSX/MJS files parsed with JavaScript/JSX parser"
+  },
+  "notVerified": [
+    "Live Firebase Authentication signup and username login",
+    "Firestore permissions in deployed project",
+    "Next.js production build (npm dependencies not available offline)"
+  ],
+  "deployment": [
+    "Apply patch over V1.8, or use full V1.9 package",
+    "Restart npm run dev",
+    "Create new username-only staff in Admin Users",
+    "Test a new account and role access on connected Firebase project"
+  ]
+}

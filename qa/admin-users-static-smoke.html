@@ -1,0 +1,174 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* Independent admin design system; never applied to the public fashion website. */
+body{margin:0}
+:root{--admin-bg:#f6f3f5;--admin-line:#e8e1e7;--admin-ink:#2b202b;--admin-muted:#766974;--admin-accent:#ac3e78;--admin-pale:#fceaf2}
+.admin-shell{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Arial,sans-serif;font-size:14px;background:var(--admin-bg);color:var(--admin-ink);min-height:100vh;line-height:1.5}
+.admin-shell *{box-sizing:border-box}
+.admin-shell h1,.admin-shell h2,.admin-shell h3,.admin-shell h4,.admin-shell p{margin:0}
+.admin-shell button,.admin-shell input,.admin-shell textarea,.admin-shell select{font:inherit}
+.admin-shell button{cursor:pointer}
+.admin-login-wrap{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 95% 7%,#4a2a41,#171218 65%)}
+.admin-login{width:min(420px,100%);padding:44px;background:#231c25;border:1px solid #573f51;border-radius:14px;box-shadow:0 20px 80px #0a070a75;color:#f5e7f0}
+.admin-login .login-logo{font:400 37px Georgia,serif;letter-spacing:.16em;text-align:center;color:#df5a9c}
+.admin-login .login-kicker{text-align:center;letter-spacing:.28em;font-size:10px;margin:6px 0 32px;color:#c8abbc}
+.admin-login label{display:block;margin:17px 0 8px;color:#ddd0da;font-size:12px}
+.admin-login input{width:100%;padding:13px 14px;color:white;background:#141115;border:1px solid #644b5c;border-radius:5px}
+.admin-login button{width:100%;margin-top:25px;padding:14px;background:#b74283;border:0;color:white;font-weight:700;letter-spacing:.09em;border-radius:5px}
+.admin-login button:disabled{opacity:.65;cursor:default}
+.admin-login .login-note{text-align:center;margin-top:20px;color:#b9a7b4;font-size:12px}
+.admin-main-layout{display:grid;grid-template-columns:244px minmax(0,1fr);min-height:100vh}
+.admin-sidebar{background:#211923;color:#e8dfea;padding:27px 17px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.admin-wordmark{font:500 26px Georgia,serif;color:#e15a9b;letter-spacing:.14em;padding:0 11px}
+.admin-subword{font:600 9px system-ui;letter-spacing:.32em;color:#b69caf;padding:5px 11px 30px}
+.admin-navitem{display:flex;align-items:center;gap:10px;width:100%;border:0;color:#d2c3cf;background:transparent;border-radius:8px;text-align:left;padding:11px 12px;margin:2px 0;font-size:13px}
+.admin-navitem:hover,.admin-navitem.active{background:#533148;color:#fff}
+.admin-navitem.active{box-shadow:inset 3px 0 #eb75ad}
+.admin-navicon{font-size:17px;width:21px;text-align:center;color:#d59fbc}
+.admin-sidebar-footer{padding:20px 10px;border-top:1px solid #49374a;margin-top:20px;color:#b9a5b5;font-size:12px}
+.admin-main{min-width:0;padding:32px clamp(18px,3.5vw,58px) 70px}
+.admin-header{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:28px}
+.admin-header h1{font-weight:680;font-size:26px;letter-spacing:-.04em}
+.admin-subtitle{color:var(--admin-muted);font-size:13px;margin-top:4px!important}
+.admin-card{border:1px solid var(--admin-line);background:#fff;border-radius:12px;padding:20px;box-shadow:0 3px 12px #3d223108}
+.admin-card h2{font-size:17px;margin-bottom:14px}
+.admin-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin:20px 0 24px}
+.admin-metric-label{color:var(--admin-muted);font-size:12px;margin-bottom:5px}
+.admin-metric-value{font:600 34px Georgia,serif;color:#622c4c}
+.admin-flex{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.admin-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.admin-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.admin-split{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;align-items:start}
+.admin-3col{display:grid;grid-template-columns:215px minmax(280px,1fr) minmax(280px,1fr);gap:15px;align-items:start}
+.admin-input,.admin-textarea,.admin-select{width:100%;padding:11px 12px;border:1px solid #dcd0da;border-radius:7px;background:white;color:#302431;outline:none}
+.admin-input:focus,.admin-textarea:focus,.admin-select:focus{border-color:var(--admin-accent);box-shadow:0 0 0 3px #e0a5c425}
+.admin-textarea{resize:vertical;min-height:76px}
+.admin-field{display:block;margin:0 0 15px;font-size:12px;font-weight:600;color:#5c4e5b}
+.admin-field>span{display:block;margin-bottom:6px}
+.admin-field>input,.admin-field>textarea,.admin-field>select{margin-top:3px}
+.admin-btn{display:inline-flex;gap:7px;align-items:center;justify-content:center;padding:10px 15px;background:#ad3c78;color:white;border:1px solid #ad3c78;border-radius:7px;font-weight:650;white-space:nowrap}
+.admin-btn.secondary{color:#642e50;background:#fff;border-color:#dcc6d2}
+.admin-btn.neutral{color:#625662;background:#f9f6f7;border-color:#ece4e9}
+.admin-btn.danger{background:#faf0f1;color:#a13b49;border-color:#f1cdd3}
+.admin-btn.sm{font-size:12px;padding:7px 10px}
+.admin-btn:disabled{opacity:.5;cursor:default}
+.admin-pill{border-radius:99px;font-size:11px;padding:4px 9px;border:1px solid #e3d5df;background:#fcf8fa;color:#7b5470}
+.admin-pill.active{background:#eef8f1;color:#286f46;border-color:#cfe3d5}
+.admin-check{display:inline-flex;gap:8px;align-items:center;color:#594d58;font-size:12px;cursor:pointer;white-space:nowrap}
+.admin-check input{accent-color:#af3e7b;width:17px;height:17px}
+.admin-divider{height:1px;background:#e8e1e6;margin:15px 0}
+.admin-table{width:100%;border-collapse:collapse;font-size:13px}
+.admin-table th{text-align:left;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#7e6b7a;padding:12px;border-bottom:1px solid #e8e1e6}
+.admin-table td{padding:12px;border-bottom:1px solid #f1ebef;vertical-align:middle}
+.admin-table tr:hover td{background:#fbf8fa}
+.admin-rowlink{background:transparent;color:#8c2f65;border:0;text-align:left;font-weight:650}
+.admin-sidebar-list{position:sticky;top:20px;max-height:80vh;overflow:auto}
+.admin-section-btn{display:block;text-align:left;padding:10px;border:1px solid transparent;border-radius:6px;background:transparent;width:100%;color:#544453}
+.admin-section-btn:hover,.admin-section-btn.selected{background:#f9ecf3;border-color:#f2d7e5}
+.admin-section-title{font-size:12px;font-weight:650;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.admin-section-counter{display:block;color:#a58c9e;font-size:10px;margin-top:3px}
+.admin-editor-fields{max-height:70vh;overflow-y:auto;padding:0 4px 0 0}
+.admin-editor-field{border:1px solid #ede5ea;border-radius:8px;padding:12px;margin-bottom:10px}
+.admin-editor-field label{font-size:11px;font-weight:600;color:#574651;display:block;margin-bottom:8px}
+.admin-editor-field .meta{font-size:10px;color:#a58c9e;word-break:break-all}
+.admin-preview{width:100%;height:690px;background:white;border:1px solid #e0d7dd;border-radius:9px}
+.admin-image-preview{width:100%;max-height:200px;object-fit:contain;object-position:left;background:#eee8ec;border-radius:8px}
+.admin-item-card{display:flex;gap:12px;border-bottom:1px solid #eee6eb;padding:12px 3px;cursor:pointer}
+.admin-item-card:hover{background:#fbf8fa}
+.admin-item-card.selected{background:#faeaf2}
+.admin-item-card img{width:55px;height:72px;object-fit:cover;border-radius:4px;background:#edebed}
+.admin-status{padding:12px 15px;border:1px solid #ebd7e2;border-radius:7px;background:#fff7fa;color:#7b3f5f;margin:0 0 14px;font-size:12px}
+.admin-status.error{color:#9b273e;background:#fff4f4;border-color:#f0d1d1}
+.admin-empty{padding:34px 14px;color:#867886;text-align:center;border:1px dashed #e6d9e1;border-radius:10px}
+.admin-media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:13px;margin-top:14px}
+.admin-media-tile{background:white;border:1px solid #ece4e8;border-radius:8px;overflow:hidden;text-align:left;padding:0;cursor:pointer}
+.admin-media-tile img{width:100%;height:140px;object-fit:cover;background:#eee}
+.admin-media-tile span{display:block;padding:8px;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.admin-modal-bg{position:fixed;inset:0;background:#190d16b5;z-index:9000;display:grid;place-items:center;padding:20px}
+.admin-modal{width:min(680px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:15px;padding:25px}
+.admin-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.admin-note{font-size:11px;color:#817180}
+.admin-tagline{color:#ad467b;font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:7px!important}
+@media(max-width:1200px){.admin-3col{grid-template-columns:210px minmax(320px,1fr)}.admin-preview-wrap{grid-column:1/-1}.admin-preview{height:500px}}
+@media(max-width:850px){.admin-main-layout{grid-template-columns:1fr}.admin-sidebar{position:relative;height:auto;display:flex;gap:6px;align-items:center;padding:10px;overflow:auto}.admin-wordmark{font-size:17px;white-space:nowrap}.admin-subword,.admin-sidebar-footer{display:none}.admin-navitem{font-size:11px;white-space:nowrap;padding:8px 10px;width:auto}.admin-navicon{display:none}.admin-main{padding:22px 12px 65px}.admin-metrics{grid-template-columns:repeat(2,1fr)}.admin-split,.admin-3col{grid-template-columns:1fr}.admin-sidebar-list{position:static;max-height:280px}.admin-grid-2{grid-template-columns:1fr}.admin-form-row{grid-template-columns:1fr}.admin-table{display:block;overflow-x:auto}.admin-header{flex-direction:column}}
+
+/* CMS V1.5 - simpler product navigation and banner/video controls */
+.cms-editor-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:15px 0 22px;border-bottom:1px solid #eee3e9;padding-bottom:10px}
+.cms-editor-tabs button{border:1px solid #ead9e3;background:#fff;color:#665062;border-radius:7px;padding:10px 14px;font-weight:600;font-size:12px}
+.cms-editor-tabs button.active{background:#ad3c78;border-color:#ad3c78;color:white}
+.cms-checkbox-stack{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0}
+.cms-product-list-item{width:100%;text-align:left;border:0;border-bottom:1px solid #eee6eb;background:#fff;color:inherit}
+.cms-product-list-item.selected{background:#f9e9f1}
+.cms-simple-panel{border-left:3px solid #b74783}
+.cms-simple-panel .admin-grid-2{margin-top:15px}
+.cms-video-editor{border:1px solid #ede4ea;border-radius:10px;padding:15px;background:#fcfafb}
+.cms-video-preview{width:100%;max-width:400px;aspect-ratio:16/9;object-fit:contain;background:#151217;border:0;border-radius:8px;display:block;margin-top:14px}
+.cms-public-link{color:#a44173;text-decoration:underline;font-size:13px}
+@media(max-width:600px){.cms-simple-panel .admin-grid-2{grid-template-columns:1fr}.cms-editor-tabs button{flex:1;padding:9px 7px}.cms-video-editor .admin-flex{gap:6px}}
+
+/* CMS V1.6 - friendly selection controls; compatible with existing admin styling. */
+.cms-friendly-picker{display:grid;gap:9px}
+.cms-chip-editor{display:grid;gap:9px}
+.cms-chips{display:flex;gap:6px;flex-wrap:wrap;min-height:29px;align-items:center}
+.cms-chip{display:inline-flex;align-items:center;gap:7px;border-radius:40px;padding:5px 7px 5px 12px;background:#f8eaf1;border:1px solid #e8c7d7;color:#7a315a;font-size:12px}
+.cms-chip button{background:transparent;color:#9a3f72;border:0;font-weight:700;cursor:pointer;padding:0 4px}
+.cms-chip-suggestions{display:flex;gap:6px;flex-wrap:wrap}
+.cms-chip-suggestions button{border:1px solid #e6d9e1;background:#fff;color:#6d4b60;border-radius:22px;padding:5px 10px;font-size:11px;cursor:pointer}
+.cms-product-choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:9px}
+.cms-product-choice{display:flex;align-items:center;gap:8px;padding:8px;border:1px solid #eae0e6;border-radius:9px;cursor:pointer;min-width:0;background:#fff}
+.cms-product-choice.checked{border-color:#bd5590;background:#fff5fa}
+.cms-product-choice input{accent-color:#ad3c78;flex:0 0 auto}
+.cms-product-choice img{width:40px;height:52px;object-fit:cover;border-radius:4px}
+.cms-product-choice span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cms-product-choice strong{font-size:12px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cms-product-choice small{font-size:10px;color:#8c7986}
+.cms-collection-checks{display:flex;flex-wrap:wrap;gap:14px;border:1px solid #f0e7ec;border-radius:9px;padding:14px;background:#fefcfd}
+.cms-image-empty{border:1px dashed #ddcbd7;background:#fdf9fc;border-radius:7px;padding:18px;font-size:12px;color:#8c7789;max-width:225px;margin-bottom:9px}
+.cms-simple-media-field .admin-image-preview{display:block}
+.cms-featured-preview{display:flex;align-items:center;gap:12px;border-radius:8px;background:#faf5f8;padding:9px;margin-bottom:12px;font-size:12px;color:#755a6b}
+.cms-featured-preview img{width:55px;height:68px;object-fit:cover;border-radius:5px}
+.cms-measurements{display:grid;gap:11px}
+@media(max-width:600px){.cms-product-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cms-product-choice{padding:6px}.cms-product-choice img{width:32px;height:45px}}
+
+/* V1.7: modules must remain discoverable on narrow screens. */
+.admin-mobile-nav{display:none}
+.admin-access-label{margin-top:9px!important;color:#8e3a67;font-size:12px;font-weight:600}
+@media(max-width:850px){
+ .admin-main-layout{grid-template-rows:max-content minmax(0,1fr)}
+ .admin-sidebar{position:sticky;top:0;z-index:100;display:flex;flex-direction:column;align-items:stretch;gap:9px;height:auto;overflow:visible;padding:12px 14px 14px;box-shadow:0 5px 16px #11091122}
+ .admin-sidebar nav{display:none}
+ .admin-mobile-nav{display:flex;flex-direction:column;gap:5px}
+ .admin-mobile-nav label{font-size:11px;color:#e4cddd;display:flex;align-items:center;gap:8px}
+ .admin-mobile-nav label small{color:#d38cb5;font-size:10px}
+ .admin-mobile-nav select{width:100%;padding:10px 12px;background:#34263a;color:#fff;border:1px solid #6b4c66;border-radius:7px;font-size:14px;font-weight:600;min-height:42px}
+ .admin-mobile-nav select:focus-visible{outline:2px solid #e15a9b;outline-offset:2px}
+ .admin-wordmark{padding:0 2px;font-size:19px}
+ .admin-sidebar-footer,.admin-subword{display:none}
+}
+
+@media(max-width:850px){
+ .admin-mobile-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:11px}
+ .admin-mobile-actions a,.admin-mobile-actions button{color:#e9cee0;background:none;border:0;text-decoration:none;padding:5px 2px;font-size:11px}
+ .admin-mobile-actions button:hover,.admin-mobile-actions a:hover{color:#fff;text-decoration:underline}
+}
+
+/* V1.11: compact Admin Users management. Public website styles are unaffected. */
+.cms-users-header{align-items:center}
+.cms-staff-create{margin-bottom:18px}
+.cms-staff-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:16px;row-gap:8px;align-items:start;margin-top:16px}
+.cms-staff-create-actions{display:flex;align-items:center;gap:12px;grid-column:1/-1}
+.cms-staff-list-heading{padding-bottom:14px;border-bottom:1px solid #ece2e8}
+.cms-staff-row{display:flex;gap:22px;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #f0e9ed}
+.cms-staff-row:last-of-type{border-bottom:0}
+.cms-staff-identity{min-width:0;flex:1}
+.cms-staff-name{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:5px}
+.cms-staff-name strong{font-size:14px;overflow-wrap:anywhere}
+.cms-staff-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.cms-staff-permissions{position:relative;min-width:115px}
+.cms-staff-permissions summary{font-size:12px;cursor:pointer;color:#7e5170;padding:7px 5px}
+.cms-staff-permissions-select{position:absolute;right:0;top:100%;z-index:5;background:white;border:1px solid #eddee6;border-radius:8px;padding:10px;min-width:205px;box-shadow:0 6px 22px #39142a1c}
+.cms-staff-self-note{max-width:230px;text-align:right}
+.admin-reset-choice{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.admin-reset-email-box{border:1px solid #ebdee6;border-radius:9px;padding:18px;background:#fefbfc}
+.admin-reset-email-box p{font-size:13px;line-height:1.6;overflow-wrap:anywhere;margin:0 0 14px}
+@media(max-width:850px){.cms-staff-form{grid-template-columns:1fr}.cms-staff-row{align-items:stretch;flex-direction:column;gap:12px}.cms-staff-actions{justify-content:flex-start}.cms-staff-self-note{max-width:none;text-align:left}.cms-staff-permissions-select{right:auto;left:0}}
+@media(max-width:400px){.cms-staff-actions .admin-btn{flex:1}.cms-staff-create-actions{flex-direction:column;align-items:flex-start}}
+</style></head><body><div class="admin-shell"><div class="admin-main-layout"><aside class="admin-sidebar"><div><div class="admin-wordmark">SHANERYN</div><div class="admin-subword">CONTENT STUDIO</div></div><nav><button class="admin-navitem">Dashboard</button><button class="admin-navitem">Admin Users</button></nav><div class="admin-mobile-nav"><label>Admin menu</label><select><option>Admin Users</option></select><div class="admin-mobile-actions"><a>Website</a></div></div></aside><main class="admin-main"><div class="admin-header cms-users-header"><div><h1>Admin Users</h1><p class="admin-subtitle">Create accounts, reset passwords or control access. No Firebase UID or email entry required.</p></div><button class="admin-btn">+ Create User</button></div><div class="admin-card"><div class="admin-row cms-staff-list-heading"><h2>Staff Accounts</h2><span class="admin-note">2 active · 3 total</span></div><div class="cms-staff-row"><div class="cms-staff-identity"><div class="cms-staff-name"><strong>superadmin</strong><span class="admin-pill">You</span><span class="admin-pill active">Active</span></div><p class="admin-note">Super Admin · Email login</p></div><p class="admin-note cms-staff-self-note">Use account menu to change password.</p></div><div class="cms-staff-row"><div class="cms-staff-identity"><div class="cms-staff-name"><strong>designer01</strong><span class="admin-pill active">Active</span></div><p class="admin-note">Content Editor · Username login</p></div><div class="cms-staff-actions"><button class="admin-btn secondary sm">Reset Password</button><button class="admin-btn danger sm">Disable User</button><details class="cms-staff-permissions"><summary>Access Role</summary></details></div></div><div class="cms-staff-row"><div class="cms-staff-identity"><div class="cms-staff-name"><strong>catalogue_team</strong><span class="admin-pill">Disabled</span></div><p class="admin-note">Product Manager · Username login</p></div><div class="cms-staff-actions"><button class="admin-btn secondary sm">Reset Password</button><button class="admin-btn secondary sm">Enable User</button><details class="cms-staff-permissions"><summary>Access Role</summary></details></div></div></div><div class="admin-card cms-staff-create" style="margin-top:20px"><h2>Create Staff Account</h2><form class="cms-staff-form"><label class="admin-field"><span>Username</span><input class="admin-input" placeholder="designer02"></label><label class="admin-field"><span>Password</span><input class="admin-input" type="password" placeholder="Minimum 12 characters"></label><label class="admin-field"><span>Access Role</span><select class="admin-select"><option>Content Editor</option></select></label><div class="cms-staff-create-actions"><button type="button" class="admin-btn">Create User</button><small class="admin-note">Share it privately.</small></div></form></div></main></div></div></body></html>

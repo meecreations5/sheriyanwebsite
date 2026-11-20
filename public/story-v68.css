@@ -1,0 +1,95 @@
+/* SHANERYN V6.8 / Our Story: Vision & Mission
+   Purposefully scoped: the homepage Founder and other pages are unchanged. */
+body[data-page="story-page"] .v68-purpose {
+  isolation: isolate;
+  position: relative;
+  background: #1d171f;
+  color: #f2e9ef;
+  border-top: 1px solid rgba(255,255,255,.11);
+  border-bottom: 1px solid rgba(255,255,255,.11);
+  padding: clamp(78px, 7.6vw, 124px) 0 clamp(84px, 8.3vw, 138px);
+  scroll-margin-top: 76px;
+}
+body[data-page="story-page"] .v68-purpose-inner {
+  width: min(1320px,calc(100% - 112px));
+  max-width: 1320px;
+}
+body[data-page="story-page"] .v68-purpose-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  margin: 0 0 clamp(48px,5vw,78px);
+}
+body[data-page="story-page"] .v68-purpose-heading .ep-kicker {
+  color: #e8a3c1 !important;
+  padding-bottom: 10px;
+  flex: 0 0 auto;
+}
+body[data-page="story-page"] .v68-purpose-heading h2 {
+  color: #f0e7ec;
+  font: 400 clamp(55px, 6.2vw, 98px)/1.04 var(--serif);
+  letter-spacing: -.045em;
+  margin: 0;
+  text-align: right;
+}
+body[data-page="story-page"] .v68-purpose-heading h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: #d9b3c4;
+}
+body[data-page="story-page"] .v68-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(26px, 4.2vw, 74px);
+}
+body[data-page="story-page"] .v68-purpose-card {
+  display: grid;
+  grid-template-columns: 76px minmax(0,1fr);
+  gap: clamp(12px, 2vw, 28px);
+  align-items: start;
+  min-width: 0;
+  padding: clamp(28px,3vw,44px) 0 0;
+  border-top: 1px solid rgba(226,207,219,.36);
+}
+body[data-page="story-page"] .v68-purpose-number {
+  font: 400 clamp(50px, 5.2vw, 79px)/.85 var(--serif);
+  letter-spacing: -.055em;
+  color: #897d88;
+}
+body[data-page="story-page"] .v68-purpose-copy { min-width: 0; }
+body[data-page="story-page"] .v68-purpose-copy h3 {
+  color: #efa7c8;
+  font: 600 clamp(12px,.95vw,14px)/1.6 var(--sans);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin: 2px 0 clamp(16px,2vw,26px);
+}
+body[data-page="story-page"] .v68-purpose-copy p {
+  color: #eee7eb;
+  font: 400 clamp(29px,2.72vw,47px)/1.25 var(--serif);
+  letter-spacing: -.018em;
+  max-width: 580px;
+  overflow-wrap: break-word;
+}
+@media (max-width: 900px) {
+  body[data-page="story-page"] .v68-purpose-heading { display:block; margin-bottom:46px; }
+  body[data-page="story-page"] .v68-purpose-heading h2 {margin:15px 0 0; text-align:left; }
+  body[data-page="story-page"] .v68-purpose-grid {gap:32px;}
+  body[data-page="story-page"] .v68-purpose-card {display:block;}
+  body[data-page="story-page"] .v68-purpose-number {display:block; margin-bottom:20px;}
+}
+@media (max-width: 700px) {
+  body[data-page="story-page"] .v68-purpose {padding:72px 0 82px;}
+  body[data-page="story-page"] .v68-purpose-inner {width:calc(100% - 42px);}
+  body[data-page="story-page"] .v68-purpose-heading {margin-bottom:35px;}
+  body[data-page="story-page"] .v68-purpose-heading h2 {font-size:clamp(51px,11vw,74px);}
+  body[data-page="story-page"] .v68-purpose-grid {grid-template-columns:1fr;gap:46px;}
+  body[data-page="story-page"] .v68-purpose-card {padding-top:26px;}
+  body[data-page="story-page"] .v68-purpose-number {font-size:60px; margin-bottom:15px;}
+  body[data-page="story-page"] .v68-purpose-copy h3 {margin-bottom:15px;}
+  body[data-page="story-page"] .v68-purpose-copy p {font-size:clamp(32px,8.2vw,46px);max-width:610px;line-height:1.28;}
+}
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="story-page"] .v68-purpose {scroll-behavior:auto;}
+}

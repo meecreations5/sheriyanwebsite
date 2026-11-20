@@ -1,0 +1,92 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function userPath() {
+   return /databases/$(database)/documents/cms_users/$(request.auth.uid);
+  }
+  function staff() {
+   return request.auth != null && exists(userPath()) &&
+          get(userPath()).data.active == true &&
+          get(userPath()).data.role in ['super_admin','editor','products','enquiries','viewer'];
+  }
+  function hasRole(roles) {return staff() && get(userPath()).data.role in roles;}
+  function superAdmin() {return hasRole(['super_admin']);}
+  function contentEditor() {return hasRole(['super_admin','editor']);}
+  function catalogueEditor() {return hasRole(['super_admin','editor','products']);}
+  function enquiryTeam() {return hasRole(['super_admin','enquiries']);}
+
+  // Page text, images, products, forms and shared settings contain public content only.
+  match /cms_pages/{pageId} {
+   allow read: if true;
+   allow create,update: if contentEditor();
+   allow delete: if superAdmin();
+  }
+  match /cms_products/{productId} {
+   allow read: if true;
+   allow create,update,delete: if catalogueEditor();
+  }
+  // Retained for backward compatibility with V1.5 garment categories.
+  match /cms_collections/{collectionId} {
+   allow read: if true;
+   allow create,update,delete: if catalogueEditor();
+  }
+  match /cms_categories/{categoryId} {
+   allow read: if true;
+   allow create,update,delete: if catalogueEditor();
+  }
+  match /cms_curated_collections/{collectionId} {
+   allow read: if true;
+   allow create,update,delete: if catalogueEditor();
+  }
+  match /cms_forms/{formId} {
+   allow read: if true;
+   allow create,update,delete: if contentEditor();
+  }
+  match /cms_settings/{settingId} {
+   allow read: if true;
+   allow create,update: if contentEditor();
+   allow delete: if superAdmin();
+  }
+  match /cms_media/{mediaId} {
+   allow read: if true;
+   allow create,update,delete: if catalogueEditor();
+  }
+  match /cms_revisions/{revisionId} {
+   allow read: if contentEditor();
+   allow create: if contentEditor();
+   allow update,delete: if false;
+  }
+  // An authentication account does not grant CMS permissions by itself.
+  // Only a console-created /cms_users/{uid} role record can grant access.
+  match /cms_users/{uid} {
+   allow get: if request.auth != null && (uid == request.auth.uid || superAdmin());
+   allow list: if superAdmin();
+   allow create: if superAdmin() && request.resource.data.role in ['super_admin','editor','products','enquiries','viewer'] && request.resource.data.active == true;
+   allow update: if superAdmin() && request.resource.data.role in ['super_admin','editor','products','enquiries','viewer'] && !(uid == request.auth.uid && (request.resource.data.active == false || request.resource.data.role != 'super_admin'));
+   allow delete: if false;
+  }
+  // A visitor may only submit a limited NEW enquiry / appointment, not read it.
+  function validNewRequest() {
+   return request.resource.data.keys().hasOnly(['reference','kind','status','name','email','phone','message','fields','source','createdAt','notes','assignedTo','followUpDate'])
+    && request.resource.data.keys().hasAll(['reference','kind','status','name','email','phone','message','fields','source','createdAt','notes','assignedTo','followUpDate'])
+    && request.resource.data.kind in ['enquiry','appointment']
+    && ((request.resource.data.kind == 'enquiry' && request.resource.data.status == 'new') || (request.resource.data.kind == 'appointment' && request.resource.data.status == 'requested'))
+    && request.resource.data.reference is string && request.resource.data.reference.size() <= 60
+    && request.resource.data.name is string && request.resource.data.name.size() >= 2 && request.resource.data.name.size() <= 120
+    && request.resource.data.email is string && request.resource.data.email.size() >= 5 && request.resource.data.email.size() <= 254 && request.resource.data.email.matches('^[^@ ]+@[^@ ]+\\.[^@ ]+$')
+    && request.resource.data.phone is string && request.resource.data.phone.size() <= 35
+    && request.resource.data.message is string && request.resource.data.message.size() <= 1600
+    && request.resource.data.fields is map && request.resource.data.fields.keys().size() <= 40
+    && request.resource.data.source is string && request.resource.data.source.size() <= 500 && request.resource.data.source.matches('^/.*')
+    && request.resource.data.notes == '' && request.resource.data.assignedTo == '' && request.resource.data.followUpDate == ''
+    && request.resource.data.createdAt == request.time;
+  }
+  match /cms_requests/{requestId} {
+   allow create: if validNewRequest();
+   allow get,list: if enquiryTeam();
+   allow update: if enquiryTeam();
+   allow delete: if superAdmin();
+  }
+  match /{document=**} {allow read,write: if false;}
+ }
+}

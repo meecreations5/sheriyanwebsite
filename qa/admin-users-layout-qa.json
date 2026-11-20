@@ -1,0 +1,38 @@
+[
+  {
+    "scrollWidth": 320,
+    "innerWidth": 320,
+    "rows": 3,
+    "actions": 4,
+    "font": "\"Times New Roman\"",
+    "viewport": 320,
+    "overflow": false
+  },
+  {
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "rows": 3,
+    "actions": 4,
+    "font": "\"Times New Roman\"",
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "scrollWidth": 768,
+    "innerWidth": 768,
+    "rows": 3,
+    "actions": 4,
+    "font": "\"Times New Roman\"",
+    "viewport": 768,
+    "overflow": false
+  },
+  {
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "rows": 3,
+    "actions": 4,
+    "font": "\"Times New Roman\"",
+    "viewport": 1440,
+    "overflow": false
+  }
+]

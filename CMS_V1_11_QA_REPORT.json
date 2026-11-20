@@ -1,0 +1,33 @@
+{
+  "version": "1.11.0",
+  "base": "1.10.0",
+  "firebaseProject": "shanerynwesbite",
+  "publicWebsiteAssetsIdenticalToV110": true,
+  "firebaseRulesChanged": false,
+  "firebaseFunctionsChanged": false,
+  "tests": {
+    "check": "PASS",
+    "check:urls": "PASS",
+    "check:cms": "PASS",
+    "check:v16": "PASS",
+    "check:v17": "PASS",
+    "check:v18": "PASS",
+    "check:v19": "PASS",
+    "check:v110": "PASS",
+    "check:v111": "PASS",
+    "nodeJsSyntax": "PASS"
+  },
+  "staticLayoutWidthsPassed": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "notTested": [
+    "Next.js production build (npm unavailable in environment)",
+    "live Firebase Authentication",
+    "Cloud Functions deployment",
+    "real email delivery"
+  ],
+  "notes": "CSS layout smoke is a representative static mock, not a running Next.js screenshot."
+}

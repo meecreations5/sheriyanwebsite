@@ -1,0 +1,161 @@
+/* SHANERYN V6.9 — Inner-page mobile refinements.
+   Intentionally never loaded on index.html: approved homepage mobile UI is untouched. */
+.v69-filter-toggle{display:none}
+body[data-page="contact-page"] .v69-contact-choices{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;
+  margin:23px 0 27px;width:100%;
+}
+body[data-page="contact-page"] .v69-contact-choice{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  width:100%;min-width:0;min-height:78px;text-align:left;cursor:pointer;
+  padding:15px 14px;color:var(--ep-ink);background:transparent;
+  border:1px solid var(--ep-hair);border-radius:0;
+  transition:background .2s,border-color .2s;
+}
+body[data-page="contact-page"] .v69-contact-choice strong{
+  font:600 clamp(12px,1vw,14px)/1.4 var(--sans);letter-spacing:.025em;
+}
+body[data-page="contact-page"] .v69-contact-choice>span{
+  font:400 clamp(11px,.85vw,12px)/1.4 var(--sans);color:var(--ep-sub);margin-top:6px;
+}
+body[data-page="contact-page"] .v69-contact-choice:is(:hover,.is-selected){
+  border-color:var(--ep-accent);background:rgba(209,78,145,.10);
+}
+body[data-page="contact-page"] .v69-contact-choice:focus-visible{outline:2px solid var(--ep-accent);outline-offset:3px}
+body[data-page="contact-page"] [data-v69-contact-panel][hidden]{display:none!important}
+body[data-page="contact-page"] .v69-appointment-inline{
+  border:0!important;background:transparent!important;margin:0!important;
+  scroll-margin-top:92px;
+}
+body[data-page="contact-page"] .v69-appointment-inline .v67-appointment-layout{
+  display:block!important;width:100%!important;max-width:none!important;
+  padding:0!important;margin:0!important;gap:0!important;
+}
+body[data-page="contact-page"] .v69-appointment-inline .v67-book-editorial h2{
+  font-size:clamp(38px,3.3vw,52px)!important;margin:13px 0 14px!important;
+}
+body[data-page="contact-page"] .v69-appointment-inline .v67-book-editorial>p:not(.v67-book-note){
+  font-size:13px;line-height:1.65;margin-bottom:12px;
+}
+body[data-page="contact-page"] .v69-appointment-inline .v67-book-signature{display:none}
+body[data-page="contact-page"] .v69-appointment-inline .v67-book-note{font-size:12px;line-height:1.65;margin:10px 0 22px}
+body[data-page="contact-page"] .v69-appointment-inline .v67-appointment-form{padding:25px 20px}
+body[data-page="contact-page"] .v69-appointment-inline .v67-book-grid{gap:2px 16px}
+body[data-page="contact-page"] .v69-appointment-inline .v67-appointment-form label{margin-bottom:19px}
+body[data-page="bespoke-page"] .v69-bespoke-shortcuts{
+  display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:18px;
+}
+body[data-page="bespoke-page"] .v69-bespoke-shortcuts a{
+  display:inline-flex;align-items:center;min-height:38px;border-bottom:1px solid var(--ep-hair);
+  color:var(--ep-sub);text-decoration:none;
+  font:600 11px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;
+}
+body[data-page="bespoke-page"] .v69-bespoke-shortcuts a:hover,
+body[data-page="bespoke-page"] .v69-bespoke-shortcuts a:focus-visible{
+  color:var(--ep-accent);border-bottom-color:var(--ep-accent);
+}
+@media(max-width:767px){
+  /* Main Collections: catalogue is visible without scrolling past a campaign poster. */
+  body[data-page="collections"] .collection-hero{
+    display:block!important;min-height:0!important;height:auto!important;
+  }
+  body[data-page="collections"] .collection-hero-image{display:none!important}
+  body[data-page="collections"] .collection-hero-copy{
+    padding:20px 18px 9px!important;min-height:0!important;
+  }
+  body[data-page="collections"] .collection-hero-copy>.eyebrow,
+  body[data-page="collections"] .collection-hero-copy>p,
+  body[data-page="collections"] .collections-hero-folio{display:none!important}
+  body[data-page="collections"] .collection-hero-copy h1{
+    font-size:clamp(36px,9.3vw,46px)!important;line-height:1.05!important;
+    margin:2px 0 5px!important;
+  }
+  body[data-page="collections"] .collections-main{padding:0 0 56px!important}
+  body[data-page="collections"] .collections-top{margin-bottom:5px!important;padding:0 0 5px!important;}
+  body[data-page="collections"] .collections-top .eyebrow,
+  body[data-page="collections"] .collections-top h2{display:none!important}
+  body[data-page="collections"] .collections-top p{font-size:12px!important;margin:0 0 4px}
+  body[data-page="collections"] .filters{margin-bottom:4px!important;padding-bottom:6px!important}
+  body[data-page="collections"] .filters .filter-btn{min-height:36px!important;padding:8px 12px!important}
+  body[data-page="collections"] .v69-filter-toggle{
+    display:flex!important;align-items:center;justify-content:space-between;
+    width:100%;min-height:40px;padding:7px 0 9px;margin:0 0 10px;
+    background:transparent;border:0;border-bottom:1px solid var(--ep-hair);
+    color:var(--ep-ink);font:600 11px/1.5 var(--sans);
+    letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+  }
+  body[data-page="collections"] .v69-filter-toggle .v69-filter-symbol{font-size:23px;line-height:1;color:var(--ep-accent)}
+  body[data-page="collections"] .v69-filter-toggle:focus-visible{outline:2px solid var(--ep-accent);outline-offset:3px}
+  body[data-page="collections"] .filter-tools.v69-filter-tools{display:none!important}
+  body[data-page="collections"] .filter-tools.v69-filter-tools.v69-is-open{
+    display:grid!important;margin:0 0 14px!important;
+  }
+  body[data-page="collections"] .look-grid{margin-top:0!important;}
+
+  /* Individual collection: no secondary banner or duplicated product-grid title. */
+  body[data-page="collection-edit"] .ep-collection-hero{
+    display:block!important;min-height:0!important;height:auto!important;
+  }
+  body[data-page="collection-edit"] .ep-collection-image{display:none!important}
+  body[data-page="collection-edit"] .ep-collection-copy{
+    padding:18px 20px 14px!important;min-height:0!important;
+  }
+  body[data-page="collection-edit"] .ep-collection-copy .ep-breadcrumb{
+    position:static!important;margin:0 0 9px!important;font-size:10px!important;
+  }
+  body[data-page="collection-edit"] .ep-collection-copy>.ep-kicker,
+  body[data-page="collection-edit"] .ep-collection-copy>.ep-fine-line,
+  body[data-page="collection-edit"] .ep-collection-copy>#edit-description{display:none!important}
+  body[data-page="collection-edit"] .ep-collection-copy h1{
+    font-size:clamp(38px,10vw,49px)!important;line-height:1.06!important;
+    margin:0 0 7px!important;
+  }
+  body[data-page="collection-edit"] .ep-category-count{
+    display:block!important;margin:4px 0 7px!important;font-size:10px!important;
+  }
+  body[data-page="collection-edit"] .ep-collection-copy>.ep-text-link{
+    margin:2px 0!important;font-size:10px!important;min-height:30px;
+  }
+  body[data-page="collection-edit"] .ep-category-index{
+    padding:12px 0 60px!important;
+  }
+  body[data-page="collection-edit"] .ep-category-index .ep-section-row{
+    margin:0 0 10px!important;padding:0!important;gap:0!important;
+  }
+  body[data-page="collection-edit"] .ep-section-row h2,
+  body[data-page="collection-edit"] .ep-section-row #v49-category-request,
+  body[data-page="collection-edit"] .ep-support-copy{display:none!important}
+  body[data-page="collection-edit"] .ep-section-row .ep-kicker{font-size:12px!important}
+  body[data-page="collection-edit"] .ep-collection-grid{margin-top:0!important}
+
+  /* Mobile Contact Us goes directly to its actionable forms, not an 800px photo. */
+  body[data-page="contact-page"] .ep-contact-visual{display:none!important}
+  body[data-page="contact-page"] .ep-contact-main{
+    display:block!important;min-height:0!important;height:auto!important;
+  }
+  body[data-page="contact-page"] .ep-contact-panel{
+    width:100%!important;max-width:none!important;padding:23px 20px 38px!important;
+  }
+  body[data-page="contact-page"] .ep-contact-panel>.ep-kicker{margin-top:12px!important}
+  body[data-page="contact-page"] .ep-contact-panel h1{
+    font-size:clamp(46px,11.5vw,57px)!important;margin:9px 0 11px!important;
+  }
+  body[data-page="contact-page"] .ep-contact-panel>p{line-height:1.65!important;margin:0 0 9px!important;font-size:13px!important}
+  body[data-page="contact-page"] .v69-contact-choices{margin:13px 0 19px;gap:8px;}
+  body[data-page="contact-page"] .v69-contact-choice{min-height:76px;padding:12px 10px;}
+  body[data-page="contact-page"] .v69-contact-choice strong{font-size:12px}
+  body[data-page="contact-page"] .v69-contact-choice span{font-size:11px}
+  body[data-page="contact-page"] .v69-appointment-inline .v67-appointment-form{padding:20px 14px}
+  body[data-page="contact-page"] .v69-appointment-inline .v67-book-grid{grid-template-columns:1fr!important}
+  body[data-page="contact-page"] .v69-appointment-inline .v67-book-editorial h2{font-size:43px!important}
+  body[data-page="contact-page"] .v69-appointment-inline .v67-book-actions .ep-solid-btn{width:100%;}
+  body[data-page="bespoke-page"] .v69-bespoke-shortcuts{
+    flex-wrap:nowrap;overflow-x:auto;gap:19px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  body[data-page="bespoke-page"] .v69-bespoke-shortcuts::-webkit-scrollbar{display:none}
+  body[data-page="bespoke-page"] .v69-bespoke-shortcuts a{flex:0 0 auto;font-size:10px;}
+  body[data-page="bespoke-page"] :is(#measurement-studio,#services,#past-work){scroll-margin-top:78px}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-page="contact-page"] .v69-contact-choice{transition:none}
+}

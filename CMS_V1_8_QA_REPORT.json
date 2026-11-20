@@ -1,0 +1,22 @@
+{
+  "release": "1.8.0",
+  "base": "1.7.0",
+  "result": "PASS",
+  "checks": [
+    "v18 image vs link regression test",
+    "v17 admin module audit",
+    "v16 categories and curated collections",
+    "v15 CMS feature checks",
+    "8 clean product URLs",
+    "9 page / 2527 fields / 34 section integrity",
+    "47 JS / JSX syntax parses"
+  ],
+  "integrationLimits": "Live Firebase, npm registry Next.js production build and deployed browser remain unverified",
+  "changedFiles": [
+    "UPDATE_V1_8.md",
+    "components/admin/CmsApp.jsx",
+    "lib/render-page.js",
+    "package.json",
+    "scripts/check-v18.js"
+  ]
+}

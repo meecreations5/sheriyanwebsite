@@ -1,1 +1,0 @@
-This is an illustrative editorial layout overview assembled from approved photos and copy. It is not a browser-rendered screenshot; review index.html in Chrome/Edge/Safari for exact responsive rendering.

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pant-sets",
+    "name": "Pant Sets",
+    "image": "assets/product-detail/sunshine/01.webp",
+    "copy": "Explore pant sets designed around your own expression.",
+    "visible": true,
+    "sortOrder": 0
+  },
+  {
+    "id": "skirt-sets",
+    "name": "Skirt Sets",
+    "image": "assets/product-detail/starlight/01.webp",
+    "copy": "Explore skirt sets designed around your own expression.",
+    "visible": true,
+    "sortOrder": 1
+  },
+  {
+    "id": "gowns",
+    "name": "Gowns",
+    "image": "assets/product-detail/fire-and-heart/01.webp",
+    "copy": "Explore gowns designed around your own expression.",
+    "visible": true,
+    "sortOrder": 2
+  },
+  {
+    "id": "tunics",
+    "name": "Tunics",
+    "image": "assets/product-detail/lozen/01.webp",
+    "copy": "Explore tunics designed around your own expression.",
+    "visible": true,
+    "sortOrder": 3
+  },
+  {
+    "id": "cropped-pant-sets",
+    "name": "Cropped Pant Sets",
+    "image": "assets/product-detail/bellona/01.webp",
+    "copy": "Explore cropped pant sets designed around your own expression.",
+    "visible": true,
+    "sortOrder": 4
+  },
+  {
+    "id": "dresses",
+    "name": "Dresses",
+    "image": "assets/product-detail/blaze/01.webp",
+    "copy": "Explore dresses designed around your own expression.",
+    "visible": true,
+    "sortOrder": 5
+  }
+]

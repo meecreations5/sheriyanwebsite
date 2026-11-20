@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "index",
+    "name": "Homepage",
+    "path": "/",
+    "fields": 311,
+    "sections": 7
+  },
+  {
+    "slug": "collections",
+    "name": "Collections",
+    "path": "/collections.html",
+    "fields": 241,
+    "sections": 4
+  },
+  {
+    "slug": "collection",
+    "name": "Collection Detail",
+    "path": "/collection.html",
+    "fields": 230,
+    "sections": 3
+  },
+  {
+    "slug": "look",
+    "name": "Look Detail",
+    "path": "/look.html",
+    "fields": 300,
+    "sections": 3
+  },
+  {
+    "slug": "story",
+    "name": "Our Story",
+    "path": "/story.html",
+    "fields": 229,
+    "sections": 3
+  },
+  {
+    "slug": "bespoke",
+    "name": "Bespoke",
+    "path": "/bespoke.html",
+    "fields": 444,
+    "sections": 4
+  },
+  {
+    "slug": "film",
+    "name": "Fashion Film",
+    "path": "/film.html",
+    "fields": 242,
+    "sections": 3
+  },
+  {
+    "slug": "testimonials",
+    "name": "Testimonials",
+    "path": "/testimonials.html",
+    "fields": 220,
+    "sections": 4
+  },
+  {
+    "slug": "contact",
+    "name": "Contact Us",
+    "path": "/contact.html",
+    "fields": 310,
+    "sections": 3
+  }
+]

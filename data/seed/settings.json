@@ -1,0 +1,33 @@
+{
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "youtube": "",
+    "linkedin": ""
+  },
+  "contact": {
+    "email": "",
+    "phone": "",
+    "whatsapp": "",
+    "address": "",
+    "mapsUrl": ""
+  },
+  "branding": {
+    "logo": "assets/brand/shaneryn-wordmark-magenta.png",
+    "favicon": "favicon-64.png",
+    "accent": "#c33583"
+  },
+  "home": {
+    "bestSellerId": "SH-STARLIGHT",
+    "featuredProductIds": [
+      "SH-SUNSHINE",
+      "SH-STARLIGHT",
+      "SH-FIREHEART",
+      "SH-DAWNDUSK"
+    ]
+  },
+  "seo": {
+    "siteName": "SHANERYN",
+    "defaultDescription": "SHANERYN luxury fashion and bespoke couture."
+  }
+}
