@@ -3,6 +3,7 @@ import React,{useEffect,useState,useMemo,useRef} from 'react';
 import {cmsApi,authApi} from '@/lib/cms-client-api';
 import {slugify,productSlug,productPath} from '@/lib/product-paths';
 import {getYoutubeVideoId,isVideoFile,youtubeEmbedUrl} from '@/lib/video-url';
+import {MAX_MEDIA_MB, DIRECT_UPLOAD_BYTES, IMAGE_MEDIA_TYPES, VIDEO_MEDIA_TYPES, SUPPORTED_MEDIA_TYPES, mediaUploadError} from '@/lib/cms-media-policy.mjs';
 const normalizeAdminUsername=x=>String(x||'').trim().toLowerCase();
 const validAdminUsername=x=>/^[a-z][a-z0-9._-]{2,31}$/.test(normalizeAdminUsername(x));
 
@@ -109,10 +110,11 @@ const IMAGE_GUIDES={
  favicon:{label:'Favicon',ratio:'1:1',size:'512 × 512 px',max:'250 KB recommended'},
  logo:{label:'Official logo',ratio:'Original',size:'At least 1000 px wide',max:'Transparent PNG / WebP recommended'}
 };
-const VIDEO_GUIDE={label:'Video',ratio:'16:9',size:'1920 × 1080 px',max:'50 MB maximum (MP4 or WebM)'};
+const VIDEO_GUIDE={label:'Video',ratio:'16:9',size:'1920 × 1080 px'};
 function MediaGuide({spec='general',type='image'}){
  const g=type==='video'?VIDEO_GUIDE:(IMAGE_GUIDES[spec]||IMAGE_GUIDES.general);
- return <div className="cms-media-guide"><strong>{g.label}</strong><span>Recommended: {g.size} · Ratio {g.ratio}</span><span>{type==='video'?'Formats: MP4, WebM':'Formats: JPG, PNG, WebP, GIF'} · {g.max}</span></div>;
+ const formats=type==='video'?'MP4, WebM':type==='all'?'JPG, PNG, WebP, GIF, MP4, WebM':'JPG, PNG, WebP, GIF';
+ return <div className="cms-media-guide"><strong>{type==='all'?'Photographs & videos':g.label}</strong><span>Recommended {type==='all'?'photo ':''}dimensions: {g.size} · Ratio {g.ratio}</span><span>Formats: {formats} · <strong>Maximum upload: {MAX_MEDIA_MB} MB per file</strong></span>{type!=='video'&&<span>For faster website loading: {g.max}</span>}</div>;
 }
 async function mediaRequest(route,body){
  const res=await fetch('/api/admin/media/'+route,{method:'POST',credentials:'same-origin',...(body instanceof FormData?{body}:{headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})});
@@ -122,16 +124,16 @@ async function mediaRequest(route,body){
 function MediaPicker({api,onPick,onClose,type='all',spec='general'}){
  const [items,setItems]=useState([]),[busy,setBusy]=useState(false),[status,setStatus]=useState('');
  useEffect(()=>{api('media').then(r=>setItems(Array.isArray(r)?r:[])).catch(e=>setStatus(e.message))},[api]);
- const fileAccept=type==='video'?'video/mp4,video/webm':type==='image'?'image/jpeg,image/png,image/webp,image/gif':'image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm';
+ const fileAccept=(type==='video'?VIDEO_MEDIA_TYPES:type==='image'?IMAGE_MEDIA_TYPES:SUPPORTED_MEDIA_TYPES).join(',');
  const compatible=x=>type==='all'||(type==='video'?x.contentType?.startsWith('video/'):x.contentType?.startsWith('image/'));
  async function upload(files){
   const file=files?.[0];if(!file)return;
-  if(!['image/jpeg','image/png','image/webp','image/gif','video/mp4','video/webm'].includes(file.type)||file.size>50*1024*1024){setStatus('Choose a JPG/PNG/WebP/GIF or MP4/WebM file under 50 MB.');return}
-  if(type==='video'&&!file.type.startsWith('video/')||type==='image'&&!file.type.startsWith('image/')){setStatus('Please select the correct media type.');return}
-  setBusy(true);setStatus('Uploading '+file.name+'…');
+  const validationError=mediaUploadError({name:file.name,type:file.type,size:file.size},type);
+  if(validationError){setStatus(validationError);return}
+  setBusy(true);setStatus('Uploading '+file.name+' ('+(file.size/(1024*1024)).toFixed(1)+' MB)… Please keep this window open.');
   try{
    let response;
-   if(file.size<=3*1024*1024){const form=new FormData();form.append('file',file);response=await mediaRequest('upload',form)}
+   if(file.size<=DIRECT_UPLOAD_BYTES){const form=new FormData();form.append('file',file);response=await mediaRequest('upload',form)}
    else{
     const signed=await mediaRequest('sign',{name:file.name,contentType:file.type,size:file.size});
     const uploaded=await fetch(signed.url,{method:'PUT',headers:{'Content-Type':file.type},body:file});
@@ -142,8 +144,8 @@ function MediaPicker({api,onPick,onClose,type='all',spec='general'}){
   }catch(error){setStatus('Upload failed: '+prettyError(error))}finally{setBusy(false)}
  }
  return <div className="admin-modal-bg" onClick={onClose}><div className="admin-modal" onClick={e=>e.stopPropagation()}><div className="admin-row"><h2>Media Library</h2><Btn variant="neutral sm" onClick={onClose}>Close ×</Btn></div>
-  <p className="admin-subtitle">Select a file or upload a new one.</p><MediaGuide spec={spec} type={type==='video'?'video':'image'}/>
-  <p style={{marginTop:15}}><input type="file" accept={fileAccept} disabled={busy} onChange={e=>upload(e.target.files)}/></p>
+  <p className="admin-subtitle">Select an existing file or upload a new file, up to {MAX_MEDIA_MB} MB each.</p><MediaGuide spec={spec} type={type}/>
+  <p style={{marginTop:15}}><input type="file" accept={fileAccept} disabled={busy} onChange={e=>{upload(e.target.files);e.target.value='';}}/></p>
   {status&&<p className="admin-status" role="status" style={{marginTop:12}}>{status}</p>}
   <div className="admin-media-grid">{items.filter(compatible).map((item,i)=><button key={item.id||i} className="admin-media-tile" onClick={()=>{onPick(item.url);onClose()}}>{item.contentType?.startsWith('video/')?<video muted playsInline src={item.url} style={{width:'100%',height:140,objectFit:'cover'}}/>:<img src={item.url} alt={item.name||'Upload'}/>}<span>{item.name||'Media'}</span></button>)}</div>
  </div></div>;
@@ -450,7 +452,7 @@ function SettingsManager({api,pick}){
   <div className="admin-card"><h2>Search Engine Settings</h2><Field label="Website Name"><Input value={data.seo?.siteName} onChange={v=>set('seo','siteName',v)}/></Field><Field label="Default Meta Description"><TextArea value={data.seo?.defaultDescription} onChange={v=>set('seo','defaultDescription',v)}/></Field></div>
  </div>}</>;
 }
-function MediaManager({api,pick}){const [items,setItems]=useState([]),[status,setStatus]=useState('');useEffect(()=>{api('media').then(setItems).catch(e=>setStatus(e.message))},[api]);return <><div className="admin-header"><div><h1>Media Library</h1><p className="admin-subtitle">Upload product, campaign and editorial photographs once; reuse their URLs throughout the CMS.</p></div><Btn onClick={()=>pick(()=>{api('media').then(setItems).catch(e=>setStatus(e.message))},'all','general')}>+ Upload Media</Btn></div>{status&&<p className="admin-status">{status}</p>}<div className="admin-card"><div className="admin-media-grid">{items.map(x=><button key={x.id} className="admin-media-tile" title="Copy image URL" onClick={()=>{navigator.clipboard.writeText(x.url);setStatus('Image URL copied')}}>{x.contentType?.startsWith('video/')?<video muted playsInline src={x.url} style={{width:'100%',height:140,objectFit:'cover'}}/>:<img src={x.url} alt={x.name||'Media'}/>}<span>{x.name||'Image'} · Copy URL</span></button>)}</div>{!items.length&&<p className="admin-empty">No Firebase uploads yet. The approved V6.9 photographs are already available in the website's local assets folder.</p>}</div></>}
+function MediaManager({api,pick}){const [items,setItems]=useState([]),[status,setStatus]=useState('');useEffect(()=>{api('media').then(setItems).catch(e=>setStatus(e.message))},[api]);return <><div className="admin-header"><div><h1>Media Library</h1><p className="admin-subtitle">Upload photographs and videos up to {MAX_MEDIA_MB} MB per file. Reuse them throughout the CMS.</p></div><Btn onClick={()=>pick(()=>{api('media').then(setItems).catch(e=>setStatus(e.message))},'all','general')}>+ Upload Media</Btn></div>{status&&<p className="admin-status">{status}</p>}<div className="admin-card"><div className="admin-media-grid">{items.map(x=><button key={x.id} className="admin-media-tile" title="Copy image URL" onClick={()=>{navigator.clipboard.writeText(x.url);setStatus('Image URL copied')}}>{x.contentType?.startsWith('video/')?<video muted playsInline src={x.url} style={{width:'100%',height:140,objectFit:'cover'}}/>:<img src={x.url} alt={x.name||'Media'}/>}<span>{x.name||'Image'} · Copy URL</span></button>)}</div>{!items.length&&<p className="admin-empty">No Firebase uploads yet. The approved V6.9 photographs are already available in the website's local assets folder.</p>}</div></>}
 function UserManager({api,me}){
  const initial={username:'',password:'',role:'editor'};
  const [users,setUsers]=useState([]),[form,setForm]=useState(initial),[status,setStatus]=useState(''),[busy,setBusy]=useState(false),[creating,setCreating]=useState(false),[showPassword,setShowPassword]=useState(false),[resetTarget,setResetTarget]=useState(null),[updatingId,setUpdatingId]=useState('');

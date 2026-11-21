@@ -1,10 +1,14 @@
-# SHANERYN — Next.js (JavaScript) + Firestore CMS — V1.18 (SEO update, V1.17 CMS preserved)
+# SHANERYN — Next.js (JavaScript) + Firestore CMS — V1.18.3 (global 100 MB per-file media limit)
 
 V1.18 adds canonical URLs, sitemap.xml, robots.txt, social SEO metadata and baseline description refinements. See `UPDATE_V1_18_SEO.md`. Set `NEXT_PUBLIC_SITE_URL` to the **verified live website origin** before deploying. The public website preserves the V6.9 editorial design. `/admin` is a simple username/password CMS: content, categories, collections, products, media, forms, enquiries, appointments and Admin Users.
 
 **Authentication**: Usernames, salted scrypt password hashes, roles and active status are stored **only** in Firestore `cms_users/{username}`. No Firebase Authentication, Firebase Admin SDK, email or UID entry is used for admin login. Password hashes cannot be viewed or decrypted, including by Super Admin. Admin can create accounts and set a new password for other staff.
 
 **Important server requirement:** A secure Next.js server requires **authorised private access to Firestore**. The Google Cloud Firestore/Storage *server SDKs* use Google Cloud IAM, not Firebase Authentication or Firebase Admin SDK. Vercel needs a Google Cloud service identity or private server credential; it is not possible to secure `cms_users` with only the public Firebase API key. Do not make `cms_users` public or weaken its Firestore rules.
+
+**V1.18.3 global media limit:** All admin media upload controls (homepage, pages, looks, products, category/collection images, founder/bespoke, branding, social previews, videos and the Media Library) use one `lib/cms-media-policy.mjs` setting: 100 MB per file. Files above 3 MB bypass the Vercel Function through Cloud Storage. This was already a 100 MB limit in V1.18.2; the new version centralises validation on both browser and server. See `UPDATE_V1_18_3_GLOBAL_100MB.md`.
+
+**V1.18.2 media note:** When a server can read Firestore but cannot sign Cloud Storage URLs, the large-file upload route now falls back to a server-authorized Cloud Storage resumable session. Grant the server identity Storage Object Admin on the media bucket as documented in `UPDATE_V1_18_2_MEDIA_UPLOAD_FIX.md`.
 
 ## Use the CMS
 
@@ -19,6 +23,6 @@ Your previous `cms_users` documents from the Firebase Authentication era may use
 
 For Vercel use the Next.js Framework Preset and the folder that contains `package.json`. Set private server credentials under Vercel Settings → Environment Variables and redeploy. **Never commit `.env.local`, passwords or credential JSON.**
 
-Media controls show recommended image/video dimensions and formats. The public design is unchanged. For hosted video uploads over 3 MB, configure the Storage bucket's allowed CORS origins using `storage-cors.json` (and set your live domain). The signed URL uploader also requires an authorised server identity capable of signing Cloud Storage URLs.
+Media controls show recommended image/video dimensions and formats. The public design is unchanged. **Maximum CMS media upload size is now 100 MB per file.** Files above 3 MB upload directly to Cloud Storage using a signed URL or resumable Storage upload session instead of passing through the Vercel Function. Apply `storage-cors.json` to the Cloud Storage bucket, with all existing authorised origins preserved; merely redeploying the ZIP does not change bucket CORS. The signed URL uploader also requires an authorised server identity capable of signing Cloud Storage URLs. See `UPDATE_V1_18_1_MEDIA.md`.
 
 **Verification:** The code includes structural checks and database mocks. Run `npm run check`, `npm run build` and end-to-end tests against staging before production; these cannot substitute for a live Firestore test. No Firebase rules are relaxed.
