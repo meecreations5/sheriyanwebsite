@@ -1,14 +1,15 @@
 {
   "name": "shaneryn-cms",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "node tests/check-v117.mjs && node tests/test-cms-server-mock.mjs && node tests/test-v117-cms-users-only.mjs && node tests/test-v116-login-session.mjs",
+    "check": "npm run check:seo && node tests/check-v117.mjs && node tests/test-cms-server-mock.mjs && node tests/test-v117-cms-users-only.mjs && node tests/test-v116-login-session.mjs",
     "check:urls": "node tests/check-public-routes.mjs",
-    "check:cms": "npm run check"
+    "check:cms": "npm run check",
+    "check:seo": "node tests/test-seo-v118.mjs"
   },
   "dependencies": {
     "next": "^16.4.6",

@@ -1,6 +1,6 @@
-# SHANERYN — Next.js (JavaScript) + Firestore CMS — V1.17
+# SHANERYN — Next.js (JavaScript) + Firestore CMS — V1.18 (SEO update, V1.17 CMS preserved)
 
-The public website preserves the V6.9 editorial design. `/admin` is a simple username/password CMS: content, categories, collections, products, media, forms, enquiries, appointments and Admin Users.
+V1.18 adds canonical URLs, sitemap.xml, robots.txt, social SEO metadata and baseline description refinements. See `UPDATE_V1_18_SEO.md`. Set `NEXT_PUBLIC_SITE_URL` to the **verified live website origin** before deploying. The public website preserves the V6.9 editorial design. `/admin` is a simple username/password CMS: content, categories, collections, products, media, forms, enquiries, appointments and Admin Users.
 
 **Authentication**: Usernames, salted scrypt password hashes, roles and active status are stored **only** in Firestore `cms_users/{username}`. No Firebase Authentication, Firebase Admin SDK, email or UID entry is used for admin login. Password hashes cannot be viewed or decrypted, including by Super Admin. Admin can create accounts and set a new password for other staff.
 
