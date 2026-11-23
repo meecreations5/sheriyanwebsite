@@ -1,3 +1,7 @@
+## Latest update: V1.18.6 - optional, structured product descriptions
+
+Admin > Products & Looks > Descriptions now supports optional tagline, short introduction, display-only price, repeatable garment-level Fabric and Design descriptions, Embroidery & Detailing and a detailed Occasion list. Only non-empty sections appear on the public Look Details page. The existing catalogue Occasion filter remains independent. See `UPDATE_V1_18_6_OPTIONAL_PRODUCT_DETAILS.md` and `docs/PRODUCT_DESCRIPTION_QUICK_GUIDE.md`.
+
 **V1.18.4 product image publishing fix:** See `UPDATE_V1_18_4_PRODUCT_IMAGE_SYNC.md` for CMS photo selection and public Firestore read reliability.
 
 # SHANERYN — Next.js (JavaScript) + Firestore CMS — V1.18.3 (global 100 MB per-file media limit)

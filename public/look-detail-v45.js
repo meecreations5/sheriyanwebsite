@@ -12,6 +12,15 @@
   const gallery = $('#ld-gallery');
   if (!look || !media || !gallery) return;
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  // Structured garment information is server rendered, so it remains visible
+  // without JavaScript. On mobile, start the optional sections collapsed.
+  const details = $$('details.ld-product-detail-block');
+  if(details.length){
+    const mediaQuery=window.matchMedia('(max-width: 850px)');
+    const setDisclosureMode=()=>details.forEach(section=>{section.open=!mediaQuery.matches;});
+    setDisclosureMode();
+    mediaQuery.addEventListener?.('change',setDisclosureMode);
+  }
   const colour = {
     'SH-SUNSHINE':'#b8ab19','SH-STARLIGHT':'#f0eae2','SH-FIREHEART':'#af9172',
     'SH-DAWNDUSK':'#4f211f','SH-URASHIMA':'#17151a','SH-LOZEN':'#322fb0',

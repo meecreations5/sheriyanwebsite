@@ -1,12 +1,12 @@
 {
   "name": "shaneryn-cms",
-  "version": "1.18.5",
+  "version": "1.18.6",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "npm run check:seo && node tests/check-v117.mjs && node tests/test-cms-server-mock.mjs && node tests/test-v117-cms-users-only.mjs && node tests/test-v116-login-session.mjs && npm run check:media && node tests/test-product-image-publishing-v1184.mjs && node tests/test-home-collection-natural-height-v1185.mjs",
+    "check": "npm run check:seo && node tests/check-v117.mjs && node tests/test-cms-server-mock.mjs && node tests/test-v117-cms-users-only.mjs && node tests/test-v116-login-session.mjs && npm run check:media && node tests/test-product-image-publishing-v1184.mjs && node tests/test-home-collection-natural-height-v1185.mjs && node tests/test-optional-product-descriptions-v1186.mjs",
     "check:urls": "node tests/check-public-routes.mjs",
     "check:cms": "npm run check",
     "check:seo": "node tests/test-seo-v118.mjs",

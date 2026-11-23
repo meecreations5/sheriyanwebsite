@@ -315,13 +315,28 @@ function PageManager({api,pick}){
  </div></>:<p className="admin-empty">Loading page editor…</p>}</>
 }
 
-const blankProduct={id:'',title:'',slug:'',cat:'Dresses',categoryId:'dresses',collectionIds:[],occasion:'evening',tagline:'',description:'',tone:'',pieces:[],measurementGroups:{},img:'',catalogueImg:'',bestSellerImage:'',gallery:[],video:'',visible:true,featured:false,bestSeller:false,sortOrder:100,seoTitle:'',seoDescription:''};
+function ProductDetailRows({title,entries,onChange,description}){
+ const rows=Array.isArray(entries)?entries:[];
+ const updateRow=(i,key,value)=>onChange(rows.map((row,j)=>j===i?{...row,[key]:value}:row));
+ return <section className="cms-product-detail-group"><div className="admin-row"><div><h3>{title}</h3><p className="admin-note">{description}</p></div><Btn variant="secondary sm" disabled={rows.length>=12} onClick={()=>onChange([...rows,{garment:'',description:''}])}>+ Add garment</Btn></div>
+ {rows.map((row,i)=><div className="cms-product-detail-row" key={i}><div className="admin-row"><strong>Garment {i+1}</strong><Btn variant="danger sm" onClick={()=>onChange(rows.filter((_,j)=>i!==j))}>Remove</Btn></div><Field label="Garment name (optional)"><Input value={row.garment} onChange={v=>updateRow(i,'garment',v)} placeholder="e.g. Black Palazzo Pant"/></Field><Field label="Description"><TextArea rows={3} value={row.description} onChange={v=>updateRow(i,'description',v)} placeholder="Enter fabric or design details for this garment"/></Field></div>)}
+ {!rows.length&&<p className="admin-note cms-description-empty">Nothing added yet. This section will stay hidden on the website.</p>}</section>;
+}
+function ProductOccasionEntries({occasions,onChange}){
+ const rows=Array.isArray(occasions)?occasions:[];
+ return <section className="cms-product-detail-group"><div className="admin-row"><div><h3>Occasion description</h3><p className="admin-note">Optional display text, separate from the catalogue filter.</p></div><Btn variant="secondary sm" disabled={rows.length>=20} onClick={()=>onChange([...rows,''])}>+ Add occasion</Btn></div>
+ {rows.map((text,i)=><div key={i} className="cms-product-occasion-row"><Input value={text} onChange={v=>onChange(rows.map((x,j)=>j===i?v:x))} placeholder="e.g. Cocktail Parties" aria-label={'Occasion '+(i+1)}/><Btn variant="danger sm" onClick={()=>onChange(rows.filter((_,j)=>j!==i))}>Remove</Btn></div>)}
+ {!rows.length&&<p className="admin-note cms-description-empty">No occasion description. This section will stay hidden on the website.</p>}</section>;
+}
+
+const blankProduct={id:'',title:'',slug:'',cat:'Dresses',categoryId:'dresses',collectionIds:[],occasion:'evening',tagline:'',description:'',price:'',productDetails:{fabric:[],design:[],embroidery:'',occasions:[]},tone:'',pieces:[],measurementGroups:{},img:'',catalogueImg:'',bestSellerImage:'',gallery:[],video:'',visible:true,featured:false,bestSeller:false,sortOrder:100,seoTitle:'',seoDescription:''};
 function ProductManager({api,pick}){
  const [items,setItems]=useState([]),[categories,setCategories]=useState([]),[collections,setCollections]=useState([]),[selected,setSelected]=useState(''),[item,setItem]=useState(null),[status,setStatus]=useState(''),[busy,setBusy]=useState(false),[filter,setFilter]=useState(''),[tab,setTab]=useState('basic');
  async function refresh(){const [products,cats,edits]=await Promise.all([api('products'),api('categories'),api('collections')]);setItems(products);setCategories(cats);setCollections(edits);return products}
  useEffect(()=>{refresh().then(x=>{if(x[0])setSelected(x[0].id)}).catch(e=>setStatus(e.message))},[api]);
  useEffect(()=>{if(selected){setItem(stable(items.find(x=>x.id===selected)||blankProduct));setTab('basic')}},[selected,items]);
  const update=(k,v)=>setItem(old=>({...old,[k]:v}));
+ const updateProductDetails=(k,v)=>setItem(old=>({...old,productDetails:{...(old.productDetails||{}),[k]:v}}));
  function create(){setSelected('');setItem({...blankProduct,id:'SH-'+Date.now().toString(36).toUpperCase(),categoryId:categories[0]?.id||'dresses',cat:categories[0]?.name||'Dresses'});setTab('basic');setStatus('New look. Enter a name, select a category and add photographs.');}
  function duplicate(){if(!item)return;setSelected('');setItem({...item,id:'SH-'+Date.now().toString(36).toUpperCase(),title:item.title+' Copy',slug:slugify(item.title+' Copy'),featured:false,bestSeller:false});setTab('basic')}
  async function save(){if(!item)return;setBusy(true);setStatus('');try{
@@ -340,16 +355,26 @@ function ProductManager({api,pick}){
  {status&&<p className="admin-status" role="status">{status}</p>}
  <div className="admin-split"><div className="admin-card"><h2>Products ({items.length})</h2><Input value={filter} onChange={setFilter} placeholder="Search by name or garment type"/>{shown.map(p=><button type="button" className={'admin-item-card cms-product-list-item '+(selected===p.id?'selected':'')} key={p.id} onClick={()=>setSelected(p.id)}><img src={mediaSrc(p.catalogueImg||p.img)} alt=""/><div><strong>{p.title}</strong><p className="admin-note">{p.cat}</p><span className={'admin-pill '+(p.visible?'active':'')}>{p.visible?'Published':'Hidden'}</span></div></button>)}</div>
  <div className="admin-card">{item?<><div className="admin-row"><h2>{item.title||'New Product'}</h2><div className="admin-flex"><Btn variant="neutral sm" onClick={duplicate}>Duplicate</Btn><Check label="Visible" checked={item.visible!==false} onChange={v=>update('visible',v)}/></div></div>
- <div className="cms-editor-tabs" role="tablist" aria-label="Product editor">{[['basic','Details'],['photos','Gallery & Video'],['advanced','More Options']].map(([id,label])=><button key={id} type="button" role="tab" aria-selected={tab===id} className={tab===id?'active':''} onClick={()=>setTab(id)}>{label}</button>)}</div>
+ <div className="cms-editor-tabs" role="tablist" aria-label="Product editor">{[['basic','Details'],['description','Descriptions'],['photos','Gallery & Video'],['advanced','More Options']].map(([id,label])=><button key={id} type="button" role="tab" aria-selected={tab===id} className={tab===id?'active':''} onClick={()=>setTab(id)}>{label}</button>)}</div>
  {tab==='basic'&&<div>
   <Field label="Product Name"><Input value={item.title} onChange={v=>update('title',v)} placeholder="e.g. Sunshine"/></Field>
   <div className="admin-form-row"><Field label="Garment Category"><Select value={item.categoryId||categories.find(c=>c.name===item.cat)?.id||''} options={[{value:'',label:'Choose a category'},...categories.filter(c=>c.visible!==false||c.name===item.cat).map(c=>({value:c.id,label:c.name}))]} onChange={v=>{const c=categories.find(x=>x.id===v);setItem(old=>({...old,cat:c?.name||'',categoryId:v}))}}/></Field><Field label="Colour / Tone"><Input value={item.tone} onChange={v=>update('tone',v)} placeholder="e.g. Sunshine Yellow"/></Field></div>
-  <Field label="Short Description"><TextArea value={item.description} rows={3} onChange={v=>update('description',v)} placeholder="Describe this outfit in a few lines"/></Field>
   <Field label="Garment pieces included"><ChipEditor value={item.pieces} onChange={v=>update('pieces',v)} suggestions={['Top','Pant','Skirt','Blouse','Jacket','Gown','Tunic','Dupatta']}/></Field>
   <div className="admin-divider"/><h2>Assign to Collections (optional)</h2><p className="admin-note" style={{marginBottom:12}}>A product has one garment category and may appear in several curated collections.</p>
   {collections.length?<div className="cms-collection-checks">{collections.map(c=><Check key={c.id} label={c.name} checked={(item.collectionIds||[]).includes(c.id)} onChange={v=>update('collectionIds',v?[...(item.collectionIds||[]),c.id]:(item.collectionIds||[]).filter(x=>x!==c.id))}/>)}</div>:<p className="admin-note">No curated collections yet. Create your first one in the Collections menu.</p>}
   <div className="admin-divider"/><h2>Main Photographs</h2><p className="admin-note" style={{marginBottom:12}}>To replace a dress picture in the four-look homepage grid or the Collections listing, change the <strong>studio photograph</strong> below. To change the first photograph inside a Look Detail gallery, also update Photo 1 under Gallery &amp; Video. Click Save &amp; Publish after choosing your image.</p><div className="admin-form-row"><Field label="Homepage four-look grid / collection card (studio photograph)"><MediaField spec="catalogue" value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Look detail (editorial photograph)"><MediaField spec="editorial" value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
   <div className="admin-divider"/><h2>Visibility & Highlights</h2><div className="cms-checkbox-stack"><Check label="Show on website" checked={item.visible!==false} onChange={v=>update('visible',v)}/><Check label="Featured product" checked={item.featured} onChange={v=>update('featured',v)}/><Check label="Best Seller" checked={item.bestSeller} onChange={v=>update('bestSeller',v)}/></div>
+ </div>}
+ {tab==='description'&&<div className="cms-product-description-editor">
+  <h2>Product Description</h2><p className="admin-note" style={{marginBottom:16}}>Fill in only what applies to this outfit. Empty sections are automatically hidden on the website. No separate Show/Hide switches.</p>
+  <Field label="Short Tagline (optional)"><Input value={item.tagline} onChange={v=>update('tagline',v)} placeholder="e.g. Let the Tide Set the Vibe"/></Field>
+  <Field label="Short Description (optional)"><TextArea value={item.description} rows={3} onChange={v=>update('description',v)} placeholder="A short introduction to the outfit"/></Field>
+  <Field label="Price (optional)"><Input value={item.price} onChange={v=>update('price',v)} placeholder="e.g. ₹ 18,500"/></Field>
+  <p className="admin-note" style={{marginTop:-7,marginBottom:16}}>Leave the price blank if you do not want to display it. This is information only; there is no online checkout.</p>
+  <ProductDetailRows title="Fabric" entries={item.productDetails?.fabric} onChange={v=>updateProductDetails('fabric',v)} description="Add the garment and its fabric. For two-piece outfits, add a separate row for each piece."/>
+  <ProductDetailRows title="Design Description" entries={item.productDetails?.design} onChange={v=>updateProductDetails('design',v)} description="Explain the cut, silhouette and construction of each garment."/>
+  <div className="cms-product-detail-group"><h3>Embroidery &amp; Detailing</h3><p className="admin-note" style={{marginBottom:10}}>Optional. You can enter several lines of text.</p><TextArea rows={4} value={item.productDetails?.embroidery} onChange={v=>updateProductDetails('embroidery',v)} placeholder="Describe embroidery, accents or finishing details"/></div>
+  <ProductOccasionEntries occasions={item.productDetails?.occasions} onChange={v=>updateProductDetails('occasions',v)}/>
  </div>}
  {tab==='photos'&&<div><h2>Product Gallery</h2><p className="admin-note" style={{marginBottom:14}}>Add photographs in the order customers should see them.</p>
   <div className="admin-form-row"><Field label="Studio image"><MediaField spec="catalogue" value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Editorial image"><MediaField spec="editorial" value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
@@ -360,8 +385,7 @@ function ProductManager({api,pick}){
  </div>}
  {tab==='advanced'&&<div><p className="admin-note" style={{marginBottom:12}}>Optional product settings. Normally you can leave these unchanged.</p>
   <Field label="Internal Reference (auto-generated)"><Input value={item.id} disabled/></Field><Field label="Public Product URL"><Input value={productSlug(item)} onChange={v=>update('slug',slugify(v))}/><small className="admin-note">Website link: {productPath(item)}</small></Field>
-  <Field label="Short Tagline"><Input value={item.tagline} onChange={v=>update('tagline',v)}/></Field>
-  <Field label="Occasion"><Select value={item.occasion} options={['evening','festive','destination','everyday','bridal','corporate']} onChange={v=>update('occasion',v)}/></Field>
+  <Field label="Catalogue Occasion Filter"><Select value={item.occasion} options={['evening','festive','destination','everyday','bridal','corporate']} onChange={v=>update('occasion',v)}/></Field><p className="admin-note" style={{marginTop:-4,marginBottom:12}}>This dropdown controls Collections filtering. To show an occasion description on the Look Details page, add it under Descriptions.</p>
   <Field label="Display Order"><Input type="number" value={item.sortOrder} onChange={v=>update('sortOrder',Number(v))}/></Field>
   <div className="admin-divider"/><h2>Measurement Questions</h2><p className="admin-note" style={{marginBottom:12}}>Add measurement groups and questions individually. No JSON or comma-separated input required.</p>
   <MeasurementGroupEditor value={item.measurementGroups} onChange={v=>update('measurementGroups',v)}/>

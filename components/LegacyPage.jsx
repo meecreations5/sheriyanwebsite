@@ -8,7 +8,7 @@ export default async function LegacyPage({slug,activeProductId=null,curatedColle
  const [page,allProducts,settings,categories,curatedCollections,forms]=await Promise.all([loadPage(slug),loadProducts(),loadSettings(),loadCategories(),slug==='collections'?loadCuratedCollections():Promise.resolve([]),loadForms()]);
  const products=curatedCollection?allProducts.filter(x=>(x.collectionIds||[]).includes(curatedCollection.id)):allProducts;
  if(!page||page.visible===false)notFound();
- const markup=renderPage(page,products,settings,forms,curatedCollections,curatedCollection,categories);
+ const markup=renderPage(page,products,settings,forms,curatedCollections,curatedCollection,categories,activeProductId);
  // The CMS may contain Firestore Timestamp instances (e.g. product.updatedAt).
  // React Server Components only accept plain data, so normalize every client prop.
  const clientProps=toPlainClientData({
