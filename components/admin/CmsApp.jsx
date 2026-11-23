@@ -140,7 +140,11 @@ function MediaPicker({api,onPick,onClose,type='all',spec='general'}){
     if(!uploaded.ok)throw Error('Large-file upload failed ('+uploaded.status+'). Check your Firebase Storage bucket CORS configuration.');
     response=await mediaRequest('complete',{uploadId:signed.uploadId});
    }
-   setItems(old=>[response.item,...old]);setStatus('Upload complete. Select the image or video below.');
+   setItems(old=>[response.item,...old]);
+   // In an image/video field, uploading a file also selects it for that field.
+   // Users must still click Save & Publish on the parent form.
+   if(type!=='all'&&response.item?.url){onPick(response.item.url);onClose();}
+   else setStatus('Upload complete. Select a file below or close the library.');
   }catch(error){setStatus('Upload failed: '+prettyError(error))}finally{setBusy(false)}
  }
  return <div className="admin-modal-bg" onClick={onClose}><div className="admin-modal" onClick={e=>e.stopPropagation()}><div className="admin-row"><h2>Media Library</h2><Btn variant="neutral sm" onClick={onClose}>Close ×</Btn></div>
@@ -344,7 +348,7 @@ function ProductManager({api,pick}){
   <Field label="Garment pieces included"><ChipEditor value={item.pieces} onChange={v=>update('pieces',v)} suggestions={['Top','Pant','Skirt','Blouse','Jacket','Gown','Tunic','Dupatta']}/></Field>
   <div className="admin-divider"/><h2>Assign to Collections (optional)</h2><p className="admin-note" style={{marginBottom:12}}>A product has one garment category and may appear in several curated collections.</p>
   {collections.length?<div className="cms-collection-checks">{collections.map(c=><Check key={c.id} label={c.name} checked={(item.collectionIds||[]).includes(c.id)} onChange={v=>update('collectionIds',v?[...(item.collectionIds||[]),c.id]:(item.collectionIds||[]).filter(x=>x!==c.id))}/>)}</div>:<p className="admin-note">No curated collections yet. Create your first one in the Collections menu.</p>}
-  <div className="admin-divider"/><h2>Main Photographs</h2><div className="admin-form-row"><Field label="Collection card (studio photograph)"><MediaField spec="catalogue" value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Look detail (editorial photograph)"><MediaField spec="editorial" value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
+  <div className="admin-divider"/><h2>Main Photographs</h2><p className="admin-note" style={{marginBottom:12}}>To replace a dress picture in the four-look homepage grid or the Collections listing, change the <strong>studio photograph</strong> below. To change the first photograph inside a Look Detail gallery, also update Photo 1 under Gallery &amp; Video. Click Save &amp; Publish after choosing your image.</p><div className="admin-form-row"><Field label="Homepage four-look grid / collection card (studio photograph)"><MediaField spec="catalogue" value={item.catalogueImg} onChange={v=>update('catalogueImg',v)} pick={pick}/></Field><Field label="Look detail (editorial photograph)"><MediaField spec="editorial" value={item.img} onChange={v=>update('img',v)} pick={pick}/></Field></div>
   <div className="admin-divider"/><h2>Visibility & Highlights</h2><div className="cms-checkbox-stack"><Check label="Show on website" checked={item.visible!==false} onChange={v=>update('visible',v)}/><Check label="Featured product" checked={item.featured} onChange={v=>update('featured',v)}/><Check label="Best Seller" checked={item.bestSeller} onChange={v=>update('bestSeller',v)}/></div>
  </div>}
  {tab==='photos'&&<div><h2>Product Gallery</h2><p className="admin-note" style={{marginBottom:14}}>Add photographs in the order customers should see them.</p>
@@ -446,7 +450,7 @@ function SettingsManager({api,pick}){
    <Field label="Best Seller — Linked Product"><Select value={data.home?.bestSellerId||''} options={[{value:'',label:'Choose linked product'},...products.filter(p=>p.visible!==false).map(p=>({value:p.id,label:p.title+' - '+p.cat}))]} onChange={v=>set('home','bestSellerId',v)}/></Field>
    {products.find(p=>p.id===data.home?.bestSellerId)&&<div className="cms-featured-preview"><img src={mediaSrc(products.find(p=>p.id===data.home.bestSellerId)?.catalogueImg||products.find(p=>p.id===data.home.bestSellerId)?.img)} alt="Linked product thumbnail only"/><span>Linked product: {products.find(p=>p.id===data.home.bestSellerId)?.title}<br/><small>Opens {productPath(products.find(p=>p.id===data.home.bestSellerId))}</small></span></div>}
    <p className="admin-note" style={{marginTop:10}}>This selection changes ONLY the product link. It does not replace the Best Seller section photograph or its text. To change that image, open Page Manager → Homepage → Best Seller.</p>
-   <div className="admin-divider"/><h2>Featured Products</h2><p className="admin-note" style={{marginBottom:12}}>Choose up to four products to feature on the homepage.</p>
+   <div className="admin-divider"/><h2>Featured Products</h2><p className="admin-note" style={{marginBottom:12}}>Choose up to four products to feature on the homepage. Their photographs come from <strong>Products &amp; Looks → Main Photographs → Homepage four-look grid / collection card</strong>, not from this screen.</p>
    <MultiProductPicker products={products} selected={featured} onChange={v=>{if(v.length<=4)set('home','featuredProductIds',v);else setStatus('Select no more than four featured products.')}}/>
   </div>
   <div className="admin-card"><h2>Search Engine Settings</h2><Field label="Website Name"><Input value={data.seo?.siteName} onChange={v=>set('seo','siteName',v)}/></Field><Field label="Default Meta Description"><TextArea value={data.seo?.defaultDescription} onChange={v=>set('seo','defaultDescription',v)}/></Field></div>

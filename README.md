@@ -1,3 +1,5 @@
+**V1.18.4 product image publishing fix:** See `UPDATE_V1_18_4_PRODUCT_IMAGE_SYNC.md` for CMS photo selection and public Firestore read reliability.
+
 # SHANERYN — Next.js (JavaScript) + Firestore CMS — V1.18.3 (global 100 MB per-file media limit)
 
 V1.18 adds canonical URLs, sitemap.xml, robots.txt, social SEO metadata and baseline description refinements. See `UPDATE_V1_18_SEO.md`. Set `NEXT_PUBLIC_SITE_URL` to the **verified live website origin** before deploying. The public website preserves the V6.9 editorial design. `/admin` is a simple username/password CMS: content, categories, collections, products, media, forms, enquiries, appointments and Admin Users.
@@ -26,3 +28,6 @@ For Vercel use the Next.js Framework Preset and the folder that contains `packag
 Media controls show recommended image/video dimensions and formats. The public design is unchanged. **Maximum CMS media upload size is now 100 MB per file.** Files above 3 MB upload directly to Cloud Storage using a signed URL or resumable Storage upload session instead of passing through the Vercel Function. Apply `storage-cors.json` to the Cloud Storage bucket, with all existing authorised origins preserved; merely redeploying the ZIP does not change bucket CORS. The signed URL uploader also requires an authorised server identity capable of signing Cloud Storage URLs. See `UPDATE_V1_18_1_MEDIA.md`.
 
 **Verification:** The code includes structural checks and database mocks. Run `npm run check`, `npm run build` and end-to-end tests against staging before production; these cannot substitute for a live Firestore test. No Firebase rules are relaxed.
+
+## V1.18.5 homepage collection image sizing
+Homepage four-look cards now display studio photographs at their natural ratio without white letterbox bars. See `UPDATE_V1_18_5_IMAGE_BAND_FIX.md`.

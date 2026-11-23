@@ -11,8 +11,8 @@ body[data-page="home"] .occasion-reference .occasion-ref-card {
 }
 body[data-page="home"] .occasion-reference .occasion-ref-card>img {
   position:relative!important;inset:auto!important;display:block;width:100%!important;
-  height:auto!important;aspect-ratio:2/3;object-fit:contain!important;
-  object-position:center!important;background:#e9e6e2;transform:none!important;
+  height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;
+  object-position:center!important;background:transparent!important;transform:none!important;
   transition:opacity .35s ease!important;
 }
 body[data-page="home"] .occasion-reference .occasion-ref-card:is(:hover,:focus-visible)>img {opacity:.92}
@@ -126,7 +126,7 @@ body[data-page="home"] .home-service-card:is(:hover,:focus-visible) .home-servic
   body[data-page="home"] .occasion-reference .occasion-ref-grid .occasion-ref-card {
     aspect-ratio:auto!important;height:auto!important;flex:0 0 min(77vw,340px);
   }
-  body[data-page="home"] .occasion-reference .occasion-ref-card>img {height:auto!important;aspect-ratio:2/3!important;object-fit:contain!important}
+  body[data-page="home"] .occasion-reference .occasion-ref-card>img {height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;background:transparent!important}
   body[data-page="home"] .occasion-reference .occasion-ref-copy {margin-top:10px;padding:12px 0 2px}
   body[data-page="home"] .occasion-reference .occasion-ref-name strong {font-size:clamp(25px,6vw,32px)}
   body[data-page="home"] .occasion-reference .occasion-ref-name small {font-size:9px;letter-spacing:.1em}
@@ -188,8 +188,9 @@ body[data-page="home"] .home-service-card:is(:hover,:focus-visible) .home-servic
   body[data-page="home"] .occasion-reference .occasion-ref-card>img {
     width:100%!important;
     height:auto!important;
-    aspect-ratio:2/3!important;
+    aspect-ratio:auto!important;
     object-fit:contain!important;
+    background:transparent!important;
   }
   /* Mobile editorial captions match the supplied column-grid reference. */
   body[data-page="home"] .occasion-reference .occasion-ref-copy {
