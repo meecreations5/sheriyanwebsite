@@ -1,3 +1,7 @@
+## V1.18.13 - Editable Collections Showcase
+
+Page Manager > Collections now includes four editable fields for the dynamically inserted Our Collections showcase. Collection cards themselves remain controlled by the Collections module. See `UPDATE_V1_18_13_EDITABLE_COLLECTIONS_SHOWCASE.md`.
+
 # SHANERYN CMS V1.18.11 - Bespoke Page Recovery
 
 See `UPDATE_V1_18_11_BESPOKE_RECOVERY.md` for safe deployment and diagnosis of the Bespoke page server error.

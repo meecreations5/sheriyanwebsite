@@ -2174,6 +2174,42 @@
       "section": "dialogs",
       "tag": "p",
       "label": "p / The SHANERYN film will appear here once the approved video is available."
+    },
+    {
+      "id": "f00242",
+      "kind": "text",
+      "value": "CURATED BY SHANERYN",
+      "visible": true,
+      "section": "s-000",
+      "tag": "span",
+      "label": "Curated collections - Small heading"
+    },
+    {
+      "id": "f00243",
+      "kind": "text",
+      "value": "Our Collections.",
+      "visible": true,
+      "section": "s-000",
+      "tag": "h2",
+      "label": "Curated collections - Main heading"
+    },
+    {
+      "id": "f00244",
+      "kind": "text",
+      "value": "Explore considered edits for every occasion.",
+      "visible": true,
+      "section": "s-000",
+      "tag": "p",
+      "label": "Curated collections - Description"
+    },
+    {
+      "id": "f00245",
+      "kind": "text",
+      "value": "Explore edit ↗",
+      "visible": true,
+      "section": "s-000",
+      "tag": "small",
+      "label": "Curated collections - Collection link text"
     }
   ],
   "sections": [
