@@ -1,0 +1,11 @@
+/* SHANERYN V1.18.14: borderless overlapping editorial photos on the Bespoke page.
+ * This is scoped to the Bespoke introduction; other pages and components keep
+ * their approved styling and all section-order controls remain untouched.
+ * The server-rendered page wrapper avoids a border flash before hydration.
+ */
+.shaneryn-public-site[data-cms-page="bespoke"] .v63-bespoke-intro .bespoke-visual > img:not(.bespoke-inset),
+.shaneryn-public-site[data-cms-page="bespoke"] .v63-bespoke-intro .bespoke-visual > img.bespoke-inset {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}

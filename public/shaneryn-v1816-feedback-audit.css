@@ -1,0 +1,22 @@
+/* SHANERYN V1.18.16 — final look-details feedback corrections.
+   Target only the Look Details closing editorial block: the client-approved white
+   headline and white note need a deep background in both normal and inverse mode.
+   This does not change the text hierarchy, spacing, or any other page section. */
+.shaneryn-public-site[data-cms-page="look"] .ld-interlude {
+  background: #241e26;
+  color: #fff;
+}
+.shaneryn-public-site[data-cms-page="look"] .ld-interlude .ld-interlude-kicker {
+  color: #e4a9c9 !important;
+  font-style: normal;
+}
+.shaneryn-public-site[data-cms-page="look"] .ld-interlude .ld-interlude-headline,
+.shaneryn-public-site[data-cms-page="look"] .ld-interlude .ld-interlude-note {
+  color: #fff;
+  font-style: normal;
+}
+/* Compatibility safety for any cached or legacy Look Details markup.
+   The paragraph is also removed from the current CMS seed and server output. */
+.shaneryn-public-site[data-cms-page="look"] .ld-made .ld-measure-note {
+  display: none !important;
+}

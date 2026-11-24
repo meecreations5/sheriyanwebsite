@@ -70,7 +70,6 @@
    const valueStore=new Map(); // values in inches, per garment/SHANERYN look
    const options=()=>mode==='garment'?Object.keys(measures):looks.map(x=>x.title);
    const currentGroups=()=>mode==='garment'?measures[select.value]:looks.find(x=>x.title===select.value)?.measurementGroups;
-   const unit=()=>document.querySelector('input[name="measure-unit"]:checked')?.value||'in';
    const round1=n=>Math.round((n+Number.EPSILON)*10)/10;
    const scope=()=>mode+'::'+select.value+'::';
    function fields(){
@@ -78,18 +77,18 @@
      const groups=currentGroups()||{};
      fieldRoot.innerHTML=Object.entries(groups).map(([group,names])=>`<fieldset class="cv3-measure-group"><legend>${esc(group)}</legend><div class="cv3-measure-fields">${names.map(name=>{
        const key=group+' / '+name,stored=valueStore.get(scope()+key);
-       const value=stored==null?'':round1(unit()==='cm'?stored*2.54:stored);
+       const value=stored==null?'':round1(stored);
        const htmlId='meas-'+(mode+'-'+select.value+'-'+key).replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
-       return `<label for="${htmlId}">${esc(name)} <span>(${unit()})</span><input id="${htmlId}" name="${esc(key)}" data-measure-key="${esc(key)}" type="number" step="0.1" min="0.1" max="${unit()==='cm'?350:140}" inputmode="decimal" placeholder="Optional" value="${esc(value)}"></label>`;
+       return `<label for="${htmlId}">${esc(name)} <span>(in)</span><input id="${htmlId}" name="${esc(key)}" data-measure-key="${esc(key)}" type="number" step="0.1" min="0.1" max="140" inputmode="decimal" placeholder="Optional" value="${esc(value)}"></label>`;
      }).join('')}</div></fieldset>`).join('');
-     const status=$('#cv3-unit-hint');if(status)status.textContent='Enter measurements in '+(unit()==='cm'?'centimetres':'inches')+'. Values are converted when you switch units.';
+     const status=$('#cv3-unit-hint');if(status)status.textContent='Enter all measurements in inches (in).';
    }
    fieldRoot.addEventListener('input',event=>{
      const input=event.target.closest('input[data-measure-key]');if(!input)return;
      const key=scope()+input.dataset.measureKey;
      if(!input.value.trim()){valueStore.delete(key);return;}
      if(!input.checkValidity())return;
-     const n=Number(input.value);if(Number.isFinite(n)&&n>0)valueStore.set(key,unit()==='cm'?n/2.54:n);
+     const n=Number(input.value);if(Number.isFinite(n)&&n>0)valueStore.set(key,n);
    });
    function buildOptions(){
      const current=selectedByMode[mode];
@@ -104,15 +103,14 @@
      selectedByMode[mode]=select.value;mode=b.dataset.measureMode;buildOptions();
    }));
    select.addEventListener('change',()=>{selectedByMode[mode]=select.value;fields()});
-   all('input[name="measure-unit"]').forEach(b=>b.addEventListener('change',fields));
    form.addEventListener('submit',e=>{
      e.preventDefault();
      const inputs=all('input[data-measure-key]',fieldRoot);
      if(!form.checkValidity()){inputs.find(x=>!x.checkValidity())?.reportValidity();return;}
-     const lines=inputs.filter(x=>x.value.trim()).map(x=>`${x.dataset.measureKey}: ${x.value} ${unit()}`);
+     const lines=inputs.filter(x=>x.value.trim()).map(x=>`${x.dataset.measureKey}: ${x.value} in`);
      if(!lines.length){inputs[0]?.focus();const hint=$('#cv3-unit-hint');if(hint)hint.textContent='Enter at least one measurement before reviewing.';return;}
      const title=mode==='garment'?'Custom garment: ':'SHANERYN look: ';
-     $('#cv3-measure-summary').textContent=[title+select.value,'Measurements in '+(unit()==='in'?'inches':'centimetres'),'',...lines].join('\n');
+     $('#cv3-measure-summary').textContent=[title+select.value,'Measurements in inches','',...lines].join('\n');
      review.hidden=false;
      review.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});
    });

@@ -122,6 +122,7 @@ html[data-color-mode="inverse"] .hero::before {background:linear-gradient(90deg,
 .cv3-unit-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:24px 0;color:var(--ep-sub);font-size:11px;}
 .cv3-unit-row label{display:flex;align-items:center;gap:7px;cursor:pointer;}
 .cv3-unit-row input{accent-color:var(--ep-accent);}
+.cv3-unit-row strong{font:600 11px/1.5 var(--sans);letter-spacing:.12em;color:var(--ep-ink)}
 .cv3-measure-group{border:0;border-top:1px solid var(--ep-hair);padding:20px 0 25px;margin:0;min-width:0;}
 .cv3-measure-group legend{padding:0 10px 0 0;font:400 27px/1.2 var(--serif);color:var(--ep-ink);}
 .cv3-measure-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;}

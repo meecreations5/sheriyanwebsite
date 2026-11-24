@@ -1,12 +1,12 @@
 {
   "name": "shaneryn-cms",
-  "version": "1.18.13",
+  "version": "1.18.17",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "npm run check:seo && node tests/check-v117.mjs && node tests/test-cms-server-mock.mjs && node tests/test-v117-cms-users-only.mjs && node tests/test-v116-login-session.mjs && npm run check:media && node tests/test-product-image-publishing-v1184.mjs && node tests/test-home-collection-natural-height-v1185.mjs && node tests/test-optional-product-descriptions-v1186.mjs && node tests/test-product-description-order-v1187.mjs && node tests/test-related-looks-natural-height-v1188.mjs && node tests/test-look-editorial-v1189.mjs && node tests/test-v190-past-work-and-home.mjs && node tests/test-v1911-bespoke-resilience.mjs && node tests/test-v1912-section-reorder.mjs && node tests/test-v1913-curated-showcase-cms.mjs",
+    "check": "npm run check:seo && node tests/check-v117.mjs && node tests/test-cms-server-mock.mjs && node tests/test-v117-cms-users-only.mjs && node tests/test-v116-login-session.mjs && npm run check:media && node tests/test-product-image-publishing-v1184.mjs && node tests/test-home-collection-natural-height-v1185.mjs && node tests/test-optional-product-descriptions-v1186.mjs && node tests/test-product-description-order-v1187.mjs && node tests/test-related-looks-natural-height-v1188.mjs && node tests/test-look-editorial-v1189.mjs && node tests/test-v190-past-work-and-home.mjs && node tests/test-v1911-bespoke-resilience.mjs && node tests/test-v1912-section-reorder.mjs && node tests/test-v1913-curated-showcase-cms.mjs && node tests/test-v1914-bespoke-borderless.mjs && node tests/test-v1815-collection-prices.mjs && node tests/test-v1816-feedback-audit.mjs && node tests/test-v1817-inches-only.mjs",
     "check:urls": "node tests/check-public-routes.mjs",
     "check:cms": "npm run check",
     "check:seo": "node tests/test-seo-v118.mjs",

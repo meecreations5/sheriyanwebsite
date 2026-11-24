@@ -1,5 +1,6 @@
 /* SHANERYN Look Detail V4.5: five verified images + a muted motion-preview video per look.
-   No checkout, network form submission or persisted body measurements. */
+   No online checkout. Measurements reach the studio only after explicit submission;
+   they are not persisted to browser storage. */
 (() => {
   'use strict';
   if (document.body.dataset.page !== 'look') return;

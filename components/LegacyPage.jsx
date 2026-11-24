@@ -30,6 +30,9 @@ export default async function LegacyPage({slug,activeProductId=null,curatedColle
   {page.styles?.map((sheet,i)=><link rel="stylesheet" href={'/'+sheet} key={sheet+i}/>)}
   <link rel="stylesheet" href="/cms-bridges.css"/>
   {slug==='index'&&<link rel="stylesheet" href="/shaneryn-v190-refinements.css"/>}
+  {slug==='bespoke'&&<link rel="stylesheet" href="/shaneryn-v1914-bespoke-borderless.css"/>}
+  {(['collections','collection'].includes(slug))&&<link rel="stylesheet" href="/shaneryn-v1815-collection-prices.css"/>}
+  {slug==='look'&&<link rel="stylesheet" href="/shaneryn-v1816-feedback-audit.css"/>}
   <div className="shaneryn-public-site" data-cms-page={slug} dangerouslySetInnerHTML={{__html:markup}} suppressHydrationWarning/>
   <LegacyScripts {...clientProps}/>
  </>

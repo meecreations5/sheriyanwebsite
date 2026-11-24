@@ -1,0 +1,28 @@
+/* SHANERYN V1.18.15 — optional product prices on collection listing cards only. */
+body[data-page="collections"] .look-info p.catalogue-price {
+  margin: 8px 0 0;
+  font: 500 clamp(12px, 1.05vw, 14px)/1.45 var(--sans, sans-serif);
+  letter-spacing: .035em;
+  text-transform: none;
+  color: var(--ep-ink, #302631);
+}
+html[data-color-mode="inverse"] body[data-page="collections"] .look-info p.catalogue-price {
+  color: #f6eaf0;
+}
+body[data-page="collection-edit"] .ep-card-caption p.ep-card-price {
+  margin: 7px 0 0;
+  font: 500 clamp(12px, 1.05vw, 14px)/1.45 var(--sans, sans-serif);
+  letter-spacing: .035em;
+  text-transform: none;
+  color: var(--ep-ink, #302631);
+}
+html[data-color-mode="inverse"] body[data-page="collection-edit"] .ep-card-caption p.ep-card-price {
+  color: #f6eaf0;
+}
+@media(max-width:720px){
+  body[data-page="collections"] .look-info p.catalogue-price,
+  body[data-page="collection-edit"] .ep-card-caption p.ep-card-price {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}

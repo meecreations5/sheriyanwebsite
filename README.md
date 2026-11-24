@@ -1,3 +1,7 @@
+## V1.18.16 — Verified 14-Point Feedback Update
+
+Audited all 14 client requirements against V1.18.15; removed the leftover Measurements introduction, corrected Look Details closing contrast in light mode, and removed obsolete Colour Story template HTML. Existing sections, data and CMS controls remain intact. See `UPDATE_V1_18_16_FEEDBACK_VERIFICATION.md` for a numbered audit and verification limits.
+
 ## V1.18.13 - Editable Collections Showcase
 
 Page Manager > Collections now includes four editable fields for the dynamically inserted Our Collections showcase. Collection cards themselves remain controlled by the Collections module. See `UPDATE_V1_18_13_EDITABLE_COLLECTIONS_SHOWCASE.md`.
@@ -53,3 +57,6 @@ Homepage four-look cards now display studio photographs at their natural ratio w
 ## V1.18.12 - Bespoke section ordering correction
 
 Fixes the V1.18.11 server render error `TypeError: $(...).detach is not a function` by using Cheerio-compatible section removal and reinsertion. See `UPDATE_V1_18_12_SECTION_REORDER_FIX.md`.
+
+## V1.18.17 - Measurement units
+All public measurement forms use inches only. The Bespoke centimetre toggle and conversion path have been removed, including a render-time safeguard for previously published CMS pages. Product Look Details measurements and studio submission remain inches-only. See `UPDATE_V1_18_17_INCHES_ONLY.md`.

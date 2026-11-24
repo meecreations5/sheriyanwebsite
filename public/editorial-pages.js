@@ -17,7 +17,8 @@
  Object.assign(categories,window.SHANERYN_CATEGORIES||{});
  const saved = () => {try {const ids=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(ids)?ids:[]}catch{return []}};
  const escapeText = s => String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
- const card = p => `<article class="ep-card"><a href="${p.publicPath}" aria-label="Explore ${escapeText(p.title)}"><img loading="lazy" src="${escapeText(assetSrc(p.catalogueImg||p.img))}" alt="Full-length SHANERYN look: ${escapeText(p.title)}"></a><div class="ep-card-caption"><div><small>${escapeText(p.cat)}</small><h3><a href="${p.publicPath}">${escapeText(p.title)}</a></h3><p>${escapeText(p.id)}</p></div><a href="${p.publicPath}" aria-label="Look details">↗</a></div></article>`;
+ const priceLabel = value => {const raw=String(value ?? '').trim();if(!raw)return '';return /^(?:\d{1,3}(?:,\d{2,3})*|\d+)(?:\.\d{1,2})?$/.test(raw)?'₹'+Number(raw.replace(/,/g,'')).toLocaleString('en-IN',{maximumFractionDigits:2}):raw;};
+ const card = (p,showPrice=false) => `<article class="ep-card"><a href="${p.publicPath}" aria-label="Explore ${escapeText(p.title)}"><img loading="lazy" src="${escapeText(assetSrc(p.catalogueImg||p.img))}" alt="Full-length SHANERYN look: ${escapeText(p.title)}"></a><div class="ep-card-caption"><div><small>${escapeText(p.cat)}</small><h3><a href="${p.publicPath}">${escapeText(p.title)}</a></h3><p>${escapeText(p.id)}</p>${showPrice&&priceLabel(p.price)?`<p class="ep-card-price">${escapeText(priceLabel(p.price))}</p>`:''}</div><a href="${p.publicPath}" aria-label="Look details">↗</a></div></article>`;
  const params = new URLSearchParams(location.search);
  if ($('body[data-page="look"]')) {
   const id = window.SHANERYN_ACTIVE_LOOK_ID || params.get('id') || looks[0]?.id;
@@ -42,7 +43,7 @@
   const group=looks.filter(p=>p.cat===category);
   $('#edit-count').textContent=`${group.length.toString().padStart(2,'0')} ${group.length===1?'look':'looks'}`;
   const request=$('#v49-category-request');if(request)request.href='contact.html?interest=Collections&look='+encodeURIComponent(category);
-  $('#edit-grid-title').textContent='The '+category+' edit.';$('#edit-look-grid').innerHTML=group.length?group.map(card).join(''):'<div class="cv3-empty-category"><span>THE CATEGORY EDIT</span><h3>Collection coming soon.</h3><p>Final garment photography and styles for this category will be added after approval. In the meantime, explore the full lookbook or discuss a personalised design.</p><a class="ep-text-link" href="bespoke.html">Discover bespoke ↗</a></div>';
+  $('#edit-grid-title').textContent='The '+category+' edit.';$('#edit-look-grid').innerHTML=group.length?group.map(p=>card(p,true)).join(''):'<div class="cv3-empty-category"><span>THE CATEGORY EDIT</span><h3>Collection coming soon.</h3><p>Final garment photography and styles for this category will be added after approval. In the meantime, explore the full lookbook or discuss a personalised design.</p><a class="ep-text-link" href="bespoke.html">Discover bespoke ↗</a></div>';
   document.title='SHANERYN | '+category;
  }
  const form=$('#ep-contact-form');
