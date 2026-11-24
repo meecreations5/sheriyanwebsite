@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {read,renderInfo,mockDom} from './look-info-mock.mjs';
+const product={id:'SH-STARLIGHT',title:'Starlight',cat:'Skirt Sets',tagline:'Where Paris meets the dhoti',description:'Existing overview',price:'17,000',productDetails:{fabric:[{garment:'Top',description:'Silk'}],occasions:['Brunches']}};
+const dom=mockDom();renderInfo(dom.$,{slug:'look'},[product],product.id);
+const info=dom.events.find(e=>e.type==='before'&&e.selector==='.ld-actions');
+assert.ok(info,'Description must render before purchase actions');
+assert.match(info.value,/FABRIC/);
+assert.match(info.value,/OCCASION/);
+assert.ok(dom.events.some(e=>e.type==='remove'&&e.selector==='.ld-colour'),'Colour Story should be removed');
+assert.ok(dom.events.some(e=>e.type==='before'&&e.selector==='.ld-title-wrap h1'),'Tagline sits above title');
+assert.ok(dom.events.some(e=>e.type==='after'&&e.selector==='.ld-title-wrap h1'),'Category sits below title');
+assert.ok(dom.events.some(e=>e.type==='remove'&&e.selector==='.ld-accordions'),'Duplicate legacy details should be removed');
+const seed=JSON.parse(read('data/seed/pages/look.json'));
+assert.match(seed.bodyHtml,/id="detail-enquire"/);
+assert.match(seed.bodyHtml,/id="detail-save"/);
+assert.match(seed.bodyHtml,/class="ld-made"/);
+console.log('PASS V1.18.7 compatible: product description before buying, no duplicate details and existing actions retained');

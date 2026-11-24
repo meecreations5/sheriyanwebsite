@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {withBespokeReadFallback,withBespokeRenderFallback} from '../lib/bespoke-resilience.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+let calls=0;
+assert.deepEqual(await withBespokeReadFallback('bespoke',async()=>['published'],()=>{calls++;return ['seed']}),['published']);
+assert.equal(calls,0,'fallback must not run for healthy CMS data');
+const originalError=console.error;
+const logs=[];
+console.error=(...args)=>logs.push(args);
+try{
+ assert.deepEqual(await withBespokeReadFallback('bespoke',async()=>{throw Error('blocked firestore read')},()=>{calls++;return ['seed']}),['seed']);
+ assert.equal(calls,1);
+ assert.equal(withBespokeRenderFallback('bespoke',()=>{throw Error('bad gallery')},()=>'<main>available</main>'),'<main>available</main>');
+ assert.equal(withBespokeRenderFallback('bespoke',()=>'<main>published</main>',()=>'<main>seed</main>'),'<main>published</main>');
+ await assert.rejects(()=>withBespokeReadFallback('collections',async()=>{throw Error('unrelated failure')},()=>['seed']),/unrelated failure/);
+ assert.throws(()=>withBespokeRenderFallback('index',()=>{throw Error('unrelated render failure')},()=>''),/unrelated render failure/);
+}finally{console.error=originalError}
+assert.ok(logs.some(x=>String(x[0]).includes('BESPOKE_CMS_READ')));
+assert.ok(logs.some(x=>String(x[0]).includes('BESPOKE_RENDER')));
+const page=readFileSync(path.join(root,'components/LegacyPage.jsx'),'utf8');
+const markup=readFileSync(path.join(root,'lib/render-page.js'),'utf8');
+const route=readFileSync(path.join(root,'app/[slug]/page.js'),'utf8');
+assert.ok(page.includes('withBespokeReadFallback')&&page.includes('withBespokeRenderFallback'));
+assert.match(route,/generateMetadata/);
+assert.match(route,/withBespokeReadFallback/);
+assert.match(route,/pageSeed\('bespoke'\),seedSettings\(\)/);
+assert.match(markup,/\[SHANERYN\]\[BESPOKE_PAST_WORK_GALLERY\]/);
+assert.match(markup,/if\(page\.slug!==.bespoke.\)return;/);
+assert.match(markup,/grid\.append\(`/);
+console.log('PASS V1.18.11: Bespoke CMS/metadata fallback, page render fallback, safe gallery error handling, and unrelated routes unaffected');

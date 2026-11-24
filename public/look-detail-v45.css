@@ -77,8 +77,13 @@ body[data-page="look"] .ld-detail-inner{max-width:720px;padding:29px clamp(22px,
 .ld-interlude h2{font:400 clamp(44px,5vw,75px)/1.03 var(--serif);margin:15px auto 12px;max-width:880px;}
 .ld-interlude h2 em{color:var(--ep-accent);font-weight:400;}
 .ld-interlude p{font:400 12px/1.8 var(--sans);color:var(--ep-sub);}
-body[data-page="look"] .ep-related-grid .ep-card>a{height:auto;aspect-ratio:unset;background:var(--ep-quiet);}
-body[data-page="look"] .ep-related-grid .ep-card img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain;}
+/* V1.18.8: Related-look photographs use their original proportions.
+   Do not stretch cards into a fixed 2:3 frame: this caused dark bands
+   beneath CMS photographs with a different aspect ratio. */
+body[data-page="look"] .ep-related-grid{align-items:start;}
+body[data-page="look"] .ep-related-grid .ep-card{align-self:start;height:auto;min-height:0;}
+body[data-page="look"] .ep-related-grid .ep-card>a:first-child{display:block;height:auto;min-height:0;aspect-ratio:auto;background:transparent;line-height:0;}
+body[data-page="look"] .ep-related-grid .ep-card>a:first-child img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center top;}
 /* Large-image lightbox with keyboard navigation. */
 .ld-zoom{position:fixed;margin:auto;border:0;width:min(1200px,98vw);max-height:96dvh;height:96dvh;padding:14px 22px;background:#17131a;color:#fff;box-shadow:0 25px 100px #0008;}
 .ld-zoom::backdrop{background:rgba(13,10,15,.92);}
@@ -114,7 +119,8 @@ body[data-page="look"] .ep-related-grid .ep-card img{width:100%;height:auto;aspe
 body[data-page="look"] .ld-product-price{display:flex;align-items:baseline;gap:13px;margin:0 0 19px;font:400 12px/1.6 var(--sans);color:var(--ep-ink)}
 body[data-page="look"] .ld-product-price span{font:600 9px/1.5 var(--sans);letter-spacing:.14em;color:var(--ep-sub)}
 body[data-page="look"] .ld-product-price strong{font-size:13px;font-weight:500}
-body[data-page="look"] .ld-product-information{margin:24px 0 7px;border-top:1px solid var(--ep-hair)}
+body[data-page="look"] .ld-product-information{margin:22px 0 0;border-top:1px solid var(--ep-hair)}
+body[data-page="look"] .ld-product-information + .ld-colour{border-top:0;padding-top:21px}
 body[data-page="look"] .ld-product-detail-block{border-bottom:1px solid var(--ep-hair);padding:0;margin:0}
 body[data-page="look"] .ld-product-detail-block>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 0;color:var(--ep-ink);font:600 10px/1.5 var(--sans);letter-spacing:.11em}
 body[data-page="look"] .ld-product-detail-block>summary::-webkit-details-marker{display:none}
@@ -126,3 +132,31 @@ body[data-page="look"] .ld-product-detail-entry+ .ld-product-detail-entry{margin
 body[data-page="look"] .ld-product-detail-entry h3{margin:0 0 5px;color:var(--ep-ink);font:500 12px/1.5 var(--sans)}
 body[data-page="look"] .ld-product-detail-body p{margin:0;white-space:normal}
 @media(max-width:850px){body[data-page="look"] .ld-product-information{margin-top:21px}body[data-page="look"] .ld-product-detail-block>summary{font-size:11px;padding:18px 0}body[data-page="look"] .ld-product-detail-body{font-size:13px;line-height:1.75}}
+
+/* V1.18.9: SHANERYN Starlight editorial review - applies to all Look Details. */
+body[data-page="look"] .ld-title-wrap .ld-small-tagline{display:block;margin:0 0 14px;color:var(--ep-accent);font:600 11px/1.6 var(--sans);letter-spacing:.14em;text-transform:none;}
+body[data-page="look"] .ld-title-wrap .ld-look-category{margin:2px 0 0;color:var(--ep-sub);font:400 15px/1.5 var(--sans);letter-spacing:.015em;}
+body[data-page="look"] .ld-look-category #detail-category{font-weight:400;color:inherit;}
+body[data-page="look"] .ld-spec-line{grid-template-columns:minmax(0,1fr);}
+body[data-page="look"] .ld-product-price{gap:18px;margin:8px 0 23px;align-items:baseline;}
+body[data-page="look"] .ld-product-price strong{font:500 clamp(22px,2vw,29px)/1.2 var(--sans);color:var(--ep-ink);}
+body[data-page="look"] .ld-product-price span{font-size:11px;}
+body[data-page="look"] .ld-product-information{margin-top:21px;border-top:1px solid var(--ep-hair);}
+body[data-page="look"] .ld-made .ld-field-top strong{font-size:12px;}
+body[data-page="look"] .ld-measure-contact{margin:12px 0 16px;}
+body[data-page="look"] .ld-measure-contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+body[data-page="look"] .ld-measure-contact-grid label{display:flex;flex-direction:column;gap:7px;color:var(--ep-sub);font:500 11px/1.5 var(--sans);}
+body[data-page="look"] .ld-measure-contact-grid input{min-width:0;width:100%;padding:12px 10px;border:1px solid var(--ep-hair);border-radius:0;background:var(--ep-bg);color:var(--ep-ink);font:400 13px/1.4 var(--sans);}
+body[data-page="look"] .ld-measure-contact-grid input:focus-visible{outline:2px solid var(--ep-accent);outline-offset:1px;}
+body[data-page="look"] .ld-measure-contact-note{font:400 10px/1.6 var(--sans);color:var(--ep-sub);margin:9px 0 0;}
+body[data-page="look"] .ld-interlude-kicker{display:block;color:#e4a9c9!important;font:600 12px/1.5 var(--sans);letter-spacing:.15em;text-transform:none;}
+body[data-page="look"] .ld-interlude h2.ld-interlude-headline{color:#fff;font:400 clamp(44px,5.3vw,82px)/1.06 var(--serif);letter-spacing:-.03em;max-width:1050px;margin:18px auto 17px;}
+body[data-page="look"] .ld-interlude p.ld-interlude-note{color:#fff;font:400 15px/1.6 var(--sans);letter-spacing:.02em;}
+@media(max-width:850px){
+ body[data-page="look"] .ld-title-wrap .ld-small-tagline{font-size:12px;letter-spacing:.12em;margin-bottom:15px;}
+ body[data-page="look"] .ld-title-wrap .ld-look-category{font-size:15px;}
+ body[data-page="look"] .ld-product-price strong{font-size:26px;}
+ body[data-page="look"] .ld-measure-contact-grid{grid-template-columns:minmax(0,1fr);}
+ body[data-page="look"] .ld-interlude h2.ld-interlude-headline{font-size:clamp(40px,9vw,58px);}
+ body[data-page="look"] .ld-interlude p.ld-interlude-note{font-size:13px;}
+}

@@ -1,13 +1,17 @@
 import {notFound, redirect, permanentRedirect} from 'next/navigation';
 import LegacyPage from '@/components/LegacyPage';
-import {loadPage, loadSettings, loadProducts} from '@/lib/cms-data';
+import {loadPage, loadSettings, loadProducts, pageSeed, seedSettings} from '@/lib/cms-data';
+import {withBespokeReadFallback} from '@/lib/bespoke-resilience.mjs';
 import {buildPublicMetadata} from '@/lib/seo-utils';
 import {findProductByLegacyId, productPath} from '@/lib/product-paths';
 export const dynamic = 'force-dynamic';
 export async function generateMetadata({params}) {
   const {slug} = await params;
   if (!/^[a-z0-9-]+$/.test(slug || '')) return {robots:{index:false,follow:false}};
-  const [page, settings] = await Promise.all([loadPage(slug),loadSettings()]);
+  const [page, settings] = await withBespokeReadFallback(slug,
+    ()=>Promise.all([loadPage(slug),loadSettings()]),
+    ()=>[pageSeed('bespoke'),seedSettings()]
+  );
   if (!page || page.visible === false) return {robots:{index:false,follow:false}};
   // The legacy generic shells are not individual product/collection landing pages.
   const index = !['look','collection'].includes(slug);

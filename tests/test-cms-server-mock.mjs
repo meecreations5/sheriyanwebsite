@@ -7,6 +7,7 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {passwordHash,passwordVerify,normalizeUsername,validUsername,validPassword} from '../lib/cms-password.mjs';
 import {normalizeProductDetails} from '../lib/product-details.mjs';
+import {upgradeLookEditorialPatches} from '../lib/look-editorial-defaults.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const docs=new Map();
 class Ref{
@@ -30,7 +31,7 @@ const FieldValue={serverTimestamp:()=>({__timestamp:true}),increment:x=>({__incr
 let source=fs.readFileSync(path.join(ROOT,'lib/cms-server-api.js'),'utf8').replace(/^import .*?;\s*$/gm,'');
 source=source.replace('export async function cmsServerApi','async function cmsServerApi')+'\n globalThis.exportedCmsApi=cmsServerApi;';
 const seedFile=name=>JSON.parse(fs.readFileSync(path.join(ROOT,'data/seed',name),'utf8'));
-const sandbox={adminDb:()=>db,FieldValue,seedProducts:()=>seedFile('products.json'),seedCategories:()=>seedFile('categories.json'),seedForms:()=>seedFile('forms.json'),seedSettings:()=>seedFile('settings.json'),pageSeed:slug=>seedFile('pages/'+slug+'.json'),pageManifest:()=>seedFile('manifest.json'),productSlug:x=>x.slug||x.id,normalizeUsername,validUsername,passwordHash,validPassword,normalizeProductDetails,crypto:globalThis.crypto,URL,Buffer,console,structuredClone};
+const sandbox={adminDb:()=>db,FieldValue,seedProducts:()=>seedFile('products.json'),seedCategories:()=>seedFile('categories.json'),seedForms:()=>seedFile('forms.json'),seedSettings:()=>seedFile('settings.json'),pageSeed:slug=>seedFile('pages/'+slug+'.json'),pageManifest:()=>seedFile('manifest.json'),productSlug:x=>x.slug||x.id,normalizeUsername,validUsername,passwordHash,validPassword,normalizeProductDetails,upgradeLookEditorialPatches,crypto:globalThis.crypto,URL,Buffer,console,structuredClone};
 vm.runInNewContext(source,sandbox,{filename:'cms-server-api.js'});
 const api=sandbox.exportedCmsApi;
 const owner={id:'owner',username:'owner',role:'super_admin',active:true};

@@ -26,7 +26,7 @@
     'SH-DAWNDUSK':'#4f211f','SH-URASHIMA':'#17151a','SH-LOZEN':'#322fb0',
     'SH-BELLONA':'#b87f91','SH-BLAZE':'#af006a'
   };
-  $('#ld-colour-dot').style.background = colour[look.id] || '#bcaabb';
+  const colourDot=$('#ld-colour-dot');if(colourDot)colourDot.style.background = colour[look.id] || '#bcaabb';
   const images = media.images;
   const extractYoutube = input=>{
     try{const u=new URL(input);if(u.protocol!=='https:')return '';
@@ -108,20 +108,17 @@
     measureToggle.setAttribute('aria-expanded',String(!expanded));measurePanel.hidden=expanded;
   });
   const groups=look.measurementGroups||{},fields=$('#ld-measure-fields');
-  // Values are held in memory only, in inches. Changing the displayed unit does
-  // not change a measurement's physical meaning or create rounding drift.
+  // Measurements remain in inches only. Never store values in browser storage.
   const canonicalInches=new Map();
-  const unit=()=>document.querySelector('input[name="ld-unit"]:checked')?.value||'in';
-  const unitName=()=>unit()==='in'?'in':'cm';
+  const unitName=()=> 'in';
   const round1=n=>Math.round((n+Number.EPSILON)*10)/10;
   function renderMeasures(){
     fields.innerHTML=Object.entries(groups).map(([group,names])=>`<fieldset class="ld-measure-fields-group"><legend>${esc(group)}</legend><div class="ld-measure-fields-grid">${names.map(name=>{
       const key=group+' / '+name;
       const base=canonicalInches.get(key);
-      const value=base==null?'':round1(unit()==='cm'?base*2.54:base);
-      return `<label>${esc(name)} (${unitName()}) <input type="number" inputmode="decimal" min="0.1" max="${unit()==='cm'?350:140}" step="0.1" data-ld-measure="${esc(key)}" value="${esc(value)}" placeholder="Optional" /></label>`;
+      return `<label>${esc(name)} (in) <input type="number" inputmode="decimal" min="0.1" max="140" step="0.1" data-ld-measure="${esc(key)}" value="${esc(base==null?'':round1(base))}" placeholder="Optional" /></label>`;
     }).join('')}</div></fieldset>`).join('');
-    $('#ld-measure-status').textContent=canonicalInches.size?'Values converted to '+(unit()==='cm'?'centimetres':'inches')+'.':'';
+    $('#ld-measure-status').textContent='';
   }
   fields.addEventListener('input',event=>{
     const input=event.target.closest('[data-ld-measure]');
@@ -129,32 +126,43 @@
     if(!input.value.trim()){canonicalInches.delete(input.dataset.ldMeasure);return;}
     if(!input.checkValidity())return;
     const value=Number(input.value);if(!Number.isFinite(value)||value<=0)return;
-    canonicalInches.set(input.dataset.ldMeasure,unit()==='cm'?value/2.54:value);
+    canonicalInches.set(input.dataset.ldMeasure,value);
   });
   renderMeasures();
-  $$('input[name="ld-unit"]').forEach(r=>r.addEventListener('change',renderMeasures));
-  // A temporary, one-use enquiry handoff is handled by ux-v48.js; no
-  // body measurements are placed in a URL or permanently saved.
   window.SHANERYN_V48_LOOK_MEASUREMENTS=()=>{
     const values=[];
     $$('input[data-ld-measure]',fields).forEach(input=>{
       if(!input.value.trim()||!input.checkValidity())return;
-      values.push(input.dataset.ldMeasure+': '+input.value+' '+unitName());
+      values.push(input.dataset.ldMeasure+': '+input.value+' in');
     });
     return values;
   };
-  $('#ld-enquire-measures')?.addEventListener('click',()=>{
+  $('#ld-enquire-measures')?.addEventListener('click',async()=>{
     const values=window.SHANERYN_V48_LOOK_MEASUREMENTS?.()||[];
     const status=$('#ld-measure-status');
-    if(!values.length){
-      if(status)status.textContent='Add at least one valid measurement to prepare an enquiry.';
-      fields.querySelector('input[data-ld-measure]')?.focus();
-      return;
+    const name=$('#ld-customer-name')?.value.trim()||'';
+    const email=$('#ld-customer-email')?.value.trim()||'';
+    const phone=$('#ld-customer-phone')?.value.trim()||'';
+    if(!values.length){status.textContent='Please enter at least one valid measurement in inches.';fields.querySelector('input[data-ld-measure]')?.focus();return;}
+    if(name.length<2){status.textContent='Please enter your name.';$('#ld-customer-name')?.focus();return;}
+    if(!$('#ld-customer-email')?.checkValidity()||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
+      status.textContent='Please enter a valid email address.';$('#ld-customer-email')?.focus();return;
     }
-    const summary=['SHANERYN / '+look.title+' ('+look.id+')','Personal measurements ('+unitName()+'):',...values].join('\n');
-    try{sessionStorage.setItem('shaneryn_v51_bespoke_once',JSON.stringify({time:Date.now(),summary}));}
-    catch{if(status)status.textContent='Your browser could not carry the notes. Copy them first to include in your enquiry.';return;}
-    window.location.href='contact.html?'+new URLSearchParams({interest:'Bespoke / Customisation',look:look.id}).toString();
+    const button=$('#ld-enquire-measures');
+    if(button.disabled)return;
+    button.disabled=true;
+    status.textContent='Submitting your measurements securely...';
+    try{
+      const message=['Measurements for '+look.title+' ('+look.id+')','Units: inches',...values].join('\n').slice(0,1600);
+      const response=await fetch('/api/requests',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({kind:'enquiry',source:location.pathname,fields:{name,email,phone,look:look.id,message,measurementSummary:values.join(' | ').slice(0,1600)}})
+      });
+      const data=await response.json().catch(()=>({}));
+      if(!response.ok||!data.ok)throw Error(data.error||'Unable to submit measurements. Please try again.');
+      status.textContent='Measurements submitted. Reference: '+data.reference+'. SHANERYN will contact you.';
+      document.dispatchEvent(new CustomEvent('shaneryn:request-sent',{detail:{kind:'enquiry'}}));
+    }catch(error){button.disabled=false;status.textContent=error.message||'Unable to submit measurements. Please try again.';}
   });
   $('#ld-copy-measures').addEventListener('click',async()=>{
     const values=$$('input[data-ld-measure]',fields).filter(x=>x.value.trim()).map(x=>x.dataset.ldMeasure+': '+x.value+' '+unitName());

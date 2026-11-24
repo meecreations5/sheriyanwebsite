@@ -24,7 +24,7 @@
   const p = looks.find(x=>x.id===id) || looks[0];
   if (p) {
    $('#detail-title').textContent=p.title;$('#detail-breadcrumb').textContent=p.id;
-   $('#detail-category').textContent=p.cat;$('#detail-code').textContent=p.id;$('#detail-tone').textContent=p.tone||'On request';
+   $('#detail-category').textContent=p.cat;$('#detail-code').textContent=p.id;const tone=$('#detail-tone');if(tone)tone.textContent=p.tone||'On request';
    $('#detail-image').src=assetSrc(p.img);$('#detail-image').alt='Illustrative preview: '+p.title;
    $('#detail-crop').src=assetSrc(p.img);$('#detail-crop').alt='Editorial crop of '+p.title;
    $('#detail-enquire').href='contact.html?look='+encodeURIComponent(p.id)+'&interest='+encodeURIComponent('Look Details');

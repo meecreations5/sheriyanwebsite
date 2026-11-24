@@ -14,7 +14,10 @@
   const viewer=document.getElementById('v63-work-dialog');
   const image=document.getElementById('v63-work-expanded');
   const count=document.getElementById('v63-work-count');
-  const buttons=Array.from(document.querySelectorAll('[data-work-index]'));
+  const buttons=Array.from(document.querySelectorAll('#past-work .v63-work-item')).filter(button=>{
+    const photo=button.querySelector('img');
+    return photo&&button.getAttribute('aria-hidden')!=='true'&&photo.getAttribute('aria-hidden')!=='true'&&getComputedStyle(button).display!=='none';
+  });
   if(!viewer||!image||!count||!buttons.length)return;
   let current=0,lastFocus=null;
   function show(index){

@@ -1,3 +1,13 @@
+# SHANERYN CMS V1.18.11 - Bespoke Page Recovery
+
+See `UPDATE_V1_18_11_BESPOKE_RECOVERY.md` for safe deployment and diagnosis of the Bespoke page server error.
+
+**Latest update: V1.18.10 — Add More Past Work photos in CMS and remove Homepage image borders/slanted pink label.** See `UPDATE_V1_18_10_PAST_WORK_AND_HOME.md`.
+
+## Latest update: V1.18.9 - Look Details editorial and measurement flow
+
+See `UPDATE_V1_18_9_LOOK_DETAILS_EDITORIAL.md` for the revised product hierarchy, optional garment information, inch-only measurements and secure direct submission, and the three-line SHANERYN closing statement.
+
 ## Latest update: V1.18.6 - optional, structured product descriptions
 
 Admin > Products & Looks > Descriptions now supports optional tagline, short introduction, display-only price, repeatable garment-level Fabric and Design descriptions, Embroidery & Detailing and a detailed Occasion list. Only non-empty sections appear on the public Look Details page. The existing catalogue Occasion filter remains independent. See `UPDATE_V1_18_6_OPTIONAL_PRODUCT_DETAILS.md` and `docs/PRODUCT_DESCRIPTION_QUICK_GUIDE.md`.
@@ -35,3 +45,7 @@ Media controls show recommended image/video dimensions and formats. The public d
 
 ## V1.18.5 homepage collection image sizing
 Homepage four-look cards now display studio photographs at their natural ratio without white letterbox bars. See `UPDATE_V1_18_5_IMAGE_BAND_FIX.md`.
+
+## V1.18.12 - Bespoke section ordering correction
+
+Fixes the V1.18.11 server render error `TypeError: $(...).detach is not a function` by using Cheerio-compatible section removal and reinsertion. See `UPDATE_V1_18_12_SECTION_REORDER_FIX.md`.
