@@ -22,6 +22,7 @@ export async function POST(request){
   if(kind==='enquiry'&&message.length<3)return send({error:'Please enter a short message'},400);
   if(kind==='appointment'&&(!f.date||!f.time||!f.service||!f.mode||!f.timezone))return send({error:'Please provide appointment preferences'},400);
   if(kind==='appointment'&&cut(f.date,10)<new Date().toISOString().slice(0,10))return send({error:'Please select a future date'},400);
+  if(kind==='appointment'&&/colou?r analysis/i.test(cut(f.service,100))&&!/studio/i.test(cut(f.mode,100)))return send({error:'Color Analysis appointments are available in the studio only'},400);
   const source=cut(input.source,500);if(!source.startsWith('/'))return send({error:'Invalid page'},400);
   const ip=cut(request.headers.get('x-forwarded-for')?.split(',')[0]||request.headers.get('x-real-ip')||'unknown',120);
   if(!permitted(ip))return send({error:'Too many requests; try again later'},429);

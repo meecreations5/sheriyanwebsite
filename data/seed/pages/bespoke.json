@@ -3983,6 +3983,249 @@
    "section": "dialogs",
    "tag": "p",
    "label": "p / The SHANERYN film will appear here once the approved video is available."
+  },
+  {
+   "id": "f119-bespoke-ways-title",
+   "kind": "text",
+   "value": "Two Ways to Work With Us",
+   "visible": true,
+   "section": "s-000",
+   "tag": "h2",
+   "label": "Bespoke: Two ways to work with us heading"
+  },
+  {
+   "id": "f119-studio-step-1-title",
+   "kind": "text",
+   "value": "Book an appointment",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 1 heading"
+  },
+  {
+   "id": "f119-studio-step-1-description",
+   "kind": "text",
+   "value": "Choose a time that suits you.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 1 description"
+  },
+  {
+   "id": "f119-studio-step-2-title",
+   "kind": "text",
+   "value": "Consultation",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 2 heading"
+  },
+  {
+   "id": "f119-studio-step-2-description",
+   "kind": "text",
+   "value": "Share your occasion, ideas and inspiration with our designer.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 2 description"
+  },
+  {
+   "id": "f119-studio-step-3-title",
+   "kind": "text",
+   "value": "Measurements",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 3 heading"
+  },
+  {
+   "id": "f119-studio-step-3-description",
+   "kind": "text",
+   "value": "We take your measurements in person for a precise fit.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 3 description"
+  },
+  {
+   "id": "f119-studio-step-4-title",
+   "kind": "text",
+   "value": "Fabric & design",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 4 heading"
+  },
+  {
+   "id": "f119-studio-step-4-description",
+   "kind": "text",
+   "value": "Select fabrics, embellishments and finishes in the studio.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 4 description"
+  },
+  {
+   "id": "f119-studio-step-5-title",
+   "kind": "text",
+   "value": "Fittings",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 5 heading"
+  },
+  {
+   "id": "f119-studio-step-5-description",
+   "kind": "text",
+   "value": "Try on your piece and fine-tune it until it feels just right.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 5 description"
+  },
+  {
+   "id": "f119-studio-step-6-title",
+   "kind": "text",
+   "value": "Collection",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 6 heading"
+  },
+  {
+   "id": "f119-studio-step-6-description",
+   "kind": "text",
+   "value": "Pick up your finished piece from the studio.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Studio Bespoke: step 6 description"
+  },
+  {
+   "id": "f119-online-step-1-title",
+   "kind": "text",
+   "value": "Send an enquiry",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 1 heading"
+  },
+  {
+   "id": "f119-online-step-1-description",
+   "kind": "text",
+   "value": "Tell us about your occasion and what you have in mind.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 1 description"
+  },
+  {
+   "id": "f119-online-step-2-title",
+   "kind": "text",
+   "value": "Virtual consultation",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 2 heading"
+  },
+  {
+   "id": "f119-online-step-2-description",
+   "kind": "text",
+   "value": "Meet our designer over a video call.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 2 description"
+  },
+  {
+   "id": "f119-online-step-3-title",
+   "kind": "text",
+   "value": "Measurements",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 3 heading"
+  },
+  {
+   "id": "f119-online-step-3-description",
+   "kind": "text",
+   "value": "We guide you step by step to take your measurements at home.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 3 description"
+  },
+  {
+   "id": "f119-online-step-4-title",
+   "kind": "text",
+   "value": "Design approval",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 4 heading"
+  },
+  {
+   "id": "f119-online-step-4-description",
+   "kind": "text",
+   "value": "We share sketches, fabric swatches and details for your approval.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 4 description"
+  },
+  {
+   "id": "f119-online-step-5-title",
+   "kind": "text",
+   "value": "Crafting",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 5 heading"
+  },
+  {
+   "id": "f119-online-step-5-description",
+   "kind": "text",
+   "value": "Your piece is made in our atelier.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 5 description"
+  },
+  {
+   "id": "f119-online-step-6-title",
+   "kind": "text",
+   "value": "Delivery",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 6 heading"
+  },
+  {
+   "id": "f119-online-step-6-description",
+   "kind": "text",
+   "value": "Your finished piece is shipped to your door.",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke: step 6 description"
+  },
+  {
+   "id": "f119-studio-button",
+   "kind": "text",
+   "value": "Book a Studio Appointment ↗",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "In-Studio Bespoke button"
+  },
+  {
+   "id": "f119-online-button",
+   "kind": "text",
+   "value": "Enquire for Online Bespoke ↗",
+   "visible": true,
+   "section": "s-004",
+   "tag": "span",
+   "label": "Online Bespoke button"
   }
  ],
  "sections": [
@@ -4016,6 +4259,22 @@
    "visible": true,
    "order": 3,
    "originalId": "past-work",
+   "parent": false
+  },
+  {
+   "id": "s-004",
+   "title": "Two Ways to Work With Us",
+   "visible": true,
+   "order": 1,
+   "originalId": "ways-to-work",
+   "parent": false
+  },
+  {
+   "id": "s-005",
+   "title": "Book Your Appointment",
+   "visible": true,
+   "order": 5,
+   "originalId": "book-appointment",
    "parent": false
   }
  ],

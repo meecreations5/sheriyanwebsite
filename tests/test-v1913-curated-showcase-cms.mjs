@@ -53,7 +53,7 @@ assert.match(original,/CURATED BY SHANERYN/);
 assert.match(original,/Our Collections\./);
 assert.match(original,/Explore considered edits for every occasion/);
 assert.match(original,/THE CURVE EDIT/);
-assert.match(original,/Explore edit ↗/);
+assert.match(original,/Explore All Looks ↗/);
 assert.match(original,/href="\/collections\/the-curve-edit"/);
 const updated=exampleRenderer(collections,{
  f00242:{value:'CELEBRATE THE CURVE',visible:true},

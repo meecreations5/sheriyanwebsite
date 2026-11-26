@@ -61,7 +61,9 @@
     ],
     "video": "assets/product-detail/sunshine/motion-preview.mp4",
     "seoTitle": "Sunshine | SHANERYN",
-    "seoDescription": "A confident top-and-trouser pairing made for joyful entrances and memorable days."
+    "seoDescription": "A confident top-and-trouser pairing made for joyful entrances and memorable days.",
+    "styleNumber": "SH 001",
+    "accessories": []
   },
   {
     "id": "SH-STARLIGHT",
@@ -124,7 +126,9 @@
     ],
     "video": "assets/product-detail/starlight/motion-preview.mp4",
     "seoTitle": "Starlight | SHANERYN",
-    "seoDescription": "A modern interpretation of occasion dressing, with an expressive top and draped dhoti skirt."
+    "seoDescription": "A modern interpretation of occasion dressing, with an expressive top and draped dhoti skirt.",
+    "styleNumber": "SH 002",
+    "accessories": []
   },
   {
     "id": "SH-FIREHEART",
@@ -188,7 +192,9 @@
     ],
     "video": "assets/product-detail/fire-and-heart/motion-preview.mp4",
     "seoTitle": "Fire & Heart | SHANERYN",
-    "seoDescription": "An assured statement in contrast and layered volume, styled as a top and skirt."
+    "seoDescription": "An assured statement in contrast and layered volume, styled as a top and skirt.",
+    "styleNumber": "SH 008",
+    "accessories": []
   },
   {
     "id": "SH-DAWNDUSK",
@@ -251,7 +257,9 @@
     ],
     "video": "assets/product-detail/dawn-and-dusk/motion-preview.mp4",
     "seoTitle": "Dawn & Dusk | SHANERYN",
-    "seoDescription": "Rich movement and soft layers bring a romantic spirit to this top-and-skirt look."
+    "seoDescription": "Rich movement and soft layers bring a romantic spirit to this top-and-skirt look.",
+    "styleNumber": "SH 006",
+    "accessories": []
   },
   {
     "id": "SH-URASHIMA",
@@ -315,7 +323,9 @@
     ],
     "video": "assets/product-detail/urashima-taro/motion-preview.mp4",
     "seoTitle": "Urashima Taro | SHANERYN",
-    "seoDescription": "A fluid black top-and-pant ensemble with expressive sheer volume."
+    "seoDescription": "A fluid black top-and-pant ensemble with expressive sheer volume.",
+    "styleNumber": "SH 007",
+    "accessories": []
   },
   {
     "id": "SH-LOZEN",
@@ -375,7 +385,9 @@
     ],
     "video": "assets/product-detail/lozen/motion-preview.mp4",
     "seoTitle": "Lozen | SHANERYN",
-    "seoDescription": "An expressive tunic silhouette in rich blue, designed around ease and presence."
+    "seoDescription": "An expressive tunic silhouette in rich blue, designed around ease and presence.",
+    "styleNumber": "SH 004",
+    "accessories": []
   },
   {
     "id": "SH-BELLONA",
@@ -440,7 +452,9 @@
     ],
     "video": "assets/product-detail/bellona/motion-preview.mp4",
     "seoTitle": "Bellona | SHANERYN",
-    "seoDescription": "A playful top-and-pant pairing with movement and a soft romantic mood."
+    "seoDescription": "A playful top-and-pant pairing with movement and a soft romantic mood.",
+    "styleNumber": "SH 003",
+    "accessories": []
   },
   {
     "id": "SH-BLAZE",
@@ -500,6 +514,8 @@
     ],
     "video": "assets/product-detail/blaze/motion-preview.mp4",
     "seoTitle": "Blaze | SHANERYN",
-    "seoDescription": "A spirited magenta dress with expressive movement and contrasting bow details. Fabric and care information await studio confirmation."
+    "seoDescription": "A spirited magenta dress with expressive movement and contrasting bow details. Fabric and care information await studio confirmation.",
+    "styleNumber": "SH 005",
+    "accessories": []
   }
 ]

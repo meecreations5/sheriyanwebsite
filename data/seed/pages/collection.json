@@ -2075,6 +2075,33 @@
    "section": "dialogs",
    "tag": "p",
    "label": "p / The SHANERYN film will appear here once the approved video is available."
+  },
+  {
+   "id": "f119-quote-small",
+   "kind": "text",
+   "value": "Clothes To Empower",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "Closing quote: small pink line"
+  },
+  {
+   "id": "f119-quote-main",
+   "kind": "text",
+   "value": "Effortless movement",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "Closing quote: main white line"
+  },
+  {
+   "id": "f119-quote-last",
+   "kind": "text",
+   "value": "for fun celebrations",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "Closing quote: supporting white line"
   }
  ],
  "sections": [

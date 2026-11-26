@@ -9,11 +9,11 @@ export default function LegacyScripts({scripts,products,settings,collections,pag
   // Match the V6.9 browser data structures, without exposing Firestore credentials.
   document.body.dataset.page=page.bodyAttrs?.['data-page']||page.slug;
   document.body.classList.add(...String(page.bodyAttrs?.class||'theme-white').split(/\s+/).filter(Boolean));
-  window.SHANERYN_LOOKS=products.filter(p=>p.visible!==false);
+  window.SHANERYN_LOOKS=products.filter(p=>p.visible!==false).map(p=>({...p,cat:p.cat==='Gowns'?'Statement Outfits':p.cat}));
   window.SHANERYN_ACTIVE_LOOK_ID=activeProductId||null;
   window.SHANERYN_DETAIL_GALLERIES=Object.fromEntries(products.map(p=>[p.id,{images:(p.gallery?.length?p.gallery:[{src:p.catalogueImg||p.img,alt:'Front view'},{src:p.img||p.catalogueImg,alt:'Alternate view'}]).map(i=>({src:i.src,alt:i.alt||'Product photograph'})),video:p.video||''}]));
-  window.SHANERYN_CATEGORIES=Object.fromEntries(collections.map(c=>[c.name,{copy:c.copy||'',image:(c.image||'').replace(/^assets\//,''),title:c.name}]));
-  window.SHANERYN_VISIBLE_CATEGORIES=collections.map(c=>c.name);
+  window.SHANERYN_CATEGORIES=Object.fromEntries(collections.map(c=>[c.name==='Gowns'?'Statement Outfits':c.name,{copy:c.copy||'',image:(c.image||'').replace(/^assets\//,''),title:c.name==='Gowns'?'Statement Outfits':c.name}]));
+  window.SHANERYN_VISIBLE_CATEGORIES=collections.map(c=>c.name==='Gowns'?'Statement Outfits':c.name);
   const heroField=page.fields?.find(f=>f.kind==='background'&&f.section==='s-000');
   const heroImage=(page.patches?.[heroField?.id]?.value||heroField?.value||'assets/hero-client-shaneryn7231.jpg').replace(/^assets\//,'');
   const heroDesktop=page.heroImages?.desktop||heroImage;
@@ -22,7 +22,8 @@ export default function LegacyScripts({scripts,products,settings,collections,pag
   window.SHANERYN_SITE_CONFIG={hero:{mode:'single',slides:[{desktop:heroDesktop,mobile:heroMobile,alt:page.heroImages?.alt||'SHANERYN fashion campaign'}]},fashionFilm:{youtubeId:getYoutubeVideoId(filmUrl),autoplayOnView:false},founder:{linkedin:settings.founderLinkedin||''},social:settings.social||{},studioAddress:settings.contact?.address||''};
   window.SHANERYN_CONTACT={email:settings.contact?.email||'',whatsapp:settings.contact?.whatsapp||''};
   const files=[...new Set((scripts||[]).filter(src=>src&&!SKIP.has(src)))];
-  files.push('cms-public-forms.js','cms-preview.js');
+  if(page.slug==='bespoke'&&!files.includes('contact-v67.js'))files.push('contact-v67.js');
+  files.push('cms-public-forms.js','cms-preview.js','shaneryn-final-v119.js');
   async function run(){for(const src of files){if(cancelled)break;await new Promise(resolve=>{const el=document.createElement('script');el.src='/'+src;el.dataset.cmsLegacy='true';el.async=false;el.onload=resolve;el.onerror=()=>{console.warn('Legacy script failed:',src);resolve()};document.body.appendChild(el);loaded.push(el)})}}
   run();
   recordEvent('page_view',{page_title:page.title,page_location:location.href});

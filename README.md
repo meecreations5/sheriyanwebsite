@@ -1,3 +1,15 @@
+> **V1.19.2** — The complete, approved “My Story” copy is now published by the Our Story page template and editable paragraph-by-paragraph via Page Manager. See `UPDATE_V1_19_2_MY_STORY.md`.
+
+## V1.19.1 — Image presentation and appointment display (26 November 2026)
+
+- Collections index and category galleries: photographs use their natural dimensions, not forced ratio / padded canvases. No crop, artificial background bands, or decorative frames.
+- Quick Look remains clickable as a minimal action below each photograph, rather than a white overlay obstructing garments.
+- Look Details: Front / Back / Profile photographs use their native aspect ratios; video retains a separate media tile, and detail/accessory strips are unboxed.
+- Appointment and Styling Services: inherited hidden tab is removed for dedicated pages, revealing the booking form without a separate tab click.
+- Appointment forms also receive the correct responsive styling outside the Contact page. Bespoke appointment form retains its dark styling.
+- No Firestore data changes, CMS-user changes, payment changes, or image replacements.
+- Test: `npm run check`. Standalone browser CSS previews are available separately from the code archive. Full Next.js production build and Vercel/Firebase verification remain required.
+
 ## V1.18.16 — Verified 14-Point Feedback Update
 
 Audited all 14 client requirements against V1.18.15; removed the leftover Measurements introduction, corrected Look Details closing contrast in light mode, and removed obsolete Colour Story template HTML. Existing sections, data and CMS controls remain intact. See `UPDATE_V1_18_16_FEEDBACK_VERIFICATION.md` for a numbered audit and verification limits.
@@ -60,3 +72,8 @@ Fixes the V1.18.11 server render error `TypeError: $(...).detach is not a functi
 
 ## V1.18.17 - Measurement units
 All public measurement forms use inches only. The Bespoke centimetre toggle and conversion path have been removed, including a render-time safeguard for previously published CMS pages. Product Look Details measurements and studio submission remain inches-only. See `UPDATE_V1_18_17_INCHES_ONLY.md`.
+
+
+## Final client feedback (V1.19.0)
+
+See `UPDATE_V1_19_0_FINAL_CLIENT_FEEDBACK.md` for the exact 27-slide scope, features, limits, testing and deployment checklist.

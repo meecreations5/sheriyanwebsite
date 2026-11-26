@@ -14,7 +14,7 @@
     if(p){
       const set=(id,v)=>{const el=$(id);if(el)el.textContent=v;};
       set('#detail-title',p.title);set('#detail-breadcrumb',p.title.toUpperCase());
-      set('#detail-code',p.id);set('#detail-tone',p.tone);set('#detail-category',p.cat);
+      set('#detail-code',p.styleNumber||p.id);set('#detail-tone',p.tone);set('#detail-category',p.cat);
       set('#detail-tagline',p.tagline);set('#detail-description',p.description);
       set('#detail-story',p.description+' The final fabric composition and care information will be confirmed by the studio.');
       set('#detail-pieces','Garment components: '+p.pieces.join(' + ')+'.');
@@ -51,15 +51,10 @@
  }
  // Measurements: two data-driven paths. Review only, no network requests/storage.
  const measures={
-  'Occasion Wear':{'Body & Fit':['Height','Chest / Bust','Waist','Hip','Shoulder width','Armhole'],'Garment':['Sleeve length','Garment length']},
-  'Bridal Wear (Women)':{'Bridal Fit':['Height','Bust','Under bust','Waist','Hip','Shoulder width','Armhole'],'Design Lengths':['Sleeve length','Bodice length','Skirt / Gown length']},
-  'Bridal Wear (Men)':{'Bridal Fit':['Height','Neck','Chest','Waist','Hip','Shoulder width'],'Design Lengths':['Sleeve length','Jacket / Sherwani length','Trouser length','Inseam']},
-  'Formal Corporate Wear':{'Tailoring Fit':['Height','Neck','Chest / Bust','Waist','Hip','Shoulder width'],'Garment Lengths':['Sleeve length','Blazer / Shirt length','Trouser length','Inseam']},
-  'Full-length dress':{'Dress':['Length','Chest','Shoulder','Armhole','Waist','Hip','Sleeve length','Neck length']},
-  'Capri pant':{'Capri Pant':['Waist','Hip','Thigh','Bottom round']},
-  'Jacket':{'Jacket':['Chest','Armhole','Waist','Hip','Sleeve','Shoulder length']},
-  'Pant':{'Pant':['Length','Waist','Hip','Thigh','Bottom round']},
-  'Skirt':{'Skirt':['Skirt length','Waist','Hip']}
+  'Occasion Wear':{'Body Measurements':['Height','Chest','Bust','Waist','Hip','Shoulder','Armhole','Sleeve Length','Garment Length']},
+  'Bridal Wear (Women)':{'Body Measurements':['Height','Chest','Bust','Under Bust','Waist','Hip','Shoulder','Armhole','Sleeve Length','Garment Length']},
+  'Bridal Wear (Men)':{'Body Measurements':['Height','Neck','Chest','Waist','Hip','Shoulder','Armhole','Sleeve Length','Garment Length']},
+  'Formal Corporate Wear':{'Body Measurements':['Height','Neck','Chest','Waist','Hip','Shoulder','Armhole','Sleeve Length','Garment Length']}
  };
  const select=$('#measure-select');
  if(select){
@@ -69,7 +64,7 @@
    const selectedByMode={garment:'Occasion Wear',look:itemById(params.get('look'))?.title||looks[0]?.title};
    const valueStore=new Map(); // values in inches, per garment/SHANERYN look
    const options=()=>mode==='garment'?Object.keys(measures):looks.map(x=>x.title);
-   const currentGroups=()=>mode==='garment'?measures[select.value]:looks.find(x=>x.title===select.value)?.measurementGroups;
+   const currentGroups=()=>{const input=mode==='garment'?measures[select.value]:looks.find(x=>x.title===select.value)?.measurementGroups;const all=Object.values(input||{}).flat().map(n=>String(n).replace(/Shoulder width/gi,'Shoulder'));return {'Body Measurements':[...new Set(all)]};};
    const round1=n=>Math.round((n+Number.EPSILON)*10)/10;
    const scope=()=>mode+'::'+select.value+'::';
    function fields(){

@@ -1,0 +1,92 @@
+/* SHANERYN V1.19.2 | client-approved My Story | Our Story only.
+ * Photo and founder links remain unchanged; the full copy is editable in CMS.
+ * Loaded last because historical editorial CSS forced tiny, wide-tracked capitals.
+ */
+body[data-page="story-page"] .v63-story-founder .founder-v55-layout{
+  grid-template-columns:minmax(0,40%) minmax(0,1fr)!important;
+  align-items:start!important;
+  gap:clamp(36px,5.5vw,92px)!important;
+  min-height:0!important;
+}
+body[data-page="story-page"] .v63-story-founder .founder-v55-visual{
+  min-width:0;
+}
+body[data-page="story-page"] .v63-story-founder .shaneryn-my-story{
+  max-width:680px;
+  border:0!important;
+  padding:0!important;
+  margin:0;
+}
+body[data-page="story-page"] .v63-story-founder .shaneryn-my-story-heading{
+  font:400 clamp(45px,5vw,72px)/1.08 var(--serif,Georgia,serif)!important;
+  color:#f7eef3!important;
+  letter-spacing:-.038em!important;
+  text-transform:none!important;
+  text-wrap:balance;
+  margin:0 0 clamp(25px,3.5vw,40px)!important;
+}
+body[data-page="story-page"] .v63-story-founder .shaneryn-my-story p,
+html[data-color-mode="inverse"] body[data-page="story-page"] .v63-story-founder .shaneryn-my-story p{
+  color:#e7dfe5!important;
+  font:400 clamp(14.5px,1.15vw,16px)/1.85 var(--sans,Arial,sans-serif)!important;
+  letter-spacing:.012em!important;
+  text-transform:none!important;
+  text-align:left!important;
+  max-width:66ch;
+  margin:0 0 23px!important;
+  overflow-wrap:break-word;
+}
+body[data-page="story-page"] .v63-story-founder .shaneryn-my-story .shaneryn-my-story-motto,
+html[data-color-mode="inverse"] body[data-page="story-page"] .v63-story-founder .shaneryn-my-story .shaneryn-my-story-motto{
+  color:#f4cade!important;
+  font:italic 400 clamp(25px,2.6vw,38px)/1.25 var(--serif,Georgia,serif)!important;
+  letter-spacing:-.015em!important;
+  margin:35px 0 36px!important;
+}
+body[data-page="story-page"] .v63-story-founder .shaneryn-my-story .shaneryn-my-story-yours{
+  margin:0 0 4px!important;
+}
+body[data-page="story-page"] .v63-story-founder .shaneryn-my-story .shaneryn-my-story-name{
+  color:#fff!important;
+  font:400 clamp(22px,2vw,30px)/1.2 var(--serif,Georgia,serif)!important;
+  letter-spacing:-.005em!important;
+  margin:0 0 4px!important;
+}
+body[data-page="story-page"] .v63-story-founder .shaneryn-my-story .shaneryn-my-story-role{
+  color:#d5bccb!important;
+  font:500 11px/1.5 var(--sans,Arial,sans-serif)!important;
+  letter-spacing:.055em!important;
+  margin:0!important;
+}
+body[data-page="story-page"] .v63-story-founder .founder-links{
+  margin-top:34px!important;
+}
+@media(max-width:1000px){
+  body[data-page="story-page"] .v63-story-founder .founder-v55-layout{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:18px!important;
+  }
+  body[data-page="story-page"] .v63-story-founder .shaneryn-my-story{
+    max-width:720px;
+    margin:0 auto;
+  }
+}
+@media(max-width:767px){
+  body[data-page="story-page"] .v63-story-founder .shaneryn-my-story-heading{
+    font-size:clamp(38px,11vw,52px)!important;
+    margin-bottom:22px!important;
+  }
+  body[data-page="story-page"] .v63-story-founder .shaneryn-my-story p,
+  html[data-color-mode="inverse"] body[data-page="story-page"] .v63-story-founder .shaneryn-my-story p{
+    font-size:14.5px!important;
+    line-height:1.8!important;
+    letter-spacing:.005em!important;
+    margin-bottom:19px!important;
+  }
+  body[data-page="story-page"] .v63-story-founder .shaneryn-my-story .shaneryn-my-story-motto{
+    font-size:29px!important;
+    line-height:1.3!important;
+  }
+}

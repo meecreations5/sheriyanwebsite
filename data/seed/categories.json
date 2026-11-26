@@ -17,9 +17,9 @@
   },
   {
     "id": "gowns",
-    "name": "Gowns",
+    "name": "Statement Outfits",
     "image": "assets/product-detail/fire-and-heart/01.webp",
-    "copy": "Explore gowns designed around your own expression.",
+    "copy": "Statement outfits created for occasions worth remembering.",
     "visible": true,
     "sortOrder": 2
   },

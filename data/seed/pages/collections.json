@@ -1,2293 +1,2320 @@
 {
-  "slug": "collections",
-  "name": "Collections",
-  "title": "SHANERYN | Collections",
-  "description": "Explore SHANERYN collections, dresses and editorial looks. Discover individual designs and enquire directly with our studio.",
-  "visible": true,
-  "bodyHtml": "<a class=\"v47-skip-link\" data-cms-href=\"f00001\" data-cms-text-refs=\"f00128\" data-cms-visibility=\"f00069\" href=\"#main-content\"><!--cms:f00128-->Skip to main content<!--/cms:f00128--></a><div class=\"topline\"></div><header class=\"site-header\" id=\"site-header\"><div class=\"header-inner\">\n<nav aria-label=\"Main menu\" class=\"nav-primary\" data-cms-aria_label=\"f00002\"><a aria-current=\"page\" class=\"active\" data-cms-href=\"f00003\" data-cms-text-refs=\"f00129\" data-cms-visibility=\"f00070\" href=\"collections.html\"><!--cms:f00129-->Collections<!--/cms:f00129--></a><a data-cms-href=\"f00004\" data-cms-text-refs=\"f00130\" data-cms-visibility=\"f00071\" href=\"bespoke.html\"><!--cms:f00130-->Bespoke<!--/cms:f00130--></a></nav>\n<a aria-label=\"SHANERYN Home\" class=\"brand\" data-cms-aria_label=\"f00006\" data-cms-href=\"f00005\" data-cms-visibility=\"f00072\" href=\"index.html\"><img alt=\"SHANERYN\" class=\"logo-original\" data-cms-alt=\"f00008\" data-cms-src=\"f00007\" data-cms-visibility=\"f00073\" height=\"55\" src=\"assets/brand/shaneryn-wordmark-magenta.png\" width=\"215\"/><img alt=\"\" aria-hidden=\"true\" class=\"logo-inverse\" data-cms-src=\"f00009\" data-cms-visibility=\"f00074\" height=\"55\" src=\"assets/brand/shaneryn-wordmark-light.png\" width=\"215\"/></a>\n<nav aria-label=\"Additional links\" class=\"nav-right\" data-cms-aria_label=\"f00010\"><a data-cms-href=\"f00011\" data-cms-text-refs=\"f00131\" data-cms-visibility=\"f00075\" href=\"story.html\"><!--cms:f00131-->Our Story<!--/cms:f00131--></a><a data-cms-href=\"f00012\" data-cms-text-refs=\"f00132\" data-cms-visibility=\"f00076\" href=\"bespoke.html#services\"><!--cms:f00132-->Styling Services<!--/cms:f00132--></a><button aria-controls=\"mobile-menu\" aria-expanded=\"false\" aria-label=\"Open menu\" class=\"icon-button menu-toggle v47-menu-toggle\" data-cms-aria_label=\"f00013\" data-cms-visibility=\"f00077\" id=\"menu-toggle\" type=\"button\"><span aria-hidden=\"true\" class=\"v47-menu-label\" data-cms-text-refs=\"f00133\"><!--cms:f00133-->Menu<!--/cms:f00133--></span><svg aria-hidden=\"true\" viewbox=\"0 0 24 24\"><path d=\"M3 7h18M3 12h18M3 17h18\"></path></svg></button><button aria-label=\"View saved looks\" class=\"icon-button\" data-cms-aria_label=\"f00014\" data-cms-visibility=\"f00078\" data-open-saved=\"\" type=\"button\"><svg aria-hidden=\"true\" viewbox=\"0 0 24 24\"><path d=\"M20.3 8.2c0 5.5-8.3 11.4-8.3 11.4S3.7 13.7 3.7 8.2a4.7 4.7 0 0 1 8.3-2.8 4.7 4.7 0 0 1 8.3 2.8Z\"></path></svg><span class=\"heart-count\" data-cms-text-refs=\"f00134\" data-saved-count=\"\"><!--cms:f00134-->0<!--/cms:f00134--></span></button></nav></div></header>\n<nav aria-hidden=\"true\" aria-label=\"Explore SHANERYN\" class=\"mobile-menu\" data-cms-aria_label=\"f00015\" id=\"mobile-menu\"><a data-cms-href=\"f00016\" data-cms-text-refs=\"f00135\" data-cms-visibility=\"f00079\" href=\"index.html\"><!--cms:f00135-->Homepage<!--/cms:f00135--><small data-cms-text-refs=\"f00136\"><!--cms:f00136-->01<!--/cms:f00136--></small></a><a data-cms-href=\"f00017\" data-cms-text-refs=\"f00137\" data-cms-visibility=\"f00080\" href=\"index.html#occasion\"><!--cms:f00137-->Shop by Style<!--/cms:f00137--><small data-cms-text-refs=\"f00138\"><!--cms:f00138-->02<!--/cms:f00138--></small></a><a aria-current=\"page\" data-cms-href=\"f00018\" data-cms-text-refs=\"f00139\" data-cms-visibility=\"f00081\" href=\"collections.html\"><!--cms:f00139-->Collections<!--/cms:f00139--><small data-cms-text-refs=\"f00140\"><!--cms:f00140-->03<!--/cms:f00140--></small></a><a data-cms-href=\"f00019\" data-cms-text-refs=\"f00141\" data-cms-visibility=\"f00082\" href=\"bespoke.html\"><!--cms:f00141-->Bespoke<!--/cms:f00141--><small data-cms-text-refs=\"f00142\"><!--cms:f00142-->04<!--/cms:f00142--></small></a><a data-cms-href=\"f00020\" data-cms-text-refs=\"f00143\" data-cms-visibility=\"f00083\" href=\"bespoke.html#services\"><!--cms:f00143-->Styling Services<!--/cms:f00143--><small data-cms-text-refs=\"f00144\"><!--cms:f00144-->05<!--/cms:f00144--></small></a><a data-cms-href=\"f00021\" data-cms-text-refs=\"f00145\" data-cms-visibility=\"f00084\" href=\"story.html\"><!--cms:f00145-->Our Story<!--/cms:f00145--><small data-cms-text-refs=\"f00146\"><!--cms:f00146-->06<!--/cms:f00146--></small></a><a data-cms-href=\"f00022\" data-cms-text-refs=\"f00147\" data-cms-visibility=\"f00085\" href=\"film.html\"><!--cms:f00147-->Fashion Film<!--/cms:f00147--><small data-cms-text-refs=\"f00148\"><!--cms:f00148-->07<!--/cms:f00148--></small></a><a data-cms-href=\"f00023\" data-cms-text-refs=\"f00149\" data-cms-visibility=\"f00086\" href=\"testimonials.html\"><!--cms:f00149-->Testimonials<!--/cms:f00149--><small data-cms-text-refs=\"f00150\"><!--cms:f00150-->08<!--/cms:f00150--></small></a><a data-cms-href=\"f00024\" data-cms-text-refs=\"f00151\" data-cms-visibility=\"f00087\" href=\"contact.html\"><!--cms:f00151-->Contact<!--/cms:f00151--><small data-cms-text-refs=\"f00152\"><!--cms:f00152-->09<!--/cms:f00152--></small></a><button data-cms-text-refs=\"f00153\" data-cms-visibility=\"f00088\" data-open-saved=\"\" type=\"button\"><!--cms:f00153-->Saved Looks <!--/cms:f00153--><small data-cms-text-refs=\"f00154\"><!--cms:f00154-->♥<!--/cms:f00154--></small></button><button data-cms-text-refs=\"f00155\" data-cms-visibility=\"f00089\" data-open-inquiry=\"\" type=\"button\"><!--cms:f00155-->Enquire <!--/cms:f00155--><small data-cms-text-refs=\"f00156\"><!--cms:f00156-->↗<!--/cms:f00156--></small></button></nav><div class=\"v47-menu-scrim\" hidden=\"\" id=\"v47-menu-scrim\"></div>\n<main id=\"main-content\"><section class=\"collection-hero\" data-cms-section=\"s-000\"><div class=\"collection-hero-copy\"><span class=\"eyebrow\" data-cms-text-refs=\"f00157\"><!--cms:f00157-->THE CURVE EDIT / SHANERYN<!--/cms:f00157--></span><h1 data-cms-text-refs=\"f00158\"><!--cms:f00158-->The Collections.<!--/cms:f00158--></h1><p data-cms-text-refs=\"f00159\"><!--cms:f00159-->Considered silhouettes. Personal expression. Explore the looks.<!--/cms:f00159--></p><span aria-hidden=\"true\" class=\"collections-hero-folio\" data-cms-text-refs=\"f00160\"><!--cms:f00160-->THE COLLECTIONS / SHANERYN<!--/cms:f00160--></span></div><img alt=\"SHANERYN Starlight studio product photograph on a neutral background\" class=\"collection-hero-image\" data-cms-alt=\"f00026\" data-cms-src=\"f00025\" data-cms-visibility=\"f00090\" src=\"assets/product-detail/starlight/01.webp\"/></section><section class=\"collections-main\" data-cms-section=\"s-001\"><div class=\"wrap\"><div class=\"collections-top\"><div><span class=\"eyebrow\" data-cms-text-refs=\"f00161\"><!--cms:f00161-->DISCOVER THE LOOKS<!--/cms:f00161--></span><h2 data-cms-text-refs=\"f00162\"><!--cms:f00162-->The edit.<!--/cms:f00162--></h2></div><p data-cms-text-refs=\"f00163\" id=\"look-count\" role=\"status\"><!--cms:f00163-->08 looks<!--/cms:f00163--></p></div><div aria-label=\"Filter by clothing category\" class=\"filters\" data-cms-aria_label=\"f00027\"><button aria-pressed=\"true\" class=\"filter-btn\" data-category=\"All\" data-cms-text-refs=\"f00164\" data-cms-visibility=\"f00091\" type=\"button\"><!--cms:f00164-->All Looks<!--/cms:f00164--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Pant Sets\" data-cms-text-refs=\"f00165\" data-cms-visibility=\"f00092\" type=\"button\"><!--cms:f00165-->Pant Sets<!--/cms:f00165--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Cropped Pant Sets\" data-cms-text-refs=\"f00166\" data-cms-visibility=\"f00093\" type=\"button\"><!--cms:f00166-->Cropped Pant Sets<!--/cms:f00166--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Skirt Sets\" data-cms-text-refs=\"f00167\" data-cms-visibility=\"f00094\" type=\"button\"><!--cms:f00167-->Skirt Sets<!--/cms:f00167--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Tunics\" data-cms-text-refs=\"f00168\" data-cms-visibility=\"f00095\" type=\"button\"><!--cms:f00168-->Tunics<!--/cms:f00168--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Dresses\" data-cms-text-refs=\"f00169\" data-cms-visibility=\"f00096\" type=\"button\"><!--cms:f00169-->Dresses<!--/cms:f00169--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Gowns\" data-cms-text-refs=\"f00170\" data-cms-visibility=\"f00097\" type=\"button\"><!--cms:f00170-->Gowns<!--/cms:f00170--></button></div><button aria-controls=\"v69-filter-tools\" aria-expanded=\"false\" class=\"v69-filter-toggle\" data-cms-visibility=\"f00098\" id=\"v69-filter-toggle\" type=\"button\"><span data-cms-text-refs=\"f00171\"><!--cms:f00171-->Search &amp; filters<!--/cms:f00171--></span><span aria-hidden=\"true\" class=\"v69-filter-symbol\" data-cms-text-refs=\"f00172\"><!--cms:f00172-->+<!--/cms:f00172--></span></button><div class=\"filter-tools v69-filter-tools\" id=\"v69-filter-tools\"><input aria-label=\"Search looks\" class=\"search-input\" data-cms-aria_label=\"f00029\" data-cms-placeholder=\"f00028\" id=\"look-search\" placeholder=\"Search by name, category or look code\" type=\"search\"/><select aria-label=\"Filter by occasion\" class=\"select-filter\" data-cms-aria_label=\"f00030\" id=\"occasion-filter\"><option data-cms-text-refs=\"f00173\" value=\"all\"><!--cms:f00173-->All occasions<!--/cms:f00173--></option><option data-cms-text-refs=\"f00174\" value=\"everyday\"><!--cms:f00174-->Everyday Elegance<!--/cms:f00174--></option><option data-cms-text-refs=\"f00175\" value=\"evening\"><!--cms:f00175-->Evenings &amp; Celebrations<!--/cms:f00175--></option><option data-cms-text-refs=\"f00176\" value=\"festive\"><!--cms:f00176-->Festive Edit<!--/cms:f00176--></option><option data-cms-text-refs=\"f00177\" value=\"destination\"><!--cms:f00177-->Destination Moments<!--/cms:f00177--></option></select><button class=\"outlined-btn\" data-cms-text-refs=\"f00178\" data-cms-visibility=\"f00099\" data-open-saved=\"\" type=\"button\"><!--cms:f00178-->Saved Looks ♥ <!--/cms:f00178--><span data-cms-text-refs=\"f00179\" data-saved-count=\"\"><!--cms:f00179-->0<!--/cms:f00179--></span></button></div><div class=\"look-grid\" id=\"look-grid\"></div><section aria-labelledby=\"v51-recent-title\" class=\"v51-recent\" data-cms-section=\"s-002\" hidden=\"\" id=\"v51-recent\">\n<div class=\"v51-section-header\"><div><span class=\"ep-kicker\" data-cms-text-refs=\"f00180\"><!--cms:f00180-->A PERSONAL EDIT<!--/cms:f00180--></span><h2 data-cms-text-refs=\"f00181\" id=\"v51-recent-title\"><!--cms:f00181-->Recently explored.<!--/cms:f00181--></h2></div><span class=\"v51-small-copy\" data-cms-text-refs=\"f00182\"><!--cms:f00182-->Only in this browser session<!--/cms:f00182--></span></div>\n<div class=\"v51-recent-grid\" id=\"v51-recent-grid\"></div></section></div></section><section aria-label=\"Personal styling invitation\" class=\"v51-text-band\" data-cms-aria_label=\"f00031\" data-cms-section=\"s-003\"><span class=\"ep-kicker\" data-cms-text-refs=\"f00183\"><!--cms:f00183-->FIND YOUR EXPRESSION<!--/cms:f00183--></span><h2 data-cms-text-refs=\"f00184\"><!--cms:f00184-->A look can be just the beginning.<!--/cms:f00184--></h2><p data-cms-text-refs=\"f00185\"><!--cms:f00185-->Found a silhouette you love? Explore an individual approach to fit, styling and finishing.<!--/cms:f00185--></p><a class=\"v51-underline-link\" data-cms-href=\"f00032\" data-cms-text-refs=\"f00186\" data-cms-visibility=\"f00100\" href=\"bespoke.html\"><!--cms:f00186-->DISCOVER BESPOKE <!--/cms:f00186--><span aria-hidden=\"true\" data-cms-text-refs=\"f00187\"><!--cms:f00187-->↗<!--/cms:f00187--></span></a></section></main><footer class=\"site-footer\" id=\"footer\">\n<img alt=\"\" aria-hidden=\"true\" class=\"footer-watermark-monogram\" data-cms-src=\"f00033\" data-cms-visibility=\"f00101\" loading=\"lazy\" src=\"assets/brand/shaneryn-monogram.png\"/>\n<div class=\"wrap\">\n<nav aria-label=\"Footer navigation\" class=\"footer-grid\" data-cms-aria_label=\"f00034\">\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00188\"><!--cms:f00188-->Explore<!--/cms:f00188--></h4>\n<a data-cms-href=\"f00035\" data-cms-text-refs=\"f00189\" data-cms-visibility=\"f00102\" href=\"index.html\"><!--cms:f00189-->Homepage<!--/cms:f00189--></a><a data-cms-href=\"f00036\" data-cms-text-refs=\"f00190\" data-cms-visibility=\"f00103\" href=\"collections.html\"><!--cms:f00190-->Collections<!--/cms:f00190--></a><a data-cms-href=\"f00037\" data-cms-text-refs=\"f00191\" data-cms-visibility=\"f00104\" href=\"index.html#occasion\"><!--cms:f00191-->Shop by Style<!--/cms:f00191--></a></div>\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00192\"><!--cms:f00192-->The World<!--/cms:f00192--></h4>\n<a data-cms-href=\"f00038\" data-cms-text-refs=\"f00193\" data-cms-visibility=\"f00105\" href=\"story.html\"><!--cms:f00193-->Our Story<!--/cms:f00193--></a><a data-cms-href=\"f00039\" data-cms-text-refs=\"f00194\" data-cms-visibility=\"f00106\" href=\"bespoke.html\"><!--cms:f00194-->Bespoke<!--/cms:f00194--></a><a data-cms-href=\"f00040\" data-cms-text-refs=\"f00195\" data-cms-visibility=\"f00107\" href=\"bespoke.html#services\"><!--cms:f00195-->Styling Services<!--/cms:f00195--></a><a data-cms-href=\"f00041\" data-cms-text-refs=\"f00196\" data-cms-visibility=\"f00108\" href=\"film.html\"><!--cms:f00196-->Fashion Film<!--/cms:f00196--></a><a data-cms-href=\"f00042\" data-cms-text-refs=\"f00197\" data-cms-visibility=\"f00109\" href=\"testimonials.html\"><!--cms:f00197-->Testimonials<!--/cms:f00197--></a></div>\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00198\"><!--cms:f00198-->Connect<!--/cms:f00198--></h4>\n<a data-cms-href=\"f00043\" data-cms-text-refs=\"f00199\" data-cms-visibility=\"f00110\" href=\"contact.html\"><!--cms:f00199-->Request Details<!--/cms:f00199--></a>\n<button data-cms-text-refs=\"f00200\" data-cms-visibility=\"f00111\" data-open-saved=\"\" type=\"button\"><!--cms:f00200-->Saved Looks<!--/cms:f00200--></button>\n<p class=\"footer-direct\" data-cms-text-refs=\"f00201 f00202\"><!--cms:f00201-->Personal enquiries only<!--/cms:f00201--><br/><!--cms:f00202-->No online checkout<!--/cms:f00202--></p>\n<a data-cms-href=\"f00044\" data-cms-text-refs=\"f00203\" data-cms-visibility=\"f00112\" href=\"mailto:info@shenerian.com\"><!--cms:f00203-->info@shenerian.com<!--/cms:f00203--></a></div>\n</nav><div class=\"footer-masthead\">\n<a aria-label=\"SHANERYN — back to homepage\" class=\"footer-logo\" data-cms-aria_label=\"f00046\" data-cms-href=\"f00045\" data-cms-visibility=\"f00113\" href=\"index.html\">\n<img alt=\"SHANERYN\" class=\"logo-original\" data-cms-alt=\"f00048\" data-cms-src=\"f00047\" data-cms-visibility=\"f00114\" decoding=\"async\" height=\"129\" loading=\"lazy\" src=\"assets/brand/shaneryn-wordmark-magenta.png\" width=\"490\"/><img alt=\"\" aria-hidden=\"true\" class=\"logo-inverse\" data-cms-src=\"f00049\" data-cms-visibility=\"f00115\" height=\"129\" loading=\"lazy\" src=\"assets/brand/shaneryn-wordmark-light.png\" width=\"490\"/>\n</a>\n<span aria-hidden=\"true\" class=\"footer-rule\"></span>\n</div>\n<div class=\"footer-bottom\"><span data-cms-text-refs=\"f00204\"><!--cms:f00204-->© 2026 SHANERYN<!--/cms:f00204--></span><span data-cms-text-refs=\"f00205\"><!--cms:f00205-->Personal enquiries only · No online checkout<!--/cms:f00205--></span></div>\n</div>\n</footer><button aria-label=\"Back to top\" class=\"backtotop\" data-cms-aria_label=\"f00050\" data-cms-text-refs=\"f00206\" data-cms-visibility=\"f00116\" id=\"backtotop\" type=\"button\"><!--cms:f00206-->↑<!--/cms:f00206--></button><div aria-live=\"polite\" class=\"toast\" id=\"toast\" role=\"status\"></div>\n<div aria-label=\"SHANERYN outfit enquiry\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00051\" hidden=\"\" id=\"inquiry-modal\" role=\"dialog\"><div class=\"modal-window dialog-small\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00052\" data-cms-text-refs=\"f00207\" data-cms-visibility=\"f00117\" type=\"button\"><!--cms:f00207-->×<!--/cms:f00207--></button><span class=\"eyebrow\" data-cms-text-refs=\"f00208\"><!--cms:f00208-->PERSONAL ENQUIRY<!--/cms:f00208--></span><h2 data-cms-text-refs=\"f00209\"><!--cms:f00209-->Begin a Conversation.<!--/cms:f00209--></h2><p class=\"bodycopy\" data-cms-text-refs=\"f00210\"><!--cms:f00210-->Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit it automatically.<!--/cms:f00210--></p><form id=\"inquiry-form\"><label data-cms-text-refs=\"f00211\" for=\"inquiry-name\"><!--cms:f00211-->Your name<!--/cms:f00211--></label><input autocomplete=\"name\" data-cms-placeholder=\"f00053\" id=\"inquiry-name\" name=\"name\" placeholder=\"Your name\" required=\"\"/><label data-cms-text-refs=\"f00212\" for=\"inquiry-email\"><!--cms:f00212-->Email address<!--/cms:f00212--></label><input autocomplete=\"email\" data-cms-placeholder=\"f00054\" id=\"inquiry-email\" name=\"email\" placeholder=\"you@example.com\" required=\"\" type=\"email\"/><label data-cms-text-refs=\"f00213\" for=\"inquiry-look\"><!--cms:f00213-->Collection or look reference<!--/cms:f00213--></label><input data-cms-placeholder=\"f00055\" id=\"inquiry-look\" name=\"look\" placeholder=\"e.g. SH-PS-01\"/><label data-cms-text-refs=\"f00214\" for=\"inquiry-garment\"><!--cms:f00214-->Garment type (optional)<!--/cms:f00214--></label><select id=\"inquiry-garment\" name=\"garmentType\"><option data-cms-text-refs=\"f00215\" value=\"\"><!--cms:f00215-->Please select if relevant<!--/cms:f00215--></option><option data-cms-text-refs=\"f00216\" value=\"Occasion Wear\"><!--cms:f00216-->Occasion Wear<!--/cms:f00216--></option><option data-cms-text-refs=\"f00217\" value=\"Bridal Wear (Women)\"><!--cms:f00217-->Bridal Wear (Women)<!--/cms:f00217--></option><option data-cms-text-refs=\"f00218\" value=\"Bridal Wear (Men)\"><!--cms:f00218-->Bridal Wear (Men)<!--/cms:f00218--></option><option data-cms-text-refs=\"f00219\" value=\"Formal Corporate Wear\"><!--cms:f00219-->Formal Corporate Wear<!--/cms:f00219--></option></select><label data-cms-text-refs=\"f00220\" for=\"inquiry-message\"><!--cms:f00220-->What would you like to know?<!--/cms:f00220--></label><textarea data-cms-placeholder=\"f00056\" id=\"inquiry-message\" name=\"message\" placeholder=\"Tell us about your occasion or requirements\"></textarea><div class=\"modal-actions\"><button class=\"filled-btn\" data-cms-text-refs=\"f00221\" data-cms-visibility=\"f00118\" type=\"submit\"><!--cms:f00221-->Copy Enquiry ↗<!--/cms:f00221--></button><button class=\"outlined-btn\" data-cms-text-refs=\"f00222\" data-cms-visibility=\"f00119\" id=\"open-email\" type=\"button\"><!--cms:f00222-->Open Email Draft ↗<!--/cms:f00222--></button></div></form><p class=\"modal-info\" data-cms-text-refs=\"f00223\"><!--cms:f00223-->Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until CMS integration.<!--/cms:f00223--></p></div></div>\n<div aria-label=\"Saved looks\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00057\" hidden=\"\" id=\"saved-modal\" role=\"dialog\"><div class=\"modal-window dialog-small\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00058\" data-cms-text-refs=\"f00224\" data-cms-visibility=\"f00120\" type=\"button\"><!--cms:f00224-->×<!--/cms:f00224--></button><span class=\"eyebrow\" data-cms-text-refs=\"f00225\"><!--cms:f00225-->YOUR EDIT<!--/cms:f00225--></span><h2 data-cms-text-refs=\"f00226\"><!--cms:f00226-->Saved Looks.<!--/cms:f00226--></h2><p class=\"bodycopy\" data-cms-text-refs=\"f00227\"><!--cms:f00227-->A shortlist saved locally in your browser; no sign-in required.<!--/cms:f00227--></p><div class=\"saved-list\" id=\"saved-list\"></div><a class=\"outlined-btn\" data-close-modal=\"\" data-cms-href=\"f00059\" data-cms-text-refs=\"f00228\" data-cms-visibility=\"f00121\" href=\"collections.html\"><!--cms:f00228-->Explore Collections ↗<!--/cms:f00228--></a></div></div>\n<div aria-label=\"Full screen outfit viewer\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00060\" hidden=\"\" id=\"look-modal\" role=\"dialog\"><div class=\"modal-window\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00061\" data-cms-text-refs=\"f00229\" data-cms-visibility=\"f00122\" type=\"button\"><!--cms:f00229-->×<!--/cms:f00229--></button><div class=\"modal-frame\"><div class=\"modal-media\"><img alt=\"Outfit\" data-cms-alt=\"f00063\" data-cms-src=\"f00062\" data-cms-visibility=\"f00123\" id=\"look-modal-image\" src=\"assets/visual_13.jpg\"/><div class=\"gallery-controls\"><button aria-label=\"Previous look\" data-cms-aria_label=\"f00064\" data-cms-text-refs=\"f00230\" data-cms-visibility=\"f00124\" data-look-step=\"-1\" type=\"button\"><!--cms:f00230-->←<!--/cms:f00230--></button><button aria-label=\"Next look\" data-cms-aria_label=\"f00065\" data-cms-text-refs=\"f00231\" data-cms-visibility=\"f00125\" data-look-step=\"1\" type=\"button\"><!--cms:f00231-->→<!--/cms:f00231--></button></div></div><div class=\"modal-frame-copy\"><span class=\"eyebrow\" data-cms-text-refs=\"f00232\"><!--cms:f00232-->THE SHANERYN LOOKBOOK<!--/cms:f00232--></span><h2 data-cms-text-refs=\"f00233\" id=\"look-modal-title\"><!--cms:f00233-->Selected look<!--/cms:f00233--></h2><p data-cms-text-refs=\"f00234\" id=\"look-modal-code\"><!--cms:f00234-->Look reference<!--/cms:f00234--></p><p data-cms-text-refs=\"f00235\" id=\"look-modal-description\"><!--cms:f00235-->An editorial presentation of the look.<!--/cms:f00235--></p><p class=\"eyebrow\" data-cms-text-refs=\"f00236\" id=\"look-modal-position\"><!--cms:f00236-->1 / 12<!--/cms:f00236--></p><button class=\"outlined-btn\" data-cms-text-refs=\"f00237\" data-cms-visibility=\"f00126\" id=\"look-modal-inquiry\" type=\"button\"><!--cms:f00237-->Enquire About This Look ↗<!--/cms:f00237--></button></div></div></div></div>\n<div aria-label=\"Fashion film\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00066\" hidden=\"\" id=\"film-modal\" role=\"dialog\"><div class=\"modal-window\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00067\" data-cms-text-refs=\"f00238\" data-cms-visibility=\"f00127\" type=\"button\"><!--cms:f00238-->×<!--/cms:f00238--></button><div class=\"video-poster\" id=\"film-placeholder\"><div><span class=\"eyebrow\" data-cms-text-refs=\"f00239\"><!--cms:f00239-->SHANERYN / FASHION IN MOTION<!--/cms:f00239--></span><h2 data-cms-text-refs=\"f00240\"><!--cms:f00240-->Stories in Motion<!--/cms:f00240--></h2><p data-cms-text-refs=\"f00241\"><!--cms:f00241-->The SHANERYN film will appear here once the approved video is available.<!--/cms:f00241--></p></div></div><iframe allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" class=\"video-frame\" data-cms-title=\"f00068\" hidden=\"\" id=\"film-iframe\" title=\"SHANERYN fashion film\"></iframe></div></div>\n",
-  "fields": [
-    {
-      "id": "f00001",
-      "kind": "href",
-      "value": "#main-content",
-      "visible": true,
-      "section": "other",
-      "tag": "a",
-      "label": "a / href: Skip to main content"
-    },
-    {
-      "id": "f00002",
-      "kind": "aria-label",
-      "value": "Main menu",
-      "visible": true,
-      "section": "header",
-      "tag": "nav",
-      "label": "nav / aria-label: Collections Bespoke"
-    },
-    {
-      "id": "f00003",
-      "kind": "href",
-      "value": "collections.html",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / href: Collections"
-    },
-    {
-      "id": "f00004",
-      "kind": "href",
-      "value": "bespoke.html",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / href: Bespoke"
-    },
-    {
-      "id": "f00005",
-      "kind": "href",
-      "value": "index.html",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / href: "
-    },
-    {
-      "id": "f00006",
-      "kind": "aria-label",
-      "value": "SHANERYN Home",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / aria-label: "
-    },
-    {
-      "id": "f00007",
-      "kind": "src",
-      "value": "assets/brand/shaneryn-wordmark-magenta.png",
-      "visible": true,
-      "section": "header",
-      "tag": "img",
-      "label": "img / src: SHANERYN"
-    },
-    {
-      "id": "f00008",
-      "kind": "alt",
-      "value": "SHANERYN",
-      "visible": true,
-      "section": "header",
-      "tag": "img",
-      "label": "img / alt: SHANERYN"
-    },
-    {
-      "id": "f00009",
-      "kind": "src",
-      "value": "assets/brand/shaneryn-wordmark-light.png",
-      "visible": true,
-      "section": "header",
-      "tag": "img",
-      "label": "img / src: photo"
-    },
-    {
-      "id": "f00010",
-      "kind": "aria-label",
-      "value": "Additional links",
-      "visible": true,
-      "section": "header",
-      "tag": "nav",
-      "label": "nav / aria-label: Our Story Styling Services Menu 0"
-    },
-    {
-      "id": "f00011",
-      "kind": "href",
-      "value": "story.html",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / href: Our Story"
-    },
-    {
-      "id": "f00012",
-      "kind": "href",
-      "value": "bespoke.html#services",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / href: Styling Services"
-    },
-    {
-      "id": "f00013",
-      "kind": "aria-label",
-      "value": "Open menu",
-      "visible": true,
-      "section": "header",
-      "tag": "button",
-      "label": "button / aria-label: Menu"
-    },
-    {
-      "id": "f00014",
-      "kind": "aria-label",
-      "value": "View saved looks",
-      "visible": true,
-      "section": "header",
-      "tag": "button",
-      "label": "button / aria-label: 0"
-    },
-    {
-      "id": "f00015",
-      "kind": "aria-label",
-      "value": "Explore SHANERYN",
-      "visible": true,
-      "section": "other",
-      "tag": "nav",
-      "label": "nav / aria-label: Homepage 01 Shop by Style 02 Collections 03 Besp"
-    },
-    {
-      "id": "f00016",
-      "kind": "href",
-      "value": "index.html",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Homepage 01"
-    },
-    {
-      "id": "f00017",
-      "kind": "href",
-      "value": "index.html#occasion",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Shop by Style 02"
-    },
-    {
-      "id": "f00018",
-      "kind": "href",
-      "value": "collections.html",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Collections 03"
-    },
-    {
-      "id": "f00019",
-      "kind": "href",
-      "value": "bespoke.html",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Bespoke 04"
-    },
-    {
-      "id": "f00020",
-      "kind": "href",
-      "value": "bespoke.html#services",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Styling Services 05"
-    },
-    {
-      "id": "f00021",
-      "kind": "href",
-      "value": "story.html",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Our Story 06"
-    },
-    {
-      "id": "f00022",
-      "kind": "href",
-      "value": "film.html",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Fashion Film 07"
-    },
-    {
-      "id": "f00023",
-      "kind": "href",
-      "value": "testimonials.html",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Testimonials 08"
-    },
-    {
-      "id": "f00024",
-      "kind": "href",
-      "value": "contact.html",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / href: Contact 09"
-    },
-    {
-      "id": "f00025",
-      "kind": "src",
-      "value": "assets/product-detail/starlight/01.webp",
-      "visible": true,
-      "section": "s-000",
-      "tag": "img",
-      "label": "img / src: SHANERYN Starlight studio product photograph on "
-    },
-    {
-      "id": "f00026",
-      "kind": "alt",
-      "value": "SHANERYN Starlight studio product photograph on a neutral background",
-      "visible": true,
-      "section": "s-000",
-      "tag": "img",
-      "label": "img / alt: SHANERYN Starlight studio product photograph on "
-    },
-    {
-      "id": "f00027",
-      "kind": "aria-label",
-      "value": "Filter by clothing category",
-      "visible": true,
-      "section": "s-001",
-      "tag": "div",
-      "label": "div / aria-label: All Looks Pant Sets Cropped Pant Sets Skirt Sets"
-    },
-    {
-      "id": "f00028",
-      "kind": "placeholder",
-      "value": "Search by name, category or look code",
-      "visible": true,
-      "section": "s-001",
-      "tag": "input",
-      "label": "input / placeholder: "
-    },
-    {
-      "id": "f00029",
-      "kind": "aria-label",
-      "value": "Search looks",
-      "visible": true,
-      "section": "s-001",
-      "tag": "input",
-      "label": "input / aria-label: "
-    },
-    {
-      "id": "f00030",
-      "kind": "aria-label",
-      "value": "Filter by occasion",
-      "visible": true,
-      "section": "s-001",
-      "tag": "select",
-      "label": "select / aria-label: All occasions Everyday Elegance Evenings & Celeb"
-    },
-    {
-      "id": "f00031",
-      "kind": "aria-label",
-      "value": "Personal styling invitation",
-      "visible": true,
-      "section": "other",
-      "tag": "section",
-      "label": "section / aria-label: FIND YOUR EXPRESSION A look can be just the begi"
-    },
-    {
-      "id": "f00032",
-      "kind": "href",
-      "value": "bespoke.html",
-      "visible": true,
-      "section": "s-003",
-      "tag": "a",
-      "label": "a / href: DISCOVER BESPOKE ↗"
-    },
-    {
-      "id": "f00033",
-      "kind": "src",
-      "value": "assets/brand/shaneryn-monogram.png",
-      "visible": true,
-      "section": "footer",
-      "tag": "img",
-      "label": "img / src: photo"
-    },
-    {
-      "id": "f00034",
-      "kind": "aria-label",
-      "value": "Footer navigation",
-      "visible": true,
-      "section": "footer",
-      "tag": "nav",
-      "label": "nav / aria-label: Explore Homepage Collections Shop by Style The W"
-    },
-    {
-      "id": "f00035",
-      "kind": "href",
-      "value": "index.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Homepage"
-    },
-    {
-      "id": "f00036",
-      "kind": "href",
-      "value": "collections.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Collections"
-    },
-    {
-      "id": "f00037",
-      "kind": "href",
-      "value": "index.html#occasion",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Shop by Style"
-    },
-    {
-      "id": "f00038",
-      "kind": "href",
-      "value": "story.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Our Story"
-    },
-    {
-      "id": "f00039",
-      "kind": "href",
-      "value": "bespoke.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Bespoke"
-    },
-    {
-      "id": "f00040",
-      "kind": "href",
-      "value": "bespoke.html#services",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Styling Services"
-    },
-    {
-      "id": "f00041",
-      "kind": "href",
-      "value": "film.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Fashion Film"
-    },
-    {
-      "id": "f00042",
-      "kind": "href",
-      "value": "testimonials.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Testimonials"
-    },
-    {
-      "id": "f00043",
-      "kind": "href",
-      "value": "contact.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: Request Details"
-    },
-    {
-      "id": "f00044",
-      "kind": "href",
-      "value": "mailto:info@shenerian.com",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: info@shenerian.com"
-    },
-    {
-      "id": "f00045",
-      "kind": "href",
-      "value": "index.html",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / href: "
-    },
-    {
-      "id": "f00046",
-      "kind": "aria-label",
-      "value": "SHANERYN — back to homepage",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / aria-label: "
-    },
-    {
-      "id": "f00047",
-      "kind": "src",
-      "value": "assets/brand/shaneryn-wordmark-magenta.png",
-      "visible": true,
-      "section": "footer",
-      "tag": "img",
-      "label": "img / src: SHANERYN"
-    },
-    {
-      "id": "f00048",
-      "kind": "alt",
-      "value": "SHANERYN",
-      "visible": true,
-      "section": "footer",
-      "tag": "img",
-      "label": "img / alt: SHANERYN"
-    },
-    {
-      "id": "f00049",
-      "kind": "src",
-      "value": "assets/brand/shaneryn-wordmark-light.png",
-      "visible": true,
-      "section": "footer",
-      "tag": "img",
-      "label": "img / src: photo"
-    },
-    {
-      "id": "f00050",
-      "kind": "aria-label",
-      "value": "Back to top",
-      "visible": true,
-      "section": "other",
-      "tag": "button",
-      "label": "button / aria-label: ↑"
-    },
-    {
-      "id": "f00051",
-      "kind": "aria-label",
-      "value": "SHANERYN outfit enquiry",
-      "visible": true,
-      "section": "other",
-      "tag": "div",
-      "label": "div / aria-label: × PERSONAL ENQUIRY Begin a Conversation. Prepare"
-    },
-    {
-      "id": "f00052",
-      "kind": "aria-label",
-      "value": "Close",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / aria-label: ×"
-    },
-    {
-      "id": "f00053",
-      "kind": "placeholder",
-      "value": "Your name",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "input",
-      "label": "input / placeholder: "
-    },
-    {
-      "id": "f00054",
-      "kind": "placeholder",
-      "value": "you@example.com",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "input",
-      "label": "input / placeholder: "
-    },
-    {
-      "id": "f00055",
-      "kind": "placeholder",
-      "value": "e.g. SH-PS-01",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "input",
-      "label": "input / placeholder: "
-    },
-    {
-      "id": "f00056",
-      "kind": "placeholder",
-      "value": "Tell us about your occasion or requirements",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "textarea",
-      "label": "textarea / placeholder: "
-    },
-    {
-      "id": "f00057",
-      "kind": "aria-label",
-      "value": "Saved looks",
-      "visible": true,
-      "section": "other",
-      "tag": "div",
-      "label": "div / aria-label: × YOUR EDIT Saved Looks. A shortlist saved local"
-    },
-    {
-      "id": "f00058",
-      "kind": "aria-label",
-      "value": "Close",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / aria-label: ×"
-    },
-    {
-      "id": "f00059",
-      "kind": "href",
-      "value": "collections.html",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "a",
-      "label": "a / href: Explore Collections ↗"
-    },
-    {
-      "id": "f00060",
-      "kind": "aria-label",
-      "value": "Full screen outfit viewer",
-      "visible": true,
-      "section": "other",
-      "tag": "div",
-      "label": "div / aria-label: × ← → THE SHANERYN LOOKBOOK Selected look Look r"
-    },
-    {
-      "id": "f00061",
-      "kind": "aria-label",
-      "value": "Close",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / aria-label: ×"
-    },
-    {
-      "id": "f00062",
-      "kind": "src",
-      "value": "assets/visual_13.jpg",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "img",
-      "label": "img / src: Outfit"
-    },
-    {
-      "id": "f00063",
-      "kind": "alt",
-      "value": "Outfit",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "img",
-      "label": "img / alt: Outfit"
-    },
-    {
-      "id": "f00064",
-      "kind": "aria-label",
-      "value": "Previous look",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / aria-label: ←"
-    },
-    {
-      "id": "f00065",
-      "kind": "aria-label",
-      "value": "Next look",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / aria-label: →"
-    },
-    {
-      "id": "f00066",
-      "kind": "aria-label",
-      "value": "Fashion film",
-      "visible": true,
-      "section": "other",
-      "tag": "div",
-      "label": "div / aria-label: × SHANERYN / FASHION IN MOTION Stories in Motion"
-    },
-    {
-      "id": "f00067",
-      "kind": "aria-label",
-      "value": "Close",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / aria-label: ×"
-    },
-    {
-      "id": "f00068",
-      "kind": "title",
-      "value": "SHANERYN fashion film",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "iframe",
-      "label": "iframe / title: "
-    },
-    {
-      "id": "f00069",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "other",
-      "tag": "a",
-      "label": "Button / Link / Image — Skip to main content"
-    },
-    {
-      "id": "f00070",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "Button / Link / Image — Collections"
-    },
-    {
-      "id": "f00071",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "Button / Link / Image — Bespoke"
-    },
-    {
-      "id": "f00072",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "Button / Link / Image — SHANERYN Home"
-    },
-    {
-      "id": "f00073",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "img",
-      "label": "Button / Link / Image — SHANERYN"
-    },
-    {
-      "id": "f00074",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "img",
-      "label": "Button / Link / Image — img"
-    },
-    {
-      "id": "f00075",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "Button / Link / Image — Our Story"
-    },
-    {
-      "id": "f00076",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "Button / Link / Image — Styling Services"
-    },
-    {
-      "id": "f00077",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "button",
-      "label": "Button / Link / Image — Menu"
-    },
-    {
-      "id": "f00078",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "header",
-      "tag": "button",
-      "label": "Button / Link / Image — 0"
-    },
-    {
-      "id": "f00079",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Homepage 01"
-    },
-    {
-      "id": "f00080",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Shop by Style 02"
-    },
-    {
-      "id": "f00081",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Collections 03"
-    },
-    {
-      "id": "f00082",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Bespoke 04"
-    },
-    {
-      "id": "f00083",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Styling Services 05"
-    },
-    {
-      "id": "f00084",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Our Story 06"
-    },
-    {
-      "id": "f00085",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Fashion Film 07"
-    },
-    {
-      "id": "f00086",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Testimonials 08"
-    },
-    {
-      "id": "f00087",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "Button / Link / Image — Contact 09"
-    },
-    {
-      "id": "f00088",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "button",
-      "label": "Button / Link / Image — Saved Looks ♥"
-    },
-    {
-      "id": "f00089",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "navigation",
-      "tag": "button",
-      "label": "Button / Link / Image — Enquire ↗"
-    },
-    {
-      "id": "f00090",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-000",
-      "tag": "img",
-      "label": "Button / Link / Image — SHANERYN Starlight studio product photograph on a neutral background"
-    },
-    {
-      "id": "f00091",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — All Looks"
-    },
-    {
-      "id": "f00092",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Pant Sets"
-    },
-    {
-      "id": "f00093",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Cropped Pant Sets"
-    },
-    {
-      "id": "f00094",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Skirt Sets"
-    },
-    {
-      "id": "f00095",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Tunics"
-    },
-    {
-      "id": "f00096",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Dresses"
-    },
-    {
-      "id": "f00097",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Gowns"
-    },
-    {
-      "id": "f00098",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Search & filters +"
-    },
-    {
-      "id": "f00099",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "Button / Link / Image — Saved Looks ♥ 0"
-    },
-    {
-      "id": "f00100",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "s-003",
-      "tag": "a",
-      "label": "Button / Link / Image — DISCOVER BESPOKE ↗"
-    },
-    {
-      "id": "f00101",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "img",
-      "label": "Button / Link / Image — img"
-    },
-    {
-      "id": "f00102",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Homepage"
-    },
-    {
-      "id": "f00103",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Collections"
-    },
-    {
-      "id": "f00104",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Shop by Style"
-    },
-    {
-      "id": "f00105",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Our Story"
-    },
-    {
-      "id": "f00106",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Bespoke"
-    },
-    {
-      "id": "f00107",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Styling Services"
-    },
-    {
-      "id": "f00108",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Fashion Film"
-    },
-    {
-      "id": "f00109",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Testimonials"
-    },
-    {
-      "id": "f00110",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — Request Details"
-    },
-    {
-      "id": "f00111",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "button",
-      "label": "Button / Link / Image — Saved Looks"
-    },
-    {
-      "id": "f00112",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — info@shenerian.com"
-    },
-    {
-      "id": "f00113",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "Button / Link / Image — SHANERYN — back to homepage"
-    },
-    {
-      "id": "f00114",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "img",
-      "label": "Button / Link / Image — SHANERYN"
-    },
-    {
-      "id": "f00115",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "footer",
-      "tag": "img",
-      "label": "Button / Link / Image — img"
-    },
-    {
-      "id": "f00116",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "other",
-      "tag": "button",
-      "label": "Button / Link / Image — ↑"
-    },
-    {
-      "id": "f00117",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — ×"
-    },
-    {
-      "id": "f00118",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — Copy Enquiry ↗"
-    },
-    {
-      "id": "f00119",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — Open Email Draft ↗"
-    },
-    {
-      "id": "f00120",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — ×"
-    },
-    {
-      "id": "f00121",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "a",
-      "label": "Button / Link / Image — Explore Collections ↗"
-    },
-    {
-      "id": "f00122",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — ×"
-    },
-    {
-      "id": "f00123",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "img",
-      "label": "Button / Link / Image — Outfit"
-    },
-    {
-      "id": "f00124",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — ←"
-    },
-    {
-      "id": "f00125",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — →"
-    },
-    {
-      "id": "f00126",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — Enquire About This Look ↗"
-    },
-    {
-      "id": "f00127",
-      "kind": "visibility",
-      "value": true,
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "Button / Link / Image — ×"
-    },
-    {
-      "id": "f00128",
-      "kind": "text",
-      "value": "Skip to main content",
-      "visible": true,
-      "section": "other",
-      "tag": "a",
-      "label": "a / Skip to main content"
-    },
-    {
-      "id": "f00129",
-      "kind": "text",
-      "value": "Collections",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / Collections"
-    },
-    {
-      "id": "f00130",
-      "kind": "text",
-      "value": "Bespoke",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / Bespoke"
-    },
-    {
-      "id": "f00131",
-      "kind": "text",
-      "value": "Our Story",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / Our Story"
-    },
-    {
-      "id": "f00132",
-      "kind": "text",
-      "value": "Styling Services",
-      "visible": true,
-      "section": "header",
-      "tag": "a",
-      "label": "a / Styling Services"
-    },
-    {
-      "id": "f00133",
-      "kind": "text",
-      "value": "Menu",
-      "visible": true,
-      "section": "header",
-      "tag": "span",
-      "label": "span / Menu"
-    },
-    {
-      "id": "f00134",
-      "kind": "text",
-      "value": "0",
-      "visible": true,
-      "section": "header",
-      "tag": "span",
-      "label": "span / 0"
-    },
-    {
-      "id": "f00135",
-      "kind": "text",
-      "value": "Homepage",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Homepage"
-    },
-    {
-      "id": "f00136",
-      "kind": "text",
-      "value": "01",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 01"
-    },
-    {
-      "id": "f00137",
-      "kind": "text",
-      "value": "Shop by Style",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Shop by Style"
-    },
-    {
-      "id": "f00138",
-      "kind": "text",
-      "value": "02",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 02"
-    },
-    {
-      "id": "f00139",
-      "kind": "text",
-      "value": "Collections",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Collections"
-    },
-    {
-      "id": "f00140",
-      "kind": "text",
-      "value": "03",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 03"
-    },
-    {
-      "id": "f00141",
-      "kind": "text",
-      "value": "Bespoke",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Bespoke"
-    },
-    {
-      "id": "f00142",
-      "kind": "text",
-      "value": "04",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 04"
-    },
-    {
-      "id": "f00143",
-      "kind": "text",
-      "value": "Styling Services",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Styling Services"
-    },
-    {
-      "id": "f00144",
-      "kind": "text",
-      "value": "05",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 05"
-    },
-    {
-      "id": "f00145",
-      "kind": "text",
-      "value": "Our Story",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Our Story"
-    },
-    {
-      "id": "f00146",
-      "kind": "text",
-      "value": "06",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 06"
-    },
-    {
-      "id": "f00147",
-      "kind": "text",
-      "value": "Fashion Film",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Fashion Film"
-    },
-    {
-      "id": "f00148",
-      "kind": "text",
-      "value": "07",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 07"
-    },
-    {
-      "id": "f00149",
-      "kind": "text",
-      "value": "Testimonials",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Testimonials"
-    },
-    {
-      "id": "f00150",
-      "kind": "text",
-      "value": "08",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 08"
-    },
-    {
-      "id": "f00151",
-      "kind": "text",
-      "value": "Contact",
-      "visible": true,
-      "section": "navigation",
-      "tag": "a",
-      "label": "a / Contact"
-    },
-    {
-      "id": "f00152",
-      "kind": "text",
-      "value": "09",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / 09"
-    },
-    {
-      "id": "f00153",
-      "kind": "text",
-      "value": "Saved Looks ",
-      "visible": true,
-      "section": "navigation",
-      "tag": "button",
-      "label": "button / Saved Looks"
-    },
-    {
-      "id": "f00154",
-      "kind": "text",
-      "value": "♥",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / ♥"
-    },
-    {
-      "id": "f00155",
-      "kind": "text",
-      "value": "Enquire ",
-      "visible": true,
-      "section": "navigation",
-      "tag": "button",
-      "label": "button / Enquire"
-    },
-    {
-      "id": "f00156",
-      "kind": "text",
-      "value": "↗",
-      "visible": true,
-      "section": "navigation",
-      "tag": "small",
-      "label": "small / ↗"
-    },
-    {
-      "id": "f00157",
-      "kind": "text",
-      "value": "THE CURVE EDIT / SHANERYN",
-      "visible": true,
-      "section": "s-000",
-      "tag": "span",
-      "label": "span / THE CURVE EDIT / SHANERYN"
-    },
-    {
-      "id": "f00158",
-      "kind": "text",
-      "value": "The Collections.",
-      "visible": true,
-      "section": "s-000",
-      "tag": "h1",
-      "label": "h1 / The Collections."
-    },
-    {
-      "id": "f00159",
-      "kind": "text",
-      "value": "Considered silhouettes. Personal expression. Explore the looks.",
-      "visible": true,
-      "section": "s-000",
-      "tag": "p",
-      "label": "p / Considered silhouettes. Personal expression. Explore the looks."
-    },
-    {
-      "id": "f00160",
-      "kind": "text",
-      "value": "THE COLLECTIONS / SHANERYN",
-      "visible": true,
-      "section": "s-000",
-      "tag": "span",
-      "label": "span / THE COLLECTIONS / SHANERYN"
-    },
-    {
-      "id": "f00161",
-      "kind": "text",
-      "value": "DISCOVER THE LOOKS",
-      "visible": true,
-      "section": "s-001",
-      "tag": "span",
-      "label": "span / DISCOVER THE LOOKS"
-    },
-    {
-      "id": "f00162",
-      "kind": "text",
-      "value": "The edit.",
-      "visible": true,
-      "section": "s-001",
-      "tag": "h2",
-      "label": "h2 / The edit."
-    },
-    {
-      "id": "f00163",
-      "kind": "text",
-      "value": "08 looks",
-      "visible": true,
-      "section": "s-001",
-      "tag": "p",
-      "label": "p / 08 looks"
-    },
-    {
-      "id": "f00164",
-      "kind": "text",
-      "value": "All Looks",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / All Looks"
-    },
-    {
-      "id": "f00165",
-      "kind": "text",
-      "value": "Pant Sets",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / Pant Sets"
-    },
-    {
-      "id": "f00166",
-      "kind": "text",
-      "value": "Cropped Pant Sets",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / Cropped Pant Sets"
-    },
-    {
-      "id": "f00167",
-      "kind": "text",
-      "value": "Skirt Sets",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / Skirt Sets"
-    },
-    {
-      "id": "f00168",
-      "kind": "text",
-      "value": "Tunics",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / Tunics"
-    },
-    {
-      "id": "f00169",
-      "kind": "text",
-      "value": "Dresses",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / Dresses"
-    },
-    {
-      "id": "f00170",
-      "kind": "text",
-      "value": "Gowns",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / Gowns"
-    },
-    {
-      "id": "f00171",
-      "kind": "text",
-      "value": "Search & filters",
-      "visible": true,
-      "section": "s-001",
-      "tag": "span",
-      "label": "span / Search & filters"
-    },
-    {
-      "id": "f00172",
-      "kind": "text",
-      "value": "+",
-      "visible": true,
-      "section": "s-001",
-      "tag": "span",
-      "label": "span / +"
-    },
-    {
-      "id": "f00173",
-      "kind": "text",
-      "value": "All occasions",
-      "visible": true,
-      "section": "s-001",
-      "tag": "option",
-      "label": "option / All occasions"
-    },
-    {
-      "id": "f00174",
-      "kind": "text",
-      "value": "Everyday Elegance",
-      "visible": true,
-      "section": "s-001",
-      "tag": "option",
-      "label": "option / Everyday Elegance"
-    },
-    {
-      "id": "f00175",
-      "kind": "text",
-      "value": "Evenings & Celebrations",
-      "visible": true,
-      "section": "s-001",
-      "tag": "option",
-      "label": "option / Evenings & Celebrations"
-    },
-    {
-      "id": "f00176",
-      "kind": "text",
-      "value": "Festive Edit",
-      "visible": true,
-      "section": "s-001",
-      "tag": "option",
-      "label": "option / Festive Edit"
-    },
-    {
-      "id": "f00177",
-      "kind": "text",
-      "value": "Destination Moments",
-      "visible": true,
-      "section": "s-001",
-      "tag": "option",
-      "label": "option / Destination Moments"
-    },
-    {
-      "id": "f00178",
-      "kind": "text",
-      "value": "Saved Looks ♥ ",
-      "visible": true,
-      "section": "s-001",
-      "tag": "button",
-      "label": "button / Saved Looks ♥"
-    },
-    {
-      "id": "f00179",
-      "kind": "text",
-      "value": "0",
-      "visible": true,
-      "section": "s-001",
-      "tag": "span",
-      "label": "span / 0"
-    },
-    {
-      "id": "f00180",
-      "kind": "text",
-      "value": "A PERSONAL EDIT",
-      "visible": true,
-      "section": "s-002",
-      "tag": "span",
-      "label": "span / A PERSONAL EDIT"
-    },
-    {
-      "id": "f00181",
-      "kind": "text",
-      "value": "Recently explored.",
-      "visible": true,
-      "section": "s-002",
-      "tag": "h2",
-      "label": "h2 / Recently explored."
-    },
-    {
-      "id": "f00182",
-      "kind": "text",
-      "value": "Only in this browser session",
-      "visible": true,
-      "section": "s-002",
-      "tag": "span",
-      "label": "span / Only in this browser session"
-    },
-    {
-      "id": "f00183",
-      "kind": "text",
-      "value": "FIND YOUR EXPRESSION",
-      "visible": true,
-      "section": "s-003",
-      "tag": "span",
-      "label": "span / FIND YOUR EXPRESSION"
-    },
-    {
-      "id": "f00184",
-      "kind": "text",
-      "value": "A look can be just the beginning.",
-      "visible": true,
-      "section": "s-003",
-      "tag": "h2",
-      "label": "h2 / A look can be just the beginning."
-    },
-    {
-      "id": "f00185",
-      "kind": "text",
-      "value": "Found a silhouette you love? Explore an individual approach to fit, styling and finishing.",
-      "visible": true,
-      "section": "s-003",
-      "tag": "p",
-      "label": "p / Found a silhouette you love? Explore an individual approach to fit, styling and finishing."
-    },
-    {
-      "id": "f00186",
-      "kind": "text",
-      "value": "DISCOVER BESPOKE ",
-      "visible": true,
-      "section": "s-003",
-      "tag": "a",
-      "label": "a / DISCOVER BESPOKE"
-    },
-    {
-      "id": "f00187",
-      "kind": "text",
-      "value": "↗",
-      "visible": true,
-      "section": "s-003",
-      "tag": "span",
-      "label": "span / ↗"
-    },
-    {
-      "id": "f00188",
-      "kind": "text",
-      "value": "Explore",
-      "visible": true,
-      "section": "footer",
-      "tag": "h4",
-      "label": "h4 / Explore"
-    },
-    {
-      "id": "f00189",
-      "kind": "text",
-      "value": "Homepage",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Homepage"
-    },
-    {
-      "id": "f00190",
-      "kind": "text",
-      "value": "Collections",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Collections"
-    },
-    {
-      "id": "f00191",
-      "kind": "text",
-      "value": "Shop by Style",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Shop by Style"
-    },
-    {
-      "id": "f00192",
-      "kind": "text",
-      "value": "The World",
-      "visible": true,
-      "section": "footer",
-      "tag": "h4",
-      "label": "h4 / The World"
-    },
-    {
-      "id": "f00193",
-      "kind": "text",
-      "value": "Our Story",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Our Story"
-    },
-    {
-      "id": "f00194",
-      "kind": "text",
-      "value": "Bespoke",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Bespoke"
-    },
-    {
-      "id": "f00195",
-      "kind": "text",
-      "value": "Styling Services",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Styling Services"
-    },
-    {
-      "id": "f00196",
-      "kind": "text",
-      "value": "Fashion Film",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Fashion Film"
-    },
-    {
-      "id": "f00197",
-      "kind": "text",
-      "value": "Testimonials",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Testimonials"
-    },
-    {
-      "id": "f00198",
-      "kind": "text",
-      "value": "Connect",
-      "visible": true,
-      "section": "footer",
-      "tag": "h4",
-      "label": "h4 / Connect"
-    },
-    {
-      "id": "f00199",
-      "kind": "text",
-      "value": "Request Details",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / Request Details"
-    },
-    {
-      "id": "f00200",
-      "kind": "text",
-      "value": "Saved Looks",
-      "visible": true,
-      "section": "footer",
-      "tag": "button",
-      "label": "button / Saved Looks"
-    },
-    {
-      "id": "f00201",
-      "kind": "text",
-      "value": "Personal enquiries only",
-      "visible": true,
-      "section": "footer",
-      "tag": "p",
-      "label": "p / Personal enquiries only"
-    },
-    {
-      "id": "f00202",
-      "kind": "text",
-      "value": "No online checkout",
-      "visible": true,
-      "section": "footer",
-      "tag": "p",
-      "label": "p / No online checkout"
-    },
-    {
-      "id": "f00203",
-      "kind": "text",
-      "value": "info@shenerian.com",
-      "visible": true,
-      "section": "footer",
-      "tag": "a",
-      "label": "a / info@shenerian.com"
-    },
-    {
-      "id": "f00204",
-      "kind": "text",
-      "value": "© 2026 SHANERYN",
-      "visible": true,
-      "section": "footer",
-      "tag": "span",
-      "label": "span / © 2026 SHANERYN"
-    },
-    {
-      "id": "f00205",
-      "kind": "text",
-      "value": "Personal enquiries only · No online checkout",
-      "visible": true,
-      "section": "footer",
-      "tag": "span",
-      "label": "span / Personal enquiries only · No online checkout"
-    },
-    {
-      "id": "f00206",
-      "kind": "text",
-      "value": "↑",
-      "visible": true,
-      "section": "other",
-      "tag": "button",
-      "label": "button / ↑"
-    },
-    {
-      "id": "f00207",
-      "kind": "text",
-      "value": "×",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / ×"
-    },
-    {
-      "id": "f00208",
-      "kind": "text",
-      "value": "PERSONAL ENQUIRY",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "span",
-      "label": "span / PERSONAL ENQUIRY"
-    },
-    {
-      "id": "f00209",
-      "kind": "text",
-      "value": "Begin a Conversation.",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "h2",
-      "label": "h2 / Begin a Conversation."
-    },
-    {
-      "id": "f00210",
-      "kind": "text",
-      "value": "Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit it automatically.",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "p",
-      "label": "p / Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit"
-    },
-    {
-      "id": "f00211",
-      "kind": "text",
-      "value": "Your name",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "label",
-      "label": "label / Your name"
-    },
-    {
-      "id": "f00212",
-      "kind": "text",
-      "value": "Email address",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "label",
-      "label": "label / Email address"
-    },
-    {
-      "id": "f00213",
-      "kind": "text",
-      "value": "Collection or look reference",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "label",
-      "label": "label / Collection or look reference"
-    },
-    {
-      "id": "f00214",
-      "kind": "text",
-      "value": "Garment type (optional)",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "label",
-      "label": "label / Garment type (optional)"
-    },
-    {
-      "id": "f00215",
-      "kind": "text",
-      "value": "Please select if relevant",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "option",
-      "label": "option / Please select if relevant"
-    },
-    {
-      "id": "f00216",
-      "kind": "text",
-      "value": "Occasion Wear",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "option",
-      "label": "option / Occasion Wear"
-    },
-    {
-      "id": "f00217",
-      "kind": "text",
-      "value": "Bridal Wear (Women)",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "option",
-      "label": "option / Bridal Wear (Women)"
-    },
-    {
-      "id": "f00218",
-      "kind": "text",
-      "value": "Bridal Wear (Men)",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "option",
-      "label": "option / Bridal Wear (Men)"
-    },
-    {
-      "id": "f00219",
-      "kind": "text",
-      "value": "Formal Corporate Wear",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "option",
-      "label": "option / Formal Corporate Wear"
-    },
-    {
-      "id": "f00220",
-      "kind": "text",
-      "value": "What would you like to know?",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "label",
-      "label": "label / What would you like to know?"
-    },
-    {
-      "id": "f00221",
-      "kind": "text",
-      "value": "Copy Enquiry ↗",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / Copy Enquiry ↗"
-    },
-    {
-      "id": "f00222",
-      "kind": "text",
-      "value": "Open Email Draft ↗",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / Open Email Draft ↗"
-    },
-    {
-      "id": "f00223",
-      "kind": "text",
-      "value": "Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until CMS integration.",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "p",
-      "label": "p / Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until "
-    },
-    {
-      "id": "f00224",
-      "kind": "text",
-      "value": "×",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / ×"
-    },
-    {
-      "id": "f00225",
-      "kind": "text",
-      "value": "YOUR EDIT",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "span",
-      "label": "span / YOUR EDIT"
-    },
-    {
-      "id": "f00226",
-      "kind": "text",
-      "value": "Saved Looks.",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "h2",
-      "label": "h2 / Saved Looks."
-    },
-    {
-      "id": "f00227",
-      "kind": "text",
-      "value": "A shortlist saved locally in your browser; no sign-in required.",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "p",
-      "label": "p / A shortlist saved locally in your browser; no sign-in required."
-    },
-    {
-      "id": "f00228",
-      "kind": "text",
-      "value": "Explore Collections ↗",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "a",
-      "label": "a / Explore Collections ↗"
-    },
-    {
-      "id": "f00229",
-      "kind": "text",
-      "value": "×",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / ×"
-    },
-    {
-      "id": "f00230",
-      "kind": "text",
-      "value": "←",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / ←"
-    },
-    {
-      "id": "f00231",
-      "kind": "text",
-      "value": "→",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / →"
-    },
-    {
-      "id": "f00232",
-      "kind": "text",
-      "value": "THE SHANERYN LOOKBOOK",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "span",
-      "label": "span / THE SHANERYN LOOKBOOK"
-    },
-    {
-      "id": "f00233",
-      "kind": "text",
-      "value": "Selected look",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "h2",
-      "label": "h2 / Selected look"
-    },
-    {
-      "id": "f00234",
-      "kind": "text",
-      "value": "Look reference",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "p",
-      "label": "p / Look reference"
-    },
-    {
-      "id": "f00235",
-      "kind": "text",
-      "value": "An editorial presentation of the look.",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "p",
-      "label": "p / An editorial presentation of the look."
-    },
-    {
-      "id": "f00236",
-      "kind": "text",
-      "value": "1 / 12",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "p",
-      "label": "p / 1 / 12"
-    },
-    {
-      "id": "f00237",
-      "kind": "text",
-      "value": "Enquire About This Look ↗",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / Enquire About This Look ↗"
-    },
-    {
-      "id": "f00238",
-      "kind": "text",
-      "value": "×",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "button",
-      "label": "button / ×"
-    },
-    {
-      "id": "f00239",
-      "kind": "text",
-      "value": "SHANERYN / FASHION IN MOTION",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "span",
-      "label": "span / SHANERYN / FASHION IN MOTION"
-    },
-    {
-      "id": "f00240",
-      "kind": "text",
-      "value": "Stories in Motion",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "h2",
-      "label": "h2 / Stories in Motion"
-    },
-    {
-      "id": "f00241",
-      "kind": "text",
-      "value": "The SHANERYN film will appear here once the approved video is available.",
-      "visible": true,
-      "section": "dialogs",
-      "tag": "p",
-      "label": "p / The SHANERYN film will appear here once the approved video is available."
-    },
-    {
-      "id": "f00242",
-      "kind": "text",
-      "value": "CURATED BY SHANERYN",
-      "visible": true,
-      "section": "s-000",
-      "tag": "span",
-      "label": "Curated collections - Small heading"
-    },
-    {
-      "id": "f00243",
-      "kind": "text",
-      "value": "Our Collections.",
-      "visible": true,
-      "section": "s-000",
-      "tag": "h2",
-      "label": "Curated collections - Main heading"
-    },
-    {
-      "id": "f00244",
-      "kind": "text",
-      "value": "Explore considered edits for every occasion.",
-      "visible": true,
-      "section": "s-000",
-      "tag": "p",
-      "label": "Curated collections - Description"
-    },
-    {
-      "id": "f00245",
-      "kind": "text",
-      "value": "Explore edit ↗",
-      "visible": true,
-      "section": "s-000",
-      "tag": "small",
-      "label": "Curated collections - Collection link text"
-    }
-  ],
-  "sections": [
-    {
-      "id": "s-000",
-      "title": "The Collections.",
-      "visible": true,
-      "order": 0,
-      "originalId": "",
-      "parent": false
-    },
-    {
-      "id": "s-001",
-      "title": "The edit.",
-      "visible": true,
-      "order": 1,
-      "originalId": "",
-      "parent": false
-    },
-    {
-      "id": "s-002",
-      "title": "Recently explored.",
-      "visible": true,
-      "order": 2,
-      "originalId": "v51-recent",
-      "parent": true
-    },
-    {
-      "id": "s-003",
-      "title": "A look can be just the beginning.",
-      "visible": true,
-      "order": 3,
-      "originalId": "",
-      "parent": false
-    }
-  ],
-  "styles": [
-    "site.css",
-    "typography-fix.css",
-    "footer-redesign.css",
-    "white-gallery.css",
-    "editorial-v3.css",
-    "inverse-mode.css",
-    "editorial-pages.css",
-    "collective-v3.css",
-    "consultation-nav.css",
-    "collections-v4-4.css",
-    "desktop-v47.css",
-    "ux-v48.css",
-    "desktop-v49.css",
-    "mobile-v5.css",
-    "signature-v51.css",
-    "client-feedback-v55.css",
-    "client-feedback-v62.css",
-    "client-feedback-v63.css",
-    "client-feedback-v64.css",
-    "client-feedback-v65.css",
-    "social-v66.css",
-    "mobile-inner-v69.css"
-  ],
-  "scripts": [
-    "look-data.js",
-    "site-config.js",
-    "site.js",
-    "inverse-mode.js",
-    "contact-config.js",
-    "feedback-v3.js",
-    "desktop-v47.js",
-    "ux-v48.js",
-    "desktop-v49.js",
-    "mobile-v5.js",
-    "signature-v51.js",
-    "social-v66.js",
-    "mobile-inner-v69.js"
-  ],
-  "updatedAt": null,
-  "bodyAttrs": {
-    "class": "theme-white",
-    "data-page": "collections"
+ "slug": "collections",
+ "name": "Collections",
+ "title": "SHANERYN | Collections",
+ "description": "Explore SHANERYN collections, dresses and editorial looks. Discover individual designs and enquire directly with our studio.",
+ "visible": true,
+ "bodyHtml": "<a class=\"v47-skip-link\" data-cms-href=\"f00001\" data-cms-text-refs=\"f00128\" data-cms-visibility=\"f00069\" href=\"#main-content\"><!--cms:f00128-->Skip to main content<!--/cms:f00128--></a><div class=\"topline\"></div><header class=\"site-header\" id=\"site-header\"><div class=\"header-inner\">\n<nav aria-label=\"Main menu\" class=\"nav-primary\" data-cms-aria_label=\"f00002\"><a aria-current=\"page\" class=\"active\" data-cms-href=\"f00003\" data-cms-text-refs=\"f00129\" data-cms-visibility=\"f00070\" href=\"collections.html\"><!--cms:f00129-->Collections<!--/cms:f00129--></a><a data-cms-href=\"f00004\" data-cms-text-refs=\"f00130\" data-cms-visibility=\"f00071\" href=\"bespoke.html\"><!--cms:f00130-->Bespoke<!--/cms:f00130--></a></nav>\n<a aria-label=\"SHANERYN Home\" class=\"brand\" data-cms-aria_label=\"f00006\" data-cms-href=\"f00005\" data-cms-visibility=\"f00072\" href=\"index.html\"><img alt=\"SHANERYN\" class=\"logo-original\" data-cms-alt=\"f00008\" data-cms-src=\"f00007\" data-cms-visibility=\"f00073\" height=\"55\" src=\"assets/brand/shaneryn-wordmark-magenta.png\" width=\"215\"/><img alt=\"\" aria-hidden=\"true\" class=\"logo-inverse\" data-cms-src=\"f00009\" data-cms-visibility=\"f00074\" height=\"55\" src=\"assets/brand/shaneryn-wordmark-light.png\" width=\"215\"/></a>\n<nav aria-label=\"Additional links\" class=\"nav-right\" data-cms-aria_label=\"f00010\"><a data-cms-href=\"f00011\" data-cms-text-refs=\"f00131\" data-cms-visibility=\"f00075\" href=\"story.html\"><!--cms:f00131-->Our Story<!--/cms:f00131--></a><a data-cms-href=\"f00012\" data-cms-text-refs=\"f00132\" data-cms-visibility=\"f00076\" href=\"bespoke.html#services\"><!--cms:f00132-->Styling Services<!--/cms:f00132--></a><button aria-controls=\"mobile-menu\" aria-expanded=\"false\" aria-label=\"Open menu\" class=\"icon-button menu-toggle v47-menu-toggle\" data-cms-aria_label=\"f00013\" data-cms-visibility=\"f00077\" id=\"menu-toggle\" type=\"button\"><span aria-hidden=\"true\" class=\"v47-menu-label\" data-cms-text-refs=\"f00133\"><!--cms:f00133-->Menu<!--/cms:f00133--></span><svg aria-hidden=\"true\" viewbox=\"0 0 24 24\"><path d=\"M3 7h18M3 12h18M3 17h18\"></path></svg></button><button aria-label=\"View saved looks\" class=\"icon-button\" data-cms-aria_label=\"f00014\" data-cms-visibility=\"f00078\" data-open-saved=\"\" type=\"button\"><svg aria-hidden=\"true\" viewbox=\"0 0 24 24\"><path d=\"M20.3 8.2c0 5.5-8.3 11.4-8.3 11.4S3.7 13.7 3.7 8.2a4.7 4.7 0 0 1 8.3-2.8 4.7 4.7 0 0 1 8.3 2.8Z\"></path></svg><span class=\"heart-count\" data-cms-text-refs=\"f00134\" data-saved-count=\"\"><!--cms:f00134-->0<!--/cms:f00134--></span></button></nav></div></header>\n<nav aria-hidden=\"true\" aria-label=\"Explore SHANERYN\" class=\"mobile-menu\" data-cms-aria_label=\"f00015\" id=\"mobile-menu\"><a data-cms-href=\"f00016\" data-cms-text-refs=\"f00135\" data-cms-visibility=\"f00079\" href=\"index.html\"><!--cms:f00135-->Homepage<!--/cms:f00135--><small data-cms-text-refs=\"f00136\"><!--cms:f00136-->01<!--/cms:f00136--></small></a><a data-cms-href=\"f00017\" data-cms-text-refs=\"f00137\" data-cms-visibility=\"f00080\" href=\"index.html#occasion\"><!--cms:f00137-->Shop by Style<!--/cms:f00137--><small data-cms-text-refs=\"f00138\"><!--cms:f00138-->02<!--/cms:f00138--></small></a><a aria-current=\"page\" data-cms-href=\"f00018\" data-cms-text-refs=\"f00139\" data-cms-visibility=\"f00081\" href=\"collections.html\"><!--cms:f00139-->Collections<!--/cms:f00139--><small data-cms-text-refs=\"f00140\"><!--cms:f00140-->03<!--/cms:f00140--></small></a><a data-cms-href=\"f00019\" data-cms-text-refs=\"f00141\" data-cms-visibility=\"f00082\" href=\"bespoke.html\"><!--cms:f00141-->Bespoke<!--/cms:f00141--><small data-cms-text-refs=\"f00142\"><!--cms:f00142-->04<!--/cms:f00142--></small></a><a data-cms-href=\"f00020\" data-cms-text-refs=\"f00143\" data-cms-visibility=\"f00083\" href=\"bespoke.html#services\"><!--cms:f00143-->Styling Services<!--/cms:f00143--><small data-cms-text-refs=\"f00144\"><!--cms:f00144-->05<!--/cms:f00144--></small></a><a data-cms-href=\"f00021\" data-cms-text-refs=\"f00145\" data-cms-visibility=\"f00084\" href=\"story.html\"><!--cms:f00145-->Our Story<!--/cms:f00145--><small data-cms-text-refs=\"f00146\"><!--cms:f00146-->06<!--/cms:f00146--></small></a><a data-cms-href=\"f00022\" data-cms-text-refs=\"f00147\" data-cms-visibility=\"f00085\" href=\"film.html\"><!--cms:f00147-->Fashion Film<!--/cms:f00147--><small data-cms-text-refs=\"f00148\"><!--cms:f00148-->07<!--/cms:f00148--></small></a><a data-cms-href=\"f00023\" data-cms-text-refs=\"f00149\" data-cms-visibility=\"f00086\" href=\"testimonials.html\"><!--cms:f00149-->Testimonials<!--/cms:f00149--><small data-cms-text-refs=\"f00150\"><!--cms:f00150-->08<!--/cms:f00150--></small></a><a data-cms-href=\"f00024\" data-cms-text-refs=\"f00151\" data-cms-visibility=\"f00087\" href=\"contact.html\"><!--cms:f00151-->Contact<!--/cms:f00151--><small data-cms-text-refs=\"f00152\"><!--cms:f00152-->09<!--/cms:f00152--></small></a><button data-cms-text-refs=\"f00153\" data-cms-visibility=\"f00088\" data-open-saved=\"\" type=\"button\"><!--cms:f00153-->Saved Looks <!--/cms:f00153--><small data-cms-text-refs=\"f00154\"><!--cms:f00154-->♥<!--/cms:f00154--></small></button><button data-cms-text-refs=\"f00155\" data-cms-visibility=\"f00089\" data-open-inquiry=\"\" type=\"button\"><!--cms:f00155-->Enquire <!--/cms:f00155--><small data-cms-text-refs=\"f00156\"><!--cms:f00156-->↗<!--/cms:f00156--></small></button></nav><div class=\"v47-menu-scrim\" hidden=\"\" id=\"v47-menu-scrim\"></div>\n<main id=\"main-content\"><section class=\"collection-hero\" data-cms-section=\"s-000\"><div class=\"collection-hero-copy\"><span class=\"eyebrow\" data-cms-text-refs=\"f00157\"><!--cms:f00157-->THE CURVE EDIT / SHANERYN<!--/cms:f00157--></span><h1 data-cms-text-refs=\"f00158\"><!--cms:f00158-->The Collections.<!--/cms:f00158--></h1><p data-cms-text-refs=\"f00159\"><!--cms:f00159-->Considered silhouettes. Personal expression. Explore the looks.<!--/cms:f00159--></p><span aria-hidden=\"true\" class=\"collections-hero-folio\" data-cms-text-refs=\"f00160\"><!--cms:f00160-->THE COLLECTIONS / SHANERYN<!--/cms:f00160--></span></div><img alt=\"SHANERYN Starlight studio product photograph on a neutral background\" class=\"collection-hero-image\" data-cms-alt=\"f00026\" data-cms-src=\"f00025\" data-cms-visibility=\"f00090\" src=\"assets/product-detail/starlight/01.webp\"/></section><section class=\"collections-main\" data-cms-section=\"s-001\"><div class=\"wrap\"><div class=\"collections-top\"><div><span class=\"eyebrow\" data-cms-text-refs=\"f00161\"><!--cms:f00161-->DISCOVER THE LOOKS<!--/cms:f00161--></span><h2 data-cms-text-refs=\"f00162\"><!--cms:f00162-->The edit.<!--/cms:f00162--></h2></div><p data-cms-text-refs=\"f00163\" id=\"look-count\" role=\"status\"><!--cms:f00163-->08 looks<!--/cms:f00163--></p></div><div aria-label=\"Filter by clothing category\" class=\"filters\" data-cms-aria_label=\"f00027\"><button aria-pressed=\"true\" class=\"filter-btn\" data-category=\"All\" data-cms-text-refs=\"f00164\" data-cms-visibility=\"f00091\" type=\"button\"><!--cms:f00164-->All Looks<!--/cms:f00164--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Pant Sets\" data-cms-text-refs=\"f00165\" data-cms-visibility=\"f00092\" type=\"button\"><!--cms:f00165-->Pant Sets<!--/cms:f00165--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Cropped Pant Sets\" data-cms-text-refs=\"f00166\" data-cms-visibility=\"f00093\" type=\"button\"><!--cms:f00166-->Cropped Pant Sets<!--/cms:f00166--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Skirt Sets\" data-cms-text-refs=\"f00167\" data-cms-visibility=\"f00094\" type=\"button\"><!--cms:f00167-->Skirt Sets<!--/cms:f00167--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Tunics\" data-cms-text-refs=\"f00168\" data-cms-visibility=\"f00095\" type=\"button\"><!--cms:f00168-->Tunics<!--/cms:f00168--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Dresses\" data-cms-text-refs=\"f00169\" data-cms-visibility=\"f00096\" type=\"button\"><!--cms:f00169-->Dresses<!--/cms:f00169--></button><button aria-pressed=\"false\" class=\"filter-btn\" data-category=\"Gowns\" data-cms-text-refs=\"f00170\" data-cms-visibility=\"f00097\" type=\"button\"><!--cms:f00170-->Gowns<!--/cms:f00170--></button></div><button aria-controls=\"v69-filter-tools\" aria-expanded=\"false\" class=\"v69-filter-toggle\" data-cms-visibility=\"f00098\" id=\"v69-filter-toggle\" type=\"button\"><span data-cms-text-refs=\"f00171\"><!--cms:f00171-->Search &amp; filters<!--/cms:f00171--></span><span aria-hidden=\"true\" class=\"v69-filter-symbol\" data-cms-text-refs=\"f00172\"><!--cms:f00172-->+<!--/cms:f00172--></span></button><div class=\"filter-tools v69-filter-tools\" id=\"v69-filter-tools\"><input aria-label=\"Search looks\" class=\"search-input\" data-cms-aria_label=\"f00029\" data-cms-placeholder=\"f00028\" id=\"look-search\" placeholder=\"Search by name, category or look code\" type=\"search\"/><select aria-label=\"Filter by occasion\" class=\"select-filter\" data-cms-aria_label=\"f00030\" id=\"occasion-filter\"><option data-cms-text-refs=\"f00173\" value=\"all\"><!--cms:f00173-->All occasions<!--/cms:f00173--></option><option data-cms-text-refs=\"f00174\" value=\"everyday\"><!--cms:f00174-->Everyday Elegance<!--/cms:f00174--></option><option data-cms-text-refs=\"f00175\" value=\"evening\"><!--cms:f00175-->Evenings &amp; Celebrations<!--/cms:f00175--></option><option data-cms-text-refs=\"f00176\" value=\"festive\"><!--cms:f00176-->Festive Edit<!--/cms:f00176--></option><option data-cms-text-refs=\"f00177\" value=\"destination\"><!--cms:f00177-->Destination Moments<!--/cms:f00177--></option></select><button class=\"outlined-btn\" data-cms-text-refs=\"f00178\" data-cms-visibility=\"f00099\" data-open-saved=\"\" type=\"button\"><!--cms:f00178-->Saved Looks ♥ <!--/cms:f00178--><span data-cms-text-refs=\"f00179\" data-saved-count=\"\"><!--cms:f00179-->0<!--/cms:f00179--></span></button></div><div class=\"look-grid\" id=\"look-grid\"></div><section aria-labelledby=\"v51-recent-title\" class=\"v51-recent\" data-cms-section=\"s-002\" hidden=\"\" id=\"v51-recent\">\n<div class=\"v51-section-header\"><div><span class=\"ep-kicker\" data-cms-text-refs=\"f00180\"><!--cms:f00180-->A PERSONAL EDIT<!--/cms:f00180--></span><h2 data-cms-text-refs=\"f00181\" id=\"v51-recent-title\"><!--cms:f00181-->Recently explored.<!--/cms:f00181--></h2></div><span class=\"v51-small-copy\" data-cms-text-refs=\"f00182\"><!--cms:f00182-->Only in this browser session<!--/cms:f00182--></span></div>\n<div class=\"v51-recent-grid\" id=\"v51-recent-grid\"></div></section></div></section><section aria-label=\"Personal styling invitation\" class=\"v51-text-band\" data-cms-aria_label=\"f00031\" data-cms-section=\"s-003\"><span class=\"ep-kicker\" data-cms-text-refs=\"f00183\"><!--cms:f00183-->FIND YOUR EXPRESSION<!--/cms:f00183--></span><h2 data-cms-text-refs=\"f00184\"><!--cms:f00184-->A look can be just the beginning.<!--/cms:f00184--></h2><p data-cms-text-refs=\"f00185\"><!--cms:f00185-->Found a silhouette you love? Explore an individual approach to fit, styling and finishing.<!--/cms:f00185--></p><a class=\"v51-underline-link\" data-cms-href=\"f00032\" data-cms-text-refs=\"f00186\" data-cms-visibility=\"f00100\" href=\"bespoke.html\"><!--cms:f00186-->DISCOVER BESPOKE <!--/cms:f00186--><span aria-hidden=\"true\" data-cms-text-refs=\"f00187\"><!--cms:f00187-->↗<!--/cms:f00187--></span></a></section></main><footer class=\"site-footer\" id=\"footer\">\n<img alt=\"\" aria-hidden=\"true\" class=\"footer-watermark-monogram\" data-cms-src=\"f00033\" data-cms-visibility=\"f00101\" loading=\"lazy\" src=\"assets/brand/shaneryn-monogram.png\"/>\n<div class=\"wrap\">\n<nav aria-label=\"Footer navigation\" class=\"footer-grid\" data-cms-aria_label=\"f00034\">\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00188\"><!--cms:f00188-->Explore<!--/cms:f00188--></h4>\n<a data-cms-href=\"f00035\" data-cms-text-refs=\"f00189\" data-cms-visibility=\"f00102\" href=\"index.html\"><!--cms:f00189-->Homepage<!--/cms:f00189--></a><a data-cms-href=\"f00036\" data-cms-text-refs=\"f00190\" data-cms-visibility=\"f00103\" href=\"collections.html\"><!--cms:f00190-->Collections<!--/cms:f00190--></a><a data-cms-href=\"f00037\" data-cms-text-refs=\"f00191\" data-cms-visibility=\"f00104\" href=\"index.html#occasion\"><!--cms:f00191-->Shop by Style<!--/cms:f00191--></a></div>\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00192\"><!--cms:f00192-->The World<!--/cms:f00192--></h4>\n<a data-cms-href=\"f00038\" data-cms-text-refs=\"f00193\" data-cms-visibility=\"f00105\" href=\"story.html\"><!--cms:f00193-->Our Story<!--/cms:f00193--></a><a data-cms-href=\"f00039\" data-cms-text-refs=\"f00194\" data-cms-visibility=\"f00106\" href=\"bespoke.html\"><!--cms:f00194-->Bespoke<!--/cms:f00194--></a><a data-cms-href=\"f00040\" data-cms-text-refs=\"f00195\" data-cms-visibility=\"f00107\" href=\"bespoke.html#services\"><!--cms:f00195-->Styling Services<!--/cms:f00195--></a><a data-cms-href=\"f00041\" data-cms-text-refs=\"f00196\" data-cms-visibility=\"f00108\" href=\"film.html\"><!--cms:f00196-->Fashion Film<!--/cms:f00196--></a><a data-cms-href=\"f00042\" data-cms-text-refs=\"f00197\" data-cms-visibility=\"f00109\" href=\"testimonials.html\"><!--cms:f00197-->Testimonials<!--/cms:f00197--></a></div>\n<div class=\"footer-col\"><h4 data-cms-text-refs=\"f00198\"><!--cms:f00198-->Connect<!--/cms:f00198--></h4>\n<a data-cms-href=\"f00043\" data-cms-text-refs=\"f00199\" data-cms-visibility=\"f00110\" href=\"contact.html\"><!--cms:f00199-->Request Details<!--/cms:f00199--></a>\n<button data-cms-text-refs=\"f00200\" data-cms-visibility=\"f00111\" data-open-saved=\"\" type=\"button\"><!--cms:f00200-->Saved Looks<!--/cms:f00200--></button>\n<p class=\"footer-direct\" data-cms-text-refs=\"f00201 f00202\"><!--cms:f00201-->Personal enquiries only<!--/cms:f00201--><br/><!--cms:f00202-->No online checkout<!--/cms:f00202--></p>\n<a data-cms-href=\"f00044\" data-cms-text-refs=\"f00203\" data-cms-visibility=\"f00112\" href=\"mailto:info@shenerian.com\"><!--cms:f00203-->info@shenerian.com<!--/cms:f00203--></a></div>\n</nav><div class=\"footer-masthead\">\n<a aria-label=\"SHANERYN — back to homepage\" class=\"footer-logo\" data-cms-aria_label=\"f00046\" data-cms-href=\"f00045\" data-cms-visibility=\"f00113\" href=\"index.html\">\n<img alt=\"SHANERYN\" class=\"logo-original\" data-cms-alt=\"f00048\" data-cms-src=\"f00047\" data-cms-visibility=\"f00114\" decoding=\"async\" height=\"129\" loading=\"lazy\" src=\"assets/brand/shaneryn-wordmark-magenta.png\" width=\"490\"/><img alt=\"\" aria-hidden=\"true\" class=\"logo-inverse\" data-cms-src=\"f00049\" data-cms-visibility=\"f00115\" height=\"129\" loading=\"lazy\" src=\"assets/brand/shaneryn-wordmark-light.png\" width=\"490\"/>\n</a>\n<span aria-hidden=\"true\" class=\"footer-rule\"></span>\n</div>\n<div class=\"footer-bottom\"><span data-cms-text-refs=\"f00204\"><!--cms:f00204-->© 2026 SHANERYN<!--/cms:f00204--></span><span data-cms-text-refs=\"f00205\"><!--cms:f00205-->Personal enquiries only · No online checkout<!--/cms:f00205--></span></div>\n</div>\n</footer><button aria-label=\"Back to top\" class=\"backtotop\" data-cms-aria_label=\"f00050\" data-cms-text-refs=\"f00206\" data-cms-visibility=\"f00116\" id=\"backtotop\" type=\"button\"><!--cms:f00206-->↑<!--/cms:f00206--></button><div aria-live=\"polite\" class=\"toast\" id=\"toast\" role=\"status\"></div>\n<div aria-label=\"SHANERYN outfit enquiry\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00051\" hidden=\"\" id=\"inquiry-modal\" role=\"dialog\"><div class=\"modal-window dialog-small\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00052\" data-cms-text-refs=\"f00207\" data-cms-visibility=\"f00117\" type=\"button\"><!--cms:f00207-->×<!--/cms:f00207--></button><span class=\"eyebrow\" data-cms-text-refs=\"f00208\"><!--cms:f00208-->PERSONAL ENQUIRY<!--/cms:f00208--></span><h2 data-cms-text-refs=\"f00209\"><!--cms:f00209-->Begin a Conversation.<!--/cms:f00209--></h2><p class=\"bodycopy\" data-cms-text-refs=\"f00210\"><!--cms:f00210-->Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit it automatically.<!--/cms:f00210--></p><form id=\"inquiry-form\"><label data-cms-text-refs=\"f00211\" for=\"inquiry-name\"><!--cms:f00211-->Your name<!--/cms:f00211--></label><input autocomplete=\"name\" data-cms-placeholder=\"f00053\" id=\"inquiry-name\" name=\"name\" placeholder=\"Your name\" required=\"\"/><label data-cms-text-refs=\"f00212\" for=\"inquiry-email\"><!--cms:f00212-->Email address<!--/cms:f00212--></label><input autocomplete=\"email\" data-cms-placeholder=\"f00054\" id=\"inquiry-email\" name=\"email\" placeholder=\"you@example.com\" required=\"\" type=\"email\"/><label data-cms-text-refs=\"f00213\" for=\"inquiry-look\"><!--cms:f00213-->Collection or look reference<!--/cms:f00213--></label><input data-cms-placeholder=\"f00055\" id=\"inquiry-look\" name=\"look\" placeholder=\"e.g. SH-PS-01\"/><label data-cms-text-refs=\"f00214\" for=\"inquiry-garment\"><!--cms:f00214-->Garment type (optional)<!--/cms:f00214--></label><select id=\"inquiry-garment\" name=\"garmentType\"><option data-cms-text-refs=\"f00215\" value=\"\"><!--cms:f00215-->Please select if relevant<!--/cms:f00215--></option><option data-cms-text-refs=\"f00216\" value=\"Occasion Wear\"><!--cms:f00216-->Occasion Wear<!--/cms:f00216--></option><option data-cms-text-refs=\"f00217\" value=\"Bridal Wear (Women)\"><!--cms:f00217-->Bridal Wear (Women)<!--/cms:f00217--></option><option data-cms-text-refs=\"f00218\" value=\"Bridal Wear (Men)\"><!--cms:f00218-->Bridal Wear (Men)<!--/cms:f00218--></option><option data-cms-text-refs=\"f00219\" value=\"Formal Corporate Wear\"><!--cms:f00219-->Formal Corporate Wear<!--/cms:f00219--></option></select><label data-cms-text-refs=\"f00220\" for=\"inquiry-message\"><!--cms:f00220-->What would you like to know?<!--/cms:f00220--></label><textarea data-cms-placeholder=\"f00056\" id=\"inquiry-message\" name=\"message\" placeholder=\"Tell us about your occasion or requirements\"></textarea><div class=\"modal-actions\"><button class=\"filled-btn\" data-cms-text-refs=\"f00221\" data-cms-visibility=\"f00118\" type=\"submit\"><!--cms:f00221-->Copy Enquiry ↗<!--/cms:f00221--></button><button class=\"outlined-btn\" data-cms-text-refs=\"f00222\" data-cms-visibility=\"f00119\" id=\"open-email\" type=\"button\"><!--cms:f00222-->Open Email Draft ↗<!--/cms:f00222--></button></div></form><p class=\"modal-info\" data-cms-text-refs=\"f00223\"><!--cms:f00223-->Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until CMS integration.<!--/cms:f00223--></p></div></div>\n<div aria-label=\"Saved looks\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00057\" hidden=\"\" id=\"saved-modal\" role=\"dialog\"><div class=\"modal-window dialog-small\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00058\" data-cms-text-refs=\"f00224\" data-cms-visibility=\"f00120\" type=\"button\"><!--cms:f00224-->×<!--/cms:f00224--></button><span class=\"eyebrow\" data-cms-text-refs=\"f00225\"><!--cms:f00225-->YOUR EDIT<!--/cms:f00225--></span><h2 data-cms-text-refs=\"f00226\"><!--cms:f00226-->Saved Looks.<!--/cms:f00226--></h2><p class=\"bodycopy\" data-cms-text-refs=\"f00227\"><!--cms:f00227-->A shortlist saved locally in your browser; no sign-in required.<!--/cms:f00227--></p><div class=\"saved-list\" id=\"saved-list\"></div><a class=\"outlined-btn\" data-close-modal=\"\" data-cms-href=\"f00059\" data-cms-text-refs=\"f00228\" data-cms-visibility=\"f00121\" href=\"collections.html\"><!--cms:f00228-->Explore Collections ↗<!--/cms:f00228--></a></div></div>\n<div aria-label=\"Full screen outfit viewer\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00060\" hidden=\"\" id=\"look-modal\" role=\"dialog\"><div class=\"modal-window\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00061\" data-cms-text-refs=\"f00229\" data-cms-visibility=\"f00122\" type=\"button\"><!--cms:f00229-->×<!--/cms:f00229--></button><div class=\"modal-frame\"><div class=\"modal-media\"><img alt=\"Outfit\" data-cms-alt=\"f00063\" data-cms-src=\"f00062\" data-cms-visibility=\"f00123\" id=\"look-modal-image\" src=\"assets/visual_13.jpg\"/><div class=\"gallery-controls\"><button aria-label=\"Previous look\" data-cms-aria_label=\"f00064\" data-cms-text-refs=\"f00230\" data-cms-visibility=\"f00124\" data-look-step=\"-1\" type=\"button\"><!--cms:f00230-->←<!--/cms:f00230--></button><button aria-label=\"Next look\" data-cms-aria_label=\"f00065\" data-cms-text-refs=\"f00231\" data-cms-visibility=\"f00125\" data-look-step=\"1\" type=\"button\"><!--cms:f00231-->→<!--/cms:f00231--></button></div></div><div class=\"modal-frame-copy\"><span class=\"eyebrow\" data-cms-text-refs=\"f00232\"><!--cms:f00232-->THE SHANERYN LOOKBOOK<!--/cms:f00232--></span><h2 data-cms-text-refs=\"f00233\" id=\"look-modal-title\"><!--cms:f00233-->Selected look<!--/cms:f00233--></h2><p data-cms-text-refs=\"f00234\" id=\"look-modal-code\"><!--cms:f00234-->Look reference<!--/cms:f00234--></p><p data-cms-text-refs=\"f00235\" id=\"look-modal-description\"><!--cms:f00235-->An editorial presentation of the look.<!--/cms:f00235--></p><p class=\"eyebrow\" data-cms-text-refs=\"f00236\" id=\"look-modal-position\"><!--cms:f00236-->1 / 12<!--/cms:f00236--></p><button class=\"outlined-btn\" data-cms-text-refs=\"f00237\" data-cms-visibility=\"f00126\" id=\"look-modal-inquiry\" type=\"button\"><!--cms:f00237-->Enquire About This Look ↗<!--/cms:f00237--></button></div></div></div></div>\n<div aria-label=\"Fashion film\" aria-modal=\"true\" class=\"modal\" data-cms-aria_label=\"f00066\" hidden=\"\" id=\"film-modal\" role=\"dialog\"><div class=\"modal-window\"><button aria-label=\"Close\" class=\"modal-close\" data-close-modal=\"\" data-cms-aria_label=\"f00067\" data-cms-text-refs=\"f00238\" data-cms-visibility=\"f00127\" type=\"button\"><!--cms:f00238-->×<!--/cms:f00238--></button><div class=\"video-poster\" id=\"film-placeholder\"><div><span class=\"eyebrow\" data-cms-text-refs=\"f00239\"><!--cms:f00239-->SHANERYN / FASHION IN MOTION<!--/cms:f00239--></span><h2 data-cms-text-refs=\"f00240\"><!--cms:f00240-->Stories in Motion<!--/cms:f00240--></h2><p data-cms-text-refs=\"f00241\"><!--cms:f00241-->The SHANERYN film will appear here once the approved video is available.<!--/cms:f00241--></p></div></div><iframe allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" class=\"video-frame\" data-cms-title=\"f00068\" hidden=\"\" id=\"film-iframe\" title=\"SHANERYN fashion film\"></iframe></div></div>\n",
+ "fields": [
+  {
+   "id": "f00001",
+   "kind": "href",
+   "value": "#main-content",
+   "visible": true,
+   "section": "other",
+   "tag": "a",
+   "label": "a / href: Skip to main content"
+  },
+  {
+   "id": "f00002",
+   "kind": "aria-label",
+   "value": "Main menu",
+   "visible": true,
+   "section": "header",
+   "tag": "nav",
+   "label": "nav / aria-label: Collections Bespoke"
+  },
+  {
+   "id": "f00003",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Collections"
+  },
+  {
+   "id": "f00004",
+   "kind": "href",
+   "value": "bespoke.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Bespoke"
+  },
+  {
+   "id": "f00005",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: "
+  },
+  {
+   "id": "f00006",
+   "kind": "aria-label",
+   "value": "SHANERYN Home",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / aria-label: "
+  },
+  {
+   "id": "f00007",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-magenta.png",
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "img / src: SHANERYN"
+  },
+  {
+   "id": "f00008",
+   "kind": "alt",
+   "value": "SHANERYN",
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "img / alt: SHANERYN"
+  },
+  {
+   "id": "f00009",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-light.png",
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "img / src: photo"
+  },
+  {
+   "id": "f00010",
+   "kind": "aria-label",
+   "value": "Additional links",
+   "visible": true,
+   "section": "header",
+   "tag": "nav",
+   "label": "nav / aria-label: Our Story Styling Services Menu 0"
+  },
+  {
+   "id": "f00011",
+   "kind": "href",
+   "value": "story.html",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Our Story"
+  },
+  {
+   "id": "f00012",
+   "kind": "href",
+   "value": "bespoke.html#services",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / href: Styling Services"
+  },
+  {
+   "id": "f00013",
+   "kind": "aria-label",
+   "value": "Open menu",
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "button / aria-label: Menu"
+  },
+  {
+   "id": "f00014",
+   "kind": "aria-label",
+   "value": "View saved looks",
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "button / aria-label: 0"
+  },
+  {
+   "id": "f00015",
+   "kind": "aria-label",
+   "value": "Explore SHANERYN",
+   "visible": true,
+   "section": "other",
+   "tag": "nav",
+   "label": "nav / aria-label: Homepage 01 Shop by Style 02 Collections 03 Besp"
+  },
+  {
+   "id": "f00016",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Homepage 01"
+  },
+  {
+   "id": "f00017",
+   "kind": "href",
+   "value": "index.html#occasion",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Shop by Style 02"
+  },
+  {
+   "id": "f00018",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Collections 03"
+  },
+  {
+   "id": "f00019",
+   "kind": "href",
+   "value": "bespoke.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Bespoke 04"
+  },
+  {
+   "id": "f00020",
+   "kind": "href",
+   "value": "bespoke.html#services",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Styling Services 05"
+  },
+  {
+   "id": "f00021",
+   "kind": "href",
+   "value": "story.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Our Story 06"
+  },
+  {
+   "id": "f00022",
+   "kind": "href",
+   "value": "film.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Fashion Film 07"
+  },
+  {
+   "id": "f00023",
+   "kind": "href",
+   "value": "testimonials.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Testimonials 08"
+  },
+  {
+   "id": "f00024",
+   "kind": "href",
+   "value": "contact.html",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / href: Contact 09"
+  },
+  {
+   "id": "f00025",
+   "kind": "src",
+   "value": "assets/product-detail/starlight/01.webp",
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "img / src: SHANERYN Starlight studio product photograph on "
+  },
+  {
+   "id": "f00026",
+   "kind": "alt",
+   "value": "SHANERYN Starlight studio product photograph on a neutral background",
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "img / alt: SHANERYN Starlight studio product photograph on "
+  },
+  {
+   "id": "f00027",
+   "kind": "aria-label",
+   "value": "Filter by clothing category",
+   "visible": true,
+   "section": "s-001",
+   "tag": "div",
+   "label": "div / aria-label: All Looks Pant Sets Cropped Pant Sets Skirt Sets"
+  },
+  {
+   "id": "f00028",
+   "kind": "placeholder",
+   "value": "Search by name, category or look code",
+   "visible": true,
+   "section": "s-001",
+   "tag": "input",
+   "label": "input / placeholder: "
+  },
+  {
+   "id": "f00029",
+   "kind": "aria-label",
+   "value": "Search looks",
+   "visible": true,
+   "section": "s-001",
+   "tag": "input",
+   "label": "input / aria-label: "
+  },
+  {
+   "id": "f00030",
+   "kind": "aria-label",
+   "value": "Filter by occasion",
+   "visible": true,
+   "section": "s-001",
+   "tag": "select",
+   "label": "select / aria-label: All occasions Everyday Elegance Evenings & Celeb"
+  },
+  {
+   "id": "f00031",
+   "kind": "aria-label",
+   "value": "Personal styling invitation",
+   "visible": true,
+   "section": "other",
+   "tag": "section",
+   "label": "section / aria-label: FIND YOUR EXPRESSION A look can be just the begi"
+  },
+  {
+   "id": "f00032",
+   "kind": "href",
+   "value": "bespoke.html",
+   "visible": true,
+   "section": "s-003",
+   "tag": "a",
+   "label": "a / href: DISCOVER BESPOKE ↗"
+  },
+  {
+   "id": "f00033",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-monogram.png",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / src: photo"
+  },
+  {
+   "id": "f00034",
+   "kind": "aria-label",
+   "value": "Footer navigation",
+   "visible": true,
+   "section": "footer",
+   "tag": "nav",
+   "label": "nav / aria-label: Explore Homepage Collections Shop by Style The W"
+  },
+  {
+   "id": "f00035",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Homepage"
+  },
+  {
+   "id": "f00036",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Collections"
+  },
+  {
+   "id": "f00037",
+   "kind": "href",
+   "value": "index.html#occasion",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Shop by Style"
+  },
+  {
+   "id": "f00038",
+   "kind": "href",
+   "value": "story.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Our Story"
+  },
+  {
+   "id": "f00039",
+   "kind": "href",
+   "value": "bespoke.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Bespoke"
+  },
+  {
+   "id": "f00040",
+   "kind": "href",
+   "value": "bespoke.html#services",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Styling Services"
+  },
+  {
+   "id": "f00041",
+   "kind": "href",
+   "value": "film.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Fashion Film"
+  },
+  {
+   "id": "f00042",
+   "kind": "href",
+   "value": "testimonials.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Testimonials"
+  },
+  {
+   "id": "f00043",
+   "kind": "href",
+   "value": "contact.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: Request Details"
+  },
+  {
+   "id": "f00044",
+   "kind": "href",
+   "value": "mailto:info@shenerian.com",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: info@shenerian.com"
+  },
+  {
+   "id": "f00045",
+   "kind": "href",
+   "value": "index.html",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / href: "
+  },
+  {
+   "id": "f00046",
+   "kind": "aria-label",
+   "value": "SHANERYN — back to homepage",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / aria-label: "
+  },
+  {
+   "id": "f00047",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-magenta.png",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / src: SHANERYN"
+  },
+  {
+   "id": "f00048",
+   "kind": "alt",
+   "value": "SHANERYN",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / alt: SHANERYN"
+  },
+  {
+   "id": "f00049",
+   "kind": "src",
+   "value": "assets/brand/shaneryn-wordmark-light.png",
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "img / src: photo"
+  },
+  {
+   "id": "f00050",
+   "kind": "aria-label",
+   "value": "Back to top",
+   "visible": true,
+   "section": "other",
+   "tag": "button",
+   "label": "button / aria-label: ↑"
+  },
+  {
+   "id": "f00051",
+   "kind": "aria-label",
+   "value": "SHANERYN outfit enquiry",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × PERSONAL ENQUIRY Begin a Conversation. Prepare"
+  },
+  {
+   "id": "f00052",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00053",
+   "kind": "placeholder",
+   "value": "Your name",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "input",
+   "label": "input / placeholder: "
+  },
+  {
+   "id": "f00054",
+   "kind": "placeholder",
+   "value": "you@example.com",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "input",
+   "label": "input / placeholder: "
+  },
+  {
+   "id": "f00055",
+   "kind": "placeholder",
+   "value": "e.g. SH-PS-01",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "input",
+   "label": "input / placeholder: "
+  },
+  {
+   "id": "f00056",
+   "kind": "placeholder",
+   "value": "Tell us about your occasion or requirements",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "textarea",
+   "label": "textarea / placeholder: "
+  },
+  {
+   "id": "f00057",
+   "kind": "aria-label",
+   "value": "Saved looks",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × YOUR EDIT Saved Looks. A shortlist saved local"
+  },
+  {
+   "id": "f00058",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00059",
+   "kind": "href",
+   "value": "collections.html",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "a",
+   "label": "a / href: Explore Collections ↗"
+  },
+  {
+   "id": "f00060",
+   "kind": "aria-label",
+   "value": "Full screen outfit viewer",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × ← → THE SHANERYN LOOKBOOK Selected look Look r"
+  },
+  {
+   "id": "f00061",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00062",
+   "kind": "src",
+   "value": "assets/visual_13.jpg",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "img",
+   "label": "img / src: Outfit"
+  },
+  {
+   "id": "f00063",
+   "kind": "alt",
+   "value": "Outfit",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "img",
+   "label": "img / alt: Outfit"
+  },
+  {
+   "id": "f00064",
+   "kind": "aria-label",
+   "value": "Previous look",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ←"
+  },
+  {
+   "id": "f00065",
+   "kind": "aria-label",
+   "value": "Next look",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: →"
+  },
+  {
+   "id": "f00066",
+   "kind": "aria-label",
+   "value": "Fashion film",
+   "visible": true,
+   "section": "other",
+   "tag": "div",
+   "label": "div / aria-label: × SHANERYN / FASHION IN MOTION Stories in Motion"
+  },
+  {
+   "id": "f00067",
+   "kind": "aria-label",
+   "value": "Close",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / aria-label: ×"
+  },
+  {
+   "id": "f00068",
+   "kind": "title",
+   "value": "SHANERYN fashion film",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "iframe",
+   "label": "iframe / title: "
+  },
+  {
+   "id": "f00069",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "other",
+   "tag": "a",
+   "label": "Button / Link / Image — Skip to main content"
+  },
+  {
+   "id": "f00070",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Collections"
+  },
+  {
+   "id": "f00071",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Bespoke"
+  },
+  {
+   "id": "f00072",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — SHANERYN Home"
+  },
+  {
+   "id": "f00073",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "Button / Link / Image — SHANERYN"
+  },
+  {
+   "id": "f00074",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "img",
+   "label": "Button / Link / Image — img"
+  },
+  {
+   "id": "f00075",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Our Story"
+  },
+  {
+   "id": "f00076",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "Button / Link / Image — Styling Services"
+  },
+  {
+   "id": "f00077",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "Button / Link / Image — Menu"
+  },
+  {
+   "id": "f00078",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "header",
+   "tag": "button",
+   "label": "Button / Link / Image — 0"
+  },
+  {
+   "id": "f00079",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Homepage 01"
+  },
+  {
+   "id": "f00080",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Shop by Style 02"
+  },
+  {
+   "id": "f00081",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Collections 03"
+  },
+  {
+   "id": "f00082",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Bespoke 04"
+  },
+  {
+   "id": "f00083",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Styling Services 05"
+  },
+  {
+   "id": "f00084",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Our Story 06"
+  },
+  {
+   "id": "f00085",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Fashion Film 07"
+  },
+  {
+   "id": "f00086",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Testimonials 08"
+  },
+  {
+   "id": "f00087",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "Button / Link / Image — Contact 09"
+  },
+  {
+   "id": "f00088",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "Button / Link / Image — Saved Looks ♥"
+  },
+  {
+   "id": "f00089",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "Button / Link / Image — Enquire ↗"
+  },
+  {
+   "id": "f00090",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-000",
+   "tag": "img",
+   "label": "Button / Link / Image — SHANERYN Starlight studio product photograph on a neutral background"
+  },
+  {
+   "id": "f00091",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — All Looks"
+  },
+  {
+   "id": "f00092",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Pant Sets"
+  },
+  {
+   "id": "f00093",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Cropped Pant Sets"
+  },
+  {
+   "id": "f00094",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Skirt Sets"
+  },
+  {
+   "id": "f00095",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Tunics"
+  },
+  {
+   "id": "f00096",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Dresses"
+  },
+  {
+   "id": "f00097",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Gowns"
+  },
+  {
+   "id": "f00098",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Search & filters +"
+  },
+  {
+   "id": "f00099",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "Button / Link / Image — Saved Looks ♥ 0"
+  },
+  {
+   "id": "f00100",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "s-003",
+   "tag": "a",
+   "label": "Button / Link / Image — DISCOVER BESPOKE ↗"
+  },
+  {
+   "id": "f00101",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "Button / Link / Image — img"
+  },
+  {
+   "id": "f00102",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Homepage"
+  },
+  {
+   "id": "f00103",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Collections"
+  },
+  {
+   "id": "f00104",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Shop by Style"
+  },
+  {
+   "id": "f00105",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Our Story"
+  },
+  {
+   "id": "f00106",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Bespoke"
+  },
+  {
+   "id": "f00107",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Styling Services"
+  },
+  {
+   "id": "f00108",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Fashion Film"
+  },
+  {
+   "id": "f00109",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Testimonials"
+  },
+  {
+   "id": "f00110",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — Request Details"
+  },
+  {
+   "id": "f00111",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "button",
+   "label": "Button / Link / Image — Saved Looks"
+  },
+  {
+   "id": "f00112",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — info@shenerian.com"
+  },
+  {
+   "id": "f00113",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "Button / Link / Image — SHANERYN — back to homepage"
+  },
+  {
+   "id": "f00114",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "Button / Link / Image — SHANERYN"
+  },
+  {
+   "id": "f00115",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "footer",
+   "tag": "img",
+   "label": "Button / Link / Image — img"
+  },
+  {
+   "id": "f00116",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "other",
+   "tag": "button",
+   "label": "Button / Link / Image — ↑"
+  },
+  {
+   "id": "f00117",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00118",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — Copy Enquiry ↗"
+  },
+  {
+   "id": "f00119",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — Open Email Draft ↗"
+  },
+  {
+   "id": "f00120",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00121",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "a",
+   "label": "Button / Link / Image — Explore Collections ↗"
+  },
+  {
+   "id": "f00122",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00123",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "img",
+   "label": "Button / Link / Image — Outfit"
+  },
+  {
+   "id": "f00124",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ←"
+  },
+  {
+   "id": "f00125",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — →"
+  },
+  {
+   "id": "f00126",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — Enquire About This Look ↗"
+  },
+  {
+   "id": "f00127",
+   "kind": "visibility",
+   "value": true,
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "Button / Link / Image — ×"
+  },
+  {
+   "id": "f00128",
+   "kind": "text",
+   "value": "Skip to main content",
+   "visible": true,
+   "section": "other",
+   "tag": "a",
+   "label": "a / Skip to main content"
+  },
+  {
+   "id": "f00129",
+   "kind": "text",
+   "value": "Collections",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Collections"
+  },
+  {
+   "id": "f00130",
+   "kind": "text",
+   "value": "Bespoke",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Bespoke"
+  },
+  {
+   "id": "f00131",
+   "kind": "text",
+   "value": "Our Story",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Our Story"
+  },
+  {
+   "id": "f00132",
+   "kind": "text",
+   "value": "Styling Services",
+   "visible": true,
+   "section": "header",
+   "tag": "a",
+   "label": "a / Styling Services"
+  },
+  {
+   "id": "f00133",
+   "kind": "text",
+   "value": "Menu",
+   "visible": true,
+   "section": "header",
+   "tag": "span",
+   "label": "span / Menu"
+  },
+  {
+   "id": "f00134",
+   "kind": "text",
+   "value": "0",
+   "visible": true,
+   "section": "header",
+   "tag": "span",
+   "label": "span / 0"
+  },
+  {
+   "id": "f00135",
+   "kind": "text",
+   "value": "Homepage",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Homepage"
+  },
+  {
+   "id": "f00136",
+   "kind": "text",
+   "value": "01",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 01"
+  },
+  {
+   "id": "f00137",
+   "kind": "text",
+   "value": "Shop by Style",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Shop by Style"
+  },
+  {
+   "id": "f00138",
+   "kind": "text",
+   "value": "02",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 02"
+  },
+  {
+   "id": "f00139",
+   "kind": "text",
+   "value": "Collections",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Collections"
+  },
+  {
+   "id": "f00140",
+   "kind": "text",
+   "value": "03",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 03"
+  },
+  {
+   "id": "f00141",
+   "kind": "text",
+   "value": "Bespoke",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Bespoke"
+  },
+  {
+   "id": "f00142",
+   "kind": "text",
+   "value": "04",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 04"
+  },
+  {
+   "id": "f00143",
+   "kind": "text",
+   "value": "Styling Services",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Styling Services"
+  },
+  {
+   "id": "f00144",
+   "kind": "text",
+   "value": "05",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 05"
+  },
+  {
+   "id": "f00145",
+   "kind": "text",
+   "value": "Our Story",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Our Story"
+  },
+  {
+   "id": "f00146",
+   "kind": "text",
+   "value": "06",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 06"
+  },
+  {
+   "id": "f00147",
+   "kind": "text",
+   "value": "Fashion Film",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Fashion Film"
+  },
+  {
+   "id": "f00148",
+   "kind": "text",
+   "value": "07",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 07"
+  },
+  {
+   "id": "f00149",
+   "kind": "text",
+   "value": "Testimonials",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Testimonials"
+  },
+  {
+   "id": "f00150",
+   "kind": "text",
+   "value": "08",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 08"
+  },
+  {
+   "id": "f00151",
+   "kind": "text",
+   "value": "Contact",
+   "visible": true,
+   "section": "navigation",
+   "tag": "a",
+   "label": "a / Contact"
+  },
+  {
+   "id": "f00152",
+   "kind": "text",
+   "value": "09",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / 09"
+  },
+  {
+   "id": "f00153",
+   "kind": "text",
+   "value": "Saved Looks ",
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "button / Saved Looks"
+  },
+  {
+   "id": "f00154",
+   "kind": "text",
+   "value": "♥",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / ♥"
+  },
+  {
+   "id": "f00155",
+   "kind": "text",
+   "value": "Enquire ",
+   "visible": true,
+   "section": "navigation",
+   "tag": "button",
+   "label": "button / Enquire"
+  },
+  {
+   "id": "f00156",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "navigation",
+   "tag": "small",
+   "label": "small / ↗"
+  },
+  {
+   "id": "f00157",
+   "kind": "text",
+   "value": "THE CURVE EDIT / SHANERYN",
+   "visible": true,
+   "section": "s-000",
+   "tag": "span",
+   "label": "span / THE CURVE EDIT / SHANERYN"
+  },
+  {
+   "id": "f00158",
+   "kind": "text",
+   "value": "The Collections.",
+   "visible": true,
+   "section": "s-000",
+   "tag": "h1",
+   "label": "h1 / The Collections."
+  },
+  {
+   "id": "f00159",
+   "kind": "text",
+   "value": "Considered silhouettes. Personal expression. Explore the looks.",
+   "visible": true,
+   "section": "s-000",
+   "tag": "p",
+   "label": "p / Considered silhouettes. Personal expression. Explore the looks."
+  },
+  {
+   "id": "f00160",
+   "kind": "text",
+   "value": "THE COLLECTIONS / SHANERYN",
+   "visible": true,
+   "section": "s-000",
+   "tag": "span",
+   "label": "span / THE COLLECTIONS / SHANERYN"
+  },
+  {
+   "id": "f00161",
+   "kind": "text",
+   "value": "DISCOVER THE LOOKS",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / DISCOVER THE LOOKS"
+  },
+  {
+   "id": "f00162",
+   "kind": "text",
+   "value": "The edit.",
+   "visible": true,
+   "section": "s-001",
+   "tag": "h2",
+   "label": "h2 / The edit."
+  },
+  {
+   "id": "f00163",
+   "kind": "text",
+   "value": "08 looks",
+   "visible": true,
+   "section": "s-001",
+   "tag": "p",
+   "label": "p / 08 looks"
+  },
+  {
+   "id": "f00164",
+   "kind": "text",
+   "value": "All Looks",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / All Looks"
+  },
+  {
+   "id": "f00165",
+   "kind": "text",
+   "value": "Pant Sets",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / Pant Sets"
+  },
+  {
+   "id": "f00166",
+   "kind": "text",
+   "value": "Cropped Pant Sets",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / Cropped Pant Sets"
+  },
+  {
+   "id": "f00167",
+   "kind": "text",
+   "value": "Skirt Sets",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / Skirt Sets"
+  },
+  {
+   "id": "f00168",
+   "kind": "text",
+   "value": "Tunics",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / Tunics"
+  },
+  {
+   "id": "f00169",
+   "kind": "text",
+   "value": "Dresses",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / Dresses"
+  },
+  {
+   "id": "f00170",
+   "kind": "text",
+   "value": "Gowns",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / Gowns"
+  },
+  {
+   "id": "f00171",
+   "kind": "text",
+   "value": "Search & filters",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / Search & filters"
+  },
+  {
+   "id": "f00172",
+   "kind": "text",
+   "value": "+",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / +"
+  },
+  {
+   "id": "f00173",
+   "kind": "text",
+   "value": "All occasions",
+   "visible": true,
+   "section": "s-001",
+   "tag": "option",
+   "label": "option / All occasions"
+  },
+  {
+   "id": "f00174",
+   "kind": "text",
+   "value": "Everyday Elegance",
+   "visible": true,
+   "section": "s-001",
+   "tag": "option",
+   "label": "option / Everyday Elegance"
+  },
+  {
+   "id": "f00175",
+   "kind": "text",
+   "value": "Evenings & Celebrations",
+   "visible": true,
+   "section": "s-001",
+   "tag": "option",
+   "label": "option / Evenings & Celebrations"
+  },
+  {
+   "id": "f00176",
+   "kind": "text",
+   "value": "Festive Edit",
+   "visible": true,
+   "section": "s-001",
+   "tag": "option",
+   "label": "option / Festive Edit"
+  },
+  {
+   "id": "f00177",
+   "kind": "text",
+   "value": "Destination Moments",
+   "visible": true,
+   "section": "s-001",
+   "tag": "option",
+   "label": "option / Destination Moments"
+  },
+  {
+   "id": "f00178",
+   "kind": "text",
+   "value": "Saved Looks ♥ ",
+   "visible": true,
+   "section": "s-001",
+   "tag": "button",
+   "label": "button / Saved Looks ♥"
+  },
+  {
+   "id": "f00179",
+   "kind": "text",
+   "value": "0",
+   "visible": true,
+   "section": "s-001",
+   "tag": "span",
+   "label": "span / 0"
+  },
+  {
+   "id": "f00180",
+   "kind": "text",
+   "value": "A PERSONAL EDIT",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / A PERSONAL EDIT"
+  },
+  {
+   "id": "f00181",
+   "kind": "text",
+   "value": "Recently explored.",
+   "visible": true,
+   "section": "s-002",
+   "tag": "h2",
+   "label": "h2 / Recently explored."
+  },
+  {
+   "id": "f00182",
+   "kind": "text",
+   "value": "Only in this browser session",
+   "visible": true,
+   "section": "s-002",
+   "tag": "span",
+   "label": "span / Only in this browser session"
+  },
+  {
+   "id": "f00183",
+   "kind": "text",
+   "value": "FIND YOUR EXPRESSION",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / FIND YOUR EXPRESSION"
+  },
+  {
+   "id": "f00184",
+   "kind": "text",
+   "value": "A look can be just the beginning.",
+   "visible": true,
+   "section": "s-003",
+   "tag": "h2",
+   "label": "h2 / A look can be just the beginning."
+  },
+  {
+   "id": "f00185",
+   "kind": "text",
+   "value": "Found a silhouette you love? Explore an individual approach to fit, styling and finishing.",
+   "visible": true,
+   "section": "s-003",
+   "tag": "p",
+   "label": "p / Found a silhouette you love? Explore an individual approach to fit, styling and finishing."
+  },
+  {
+   "id": "f00186",
+   "kind": "text",
+   "value": "DISCOVER BESPOKE ",
+   "visible": true,
+   "section": "s-003",
+   "tag": "a",
+   "label": "a / DISCOVER BESPOKE"
+  },
+  {
+   "id": "f00187",
+   "kind": "text",
+   "value": "↗",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "span / ↗"
+  },
+  {
+   "id": "f00188",
+   "kind": "text",
+   "value": "Explore",
+   "visible": true,
+   "section": "footer",
+   "tag": "h4",
+   "label": "h4 / Explore"
+  },
+  {
+   "id": "f00189",
+   "kind": "text",
+   "value": "Homepage",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Homepage"
+  },
+  {
+   "id": "f00190",
+   "kind": "text",
+   "value": "Collections",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Collections"
+  },
+  {
+   "id": "f00191",
+   "kind": "text",
+   "value": "Shop by Style",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Shop by Style"
+  },
+  {
+   "id": "f00192",
+   "kind": "text",
+   "value": "The World",
+   "visible": true,
+   "section": "footer",
+   "tag": "h4",
+   "label": "h4 / The World"
+  },
+  {
+   "id": "f00193",
+   "kind": "text",
+   "value": "Our Story",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Our Story"
+  },
+  {
+   "id": "f00194",
+   "kind": "text",
+   "value": "Bespoke",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Bespoke"
+  },
+  {
+   "id": "f00195",
+   "kind": "text",
+   "value": "Styling Services",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Styling Services"
+  },
+  {
+   "id": "f00196",
+   "kind": "text",
+   "value": "Fashion Film",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Fashion Film"
+  },
+  {
+   "id": "f00197",
+   "kind": "text",
+   "value": "Testimonials",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Testimonials"
+  },
+  {
+   "id": "f00198",
+   "kind": "text",
+   "value": "Connect",
+   "visible": true,
+   "section": "footer",
+   "tag": "h4",
+   "label": "h4 / Connect"
+  },
+  {
+   "id": "f00199",
+   "kind": "text",
+   "value": "Request Details",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / Request Details"
+  },
+  {
+   "id": "f00200",
+   "kind": "text",
+   "value": "Saved Looks",
+   "visible": true,
+   "section": "footer",
+   "tag": "button",
+   "label": "button / Saved Looks"
+  },
+  {
+   "id": "f00201",
+   "kind": "text",
+   "value": "Personal enquiries only",
+   "visible": true,
+   "section": "footer",
+   "tag": "p",
+   "label": "p / Personal enquiries only"
+  },
+  {
+   "id": "f00202",
+   "kind": "text",
+   "value": "No online checkout",
+   "visible": true,
+   "section": "footer",
+   "tag": "p",
+   "label": "p / No online checkout"
+  },
+  {
+   "id": "f00203",
+   "kind": "text",
+   "value": "info@shenerian.com",
+   "visible": true,
+   "section": "footer",
+   "tag": "a",
+   "label": "a / info@shenerian.com"
+  },
+  {
+   "id": "f00204",
+   "kind": "text",
+   "value": "© 2026 SHANERYN",
+   "visible": true,
+   "section": "footer",
+   "tag": "span",
+   "label": "span / © 2026 SHANERYN"
+  },
+  {
+   "id": "f00205",
+   "kind": "text",
+   "value": "Personal enquiries only · No online checkout",
+   "visible": true,
+   "section": "footer",
+   "tag": "span",
+   "label": "span / Personal enquiries only · No online checkout"
+  },
+  {
+   "id": "f00206",
+   "kind": "text",
+   "value": "↑",
+   "visible": true,
+   "section": "other",
+   "tag": "button",
+   "label": "button / ↑"
+  },
+  {
+   "id": "f00207",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00208",
+   "kind": "text",
+   "value": "PERSONAL ENQUIRY",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / PERSONAL ENQUIRY"
+  },
+  {
+   "id": "f00209",
+   "kind": "text",
+   "value": "Begin a Conversation.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Begin a Conversation."
+  },
+  {
+   "id": "f00210",
+   "kind": "text",
+   "value": "Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit it automatically.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / Prepare a personal enquiry about your look. Copy your request or open an email draft; this site does not submit"
+  },
+  {
+   "id": "f00211",
+   "kind": "text",
+   "value": "Your name",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Your name"
+  },
+  {
+   "id": "f00212",
+   "kind": "text",
+   "value": "Email address",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Email address"
+  },
+  {
+   "id": "f00213",
+   "kind": "text",
+   "value": "Collection or look reference",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Collection or look reference"
+  },
+  {
+   "id": "f00214",
+   "kind": "text",
+   "value": "Garment type (optional)",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / Garment type (optional)"
+  },
+  {
+   "id": "f00215",
+   "kind": "text",
+   "value": "Please select if relevant",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Please select if relevant"
+  },
+  {
+   "id": "f00216",
+   "kind": "text",
+   "value": "Occasion Wear",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Occasion Wear"
+  },
+  {
+   "id": "f00217",
+   "kind": "text",
+   "value": "Bridal Wear (Women)",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Bridal Wear (Women)"
+  },
+  {
+   "id": "f00218",
+   "kind": "text",
+   "value": "Bridal Wear (Men)",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Bridal Wear (Men)"
+  },
+  {
+   "id": "f00219",
+   "kind": "text",
+   "value": "Formal Corporate Wear",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "option",
+   "label": "option / Formal Corporate Wear"
+  },
+  {
+   "id": "f00220",
+   "kind": "text",
+   "value": "What would you like to know?",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "label",
+   "label": "label / What would you like to know?"
+  },
+  {
+   "id": "f00221",
+   "kind": "text",
+   "value": "Copy Enquiry ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / Copy Enquiry ↗"
+  },
+  {
+   "id": "f00222",
+   "kind": "text",
+   "value": "Open Email Draft ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / Open Email Draft ↗"
+  },
+  {
+   "id": "f00223",
+   "kind": "text",
+   "value": "Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until CMS integration.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / Enquiries are prepared as email drafts to info@shenerian.com. The website does not send or save requests until "
+  },
+  {
+   "id": "f00224",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00225",
+   "kind": "text",
+   "value": "YOUR EDIT",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / YOUR EDIT"
+  },
+  {
+   "id": "f00226",
+   "kind": "text",
+   "value": "Saved Looks.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Saved Looks."
+  },
+  {
+   "id": "f00227",
+   "kind": "text",
+   "value": "A shortlist saved locally in your browser; no sign-in required.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / A shortlist saved locally in your browser; no sign-in required."
+  },
+  {
+   "id": "f00228",
+   "kind": "text",
+   "value": "Explore Collections ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "a",
+   "label": "a / Explore Collections ↗"
+  },
+  {
+   "id": "f00229",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00230",
+   "kind": "text",
+   "value": "←",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ←"
+  },
+  {
+   "id": "f00231",
+   "kind": "text",
+   "value": "→",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / →"
+  },
+  {
+   "id": "f00232",
+   "kind": "text",
+   "value": "THE SHANERYN LOOKBOOK",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / THE SHANERYN LOOKBOOK"
+  },
+  {
+   "id": "f00233",
+   "kind": "text",
+   "value": "Selected look",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Selected look"
+  },
+  {
+   "id": "f00234",
+   "kind": "text",
+   "value": "Look reference",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / Look reference"
+  },
+  {
+   "id": "f00235",
+   "kind": "text",
+   "value": "An editorial presentation of the look.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / An editorial presentation of the look."
+  },
+  {
+   "id": "f00236",
+   "kind": "text",
+   "value": "1 / 12",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / 1 / 12"
+  },
+  {
+   "id": "f00237",
+   "kind": "text",
+   "value": "Enquire About This Look ↗",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / Enquire About This Look ↗"
+  },
+  {
+   "id": "f00238",
+   "kind": "text",
+   "value": "×",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "button",
+   "label": "button / ×"
+  },
+  {
+   "id": "f00239",
+   "kind": "text",
+   "value": "SHANERYN / FASHION IN MOTION",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "span",
+   "label": "span / SHANERYN / FASHION IN MOTION"
+  },
+  {
+   "id": "f00240",
+   "kind": "text",
+   "value": "Stories in Motion",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "h2",
+   "label": "h2 / Stories in Motion"
+  },
+  {
+   "id": "f00241",
+   "kind": "text",
+   "value": "The SHANERYN film will appear here once the approved video is available.",
+   "visible": true,
+   "section": "dialogs",
+   "tag": "p",
+   "label": "p / The SHANERYN film will appear here once the approved video is available."
+  },
+  {
+   "id": "f00242",
+   "kind": "text",
+   "value": "CURATED BY SHANERYN",
+   "visible": true,
+   "section": "s-000",
+   "tag": "span",
+   "label": "Curated collections - Small heading"
+  },
+  {
+   "id": "f00243",
+   "kind": "text",
+   "value": "Our Collections.",
+   "visible": true,
+   "section": "s-000",
+   "tag": "h2",
+   "label": "Curated collections - Main heading"
+  },
+  {
+   "id": "f00244",
+   "kind": "text",
+   "value": "Explore considered edits for every occasion.",
+   "visible": true,
+   "section": "s-000",
+   "tag": "p",
+   "label": "Curated collections - Description"
+  },
+  {
+   "id": "f00245",
+   "kind": "text",
+   "value": "Explore All Looks ↗",
+   "visible": true,
+   "section": "s-000",
+   "tag": "small",
+   "label": "Curated collections - Collection link text"
+  },
+  {
+   "id": "f119-quote-small",
+   "kind": "text",
+   "value": "Clothes To Empower",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "Closing quote: small pink line"
+  },
+  {
+   "id": "f119-quote-main",
+   "kind": "text",
+   "value": "Effortless movement",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "Closing quote: main white line"
+  },
+  {
+   "id": "f119-quote-last",
+   "kind": "text",
+   "value": "for fun celebrations",
+   "visible": true,
+   "section": "s-003",
+   "tag": "span",
+   "label": "Closing quote: supporting white line"
   }
+ ],
+ "sections": [
+  {
+   "id": "s-000",
+   "title": "The Collections.",
+   "visible": true,
+   "order": 0,
+   "originalId": "",
+   "parent": false
+  },
+  {
+   "id": "s-001",
+   "title": "The edit.",
+   "visible": true,
+   "order": 1,
+   "originalId": "",
+   "parent": false
+  },
+  {
+   "id": "s-002",
+   "title": "Recently explored.",
+   "visible": true,
+   "order": 2,
+   "originalId": "v51-recent",
+   "parent": true
+  },
+  {
+   "id": "s-003",
+   "title": "A look can be just the beginning.",
+   "visible": true,
+   "order": 3,
+   "originalId": "",
+   "parent": false
+  }
+ ],
+ "styles": [
+  "site.css",
+  "typography-fix.css",
+  "footer-redesign.css",
+  "white-gallery.css",
+  "editorial-v3.css",
+  "inverse-mode.css",
+  "editorial-pages.css",
+  "collective-v3.css",
+  "consultation-nav.css",
+  "collections-v4-4.css",
+  "desktop-v47.css",
+  "ux-v48.css",
+  "desktop-v49.css",
+  "mobile-v5.css",
+  "signature-v51.css",
+  "client-feedback-v55.css",
+  "client-feedback-v62.css",
+  "client-feedback-v63.css",
+  "client-feedback-v64.css",
+  "client-feedback-v65.css",
+  "social-v66.css",
+  "mobile-inner-v69.css"
+ ],
+ "scripts": [
+  "look-data.js",
+  "site-config.js",
+  "site.js",
+  "inverse-mode.js",
+  "contact-config.js",
+  "feedback-v3.js",
+  "desktop-v47.js",
+  "ux-v48.js",
+  "desktop-v49.js",
+  "mobile-v5.js",
+  "signature-v51.js",
+  "social-v66.js",
+  "mobile-inner-v69.js"
+ ],
+ "updatedAt": null,
+ "bodyAttrs": {
+  "class": "theme-white",
+  "data-page": "collections"
+ }
 }

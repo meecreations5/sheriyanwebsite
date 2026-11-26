@@ -38,8 +38,8 @@
     "slug": "bespoke",
     "name": "Bespoke",
     "path": "/bespoke.html",
-    "fields": 444,
-    "sections": 4
+    "fields": 469,
+    "sections": 6
   },
   {
     "slug": "film",
@@ -61,5 +61,26 @@
     "path": "/contact.html",
     "fields": 310,
     "sections": 3
+  },
+  {
+    "slug": "styling-services",
+    "name": "Styling Services",
+    "path": "/styling-services",
+    "fields": 233,
+    "sections": 3
+  },
+  {
+    "slug": "accessories",
+    "name": "Accessories",
+    "path": "/accessories",
+    "fields": 193,
+    "sections": 2
+  },
+  {
+    "slug": "appointment",
+    "name": "Book Your Appointment",
+    "path": "/appointment",
+    "fields": 225,
+    "sections": 2
   }
 ]

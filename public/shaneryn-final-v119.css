@@ -1,0 +1,508 @@
+/* SHANERYN | Final Client Feedback | 25 November 2026 | v1.19.0
+   Additional selectors are scoped to the final changes and loaded after the approved design. */
+.v119-wrap{width:min(1200px,calc(100% - 64px));margin-inline:auto}
+.v119-eyebrow{font:600 11px/1.5 var(--sans,Arial,sans-serif);letter-spacing:.19em;text-transform:uppercase;color:#df9dbd}
+.v119-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:15px 24px;background:#ebd8e3;border:1px solid #ebd8e3;color:#231c23!important;text-decoration:none;font:600 11px/1.4 var(--sans,Arial,sans-serif);text-transform:uppercase;letter-spacing:.12em;cursor:pointer}
+.v119-btn:hover{background:#fff;color:#271d25!important}
+.v119-outline{background:transparent;color:#fff!important;border-color:#b3a5af}
+.v119-outline:hover{color:#231c23!important}
+.v119-upright,.bespoke-copy h2 em,#bespoke-heading em{font-style:normal!important;text-decoration:none!important;transform:none!important;display:inline!important}
+/* Homepage collection CTA follows photographs, not precedes them. */
+.occasion-ref-wrap>.occasion-ref-all.v119-after-looks{display:inline-flex;align-items:center;justify-content:center;margin:28px 0 0;min-height:42px}
+#closure .closure-v59-heading{font-size:clamp(48px,7.4vw,104px)!important;line-height:1.05!important;letter-spacing:-.025em;max-width:1100px;margin-inline:auto;text-wrap:balance}
+/* Founder: portrait is restrained on mobile and the vertical label never breaks. */
+.founder-v55-vertical-title{white-space:nowrap!important;overflow-wrap:normal!important;word-break:keep-all!important;hyphens:none!important}
+/* Clients supplied a clear contrast between an in-studio and online bespoke experience. */
+.v119-bespoke-journeys{padding:90px 0;background:#261e26;color:#f4ecf0}
+.v119-bespoke-journeys>.v119-wrap>h2{font:400 clamp(40px,5.2vw,78px)/1.08 var(--serif,Georgia,serif);margin:13px 0 35px;text-wrap:balance}
+.v119-journey-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.v119-journey-card{border:1px solid rgba(226,206,218,.27);padding:34px 34px 38px;background:rgba(255,255,255,.025)}
+.v119-journey-card h3{font:400 clamp(30px,3vw,44px)/1.1 var(--serif,Georgia,serif);margin:16px 0 10px}
+.v119-journey-card>p:not(.v119-eyebrow){color:#d7c8d1;font-size:13px;margin-bottom:20px}
+.v119-journey-card ol{list-style:none;counter-reset:steps;margin:0 0 26px;padding:0}
+.v119-journey-card ol li{counter-increment:steps;position:relative;padding:12px 0 12px 36px;border-bottom:1px solid rgba(227,205,216,.16);display:flex;flex-direction:column;gap:6px}
+.v119-journey-card ol li:before{content:counter(steps,decimal-leading-zero);position:absolute;top:14px;left:0;color:#d7a5c2;font:600 10px var(--sans,Arial,sans-serif)}
+.v119-journey-card ol strong{font:500 15px/1.4 var(--sans,Arial,sans-serif)}
+.v119-journey-card ol span{color:#cec2cb;font:400 12px/1.6 var(--sans,Arial,sans-serif)}
+.v119-booking-cta{padding:84px 0;background:#342935;color:#f7f2f4;text-align:center}
+.v119-booking-cta h2{font:400 clamp(41px,6vw,80px)/1.08 var(--serif,Georgia,serif);margin:10px 0 18px}
+.v119-booking-cta p:not(.v119-eyebrow){color:#e0d5dd;font:400 15px/1.7 var(--sans,Arial,sans-serif);max-width:56ch;margin:0 auto 26px}
+.v119-booking-cta small{display:block;margin:13px 0 0;color:#d4c4ce;font-size:11px}
+.v119-measuring-guide{width:100%;margin:24px 0 14px;border:1px solid #b8aab3}
+.v119-measuring-guide>summary{padding:16px 18px;display:flex;justify-content:space-between;gap:15px;cursor:pointer;list-style:none;font:600 11px/1.5 var(--sans,Arial,sans-serif);letter-spacing:.1em}
+.v119-measuring-guide>summary::-webkit-details-marker{display:none}
+.v119-measuring-guide>summary span{font-weight:400;letter-spacing:0}
+.v119-measuring-guide img{width:100%;max-height:850px;object-fit:contain;background:#f7f5f2;display:block}
+.v119-inches-rule{display:flex;flex-direction:column;gap:6px;font-family:var(--sans,Arial,sans-serif);padding:15px 0;margin:0 0 16px;border-top:1px solid #b4a7b1;border-bottom:1px solid #b4a7b1}
+.v119-inches-rule strong{font-size:15px;letter-spacing:.02em}.v119-inches-rule span{font-size:13px}
+.v119-bespoke-customer{margin:30px 0 20px;padding:25px;border:1px solid rgba(160,127,144,.6);display:grid;gap:20px}
+.v119-contact-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.v119-bespoke-customer label,.v119-appointment-references label{display:flex;flex-direction:column;gap:8px;font:500 12px/1.4 var(--sans,Arial,sans-serif);letter-spacing:.03em}
+.v119-bespoke-customer input,.v119-bespoke-customer textarea,.v119-appointment-references input,.v119-appointment-references textarea{font:400 14px var(--sans,Arial,sans-serif);border:1px solid #b6a5b1;background:rgba(255,255,255,.04);color:inherit;padding:13px;min-height:46px;max-width:100%;width:100%}
+.v119-bespoke-customer input:focus-visible,.v119-bespoke-customer textarea:focus-visible{outline:2px solid #cc90ad;outline-offset:2px}
+.v119-bespoke-customer .v119-wide{grid-column:1/-1}
+#v119-bespoke-status{min-height:19px;word-wrap:break-word;font-size:12px}
+/* Standalone Styling Services, Accessories and Appointment pages. */
+.v119-standalone{background:#251e26;color:#faf5f7;min-height:75svh;padding-bottom:50px}
+.v119-page-intro{padding:clamp(60px,8vw,120px) max(32px,calc((100vw - 1200px)/2));background:linear-gradient(130deg,#2e232e,#241c25);border-bottom:1px solid rgba(255,255,255,.16)}
+.v119-page-intro h1{font:400 clamp(52px,8vw,110px)/1.05 var(--serif,Georgia,serif);margin:14px 0 18px;letter-spacing:-.035em;text-wrap:balance}
+.v119-page-intro>p:not(.v119-eyebrow){font:400 15px/1.8 var(--sans,Arial,sans-serif);max-width:58ch;color:#e2d4db}
+.v119-services-page,.v119-accessories-page{padding:50px 0 70px}
+.v119-service-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0 45px}
+.v119-service-option{cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;min-height:150px;gap:45px;padding:18px;text-align:left;border:1px solid #6f5868;background:rgba(255,255,255,.015);color:#f8f3f6}
+.v119-service-option:hover,.v119-service-option[aria-pressed="true"]{background:#ead5e1;color:#251e26}
+.v119-service-option>span{font-size:10px;letter-spacing:.15em}
+.v119-service-option strong{font:400 clamp(19px,2.1vw,32px)/1.12 var(--serif,Georgia,serif)}
+.v119-service-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.v119-service-editorial{border-top:1px solid #947d8b;padding:22px 0}
+.v119-service-editorial h3{font:400 clamp(24px,2.6vw,38px)/1.13 var(--serif,Georgia,serif);margin:0 0 12px}
+.v119-service-editorial p,.v119-service-context{color:#e1d4db;line-height:1.8;font-size:13px}
+.v119-service-editorial a{display:inline-block;margin-top:14px;font:600 11px var(--sans,Arial,sans-serif);text-decoration:underline;text-underline-offset:6px;color:#f5dbe8}
+.v119-service-context{margin:25px 0 0}
+.v119-standalone #book-appointment,.v119-standalone .v67-appointment-section{background:#eee5ea!important;color:#292129!important;padding:52px 0!important}
+.v119-standalone #book-appointment h2{font-size:clamp(36px,4vw,68px)}
+.v119-appointment-references{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:14px 0 22px}
+.v119-appointment-references input,.v119-appointment-references textarea{background:#fff;color:#292129}
+.v119-small-note{font-size:12px;color:#845673;margin:8px 0}
+.v119-standalone #v67-book-copy{display:none!important}
+.v119-accessory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 18px}
+.v119-accessory{min-width:0}.v119-accessory img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#322832}
+.v119-accessory h3{font:400 26px var(--serif,Georgia,serif);margin:12px 0 5px}.v119-accessory>p{font-size:13px;color:#e4d5dc}
+.v119-accessory-price{color:#fff!important;font-weight:600!important}
+.v119-empty-accessories{grid-column:1/-1;text-align:center;padding:70px 20px}.v119-empty-accessories h2{font:400 45px var(--serif,Georgia,serif)}.v119-empty-accessories p{margin:18px 0 25px}
+/* Original V1.19.0 listing frames, superseded by the natural-height V1.19.1 corrections below. */
+body[data-page="collections"] .look-image-btn{aspect-ratio:3/4!important;height:auto!important;min-height:0!important;overflow:hidden!important;background:#ede4e8!important}
+body[data-page="collections"] .look-image-btn img{display:block!important;width:100%!important;height:100%!important;max-height:none!important;aspect-ratio:3/4!important;object-fit:contain!important;object-position:center!important}
+body[data-page="collection-edit"] .ep-card>a:first-child{height:auto!important;aspect-ratio:3/4!important;overflow:hidden!important;background:#ede4e8!important;display:block!important}
+body[data-page="collection-edit"] .ep-card>a:first-child img{width:100%!important;height:100%!important;aspect-ratio:3/4!important;object-fit:contain!important;object-position:center!important}
+body[data-page="collections"] .collection-hero-copy>p{display:none!important}
+/* Original V1.19.0 square gallery frames, superseded for photos by the V1.19.1 full-height correction below. */
+body[data-page="look"] .ld-gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;align-items:stretch}
+body[data-page="look"] .ld-media-tile.v119-primary-tile{aspect-ratio:1!important;height:auto!important;min-height:0;background:#ded7db}
+body[data-page="look"] .ld-media-tile.v119-primary-tile .ld-photo-open{height:100%;width:100%;display:block}
+body[data-page="look"] .ld-media-tile.v119-primary-tile img,body[data-page="look"] .ld-media-tile.v119-primary-tile video{display:block;width:100%!important;height:100%!important;aspect-ratio:1!important;object-fit:contain!important;max-height:none!important}
+body[data-page="look"] .ld-media-tile.v119-primary-tile iframe{display:block!important;width:100%!important;height:100%!important;aspect-ratio:1!important;border:0}
+body[data-page="look"] .ld-media-tile.v119-primary-tile .ld-film-kicker{position:absolute;z-index:3;top:10px;left:10px}
+.v119-extra-media{margin:45px 0 0;min-width:0}.v119-extra-media section+section{margin-top:56px}
+.v119-extra-media .v119-eyebrow{margin:0 0 20px;color:#a36c88}
+.v119-horizontal-media{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;padding-bottom:16px;scrollbar-width:thin}
+.v119-detail-tile,.v119-accessory-tile{flex:0 0 clamp(180px,38%,280px);min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px;text-align:left;background:transparent;border:0;color:inherit;padding:0}
+.v119-detail-tile{cursor:zoom-in}.v119-detail-tile img,.v119-accessory-tile img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#e4dde0;display:block}
+.v119-detail-tile span{font:600 10px var(--sans,Arial,sans-serif);letter-spacing:.15em}
+.v119-accessory-tile h3{font:400 22px var(--serif,Georgia,serif);margin:0}
+.v119-accessory-tile p{font:600 12px var(--sans,Arial,sans-serif);margin:0}
+/* Client's exact concluding wording, styled in the established luxury palette. */
+.v119-final-quote{background:#251e26!important;color:#fbf7f9!important;text-align:center;padding:clamp(65px,9vw,118px) 20px!important;border:0!important}
+.v119-quote-inner{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:12px;align-items:center}
+.v119-final-quote span{color:#e4abc9!important;letter-spacing:.19em;font:600 11px/1.5 var(--sans,Arial,sans-serif);text-transform:uppercase}
+.v119-final-quote h2{color:#fff!important;font:400 clamp(46px,7vw,100px)/1.06 var(--serif,Georgia,serif)!important;letter-spacing:-.035em;text-wrap:balance;margin:0!important}
+.v119-final-quote p{color:#fff!important;font:400 clamp(15px,2vw,23px)/1.6 var(--sans,Arial,sans-serif)!important;letter-spacing:.04em;margin:0!important}
+@media(max-width:850px){
+ .v119-wrap{width:calc(100% - 38px)}
+ .v119-bespoke-journeys{padding:58px 0}.v119-journey-grid{grid-template-columns:1fr}.v119-journey-card{padding:24px}
+ .v119-contact-fields,.v119-service-notes,.v119-appointment-references{grid-template-columns:1fr}
+ .v119-service-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.v119-service-option{min-height:125px;gap:25px}
+ .v119-page-intro{padding:60px 19px}.v119-accessory-grid{grid-template-columns:repeat(2,1fr);gap:20px 10px}
+ body[data-page="look"] .ld-gallery-grid{display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;gap:0!important;scrollbar-width:none}
+ body[data-page="look"] .ld-media-tile.v119-primary-tile{flex:0 0 100%;min-width:100%;scroll-snap-align:start;aspect-ratio:1!important}
+ body[data-page="look"] .ld-media-tile.v119-primary-tile img{height:100%!important;object-fit:contain!important}
+ .v119-detail-tile,.v119-accessory-tile{flex-basis:min(68vw,280px)}
+ .founder-photo,.founder-v55-visual{max-height:min(56svh,470px)!important;overflow:hidden!important}
+ .founder-v55-visual .founder-photo-full{width:100%!important;height:100%!important;max-height:min(55svh,450px)!important;object-fit:contain!important;object-position:center top!important}
+ .founder-v55-vertical-title{font-size:clamp(36px,8vw,64px)!important}
+ .v119-bespoke-customer{padding:18px}
+}
+@media(max-width:640px){
+ body[data-page="collections"] .look-grid{grid-template-columns:1fr!important;gap:30px!important}
+ body[data-page="collections"] .look-image-btn{max-width:100%!important}
+ .v119-bespoke-journeys>.v119-wrap>h2{font-size:44px}
+ .v119-booking-cta{padding:60px 0}
+ .v119-service-option{min-height:135px;padding:14px}
+ .v119-measuring-guide img{max-height:none}
+ .v119-accessory-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.v119-horizontal-media{scroll-behavior:auto}}
+
+/* Dedicated Bespoke appointment card follows the Past Work section, with the
+   exact same request flow and confirmation safeguards as the contact page. */
+body[data-page="bespoke-page"] .v119-bespoke-booking{background:#251e26!important;color:#fbf5f8!important;padding:70px max(24px,calc((100vw - 1150px)/2))!important;margin:0!important;max-width:none!important}
+body[data-page="bespoke-page"] .v119-bespoke-booking h2,body[data-page="bespoke-page"] .v119-bespoke-booking label{color:#fff!important}
+body[data-page="bespoke-page"] .v119-bespoke-booking input,body[data-page="bespoke-page"] .v119-bespoke-booking select,body[data-page="bespoke-page"] .v119-bespoke-booking textarea{background:#171318!important;color:#fff!important;border:1px solid #5a4d5a!important}
+body[data-page="bespoke-page"] .v119-bespoke-booking .v67-book-wrap{width:100%!important;max-width:1100px!important;margin-inline:auto!important}
+body[data-page="bespoke-page"] .v119-bespoke-booking button[type=submit]{min-height:54px;background:#ead7e2;color:#251c23!important}
+body[data-page="bespoke-page"] .v119-bespoke-booking .ep-smallnote{color:#dbc9d4!important}
+@media(max-width:850px){body[data-page="bespoke-page"] .v119-bespoke-booking{padding:55px 20px!important}}
+
+
+/* SHANERYN v1.19.1 - natural fashion-photograph flow and appointment visibility.
+   Full outfits must not be boxed into arbitrary 3:4 or 1:1 canvases. The CMS
+   may supply portraits with different proportions, so let intrinsic height win. */
+body[data-page="collections"] .look-grid,
+body[data-page="collection-edit"] .ep-collection-grid{
+  align-items:start!important;
+}
+body[data-page="collections"] .look-card,
+body[data-page="collection-edit"] .ep-card{
+  align-self:start!important;
+  min-height:0!important;
+  height:auto!important;
+}
+body[data-page="collections"] .look-card>.look-image-btn,
+body[data-page="collection-edit"] .ep-card>a:first-child{
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  line-height:0;
+}
+body[data-page="collections"] .look-card>.look-image-btn img,
+body[data-page="collection-edit"] .ep-card>a:first-child img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+/* Quick Look remains functional, but is an editorial text action below the
+   image instead of the white stripe obscuring each outfit. */
+body[data-page="collections"] .look-card .v51-quick-btn{
+  position:relative!important;
+  inset:auto!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  width:auto!important;
+  min-width:0!important;
+  max-width:max-content!important;
+  margin:11px 0 0!important;
+  padding:5px 0 7px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:22px!important;
+  background:transparent!important;
+  color:var(--ep-ink)!important;
+  border:0!important;
+  border-bottom:1px solid currentColor!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  letter-spacing:.13em!important;
+  font-size:10px!important;
+}
+body[data-page="collections"] .look-card .v51-quick-btn:hover{
+  opacity:.75;
+  transform:none!important;
+  background:transparent!important;
+}
+/* The Front / Back / Profile photographs render at their real proportions.
+   The video remains a separate dark media frame rather than letterboxing the
+   photographs with artificial pastel bars. */
+body[data-page="look"] .ld-gallery-grid{
+  align-items:start!important;
+}
+body[data-page="look"] .ld-media-tile.v119-primary-tile:not(.ld-film-tile){
+  align-self:start!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body[data-page="look"] .ld-media-tile.v119-primary-tile:not(.ld-film-tile) .ld-photo-open{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  background:transparent!important;
+  line-height:0!important;
+}
+body[data-page="look"] .ld-media-tile.v119-primary-tile:not(.ld-film-tile) img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+  border:0!important;
+}
+body[data-page="look"] .ld-media-tile.v119-primary-tile:not(.ld-film-tile) .ld-photo-label{
+  bottom:12px;
+  left:12px;
+  color:#fff;
+  background:rgba(29,22,29,.64);
+  border:0;
+  backdrop-filter:none;
+}
+body[data-page="look"] .ld-media-tile.v119-primary-tile.ld-film-tile{
+  aspect-ratio:2/3!important;
+  height:auto!important;
+  min-height:0!important;
+  background:#201920!important;
+}
+body[data-page="look"] .ld-media-tile.v119-primary-tile.ld-film-tile :is(video,iframe){
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+}
+body[data-page="look"] .v119-detail-tile img,
+body[data-page="look"] .v119-accessory-tile img{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  background:transparent!important;
+}
+/* Extra safety for previously-published CMS pages that still carry the
+   Contact tab's hidden state in the standalone appointment form. The server
+   removes hidden for the current template; this is only a visual fallback. */
+body:not([data-page="contact-page"]) .v119-standalone #book-appointment[hidden],
+body[data-page="bespoke-page"] #book-appointment.v119-bespoke-booking[hidden]{
+  display:block!important;
+}
+@media(max-width:850px){
+  body[data-page="look"] .ld-gallery-grid{align-items:flex-start!important;}
+  body[data-page="look"] .ld-media-tile.v119-primary-tile:not(.ld-film-tile){
+    flex:0 0 100%!important;
+    min-width:100%!important;
+    max-width:100%!important;
+    aspect-ratio:auto!important;
+    height:auto!important;
+  }
+  body[data-page="look"] .ld-media-tile.v119-primary-tile:not(.ld-film-tile) img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+  }
+  body[data-page="look"] .ld-media-tile.v119-primary-tile.ld-film-tile{
+    flex:0 0 100%!important;
+    min-width:100%!important;
+    aspect-ratio:2/3!important;
+  }
+}
+
+/* V1.19.1: the inherited editorial pseudo-frame is a visible false border. */
+body[data-page="collections"] .look-card>.look-image-btn::after{
+  content:none!important;
+  display:none!important;
+  border:0!important;
+  background:none!important;
+}
+/* V1.19.0 reused the Contact booking form on other pages, but all of its
+   original grid/input CSS was scoped to body[data-page="contact-page"].
+   Make the standalone + Bespoke versions visually complete and responsive. */
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-layout{
+  box-sizing:border-box;
+  display:grid!important;
+  grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr)!important;
+  gap:clamp(30px,5.2vw,86px)!important;
+  align-items:start!important;
+  width:min(1200px,calc(100% - 56px))!important;
+  max-width:1200px!important;
+  padding:clamp(22px,3.4vw,48px) 0!important;
+  margin:0 auto!important;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-editorial{
+  min-width:0;
+  position:relative;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-editorial h2{
+  font:400 clamp(38px,4.7vw,67px)/1.08 var(--serif,Georgia,serif)!important;
+  letter-spacing:-.04em;
+  overflow-wrap:normal;
+  text-wrap:balance;
+  margin:18px 0 20px;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-editorial h2 em{
+  font-weight:400;
+  color:#b67d9e;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-editorial>p{
+  font:400 14px/1.75 var(--sans,Arial,sans-serif);
+  max-width:41ch;
+  margin:14px 0;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-signature{
+  display:none;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-note{
+  border-left:2px solid #a36b8d;
+  padding-left:17px;
+  max-width:42ch;
+  opacity:.8;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form{
+  box-sizing:border-box;
+  display:block;
+  min-width:0;
+  width:100%;
+  padding:clamp(23px,3vw,40px)!important;
+  border:1px solid rgba(132,98,120,.28)!important;
+  background:#fff!important;
+  color:#2a222b!important;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form>.ep-kicker{
+  display:block;
+  margin:0 0 25px;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-grid,
+:is(.v119-standalone,.v119-bespoke-booking) .v119-appointment-references{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:4px 20px!important;
+  width:100%;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form label{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:9px!important;
+  min-width:0;
+  width:100%;
+  margin:0 0 22px!important;
+  color:#352b35!important;
+  font:600 10px/1.5 var(--sans,Arial,sans-serif)!important;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form :is(input,select,textarea){
+  box-sizing:border-box!important;
+  min-width:0!important;
+  width:100%!important;
+  min-height:46px!important;
+  padding:10px 0 12px!important;
+  border:0!important;
+  border-bottom:1px solid #c9bbc5!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#2b222b!important;
+  outline:none;
+  font:400 14px/1.5 var(--sans,Arial,sans-serif)!important;
+  text-transform:none;
+  letter-spacing:normal;
+  color-scheme:light;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form :is(input,textarea)::placeholder{
+  color:#887b86;
+  opacity:.9;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form :is(input,select,textarea):focus-visible{
+  border-bottom-color:#a6678e!important;
+  outline:2px solid #a6678e;
+  outline-offset:3px;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form select option{
+  color:#2b222b;
+  background:#fff;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form textarea{
+  min-height:105px!important;
+  resize:vertical;
+  line-height:1.6;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-book-actions{
+  display:block!important;
+  margin:14px 0 0;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v119-appointment-references{
+  margin:15px 0 18px;
+}
+:is(.v119-standalone,.v119-bespoke-booking) #v67-book-submit{
+  min-height:53px;
+  width:100%;
+  margin:0 0 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:#2c222d!important;
+  color:#fff!important;
+  border:1px solid #2c222d!important;
+  padding:15px 18px;
+  cursor:pointer;
+  font:600 11px/1.5 var(--sans,Arial,sans-serif);
+  text-transform:uppercase;
+  letter-spacing:.09em;
+}
+:is(.v119-standalone,.v119-bespoke-booking) #v67-book-submit:hover{
+  background:#743f63!important;
+  border-color:#743f63!important;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-status{
+  color:#713752;
+  font:400 12px/1.6 var(--sans,Arial,sans-serif);
+  min-height:1.5em;
+}
+:is(.v119-standalone,.v119-bespoke-booking) .ep-smallnote{
+  display:block;
+  margin-top:15px;
+  font:400 12px/1.7 var(--sans,Arial,sans-serif);
+  color:#73616e;
+}
+/* Bespoke is intentionally dark; do not apply an incompatible white form
+   control palette that overrides the approved brand treatment. */
+body[data-page="bespoke-page"] .v119-bespoke-booking .v67-appointment-form{
+  background:#2c2330!important;
+  color:#fff!important;
+  border-color:#584353!important;
+}
+body[data-page="bespoke-page"] .v119-bespoke-booking .v67-appointment-form label,
+body[data-page="bespoke-page"] .v119-bespoke-booking .v67-appointment-form>.ep-kicker{
+  color:#f9eff5!important;
+}
+body[data-page="bespoke-page"] .v119-bespoke-booking .v67-appointment-form :is(input,select,textarea){
+  color:#fff!important;
+  border-bottom-color:#69586a!important;
+  color-scheme:dark;
+}
+body[data-page="bespoke-page"] .v119-bespoke-booking .v67-appointment-form select option{
+  background:#2c2330;
+  color:#fff;
+}
+body[data-page="bespoke-page"] .v119-bespoke-booking .v67-appointment-status,
+body[data-page="bespoke-page"] .v119-bespoke-booking .ep-smallnote{
+  color:#e2c7d5!important;
+}
+body[data-page="bespoke-page"] .v119-bespoke-booking #v67-book-submit{
+  background:#ead7e2!important;
+  color:#261d25!important;
+  border-color:#ead7e2!important;
+}
+@media(max-width:850px){
+  :is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-layout{
+    grid-template-columns:minmax(0,1fr)!important;
+    width:calc(100% - 38px)!important;
+    gap:22px!important;
+    padding:22px 0!important;
+  }
+  :is(.v119-standalone,.v119-bespoke-booking) .v67-book-editorial h2{
+    font-size:clamp(35px,9vw,53px)!important;
+  }
+}
+@media(max-width:550px){
+  :is(.v119-standalone,.v119-bespoke-booking) .v67-book-grid,
+  :is(.v119-standalone,.v119-bespoke-booking) .v119-appointment-references{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  :is(.v119-standalone,.v119-bespoke-booking) .v67-appointment-form{
+    padding:20px 17px!important;
+  }
+}

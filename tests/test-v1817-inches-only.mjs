@@ -63,7 +63,7 @@ const sectionEnd=script.lastIndexOf('\n})();');
 assert.ok(sectionStart>=0&&sectionEnd>sectionStart);
 const listeners=()=>({handlers:{},addEventListener(type,fn){this.handlers[type]=fn}});
 const select={...listeners(),value:'Occasion Wear',innerHTML:''};
-const input={dataset:{measureKey:'Body & Fit / Chest / Bust'},value:'33.5',checkValidity(){return true},focus(){}};
+const input={dataset:{measureKey:'Body Measurements / Chest'},value:'33.5',checkValidity(){return true},focus(){}};
 const fieldRoot={...listeners(),innerHTML:'',querySelectorAll(q){return q==='input[data-measure-key]'?[input]:[]}};
 const form={...listeners(),checkValidity(){return true}};
 const review={hidden:true,scrollIntoView(){this.scrolled=true}};
@@ -78,7 +78,8 @@ const prelude=`const $=(q,el=document)=>el.querySelector(q),all=(q,el=document)=
 const looks=globalThis.looks;const itemById=id=>looks.find(x=>x.id===id);
 const esc=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));`;
 vm.runInNewContext(prelude+script.slice(sectionStart,sectionEnd),context);
-assert.match(fieldRoot.innerHTML,/Chest \/ Bust <span>\(in\)<\/span>/);
+assert.match(fieldRoot.innerHTML,/Chest <span>\(in\)<\/span>/);
+assert.match(fieldRoot.innerHTML,/Bust <span>\(in\)<\/span>/);
 assert.match(fieldRoot.innerHTML,/max="140"/);
 assert.doesNotMatch(fieldRoot.innerHTML,/centimet|\(cm\)/i);
 assert.equal(status.textContent,'Enter all measurements in inches (in).');
@@ -86,7 +87,7 @@ fieldRoot.handlers.input({target:{closest:()=>input}});
 form.handlers.submit({preventDefault(){}});
 assert.equal(review.hidden,false);
 assert.match(summary.textContent,/Measurements in inches/);
-assert.match(summary.textContent,/Body & Fit \/ Chest \/ Bust: 33\.5 in/);
+assert.match(summary.textContent,/Body Measurements \/ Chest: 33\.5 in/);
 assert.doesNotMatch(summary.textContent,/cm|centimet/i);
 // Look-specific path uses the same inches rule; switching back preserves numbers.
 lookButton.handlers.click();

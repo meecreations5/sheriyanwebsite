@@ -39,15 +39,29 @@
   };
   const ytId=extractYoutube(media.video||'');
   const videoMedia=media.video?(ytId?`<iframe title="${esc(look.title)} film" src="https://www.youtube-nocookie.com/embed/${esc(ytId)}?rel=0" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy" style="width:100%;aspect-ratio:9/16;border:0"></iframe>`:`<video id="ld-motion-video" src="${esc(media.video)}" poster="${esc(images[1]?.src||images[0]?.src||'')}" muted playsinline loop controls preload="metadata" aria-label="Film for ${esc(look.title)}"></video>`):'';
-  gallery.innerHTML = images.map((item,i) => `<figure class="ld-media-tile" data-ld-index="${i}">
-    <button type="button" class="ld-photo-open" data-ld-open="${i}" aria-label="Enlarge ${esc(look.title)}: ${esc(item.alt)}">
-      <img src="${esc(item.src)}" alt="${esc(look.title)} — ${esc(item.alt)}" loading="eager" decoding="async" ${i===0?'fetchpriority="high"':''}/>
-    </button><figcaption class="ld-photo-label">${String(i+1).padStart(2,'0')} / ${esc(item.alt)}</figcaption>
-  </figure>`).join('') + (videoMedia ? `<figure class="ld-media-tile ld-film-tile" data-ld-index="${images.length}">
-    <span class="ld-film-kicker">SHANERYN FILM / ${esc(look.title)}</span>
-    ${videoMedia}
+  // Final client sequence: three principal views, followed by video in equal
+  // square frames. Remaining photographs appear in a separate detail strip.
+  const mainViews=images.slice(0,3);
+  const detailViews=images.slice(3);
+  const mainLabels=['Front','Back','Profile'];
+  gallery.innerHTML = mainViews.map((item,i) => `<figure class="ld-media-tile v119-primary-tile" data-ld-index="${i}">
+    <button type="button" class="ld-photo-open" data-ld-open="${i}" aria-label="Enlarge ${esc(look.title)}: ${esc(item.alt||mainLabels[i])}">
+      <img src="${esc(item.src)}" alt="${esc(look.title)} — ${esc(item.alt||mainLabels[i])}" loading="eager" decoding="async" ${i===0?'fetchpriority="high"':''}/>
+    </button><figcaption class="ld-photo-label">${String(i+1).padStart(2,'0')} / ${mainLabels[i]}</figcaption>
+  </figure>`).join('') + (videoMedia ? `<figure class="ld-media-tile ld-film-tile v119-primary-tile" data-ld-index="${mainViews.length}">
+    <span class="ld-film-kicker">04 / VIDEO</span>${videoMedia}
   </figure>` : '');
-  $('#ld-gallery-total').textContent = String(images.length).padStart(2,'0') + ' PHOTOGRAPHS' + (videoMedia?' + 01 VIDEO':'');
+  const oldExtras=$('.v119-extra-media');if(oldExtras)oldExtras.remove();
+  if(detailViews.length||Array.isArray(look.accessories)&&look.accessories.some(a=>a.visible!==false&&a.image)){
+    const strips=document.createElement('div');strips.className='v119-extra-media';
+    if(detailViews.length){strips.innerHTML='<section class="v119-detail-photos" aria-label="Detail photographs"><p class="v119-eyebrow">DETAIL PHOTOGRAPHS</p><div class="v119-horizontal-media">'+detailViews.map((item,i)=>`<button type="button" class="v119-detail-tile" data-ld-open="${i+3}"><img loading="lazy" src="${esc(item.src)}" alt="${esc(item.alt||'Product detail')}"/><span>DETAIL ${String(i+1).padStart(2,'0')}</span></button>`).join('')+'</div></section>'}
+    const accessories=Array.isArray(look.accessories)?look.accessories.filter(a=>a.visible!==false&&a.image):[];
+    if(accessories.length){const fmt=raw=>{const t=String(raw||'').trim();return /^\d+(?:\.\d{1,2})?$/.test(t)?'₹'+Number(t).toLocaleString('en-IN'):t};
+      strips.innerHTML+='<section class="v119-look-accessories" aria-label="Accessories"><p class="v119-eyebrow">ACCESSORIES</p><div class="v119-horizontal-media">'+accessories.map(a=>`<article class="v119-accessory-tile"><img loading="lazy" src="${esc(a.image)}" alt="${esc(a.name||'Accessory')}"/><h3>${esc(a.name||'Accessory')}</h3>${a.price?`<p>${esc(fmt(a.price))}</p>`:''}</article>`).join('')+'</div></section>';
+    }
+    gallery.parentElement?.appendChild(strips);
+  }
+  $('#ld-gallery-total').textContent = String(mainViews.length).padStart(2,'0') + ' MAIN VIEWS' + (videoMedia?' + 01 VIDEO':'') + (detailViews.length?' · '+detailViews.length+' DETAILS':'');
   const tiles = $$('[data-ld-index]',gallery), counter = $('#ld-gallery-position');
   function moveTo(i){
     const count=tiles.length;
@@ -88,7 +102,7 @@
     zoomImg.alt=look.title+' — '+images[zoomIndex].alt;
     $('#ld-zoom-count').textContent=String(zoomIndex+1).padStart(2,'0')+' / '+String(images.length).padStart(2,'0');
   }
-  $$('[data-ld-open]',gallery).forEach(btn=>btn.addEventListener('click',()=>{
+  $$('[data-ld-open]').forEach(btn=>btn.addEventListener('click',()=>{
     zoomTo(Number(btn.dataset.ldOpen));
     dialog.showModal();
   }));
@@ -154,7 +168,7 @@
     button.disabled=true;
     status.textContent='Submitting your measurements securely...';
     try{
-      const message=['Measurements for '+look.title+' ('+look.id+')','Units: inches',...values].join('\n').slice(0,1600);
+      const message=['Measurements for '+look.title+' ('+(look.styleNumber||look.id)+')','Units: inches',...values].join('\n').slice(0,1600);
       const response=await fetch('/api/requests',{
         method:'POST',headers:{'Content-Type':'application/json'},
         body:JSON.stringify({kind:'enquiry',source:location.pathname,fields:{name,email,phone,look:look.id,message,measurementSummary:values.join(' | ').slice(0,1600)}})
@@ -169,7 +183,7 @@
     const values=$$('input[data-ld-measure]',fields).filter(x=>x.value.trim()).map(x=>x.dataset.ldMeasure+': '+x.value+' '+unitName());
     const status=$('#ld-measure-status');
     if(!values.length){status.textContent='Enter at least one measurement to copy.';return;}
-    const text=['SHANERYN / '+look.title+' ('+look.id+')','Personal measurements ('+unitName()+'):',...values].join('\n');
+    const text=['SHANERYN / '+look.title+' ('+(look.styleNumber||look.id)+')','Personal measurements ('+unitName()+'):',...values].join('\n');
     try{
       await navigator.clipboard.writeText(text);
       status.textContent='Measurement notes copied. Share them during your consultation.';
