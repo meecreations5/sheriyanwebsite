@@ -3,6 +3,7 @@
 const legacyPages = ['collections', 'collection', 'look', 'story', 'bespoke', 'film', 'testimonials', 'contact'];
 const nextConfig = {
   reactStrictMode: true,
+  async headers(){return [{source:'/sw.js',headers:[{key:'Cache-Control',value:'no-store, max-age=0'},{key:'Service-Worker-Allowed',value:'/'}]}]},
   async redirects() {
     return [
       {source: '/new-drop', destination: '/collections', permanent: true},

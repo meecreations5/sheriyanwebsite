@@ -1,3 +1,7 @@
+**V1.19.8.1 review hotfix:** Equal Reject/Accept cookie controls, restored iOS PWA help theme, keyboard accessibility, and desktop-agent iPadOS install guidance. See `UPDATE_V1_19_8_1_AUDIT_HOTFIX.md`.
+
+**V1.19.8:** Mobile PWA, consent-gated Firebase Analytics, Privacy/Cookies/Terms and consent preferences. See `UPDATE_V1_19_8_PWA_MOBILE_PRIVACY.md`.
+
 **V1.19.6 (27 November 2026):** Bespoke original three image-based service cards restored; Styling Services previous three selection boxes retained without Bespoke; Book Your Appointment uses Contact-style image/form composition; same five-icon social row on Contact/Footer (including configurable WhatsApp). See `UPDATE_V1_19_6_DESIGN_CONSISTENCY.md`.
 
 > **V1.19.5:** verified client-feedback corrections; see [UPDATE_V1_19_5_VERIFIED_CLIENT_FEEDBACK.md](UPDATE_V1_19_5_VERIFIED_CLIENT_FEEDBACK.md).

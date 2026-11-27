@@ -9,12 +9,13 @@
     explore:'<rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M12 4v16M4 12h16"/>',
     bespoke:'<path d="m8 3 4 5 4-5 4 4-3 5v9H7v-9L4 7z"/><path d="M12 8v13"/>',
     whatsapp:'<path d="M20.7 11.5a8.7 8.7 0 0 1-12.8 7.7L3 20.8l1.6-4.7a8.7 8.7 0 1 1 16.1-4.6Z"/><path d="M8.1 8.1c-.4.5-.6 1.2-.3 2 .9 2.4 3 4.5 5.4 5.5.9.4 1.6.3 2.2-.1l.9-1.2-2.4-1.1-1.1.8c-1.4-.6-2.5-1.7-3.1-3.1l.8-1.1-1.2-2.3z"/>',
+    appointment:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/>',
     menu:'<path d="M4 6h16M4 12h16M4 18h16"/>'
   }[name] || '');
   const svg = n => `<svg aria-hidden="true" viewBox="0 0 24 24">${icon(n)}</svg>`;
   const current = {
     home:'home',collections:'explore','collection-edit':'explore',look:'explore',
-    'bespoke-page':'bespoke'
+    'bespoke-page':'bespoke','appointment-page':'appointment'
   }[page]||'';
   // A number is deliberately not invented. Set SHANERYN_CONTACT.whatsapp with
   // country code (digits only or +prefix) to enable direct WhatsApp chat.
@@ -25,10 +26,10 @@
     : 'contact.html#ep-contact-form';
   const tabs = [
     ['home','Home','index.html','a'],
-    ['explore','Explore','collections.html','a'],
+    ['explore','Collections','/collections','a'],
     ['bespoke','Bespoke','bespoke.html','a'],
-    ['whatsapp','WhatsApp',whatsappHref,'a'],
-    ['menu','Menu',null,'button']
+    ['appointment','Appointment','/appointment','a'],
+    ['menu','More',null,'button']
   ];
   const nav = document.createElement('nav');
   nav.className='v5-tabbar'; nav.setAttribute('aria-label','SHANERYN mobile navigation');

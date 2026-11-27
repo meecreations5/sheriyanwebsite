@@ -2,6 +2,14 @@
 (()=>{
  const selectors={'ep-contact-form':'enquiry','inquiry-form':'enquiry','v67-appointment-form':'appointment'};
  function clean(value){return String(value==null?'':value).slice(0,1600)}
+ // Purpose-specific privacy notice near customer request forms. This is not
+ // optional analytics consent: submitted details are needed to answer requests.
+ for(const form of document.querySelectorAll('#ep-contact-form,#inquiry-form,#v67-appointment-form,#cv3-measure-form')){
+  if(form.querySelector('.sh-form-privacy-note'))continue;
+  const note=document.createElement('p');note.className='sh-form-privacy-note';
+  note.innerHTML='Your details and any reference photo are sent to the SHANERYN studio to respond to your request. <a href="/privacy" target="_blank" rel="noopener">Privacy policy</a>.';
+  form.appendChild(note);
+ }
  document.addEventListener('submit',async event=>{
   const form=event.target;if(!form||!selectors[form.id])return;
   event.preventDefault();event.stopImmediatePropagation();

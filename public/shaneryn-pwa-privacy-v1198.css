@@ -1,0 +1,65 @@
+/* V1.19.8.1 | Privacy + install UI. Brand styling only; no homepage redesign. */
+.sh-consent-root,.sh-legal-page{--sh-bg:#1b161e;--sh-panel:#29212b;--sh-text:#fcf3f6;--sh-muted:#d6c4cd;--sh-rose:#e7a2c1;--sh-line:rgba(245,225,237,.24);font-family:Arial,Helvetica,sans-serif}
+.sh-consent-root *, .sh-legal-page *{box-sizing:border-box}
+.sh-consent-root a,.sh-legal-page a{color:inherit}
+.sh-consent-root button,.sh-legal-page button{font:inherit;cursor:pointer}
+.sh-consent-banner{position:fixed;z-index:250;bottom:18px;left:50%;transform:translateX(-50%);width:min(1060px,calc(100% - 32px));max-height:calc(90dvh - 40px);overflow-y:auto;background:var(--sh-panel);color:var(--sh-text);border:1px solid var(--sh-line);box-shadow:0 25px 80px rgba(0,0,0,.48);display:flex;align-items:center;gap:25px;padding:22px 26px;border-radius:3px}
+.sh-consent-copy{flex:1;min-width:0}.sh-consent-copy h2,.sh-consent-panel h2,.sh-pwa-help h2{font:400 30px/1.08 Georgia,'Times New Roman',serif;letter-spacing:-.025em;margin:7px 0 9px;color:var(--sh-text)}
+.sh-consent-kicker{font:700 10px/1.6 Arial,sans-serif;letter-spacing:.18em;color:var(--sh-rose)!important}
+.sh-consent-copy p,.sh-consent-panel p,.sh-pwa-help p{font:400 12px/1.7 Arial,sans-serif;color:var(--sh-muted);margin:0}
+.sh-consent-links{margin-top:8px!important}.sh-consent-links a{font-size:11px;text-decoration:underline;text-underline-offset:3px;color:var(--sh-rose)}.sh-consent-links a+a{margin-left:16px}
+.sh-consent-actions{display:grid;grid-template-columns:repeat(2,minmax(110px,1fr));gap:8px;flex:0 1 325px;align-items:stretch}
+/* Give Reject and Accept identical area and visual prominence; Preferences is secondary. */
+.sh-consent-actions button:last-child{grid-column:span 2}
+.sh-consent-btn{min-height:46px;border:1px solid var(--sh-line);border-radius:0;padding:10px 14px;font:700 10px/1.4 Arial,sans-serif!important;letter-spacing:.08em;text-transform:uppercase;transition:background .18s}
+.sh-consent-filled{background:#f4e5ed;color:#221a22;border-color:#f4e5ed}.sh-consent-outline{background:transparent;color:#fff}
+.sh-consent-btn:hover{filter:brightness(1.09)}.sh-consent-root :is(button,a,input):focus-visible,.sh-legal-page :is(button,a):focus-visible{outline:2px solid var(--sh-rose);outline-offset:3px}
+.sh-consent-scrim{position:fixed;z-index:270;inset:0;display:grid;place-items:center;overflow-y:auto;padding:18px;background:rgba(7,4,8,.72)}
+.sh-consent-panel,.sh-pwa-help{position:relative;background:var(--sh-panel);color:var(--sh-text);border:1px solid var(--sh-line);width:min(540px,100%);max-height:calc(100dvh - 36px);overflow-y:auto;padding:34px 28px}
+.sh-consent-close{position:absolute;top:12px;right:12px;background:transparent;color:var(--sh-text);border:0;padding:5px 12px;font:400 26px/1 Arial,sans-serif!important}
+.sh-consent-panel>p{margin:0 0 16px}
+.sh-consent-option{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 0;border-top:1px solid var(--sh-line);color:var(--sh-text)}
+.sh-consent-option strong{display:block;font:600 13px/1.6 Arial,sans-serif}.sh-consent-option small{display:block;font:400 12px/1.5 Arial,sans-serif;color:var(--sh-muted);margin-top:4px}
+.sh-consent-option input{accent-color:#cd5793;min-width:22px;min-height:22px;cursor:pointer}
+.sh-consent-required{font:600 10px/1.5 Arial,sans-serif;color:var(--sh-rose);white-space:nowrap}
+.sh-consent-panel-actions{display:flex;gap:10px;margin-top:20px}.sh-consent-panel-actions button{flex:1}
+.sh-legal-footer{display:inline-flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 15px;width:100%;margin-top:8px;font:500 11px/1.5 Arial,sans-serif}
+.sh-legal-footer a,.sh-legal-footer button{background:transparent;color:inherit;border:0;padding:4px 1px;text-decoration:underline;text-underline-offset:3px;font:inherit}
+.sh-pwa-install{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 82px);left:12px;z-index:170;display:inline-flex;gap:7px;align-items:center;padding:11px 13px;border:1px solid rgba(245,225,237,.32);border-radius:24px;color:#fbeef4;background:#241e27;box-shadow:0 8px 28px rgba(0,0,0,.35);font:600 11px/1 Arial,sans-serif;letter-spacing:.03em;cursor:pointer}
+.sh-pwa-help p{margin:16px 0 24px}.sh-pwa-help .sh-consent-btn{width:100%}
+.sh-external-video{min-height:320px;width:100%;display:flex;align-items:center;justify-content:center;padding:16px;background:#211a25;color:#fff;text-align:center}
+.sh-external-video button{min-height:50px;padding:12px 18px;background:transparent;color:inherit;border:1px solid rgba(255,255,255,.6);cursor:pointer;font:600 12px/1.5 Arial,sans-serif}
+.sh-external-video iframe{width:100%;height:100%;min-height:330px;aspect-ratio:9/16;border:0}
+.sh-legal-page{min-height:100dvh;background:#1b161e;color:#fcf3f6}
+.sh-legal-header{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:82px;padding:17px clamp(20px,5vw,70px);border-bottom:1px solid rgba(255,255,255,.16)}
+.sh-legal-header img{object-fit:contain;max-width:155px;height:auto}.sh-legal-header nav{display:flex;gap:24px}.sh-legal-header nav a{font:600 11px/1.4 Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+.sh-legal-main{width:min(760px,calc(100% - 40px));margin:0 auto;padding:64px 0 100px}.sh-legal-eyebrow{color:#e7a2c1;letter-spacing:.2em;font:700 11px Arial,sans-serif}
+.sh-legal-main h1{font:400 clamp(46px,7vw,84px)/1.05 Georgia,'Times New Roman',serif;margin:18px 0 40px;letter-spacing:-.045em}
+.sh-legal-main h2{font:400 27px/1.2 Georgia,'Times New Roman',serif;margin:36px 0 12px;color:#fff}
+.sh-legal-main p{font:400 15px/1.85 Arial,sans-serif;color:#e1d2d9;margin:0 0 16px}.sh-legal-main .sh-legal-intro{font-size:17px;color:#fff}
+.sh-legal-main a{color:#f7b5d3;text-decoration:underline;text-underline-offset:4px}
+.sh-legal-updated{margin-top:44px!important;font-size:12px!important;color:#bba7b3!important}
+.sh-legal-cta{background:#f0dfea;color:#251b27;border:0;padding:16px 22px;font:700 11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.09em}
+.sh-legal-bottom{border-top:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:15px 25px;padding:24px 16px}.sh-legal-bottom :is(a,button){color:#f7e8f0;background:transparent;border:0;font:500 12px Arial,sans-serif;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:767px){
+ .sh-consent-banner{bottom:calc(env(safe-area-inset-bottom,0px) + 76px);width:calc(100% - 18px);padding:18px 17px;display:block;max-height:calc(100dvh - env(safe-area-inset-bottom,0px) - 132px)}
+ .sh-consent-copy h2{font-size:26px}.sh-consent-copy p{font-size:12px}
+ .sh-consent-actions{grid-template-columns:1fr 1fr;margin-top:15px;gap:7px}
+ .sh-consent-actions button{padding-inline:4px}.sh-consent-actions button:last-child{grid-column:1/-1}
+ .sh-consent-panel,.sh-pwa-help{padding:30px 21px 22px}.sh-consent-panel-actions{flex-wrap:wrap}.sh-consent-panel-actions button{flex:1 1 155px}
+ .sh-legal-main{padding-top:42px}.sh-legal-header{min-height:66px}.sh-legal-header nav{gap:14px}.sh-legal-header nav a{font-size:10px}
+ .sh-pwa-install{bottom:calc(var(--v5-tab-total,82px) + 15px);left:13px}
+}
+@media(prefers-reduced-motion:reduce){.sh-consent-btn{transition:none}}
+
+/* Applies only to request forms; never changes button dimensions or layout grids. */
+.shaneryn-public-site .sh-form-privacy-note{display:block;grid-column:1/-1;width:100%;font:400 11px/1.65 Arial,sans-serif;color:var(--ep-sub,var(--muted,#bdaeb8));margin:12px 0 2px}
+.shaneryn-public-site .sh-form-privacy-note a{color:var(--ep-accent,#e7a2c1);text-underline-offset:3px}
+@media(min-width:768px){.sh-pwa-install{bottom:20px;left:20px}}
+/* Standalone iOS/Android: content must clear the notch/status-bar safe area. */
+@media (display-mode: standalone) and (max-width:767px){
+  html:root{--v5-header:calc(62px + env(safe-area-inset-top,0px))}
+  body[data-page] .site-header .header-inner{padding-top:env(safe-area-inset-top,0px)!important}
+  body[data-page] .site-header .v47-menu-toggle{top:calc(10px + env(safe-area-inset-top,0px))!important}
+  .sh-legal-header{padding-top:calc(17px + env(safe-area-inset-top,0px))}
+}

@@ -38,7 +38,7 @@
     }catch{return ''}
   };
   const ytId=extractYoutube(media.video||'');
-  const videoMedia=media.video?(ytId?`<iframe title="${esc(look.title)} film" src="https://www.youtube-nocookie.com/embed/${esc(ytId)}?rel=0" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy" style="width:100%;aspect-ratio:9/16;border:0"></iframe>`:`<video id="ld-motion-video" src="${esc(media.video)}" poster="${esc(images[1]?.src||images[0]?.src||'')}" muted playsinline loop controls preload="metadata" aria-label="Film for ${esc(look.title)}"></video>`):'';
+  const videoMedia=media.video?(ytId?`<div class="sh-external-video"><button type="button" data-sh-load-video="${esc(ytId)}" aria-label="Load ${esc(look.title)} video from YouTube">Play video on YouTube ↗</button></div>`:`<video id="ld-motion-video" src="${esc(media.video)}" poster="${esc(images[1]?.src||images[0]?.src||'')}" muted playsinline loop controls preload="metadata" aria-label="Film for ${esc(look.title)}"></video>`):'';
   // Final client sequence: three principal views, followed by video in equal
   // square frames. Remaining photographs appear in a separate detail strip.
   const mainViews=images.slice(0,3);
@@ -46,7 +46,7 @@
   const mainLabels=['Front','Back','Profile'];
   gallery.innerHTML = mainViews.map((item,i) => `<figure class="ld-media-tile v119-primary-tile" data-ld-index="${i}">
     <button type="button" class="ld-photo-open" data-ld-open="${i}" aria-label="Enlarge ${esc(look.title)}: ${esc(item.alt||mainLabels[i])}">
-      <img src="${esc(item.src)}" alt="${esc(look.title)} — ${esc(item.alt||mainLabels[i])}" loading="eager" decoding="async" ${i===0?'fetchpriority="high"':''}/>
+      <img src="${esc(item.src)}" alt="${esc(look.title)} — ${esc(item.alt||mainLabels[i])}" loading="${i===0?'eager':'lazy'}" decoding="async" ${i===0?'fetchpriority="high"':''}/>
     </button><figcaption class="ld-photo-label">${String(i+1).padStart(2,'0')} / ${mainLabels[i]}</figcaption>
   </figure>`).join('') + (videoMedia ? `<figure class="ld-media-tile ld-film-tile v119-primary-tile" data-ld-index="${mainViews.length}">
     <span class="ld-film-kicker">04 / VIDEO</span>${videoMedia}
@@ -116,7 +116,7 @@
     if(e.key==='ArrowRight'){e.preventDefault();zoomTo(zoomIndex+1)}
   });
   // Keep related photos ready when the user reaches the next-look section.
-  document.querySelectorAll('#detail-related img').forEach(img=>{img.loading='eager';});
+  document.querySelectorAll('#detail-related img').forEach(img=>{img.loading='lazy';});
   const measurePanel=$('#ld-measure-panel'), measureToggle=$('#ld-measure-toggle');
   measureToggle.addEventListener('click',()=>{
     const expanded=measureToggle.getAttribute('aria-expanded')==='true';

@@ -1,0 +1,5 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const css=read('public/shaneryn-mobile-v120.css'),js=read('public/shaneryn-mobile-v120.js');
+for(const [label,ok] of [['two-column grids',css.includes('repeat(2,minmax(0,1fr))')&&css.includes('.ep-related-grid')],['desktop detail inset',css.includes('padding-inline:clamp(32px,4vw,64px)')],['founder grid',css.includes('42fr) minmax(0,58fr)')],['footer controls',js.includes('aria-expanded')&&css.includes('sh120-collapsed')],['section visibility',js.includes('[aria-hidden="true"],[hidden]')],['filter sheet',js.includes('sh120-filter-shade')&&css.includes('75dvh')],['share and zoom',js.includes('navigator.share')&&js.includes('Math.hypot')],['mobile navigation',read('public/mobile-v5.js').includes("'Appointment','/appointment'")],['safe areas',css.includes('env(safe-area-inset-bottom)')],['integration',read('components/LegacyPage.jsx').includes('shaneryn-mobile-v120.css')&&read('components/LegacyScripts.jsx').includes('shaneryn-mobile-v120.js')]]){assert.ok(ok,label);console.log('PASS V1.20 source:',label)}

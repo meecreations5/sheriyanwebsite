@@ -30,7 +30,7 @@ export default async function LegacyPage({slug,activeProductId=null,curatedColle
  const clientProps=toPlainClientData({
   scripts:page.scripts,
   products:products.map(p=>({...p,publicPath:productPath(p)})),
-  settings,collections:categories,page,activeProductId,activeClothingCategoryId:activeClothingCategory?.id||null
+  settings,collections:categories,curatedCollections,page,activeProductId,activeClothingCategoryId:activeClothingCategory?.id||null
  });
  const brandAccent=String(settings?.branding?.accent||'').trim();
  const customAccent=/^#[a-f0-9]{6}$/i.test(brandAccent)&&brandAccent.toLowerCase()!=='#c33583'?brandAccent:null;
@@ -47,6 +47,7 @@ export default async function LegacyPage({slug,activeProductId=null,curatedColle
   <link rel="stylesheet" href="/shaneryn-v1196-page-consistency.css"/>
   {slug==='story'&&<link rel="stylesheet" href="/shaneryn-my-story-v1192.css"/>}
   {['index','accessories','look'].includes(slug)&&<link rel="stylesheet" href="/shaneryn-catalogue-v1193.css"/>}
+  <link rel="stylesheet" href="/shaneryn-mobile-v120.css"/>
   <div className="shaneryn-public-site" data-cms-page={slug} dangerouslySetInnerHTML={{__html:markup}} suppressHydrationWarning/>
   <LegacyScripts {...clientProps}/>
  </>
