@@ -132,10 +132,11 @@
   }
   function initCategoryNav(){
     const el=$('#v51-category-switch');if(!el)return;
-    const current=new URLSearchParams(location.search).get('category')||'Pant Sets';
-    const cats=[...new Set(looks.map(p=>p.cat))];
-    el.innerHTML=cats.map(cat=>`<a href="collection.html?category=${encodeURIComponent(cat)}" ${current===cat?'aria-current="page"':''}>${escapeHtml(cat)}</a>`).join('');
-    const bespoke=$('.v51-category-tail a');if(bespoke)bespoke.href='bespoke.html?category='+encodeURIComponent(current)+'#measurement-studio';
+    const categories=Array.isArray(window.SHANERYN_CATEGORY_DEFINITIONS)?window.SHANERYN_CATEGORY_DEFINITIONS:[];
+    const current=window.SHANERYN_ACTIVE_CATEGORY_ID||new URLSearchParams(location.search).get('category')||'';
+    const cats=categories.filter(c=>looks.some(p=>p.cat===c.name||p.categoryId===c.id));
+    el.innerHTML=cats.map(cat=>`<a href="/category/${encodeURIComponent(cat.id)}" ${(current===cat.id||current===cat.name)?'aria-current="page"':''}>${escapeHtml(cat.name)}</a>`).join('');
+    const bespoke=$('.v51-category-tail a');if(bespoke)bespoke.href='/bespoke?category='+encodeURIComponent(current)+'#measurement-studio';
   }
   function initLookIntent(){
     const id=window.SHANERYN_ACTIVE_LOOK_ID || new URLSearchParams(location.search).get('id') || looks[0]?.id;

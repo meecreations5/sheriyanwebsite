@@ -1,3 +1,9 @@
+**V1.19.6 (27 November 2026):** Bespoke original three image-based service cards restored; Styling Services previous three selection boxes retained without Bespoke; Book Your Appointment uses Contact-style image/form composition; same five-icon social row on Contact/Footer (including configurable WhatsApp). See `UPDATE_V1_19_6_DESIGN_CONSISTENCY.md`.
+
+> **V1.19.5:** verified client-feedback corrections; see [UPDATE_V1_19_5_VERIFIED_CLIENT_FEEDBACK.md](UPDATE_V1_19_5_VERIFIED_CLIENT_FEEDBACK.md).
+
+**V1.19.4 update:** Restored the three original photograph-led Color Analysis / Personal Styling / Occasion Styling cards on the dedicated Styling Services page, with individually editable CMS images, descriptions and booking links. See [UPDATE_V1_19_4_STYLING_SERVICE_PHOTOS.md](UPDATE_V1_19_4_STYLING_SERVICE_PHOTOS.md).
+
 > **V1.19.2** — The complete, approved “My Story” copy is now published by the Our Story page template and editable paragraph-by-paragraph via Page Manager. See `UPDATE_V1_19_2_MY_STORY.md`.
 
 ## V1.19.1 — Image presentation and appointment display (26 November 2026)
@@ -77,3 +83,18 @@ All public measurement forms use inches only. The Bespoke centimetre toggle and 
 ## Final client feedback (V1.19.0)
 
 See `UPDATE_V1_19_0_FINAL_CLIENT_FEEDBACK.md` for the exact 27-slide scope, features, limits, testing and deployment checklist.
+
+## v1.19.3: clothing and accessories collections
+
+See `UPDATE_V1_19_3_MULTI_COLLECTIONS_ACCESSORIES.md` for the new independent
+Accessories / Accessory Categories CMS modules, clothing and accessory collection
+assignment, example starter edits, customer-facing routes and deployment tests.
+
+
+## V1.19.7 — Dynamic catalogue verification
+
+New CMS categories support stable `/category/{id}` public pages, category
+renaming, dynamic filters and sitemap entries. Visible clothing and accessory
+collection pages require assigned visible items. Accessories now link back to
+canonical look URLs. Refer to `UPDATE_V1_19_7_DYNAMIC_CATALOGUE.md` for the
+publishing workflow, test coverage and remaining live checks.

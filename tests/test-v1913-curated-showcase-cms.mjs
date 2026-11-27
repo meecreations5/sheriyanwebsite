@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import vm from 'node:vm';
+import {publishedClothingCollections} from '../lib/clothing-catalogue.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const source=p=>readFileSync(resolve(root,p),'utf8');
 const page=JSON.parse(source('data/seed/pages/collections.json'));
@@ -22,7 +23,7 @@ assert.match(ui,/Our Collections - Website Showcase/);
 assert.match(ui,/To edit THE CURVE EDIT card:/);
 assert.match(ui,/selected==='collections'/);
 assert.match(ui,/updatePatch\('f00243',\{value\}\)/);
-assert.match(render,/patchCuratedCollections\(\$,curatedCollections,activeCuratedCollection,page\)/);
+assert.match(render,/patchCuratedCollections\(\$,curatedCollections,activeCuratedCollection,page,products\)/);
 assert.match(preview,/shaneryn-cms-preview/);
 assert.match(preview,/data-cms-text-refs/);
 assert.match(server,/patches:trimPatches\(body,base\.fields\)/,'Existing publish path sanitizes patches against seed fields');
@@ -42,9 +43,9 @@ function exampleRenderer(collections,patches={},active=null){
  const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const safeImage=v=>{const x=String(v||'');return (/^(https:\/\/|\/|assets\/|data:image\/)/i.test(x)&&!/[<>]/.test(x))?x:''};
  const normalized=(p,id)=>p?.[id]&&typeof p[id]==='object'?p[id]:null;
- const context={$ ,escapeHtml,safeImage,normalized};
+ const context={$ ,escapeHtml,safeImage,normalized,publishedClothingCollections};
  vm.runInNewContext(snippet+'\nglobalThis.renderShowcase=patchCuratedCollections;',context);
- context.renderShowcase($,collections,active,{...page,patches});
+ context.renderShowcase($,collections,active,{...page,patches},[{id:'SH-ONE',visible:true,collectionIds:['the-curve-edit']}]);
  return inserted;
 }
 const collections=[{id:'the-curve-edit',name:'THE CURVE EDIT',image:'/cover.jpg',visible:true}];

@@ -8,6 +8,8 @@ service cloud.firestore {
   match /cms_collections/{id} { allow read: if true; allow write: if false; }
   match /cms_categories/{id} { allow read: if true; allow write: if false; }
   match /cms_curated_collections/{id} { allow read: if true; allow write: if false; }
+  match /cms_accessories/{id} { allow read: if true; allow write: if false; }
+  match /cms_accessory_categories/{id} { allow read: if true; allow write: if false; }
   match /cms_forms/{id} { allow read: if true; allow write: if false; }
   match /cms_settings/{id} { allow read: if true; allow write: if false; }
   match /cms_media/{id} { allow read: if true; allow write: if false; }

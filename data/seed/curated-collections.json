@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "the-curve-edit",
+    "name": "The Curve Edit",
+    "type": "clothing",
+    "description": "",
+    "image": "",
+    "sortOrder": 0,
+    "visible": false
+  },
+  {
+    "id": "the-curve-edit-adorned",
+    "name": "The Curve Edit - Adorned",
+    "type": "clothing",
+    "description": "",
+    "image": "",
+    "sortOrder": 1,
+    "visible": false
+  }
+]

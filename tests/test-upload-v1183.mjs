@@ -43,7 +43,8 @@ assert.match(done,/Number\(info.size\)!==job.size/);
 assert.match(ui,/function MediaField/);
 assert.match(ui,/function VideoField/);
 assert.match(ui,/function MediaManager/);
-// All form uploads share MediaPicker. No other CMS upload UI can bypass its cap.
+// CMS media uploads still share MediaPicker; the new public customer reference
+// is intentionally separate with a stricter 3 MB private-image policy.
 let fileInputCount=0;
 for(const folder of ['app','components','lib']) {
   const scan=d=>{for(const entry of fs.readdirSync(d,{withFileTypes:true})){
@@ -51,9 +52,13 @@ for(const folder of ['app','components','lib']) {
     else if(/\.(?:js|jsx|mjs)$/.test(entry.name)){
       const source=fs.readFileSync(path.join(d,entry.name),'utf8');
       fileInputCount+=(source.match(/type="file"/g)||[]).length;
-      if(/type="file"/.test(source))assert.equal(path.relative(root,path.join(d,entry.name)),'components/admin/CmsApp.jsx');
+      if(/type="file"/.test(source)){
+        const relative=path.relative(root,path.join(d,entry.name));
+        assert.ok(['components/admin/CmsApp.jsx','lib/final-feedback-v119.mjs'].includes(relative),`Unexpected file upload surface: ${relative}`);
+        if(relative==='lib/final-feedback-v119.mjs')assert.match(source,/name="referenceImage"/);
+      }
     }
   }};scan(path.join(root,folder));
 }
-assert.equal(fileInputCount,1,'One shared file input across CMS modules');
+assert.equal(fileInputCount,2,'One CMS media picker plus one private visitor reference upload surface');
 console.log('PASS V1.18.3: global 100 MB policy, boundary tests, all CMS upload surfaces and Storage routing');

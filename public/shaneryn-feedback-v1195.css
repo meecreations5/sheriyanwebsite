@@ -1,0 +1,34 @@
+/* V1.19.5 verified client feedback; no existing image ratio overrides. */
+body[data-page="home"] .occasion-ref-wrap>.occasion-ref-all.v119-after-looks{display:flex!important;width:max-content;max-width:100%;margin:28px 0 0 auto!important;justify-content:flex-end!important;}
+body[data-page="look"] .v119-horizontal-media{gap:30px!important;}
+body[data-page="look"] .v1195-details-heading{font:400 clamp(27px,3vw,42px)/1.16 var(--serif,Georgia,serif);margin:0 0 23px;color:inherit;letter-spacing:-.015em;}
+body[data-page="look"] .v119-extra-media section+section{margin-top:56px;}
+.v1195-reference-upload{padding:12px 0 15px;min-width:0;}
+.v1195-reference-upload label{display:flex;flex-direction:column;gap:10px;font:600 11px/1.5 var(--sans,Arial,sans-serif);letter-spacing:.08em;color:inherit;}
+.v1195-reference-upload input[type=file]{display:block!important;border:1px dashed rgba(163,129,147,.7)!important;padding:15px!important;width:100%;max-width:100%;background:rgba(255,255,255,.035);font:400 13px/1.5 var(--sans,Arial,sans-serif);color:inherit;cursor:pointer;}
+.v1195-reference-upload small{display:block;margin-top:8px;font:400 11px/1.5 var(--sans,Arial,sans-serif);letter-spacing:0;color:inherit;opacity:.75;}
+.v1195-reference-preview:not([hidden]){display:flex;align-items:flex-start;gap:18px;margin-top:12px;flex-wrap:wrap;}
+.v1195-reference-preview img{max-width:180px;max-height:180px;width:auto;height:auto;object-fit:contain;border:0;background:transparent;}
+.v1195-remove-photo{background:transparent;border:1px solid currentColor;padding:10px;font-size:11px;color:inherit;cursor:pointer;}
+.v1195-file-error{margin:9px 0 0;font-size:12px;color:#d57c93;}
+.v119-bespoke-customer #v119-bespoke-other-label[hidden]{display:none!important;}
+.admin-reference-photo{padding:15px 0;}
+.admin-reference-photo img{display:block;max-width:min(100%,340px);max-height:340px;object-fit:contain;margin:12px 0;border:1px solid #d6ccd2;}
+.admin-reference-photo a span{display:block;font-size:12px;}
+/* Both page closures use the approved desktop typography; mobile scales down. */
+body[data-page="home"] .closure .closure-v59-eyebrow, body[data-page="home"] .closure .eyebrow, .v119-final-quote .v119-quote-inner>span{font-size:24px!important;letter-spacing:.12em!important;}
+body[data-page="home"] #closure-heading,body[data-page="home"] .closure .closure-v59-heading,.v119-final-quote .v119-quote-inner>h2{font-size:60px!important;line-height:1.09!important;}
+@media(max-width:760px){body[data-page="home"] .closure .closure-v59-eyebrow,body[data-page="home"] .closure .eyebrow,.v119-final-quote .v119-quote-inner>span{font-size:clamp(15px,4vw,21px)!important;}body[data-page="home"] #closure-heading,body[data-page="home"] .closure .closure-v59-heading,.v119-final-quote .v119-quote-inner>h2{font-size:clamp(34px,8vw,55px)!important;}}
+@media(max-width:540px){body[data-page="home"] .occasion-ref-wrap>.occasion-ref-all.v119-after-looks{margin-top:22px!important;}body[data-page="look"] .v119-horizontal-media{gap:20px!important;}}
+
+#v119-bespoke-other-label{display:flex;flex-direction:column;gap:10px;margin:12px 0 18px;color:inherit;font:600 12px/1.5 var(--sans,Arial,sans-serif)}
+#v119-bespoke-other-label input{width:100%;padding:12px;min-height:46px;border:1px solid #b6a5b1;background:rgba(255,255,255,.04);color:inherit;}
+#v119-bespoke-other-label[hidden]{display:none!important;}
+body[data-page="appointment"] .v119-page-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);column-gap:4vw;align-items:center;}
+body[data-page="appointment"] .v119-page-intro>:not(.v1195-appointment-image){grid-column:1;}
+.v1195-appointment-image{grid-column:2;grid-row:1/4;align-self:center;max-width:430px;width:100%;margin:0;justify-self:end;}
+.v1195-appointment-image img{display:block;width:100%;height:auto;max-height:340px;object-fit:contain;object-position:center center;border:0;box-shadow:none;}
+.v119-whatsapp,.v119-whatsapp-contact{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font-weight:600;}
+@media(max-width:760px){body[data-page="appointment"] .v119-page-intro{display:block!important;}body[data-page="appointment"] .v1195-appointment-image{margin:25px 0 0;max-width:320px;}body[data-page="appointment"] .v1195-appointment-image img{max-height:260px;}}
+/* Keep the mobile Designer typographic treatment intact without splitting letters. */
+@media(max-width:760px){.founder-v55-vertical-title{white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important;font-size:clamp(55px,15vw,92px)!important;}.founder-v55 .founder-photo{max-width:min(230px,64vw)!important;}}

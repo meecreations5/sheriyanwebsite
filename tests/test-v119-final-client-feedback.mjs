@@ -37,7 +37,9 @@ for(const slug of ['collections','collection','look']){
  for(const id of ['f119-quote-small','f119-quote-main','f119-quote-last'])assert.ok(page.fields.some(f=>f.id===id),`${slug} quote CMS editable`);
 }
 const sty=data.find(x=>x.slug==='styling-services');
-for(const service of ['Bespoke','Color Analysis','Personal Styling','Occasion Styling'])assert.ok(sty.bodyHtml.includes(`data-v119-service="${service}"`),`${service} service block`);
+// The client's revised final feedback removed Bespoke from the independent Styling Services page.
+for(const service of ['Color Analysis','Personal Styling','Occasion Styling'])assert.ok(sty.bodyHtml.includes(`data-v119-service="${service}"`),`${service} service block`);
+assert.ok(!sty.bodyHtml.includes('data-v119-service="Bespoke"'),'Bespoke remains a separate page');
 assert.ok(sty.bodyHtml.includes('id="v67-appointment-form"'),'styling has actual booking form');
 assert.ok(data.find(x=>x.slug==='appointment').bodyHtml.includes('id="v67-appointment-form"'),'appointment page has actual form');
 assert.ok(data.find(x=>x.slug==='accessories').bodyHtml.includes('v119-accessory-gallery'),'accessory page has dynamic gallery');

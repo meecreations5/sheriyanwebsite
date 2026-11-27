@@ -51,6 +51,7 @@
  }
  // Measurements: two data-driven paths. Review only, no network requests/storage.
  const measures={
+  'Other':{'Body Measurements':['Height','Chest','Bust','Waist','Hip','Shoulder']},
   'Occasion Wear':{'Body Measurements':['Height','Chest','Bust','Waist','Hip','Shoulder','Armhole','Sleeve Length','Garment Length']},
   'Bridal Wear (Women)':{'Body Measurements':['Height','Chest','Bust','Under Bust','Waist','Hip','Shoulder','Armhole','Sleeve Length','Garment Length']},
   'Bridal Wear (Men)':{'Body Measurements':['Height','Neck','Chest','Waist','Hip','Shoulder','Armhole','Sleeve Length','Garment Length']},

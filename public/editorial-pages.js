@@ -37,10 +37,13 @@
   }
  }
  if ($('body[data-page="collection-edit"]')) {
-  let category=params.get('category') || cats[0];if(!cats.includes(category))category=cats[0];
+  const definitions=Array.isArray(window.SHANERYN_CATEGORY_DEFINITIONS)?window.SHANERYN_CATEGORY_DEFINITIONS:[];
+  const raw=window.SHANERYN_ACTIVE_CATEGORY_ID||params.get('category')||decodeURIComponent(location.pathname.match(/^\/category\/([^/]+)/)?.[1]||'')||cats[0];
+  const definition=definitions.find(c=>c.id===raw||c.name===raw);
+  let category=definition?.name||raw||cats[0]||'Collection';if(!definition&&cats.length&&!cats.includes(category))category=cats[0];
   const item=categories[category]||{copy:"Discover the looks.",image:(looks.find(p=>p.cat===category)?.catalogueImg||looks[0]?.catalogueImg||""),title:category};$('#edit-title').textContent=category+'.';$('#edit-crumb').textContent=category.toUpperCase();
-  $('#edit-description').textContent=item.copy;$('#edit-hero-image').src=assetSrc(item.image);$('#edit-hero-image').alt='Full-length SHANERYN studio catalogue photograph for '+category;
-  const group=looks.filter(p=>p.cat===category);
+  $('#edit-description').textContent=item.copy;const hero=$('#edit-hero-image');if(item.image)hero.src=assetSrc(item.image);else hero.removeAttribute('src');hero.alt='Full-length SHANERYN studio catalogue photograph for '+category;
+  const group=looks.filter(p=>p.cat===category||(definition&&p.categoryId===definition.id));
   $('#edit-count').textContent=`${group.length.toString().padStart(2,'0')} ${group.length===1?'look':'looks'}`;
   const request=$('#v49-category-request');if(request)request.href='contact.html?interest=Collections&look='+encodeURIComponent(category);
   $('#edit-grid-title').textContent='Live in Luxury';$('#edit-look-grid').innerHTML=group.length?group.map(p=>card(p,true)).join(''):'<div class="cv3-empty-category"><span>THE CATEGORY EDIT</span><h3>Collection coming soon.</h3><p>Final garment photography and styles for this category will be added after approval. In the meantime, explore the full lookbook or discuss a personalised design.</p><a class="ep-text-link" href="bespoke.html">Discover bespoke ↗</a></div>';

@@ -1,0 +1,80 @@
+/* SHANERYN v1.19.3: independent clothing and accessory collections.
+   Keep garments and accessories at their natural height: no patch-like frames. */
+body[data-page="accessories"] .v1193-accessory-card img,
+body[data-page="accessories"] .v1193-collection-card img,
+body[data-page="accessories"] .v1193-product-photos img,
+body[data-page="accessories"] .v1193-related-look img{
+  width:100%!important;height:auto!important;max-height:none!important;
+  aspect-ratio:auto!important;object-fit:contain!important;object-position:center top;
+  display:block;border:0!important;box-shadow:none!important;background:transparent!important;
+}
+body[data-page="accessories"] .v119-accessory-grid{align-items:start!important;gap:36px 24px!important}
+body[data-page="accessories"] .v1193-accessory-card{align-self:start;min-width:0}
+body[data-page="accessories"] .v1193-accessory-card>a{display:block;line-height:0}
+body[data-page="accessories"] .v1193-accessory-card-caption{padding:13px 0 16px}
+body[data-page="accessories"] .v1193-accessory-card h3{font:400 clamp(23px,2.2vw,32px)/1.16 var(--serif,Georgia,serif);margin:0 0 8px}
+body[data-page="accessories"] .v1193-accessory-card h3 a{color:inherit;text-decoration:none}
+body[data-page="accessories"] .v1193-accessory-card .v119-accessory-price{font:500 14px/1.4 var(--sans,Arial,sans-serif);margin:0 0 12px}
+body[data-page="accessories"] .v1193-accessory-card p:not(.v119-accessory-price){font-size:12px;color:#d9c9d3}
+body[data-page="accessories"] .v1193-view-link{font:600 10px/1.5 var(--sans,Arial,sans-serif);letter-spacing:.1em;text-decoration:none;border-bottom:1px solid #b4a2ad;padding-bottom:5px;color:#f4e8f0;display:inline-block;margin-top:12px}
+body[data-page="accessories"] .v1193-accessory-navigation{padding:36px 0 20px;background:#211a23}
+body[data-page="accessories"] .v1193-accessory-navigation h2{font:400 clamp(34px,4vw,54px)/1.1 var(--serif,Georgia,serif);margin:10px 0 24px}
+body[data-page="accessories"] .v1193-collection-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:28px;align-items:start}
+body[data-page="accessories"] .v1193-collection-card{text-decoration:none;color:#f8f1f5;display:block}
+body[data-page="accessories"] .v1193-collection-card img{margin-bottom:14px}
+body[data-page="accessories"] .v1193-collection-card span{display:block;font:400 clamp(24px,2.7vw,36px)/1.2 var(--serif,Georgia,serif)}
+body[data-page="accessories"] .v1193-category-nav{padding:35px 0 12px;border-bottom:1px solid #4a3946}
+body[data-page="accessories"] .v1193-category-links{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0}
+body[data-page="accessories"] .v1193-category-links a{padding:10px 16px;border:1px solid #786476;text-decoration:none;color:#f7eff4;font:600 11px/1.5 var(--sans,Arial,sans-serif);letter-spacing:.05em}
+body[data-page="accessories"] .v1193-category-links a:hover{background:#e8d4df;color:#211a23}
+body[data-page="accessories"] .v1193-back{padding-top:23px}
+body[data-page="accessories"] .v1193-back a{color:#eecbdc;text-decoration:none;font:600 11px var(--sans,Arial,sans-serif);letter-spacing:.08em}
+body[data-page="accessories"] .v1193-accessory-detail{padding:64px 0 110px}
+body[data-page="accessories"] .v1193-accessory-detail-inner{width:min(1330px,calc(100% - 64px));margin:0 auto}
+body[data-page="accessories"] .v1193-breadcrumb{font:600 10px/1.5 var(--sans,Arial,sans-serif);text-transform:uppercase;letter-spacing:.1em;color:#dcabc6;margin-bottom:38px}
+body[data-page="accessories"] .v1193-breadcrumb a{color:inherit;text-decoration:none}
+body[data-page="accessories"] .v1193-product-detail-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,1fr);gap:clamp(24px,5vw,74px);align-items:start}
+body[data-page="accessories"] .v1193-product-photos{display:grid;gap:24px;align-items:start}
+body[data-page="accessories"] .v1193-product-info{position:sticky;top:120px}
+body[data-page="accessories"] .v1193-product-info h1{font:400 clamp(42px,5.4vw,75px)/1.06 var(--serif,Georgia,serif);margin:14px 0 26px}
+body[data-page="accessories"] .v1193-links{font:500 12px/1.7 var(--sans,Arial,sans-serif);color:#dfbdce;margin-bottom:18px}
+body[data-page="accessories"] .v1193-links a{color:inherit}
+body[data-page="accessories"] .v1193-price{font:500 24px/1.4 var(--sans,Arial,sans-serif);margin:24px 0}
+body[data-page="accessories"] .v1193-sku{color:#debdce;font-size:11px;letter-spacing:.1em}
+body[data-page="accessories"] .v1193-description{font:400 15px/1.8 var(--sans,Arial,sans-serif);color:#e3d3df;white-space:normal;margin-bottom:30px}
+body[data-page="accessories"] .v1193-note{font-size:11px;color:#d5c4cf;margin:14px 0}
+body[data-page="accessories"] .v1193-related{padding:80px 0 20px}
+body[data-page="accessories"] .v1193-related h2{font:400 48px/1.15 var(--serif,Georgia,serif);margin:10px 0 26px}
+body[data-page="accessories"] .v1193-related-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;gap:26px}
+body[data-page="accessories"] .v1193-related-look{color:inherit;text-decoration:none}
+body[data-page="accessories"] .v1193-related-look span{font:400 24px/1.4 var(--serif,Georgia,serif);display:block;margin:12px 0}
+@media(max-width:840px){
+ body[data-page="accessories"] .v1193-product-detail-grid{grid-template-columns:1fr;gap:30px}
+ body[data-page="accessories"] .v1193-product-info{position:static}
+ body[data-page="accessories"] .v1193-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-page="accessories"] .v1193-accessory-detail-inner{width:calc(100% - 34px)}
+ body[data-page="accessories"] .v1193-accessory-detail{padding-top:38px}
+}
+@media(max-width:540px){
+ body[data-page="accessories"] .v1193-collection-cards{grid-template-columns:1fr}
+ body[data-page="accessories"] .v119-accessory-grid{grid-template-columns:1fr!important;gap:22px!important}
+ body[data-page="accessories"] .v1193-related-grid{gap:14px}
+ body[data-page="accessories"] .v1193-related-look span{font-size:20px}
+ body[data-page="accessories"] .v1193-accessory-navigation{padding-top:25px}
+}
+
+body[data-page="look"] .v1193-look-accessory-link{display:block;line-height:0}
+body[data-page="look"] .v1193-look-accessory-link img{height:auto;aspect-ratio:auto;object-fit:contain}
+body[data-page="look"] .v1193-look-accessory-cta{font:600 10px/1.5 var(--sans,Arial,sans-serif);color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px;align-self:flex-start}
+/* Optional featured clothing collections live within the approved home chapter. */
+body[data-page="home"] .v1193-home-curated,body[data-page="index"] .v1193-home-curated{padding:32px 0 10px}
+.v1193-home-curated>.eyebrow{font-size:12px;letter-spacing:.15em;margin-bottom:20px}
+.v1193-home-curated-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:22px;align-items:start}
+.v1193-home-curated-grid a{color:inherit;text-decoration:none;display:block}
+.v1193-home-curated-grid img{display:block;width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:contain;background:transparent}
+.v1193-home-curated-grid span{display:block;margin-top:12px;font:400 clamp(22px,2.6vw,32px)/1.25 var(--serif,Georgia,serif)}
+.v1193-home-curated-grid small{font-size:14px;color:#d0a5c0}
+
+body[data-page="accessories"] .v1193-category-links .v1193-category-cover{border:0;padding:0;max-width:220px;flex:1 1 190px}
+body[data-page="accessories"] .v1193-category-cover img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;background:transparent}
+body[data-page="accessories"] .v1193-category-cover span{display:block;padding:10px 0;font:400 22px/1.2 var(--serif,Georgia,serif)}

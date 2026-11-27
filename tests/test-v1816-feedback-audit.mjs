@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import {MAX_REFERENCE_BYTES,validateReferenceImage,needsBespokePhone,validCustomerPhone} from '../lib/reference-image.mjs';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.resolve(root,name),'utf8');
@@ -93,7 +94,9 @@ const rawRoute=read('app/api/requests/route.js');
 const routeJs=rawRoute.replace(/^import [^\n]*\n/gm,'').replace('export const runtime=', 'const runtime=').replace('export async function POST','async function POST');
 const writes=[];
 const fakeDb=()=>({collection:name=>({doc:()=>({id:'abc123456',set:async data=>{writes.push({name,data})}})})});
-const context={adminDb:fakeDb,FieldValue:{serverTimestamp:()=>'<server-timestamp>'},Response,Date,URL,Map,Number,Object,String,Error,console,Math};
+const uploaded=[];
+const adminBucket=()=>({file:path=>({save:async (bytes,options)=>{uploaded.push({path,bytes,options})},delete:async()=>{uploaded.push({path,deleted:true})}})});
+const context={MAX_REFERENCE_BYTES,validateReferenceImage,needsBespokePhone,validCustomerPhone,File,Buffer,randomUUID:()=> 'mocked-photo-uuid',adminBucket,adminDb:fakeDb,FieldValue:{serverTimestamp:()=>'<server-timestamp>'},Response,Date,URL,Map,Number,Object,String,Error,console,Math};
 vm.runInNewContext(routeJs+'\nglobalThis.submitRequest=POST;',context);
 const domain='https://shanerynwebsite.vercel.app';
 const request=fields=>new Request(domain+'/api/requests',{method:'POST',headers:{'Content-Type':'application/json',Origin:domain,Host:'shanerynwebsite.vercel.app'},body:JSON.stringify({kind:'enquiry',source:'/look/starlight',fields})});
@@ -107,3 +110,18 @@ const rejected=await context.submitRequest(request({name:'X',email:'bad@',messag
 assert.equal(rejected.status,400);
 assert.equal(writes.length,1,'bad form may not create a request');
 console.log('PASS V1.18.16: measurement enquiry reaches the studio requests collection; invalid submissions rejected.');
+// V1.19.5: verify a real multipart shape, storage save, and Firestore attachment.
+const multipart=new FormData();
+multipart.append('payload',JSON.stringify({kind:'enquiry',source:'/bespoke',fields:{name:'Example Bespoke Customer',email:'bespoke@customer.test',phone:'+91 98765 43210',message:'Please customise this look'}}));
+multipart.append('referenceImage',new File([Buffer.from([137,80,78,71,13,10,26,10,0,0,0,13])],'reference.png',{type:'image/png'}));
+const withPhoto=new Request(domain+'/api/requests',{method:'POST',headers:{Origin:domain,Host:'shanerynwebsite.vercel.app'},body:multipart});
+const accepted=await context.submitRequest(withPhoto);
+assert.equal(accepted.status,201,'multipart Bespoke enquiry saved');
+assert.equal(uploaded.length,1,'exactly one private reference uploaded');
+assert.match(uploaded[0].path,/^private\/customer-references\/abc123456\//);
+assert.equal(writes.at(-1).data.referenceImage.contentType,'image/png');
+const invalidPhone=new Request(domain+'/api/requests',{method:'POST',headers:{'Content-Type':'application/json',Origin:domain,Host:'shanerynwebsite.vercel.app'},body:JSON.stringify({kind:'enquiry',source:'/bespoke',fields:{name:'Customer',email:'customer@test.invalid',message:'Fashion request',phone:''}})});
+const rejectedPhone=await context.submitRequest(invalidPhone);
+assert.equal(rejectedPhone.status,400,'Bespoke request with empty phone rejected by API');
+console.log('PASS V1.19.5: private image stored with enquiry and missing Bespoke phone rejected.');
+

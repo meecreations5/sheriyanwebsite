@@ -1,0 +1,152 @@
+/* SHANERYN V1.19.6 — Restore the approved page compositions.
+   No product galleries, CMS logins or customer-upload behaviour is modified. */
+
+/* The original three Bespoke photo-led cards are now restored on Bespoke.
+   Preserve their existing editorial treatment and responsive layout. */
+body[data-page="bespoke-page"] #services.v63-services{display:block;scroll-margin-top:88px;}
+body[data-page="bespoke-page"] #services .v63-service-card img{border:0;box-shadow:none;}
+body[data-page="bespoke-page"] #services .v63-service-photo{border:0;box-shadow:none;}
+
+/* Styling Services: the previous three service-selection boxes and their
+   separate text/appointment descriptions, without the Bespoke fourth box. */
+body[data-page="styling-services"] .v119-service-options{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;
+}
+body[data-page="styling-services"] .v119-service-option{min-width:0;}
+body[data-page="styling-services"] .v119-service-notes{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;
+}
+@media(max-width:840px){
+ body[data-page="styling-services"] .v119-service-notes{gap:16px;}
+}
+@media(max-width:650px){
+ body[data-page="styling-services"] .v119-service-options{grid-template-columns:1fr;gap:10px;}
+ body[data-page="styling-services"] .v119-service-option{min-height:90px;}
+ body[data-page="styling-services"] .v119-service-notes{grid-template-columns:1fr;gap:26px;}
+}
+
+/* Contact-like Appointment page: an editorial photograph occupies the left
+   half and the complete appointment request form occupies the right half.
+   Both fields and form submission are the original proven CMS components. */
+body[data-page="appointment"] main.v119-standalone{
+  box-sizing:border-box;display:grid;grid-template-columns:minmax(0,46%) minmax(0,54%);
+  min-height:calc(100svh - var(--bar,80px));padding:0!important;
+  background:#241d26;color:#fcf8fa;align-items:stretch;
+}
+body[data-page="appointment"] main.v119-standalone>.v119-page-intro{
+  box-sizing:border-box;position:relative;isolation:isolate;display:flex!important;
+  flex-direction:column;justify-content:flex-end;align-items:flex-start;
+  min-height:780px;padding:clamp(32px,5.1vw,90px)!important;
+  background:#5e384d;border:0!important;color:#fff;overflow:hidden;
+}
+body[data-page="appointment"] main.v119-standalone>.v119-page-intro:after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to top,rgba(19,12,23,.86),rgba(25,14,25,.22) 62%,rgba(25,14,25,.18));
+  pointer-events:none;
+}
+body[data-page="appointment"] .v119-page-intro>.v1195-appointment-image{
+  position:absolute!important;inset:0!important;margin:0!important;
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:none!important;grid-area:auto!important;z-index:-2;overflow:hidden;
+}
+body[data-page="appointment"] .v119-page-intro>.v1195-appointment-image img{
+  display:block!important;position:absolute;inset:0;width:100%!important;
+  height:100%!important;max-height:none!important;
+  object-fit:cover!important;object-position:center!important;border:0;box-shadow:none;
+}
+body[data-page="appointment"] .v119-page-intro>.v119-eyebrow{
+  z-index:1;max-width:95%;margin-bottom:14px;color:#f3bad6;
+  font:600 11px/1.6 var(--sans,Arial,sans-serif);letter-spacing:.16em;
+}
+body[data-page="appointment"] .v119-page-intro>h1{
+  z-index:1;max-width:100%;margin:0 0 18px;
+  font:400 clamp(48px,5.5vw,89px)/1.04 var(--serif,Georgia,serif);
+  letter-spacing:-.048em;color:#fff;overflow-wrap:normal;word-break:normal;
+}
+body[data-page="appointment"] .v119-page-intro>p:not(.v119-eyebrow){
+  z-index:1;max-width:43ch;margin:0!important;
+  color:#f1e1e9!important;font:400 14px/1.85 var(--sans,Arial,sans-serif);
+}
+body[data-page="appointment"] main.v119-standalone>#book-appointment{
+  box-sizing:border-box;display:block!important;min-width:0;
+  padding:clamp(38px,5vw,84px) clamp(28px,5.2vw,100px)!important;
+  margin:0!important;border:0!important;background:#241d26!important;color:#f9edf4!important;
+}
+body[data-page="appointment"] #book-appointment>.v67-appointment-layout{
+  display:block!important;box-sizing:border-box;width:100%!important;
+  max-width:none!important;margin:0!important;padding:0!important;
+  grid-template-columns:none!important;
+}
+body[data-page="appointment"] #book-appointment .v67-book-editorial{display:none!important;}
+body[data-page="appointment"] #book-appointment .v67-appointment-form{
+  display:block!important;box-sizing:border-box;width:100%;max-width:690px;
+  margin:0 auto;padding:0!important;border:0!important;
+  background:transparent!important;color:#f9edf4!important;
+}
+body[data-page="appointment"] #book-appointment .v67-appointment-form>.ep-kicker{
+  display:block!important;margin:0 0 30px;color:#e8a7c8!important;
+  letter-spacing:.17em;
+}
+body[data-page="appointment"] #book-appointment .v67-appointment-form label{
+  color:#f4e9f0!important;
+}
+body[data-page="appointment"] #book-appointment .v67-appointment-form :is(input,select,textarea){
+  background:transparent!important;color:#fff!important;
+  border-bottom:1px solid #695767!important;color-scheme:dark!important;
+}
+body[data-page="appointment"] #book-appointment .v67-appointment-form select option{
+  background:#241d26!important;color:#fff!important;
+}
+body[data-page="appointment"] #book-appointment .v67-appointment-form :is(input,textarea)::placeholder{
+  color:#bdaab7!important;opacity:.9;
+}
+body[data-page="appointment"] #book-appointment .v67-appointment-form :is(input,select,textarea):focus-visible{
+  border-bottom-color:#e4a9c9!important;outline-color:#e4a9c9!important;
+}
+body[data-page="appointment"] #book-appointment #v67-book-submit{
+  background:#f0dee7!important;color:#251b26!important;border-color:#f0dee7!important;
+}
+body[data-page="appointment"] #book-appointment #v67-book-submit:hover{
+  background:#dca8c5!important;border-color:#dca8c5!important;
+}
+body[data-page="appointment"] #book-appointment :is(.v67-appointment-status,.ep-smallnote){
+  color:#e2cbd8!important;
+}
+@media(max-width:980px){
+ body[data-page="appointment"] main.v119-standalone{grid-template-columns:minmax(0,43%) minmax(0,57%);}
+ body[data-page="appointment"] main.v119-standalone>.v119-page-intro{padding:40px 30px!important;}
+ body[data-page="appointment"] main.v119-standalone>#book-appointment{padding:42px 32px!important;}
+}
+@media(max-width:760px){
+ body[data-page="appointment"] main.v119-standalone{display:block!important;min-height:0;}
+ body[data-page="appointment"] main.v119-standalone>.v119-page-intro{
+  display:flex!important;min-height:clamp(360px,67svh,580px)!important;
+  padding:36px 24px 40px!important;
+ }
+ body[data-page="appointment"] .v119-page-intro>h1{
+  font-size:clamp(48px,11vw,76px);max-width:90%;
+ }
+ body[data-page="appointment"] main.v119-standalone>#book-appointment{
+  padding:43px 22px 65px!important;
+ }
+ body[data-page="appointment"] #book-appointment .v67-appointment-form{max-width:none;}
+}
+
+/* One matching five-icon row in Contact and Footer, rather than duplicated
+   WhatsApp/Instagram text links below the Contact icons. */
+.site-footer .v66-social,.v67-contact-social{gap:12px;}
+.site-footer .v66-social .v66-social-icon,
+body[data-page="contact-page"] .v67-contact-social .v66-social-icon{
+  box-sizing:border-box;width:46px!important;height:46px!important;flex:0 0 46px!important;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:#e6becf;background:transparent;border:1px solid #66505e;border-radius:50%;
+  text-decoration:none;transition:color .2s,border-color .2s,background-color .2s;
+}
+.site-footer .v66-social .v66-social-icon svg,
+body[data-page="contact-page"] .v67-contact-social .v66-social-icon svg{
+  width:20px!important;height:20px!important;stroke-width:1.7;
+}
+.site-footer .v66-social a.v66-social-icon:hover,
+body[data-page="contact-page"] .v67-contact-social a.v66-social-icon:hover{
+  background:#382531;border-color:#d586b2;color:#fff;
+}
