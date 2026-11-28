@@ -1,0 +1,222 @@
+{
+  "results": [
+    {
+      "page": "bespoke",
+      "width": 320,
+      "labels": 13,
+      "fields": 6
+    },
+    {
+      "page": "styling-services",
+      "width": 320,
+      "labels": 9,
+      "fields": 16
+    },
+    {
+      "page": "index",
+      "width": 320,
+      "labels": 11,
+      "fields": 5
+    },
+    {
+      "page": "appointment",
+      "width": 320,
+      "labels": 8,
+      "fields": 16
+    },
+    {
+      "page": "accessories",
+      "width": 320,
+      "labels": 6,
+      "fields": 5
+    },
+    {
+      "page": "contact",
+      "width": 320,
+      "labels": 10,
+      "fields": 21
+    },
+    {
+      "page": "collection",
+      "width": 320,
+      "labels": 10,
+      "fields": 5
+    },
+    {
+      "page": "film",
+      "width": 320,
+      "labels": 8,
+      "fields": 5
+    },
+    {
+      "page": "collections",
+      "width": 320,
+      "labels": 9,
+      "fields": 5
+    },
+    {
+      "page": "testimonials",
+      "width": 320,
+      "labels": 8,
+      "fields": 5
+    },
+    {
+      "page": "story",
+      "width": 320,
+      "labels": 7,
+      "fields": 5
+    },
+    {
+      "page": "look",
+      "width": 320,
+      "labels": 9,
+      "fields": 10
+    },
+    {
+      "page": "bespoke",
+      "width": 390,
+      "labels": 13,
+      "fields": 6
+    },
+    {
+      "page": "styling-services",
+      "width": 390,
+      "labels": 9,
+      "fields": 16
+    },
+    {
+      "page": "index",
+      "width": 390,
+      "labels": 11,
+      "fields": 5
+    },
+    {
+      "page": "appointment",
+      "width": 390,
+      "labels": 8,
+      "fields": 16
+    },
+    {
+      "page": "accessories",
+      "width": 390,
+      "labels": 6,
+      "fields": 5
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "labels": 10,
+      "fields": 21
+    },
+    {
+      "page": "collection",
+      "width": 390,
+      "labels": 10,
+      "fields": 5
+    },
+    {
+      "page": "film",
+      "width": 390,
+      "labels": 8,
+      "fields": 5
+    },
+    {
+      "page": "collections",
+      "width": 390,
+      "labels": 9,
+      "fields": 5
+    },
+    {
+      "page": "testimonials",
+      "width": 390,
+      "labels": 8,
+      "fields": 5
+    },
+    {
+      "page": "story",
+      "width": 390,
+      "labels": 7,
+      "fields": 5
+    },
+    {
+      "page": "look",
+      "width": 390,
+      "labels": 9,
+      "fields": 10
+    },
+    {
+      "page": "bespoke",
+      "width": 1440,
+      "labels": 13,
+      "fields": 6
+    },
+    {
+      "page": "styling-services",
+      "width": 1440,
+      "labels": 9,
+      "fields": 16
+    },
+    {
+      "page": "index",
+      "width": 1440,
+      "labels": 11,
+      "fields": 5
+    },
+    {
+      "page": "appointment",
+      "width": 1440,
+      "labels": 8,
+      "fields": 16
+    },
+    {
+      "page": "accessories",
+      "width": 1440,
+      "labels": 6,
+      "fields": 5
+    },
+    {
+      "page": "contact",
+      "width": 1440,
+      "labels": 10,
+      "fields": 21
+    },
+    {
+      "page": "collection",
+      "width": 1440,
+      "labels": 10,
+      "fields": 5
+    },
+    {
+      "page": "film",
+      "width": 1440,
+      "labels": 8,
+      "fields": 5
+    },
+    {
+      "page": "collections",
+      "width": 1440,
+      "labels": 9,
+      "fields": 5
+    },
+    {
+      "page": "testimonials",
+      "width": 1440,
+      "labels": 8,
+      "fields": 5
+    },
+    {
+      "page": "story",
+      "width": 1440,
+      "labels": 7,
+      "fields": 5
+    },
+    {
+      "page": "look",
+      "width": 1440,
+      "labels": 9,
+      "fields": 10
+    }
+  ],
+  "failures": [],
+  "method": "Static bundled seed templates with production stylesheet order; simulated CMS-edited labels and representative runtime measurement inputs. No live CMS or Next.js."
+}

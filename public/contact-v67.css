@@ -51,7 +51,7 @@ body[data-page="contact-page"] .v67-appointment-form select,
 body[data-page="contact-page"] .v67-appointment-form textarea {
   box-sizing:border-box;min-width:0;width:100%;border-radius:0;
   border:0;border-bottom:1px solid var(--ep-hair);background:transparent;
-  color:var(--ep-ink);min-height:43px;padding:8px 0 12px;
+  color:var(--ep-ink);min-height:50px;padding:12px 16px;
   font:400 15px/1.4 var(--sans); letter-spacing:normal; text-transform:none;
   outline:none;color-scheme:dark;
 }

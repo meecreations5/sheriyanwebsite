@@ -16,9 +16,9 @@ body[data-page="look"] .v119-extra-media section+section{margin-top:56px;}
 .admin-reference-photo img{display:block;max-width:min(100%,340px);max-height:340px;object-fit:contain;margin:12px 0;border:1px solid #d6ccd2;}
 .admin-reference-photo a span{display:block;font-size:12px;}
 /* Both page closures use the approved desktop typography; mobile scales down. */
-body[data-page="home"] .closure .closure-v59-eyebrow, body[data-page="home"] .closure .eyebrow, .v119-final-quote .v119-quote-inner>span{font-size:24px!important;letter-spacing:.12em!important;}
+body[data-page="home"] .closure .closure-v59-eyebrow, body[data-page="home"] .closure .eyebrow, .v119-final-quote .v119-quote-inner>span{font-size:14px;letter-spacing:.12em;}
 body[data-page="home"] #closure-heading,body[data-page="home"] .closure .closure-v59-heading,.v119-final-quote .v119-quote-inner>h2{font-size:60px!important;line-height:1.09!important;}
-@media(max-width:760px){body[data-page="home"] .closure .closure-v59-eyebrow,body[data-page="home"] .closure .eyebrow,.v119-final-quote .v119-quote-inner>span{font-size:clamp(15px,4vw,21px)!important;}body[data-page="home"] #closure-heading,body[data-page="home"] .closure .closure-v59-heading,.v119-final-quote .v119-quote-inner>h2{font-size:clamp(34px,8vw,55px)!important;}}
+@media(max-width:760px){body[data-page="home"] .closure .closure-v59-eyebrow,body[data-page="home"] .closure .eyebrow,.v119-final-quote .v119-quote-inner>span{font-size:12px;}body[data-page="home"] #closure-heading,body[data-page="home"] .closure .closure-v59-heading,.v119-final-quote .v119-quote-inner>h2{font-size:clamp(34px,8vw,55px)!important;}}
 @media(max-width:540px){body[data-page="home"] .occasion-ref-wrap>.occasion-ref-all.v119-after-looks{margin-top:22px!important;}body[data-page="look"] .v119-horizontal-media{gap:20px!important;}}
 
 #v119-bespoke-other-label{display:flex;flex-direction:column;gap:10px;margin:12px 0 18px;color:inherit;font:600 12px/1.5 var(--sans,Arial,sans-serif)}

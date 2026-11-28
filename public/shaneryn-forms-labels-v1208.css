@@ -1,0 +1,23 @@
+/* Public customer controls only. Keep catalogue filters, admin, hidden inputs,
+   checkboxes, radio buttons and upload controls outside the text-field reset. */
+html body[data-page] .shaneryn-public-site {
+ --sh-field-padding:16px; --sh-field-height:50px; --sh-field-gap:24px; --sh-label-size:14px;
+}
+@media(max-width:767px){html body[data-page] .shaneryn-public-site{--sh-field-padding:14px;--sh-field-height:48px;--sh-field-gap:20px;--sh-label-size:12px}}
+/* ID-level specificity is intentional: old page styles target #closure and
+   #book-appointment. Match by semantic role, not by editable wording. */
+html body[data-page] .shaneryn-public-site :is(#closure .closure-v62-kicker,#closure .eyebrow,#closure .closure-v59-eyebrow,#sh1208-label,[data-sh-section-label],.eyebrow,.ep-kicker,.v119-eyebrow,.ep-image-overline,.ld-sticky-kicker,.ld-interlude-kicker,.closure-v59-eyebrow,.closure-v62-kicker,.v119-final-quote .v119-quote-inner>span,.v64-stitch-label),
+html body[data-page] .shaneryn-public-site :is(#closure .closure-v62-kicker,#sh1208-label,[data-sh-section-label],.eyebrow,.ep-kicker,.ld-interlude-kicker,.v119-final-quote .v119-quote-inner>span) :is(em,strong,b,span) {
+ font-family:var(--sans)!important;font-size:var(--sh-label-size)!important;font-weight:400!important;line-height:1.5!important;letter-spacing:.12em!important;font-style:normal!important;
+}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form,form,.ld-measure-fields-grid,.ld-measure-contact-grid,.cv3-measure-fields,.cv3-measure-select,.v119-bespoke-customer,.v119-appointment-references) :is(input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=submit]):not([type=button]):not([type=reset]):not([type=range]):not([type=color]):not(.cms-honeypot),select,textarea) {
+ box-sizing:border-box!important;min-width:0;max-width:100%;min-height:var(--sh-field-height)!important;padding:10px var(--sh-field-padding)!important;font-family:var(--sans)!important;font-size:16px!important;font-weight:400!important;line-height:1.4!important;letter-spacing:normal!important;text-transform:none!important;
+}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form,form,.ld-measure-fields-grid,.ld-measure-contact-grid,.cv3-measure-fields) textarea {min-height:120px!important;resize:vertical;}
+@media(max-width:767px){html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form,form,.ld-measure-fields-grid,.ld-measure-contact-grid,.cv3-measure-fields) textarea{min-height:100px!important}}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form,form,.ld-measure-fields-grid,.ld-measure-contact-grid,.cv3-measure-fields) :is(input,textarea)::placeholder {color:inherit!important;opacity:.72!important}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form,form,.ld-measure-fields-grid,.ld-measure-contact-grid,.cv3-measure-fields) :is(input,select,textarea):focus-visible {outline:2px solid var(--ep-accent,var(--accent,#c33583))!important;outline-offset:2px!important}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form,form) label:has(> :is(input:not([type=checkbox]):not([type=radio]):not([type=hidden]),select,textarea)) {font-family:var(--sans)!important;font-size:14px!important;font-weight:400!important;line-height:1.4!important;gap:8px!important;min-width:0}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form) :is(.v67-book-grid,.ep-contact-grid) {row-gap:var(--sh-field-gap)!important}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form) > label:not(:has(input[type=checkbox],input[type=radio])) {margin-bottom:8px}
+html body[data-page] .shaneryn-public-site :is(#ep-contact-form,#v67-appointment-form,#inquiry-form,#cv3-measure-form,form) input[type=file] {max-width:100%;box-sizing:border-box;padding:12px var(--sh-field-padding)!important;font-family:var(--sans)!important;font-size:14px!important;min-height:var(--sh-field-height)!important}

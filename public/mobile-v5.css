@@ -362,7 +362,7 @@
   body[data-page="contact-page"] .ep-contact-form {min-width:0;}
   body[data-page="contact-page"] .ep-contact-form .ep-form-row {display:grid!important;grid-template-columns:1fr!important;gap:0!important;}
   body[data-page="contact-page"] .ep-contact-form label {font-size:12px!important;line-height:1.6;}
-  body[data-page="contact-page"] .ep-contact-form :is(input,select,textarea) {min-height:48px!important;padding:12px 0!important;}
+  body[data-page="contact-page"] .ep-contact-form :is(input,select,textarea) {min-height:48px!important;padding:12px 14px!important;}
   body[data-page="contact-page"] .ep-contact-actions {display:grid;grid-template-columns:1fr;gap:10px;}
   body[data-page="contact-page"] .ep-contact-actions :is(a,button) {width:100%;min-height:49px;}
   body[data-page="contact-page"] .cv3-contact-info {padding-top:56px;padding-bottom:65px;}

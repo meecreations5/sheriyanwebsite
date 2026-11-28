@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const css=read('public/shaneryn-forms-labels-v1208.css');
+assert.match(css,/--sh-field-padding:16px; --sh-field-height:50px/);
+assert.match(css,/--sh-field-padding:14px;--sh-field-height:48px/);
+assert.match(css,/--sh-label-size:12px/);
+assert.match(css,/\.closure-v62-kicker/);
+assert.match(css,/\.ld-interlude-kicker/);
+assert.match(css,/:is\(em,strong,b,span\)/);
+assert.match(css,/padding:10px var\(--sh-field-padding\)!important/);
+assert.match(css,/:not\(\.cms-honeypot\)/);
+assert.match(read('public/mobile-v5.css'),/min-height:48px!important;padding:12px 14px!important/);
+assert.match(read('lib/render-page.js'),/data-sh-section-label/);
+assert.match(read('components/LegacyPage.jsx'),/shaneryn-forms-labels-v1208\.css\?v=1208/);
+console.log('PASS V1.20.8 semantic labels, nested CMS typography, customer form spacing, cache version');

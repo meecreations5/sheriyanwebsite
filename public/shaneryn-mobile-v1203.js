@@ -23,6 +23,16 @@
  const panel=document.createElement('div');panel.className='sh1203-look-panel';
  const anchor=document.createComment('original purchase panel');cta.before(anchor);
  const entries=[];let mounted=false,panelHeight=0,frame=0;
+ const footer=$('.site-footer'),dock=document.querySelector('.v5-tabbar');
+ let footerMarker=null,dockMarker=null;
+ const measurePanel=$('#ld-measure-panel');
+ const syncDock=hide=>{
+  const formActive=available(measurePanel)&&measurePanel.getBoundingClientRect().top<scroll.getBoundingClientRect().bottom&&measurePanel.getBoundingClientRect().bottom>scroll.getBoundingClientRect().top;
+  const blocked=formActive||document.body.matches('.modal-open,.v5-input-focus,.v47-menu-open')||!!document.querySelector('.sh-consent-banner,.sh-consent-scrim,dialog[open]');
+  if(dock){dock.hidden=!hide||blocked;dock.inert=dock.hidden;}
+  document.body.classList.toggle('sh1207-after-gallery',hide);
+  document.body.classList.toggle('sh1207-overlay-active',blocked);
+ };
  const detailsButton=document.createElement('button');detailsButton.type='button';detailsButton.className='sh1203-panel-details';detailsButton.textContent='View details & measurements';
  const nav=$('.sh120-nav');
  const go=(node)=>{if(!node)return;const y=node.getBoundingClientRect().top-scroll.getBoundingClientRect().top+scroll.scrollTop-(nav?.offsetHeight||0);scroll.scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});};
@@ -40,21 +50,30 @@
   const galleryEnd=gallery.getBoundingClientRect().bottom;
   const hide=galleryEnd<=boundary+1;
   if(panel.hidden!==hide){panel.hidden=hide;panel.inert=hide;}
+  syncDock(hide);
  };
  const queue=()=>{if(frame)return;frame=requestAnimationFrame(()=>{frame=0;syncPanel();syncNav();});};
  scroll.addEventListener('scroll',queue,{passive:true});
+ const stateObserver=new MutationObserver(queue);stateObserver.observe(document.body,{attributes:true,attributeFilter:['class'],childList:true});
+ if(measurePanel)stateObserver.observe(measurePanel,{attributes:true,attributeFilter:['hidden']});
+ document.addEventListener('focusin',queue);document.addEventListener('focusout',queue);
  const galleryObserver=new ResizeObserver(queue);galleryObserver.observe(gallery);
  const panelObserver=new ResizeObserver(queue);panelObserver.observe(panel);
  const layout=()=>{if(!mounted)return;const rect=header.getBoundingClientRect();main.style.setProperty('--sh1203-header-bottom',Math.max(0,rect.bottom)+'px');const vv=window.visualViewport;main.style.setProperty('--sh1203-viewport-bottom',Math.max(0,innerHeight-(vv?vv.height+vv.offsetTop:innerHeight))+'px');queue();};
  function mount(){if(mounted)return;mounted=true;
   // Move, never clone, live gallery/form/related nodes so existing listeners and entered values survive.
   for(const child of [...main.children]){if(child===cta||child.tagName==='DIALOG')continue;const marker=document.createComment('original section');child.before(marker);entries.push([child,marker]);scroll.append(child);}
-  panel.hidden=false;panel.inert=false;panelHeight=0;panel.append(detailsButton,cta);main.append(scroll,panel);main.classList.add('sh1203-look-ready');document.body.classList.add('sh1203-look-active');layout();syncPanel();syncNav();
+  if(footer&&!scroll.contains(footer)){footerMarker=document.createComment('original footer');footer.before(footerMarker);scroll.append(footer);}
+  panel.hidden=false;panel.inert=false;panelHeight=0;panel.append(detailsButton,cta);main.append(scroll,panel);
+  if(dock){dockMarker=document.createComment('original mobile dock');dock.before(dockMarker);main.append(dock);dock.hidden=true;dock.inert=true;}main.classList.add('sh1203-look-ready');document.body.classList.add('sh1203-look-active');layout();syncPanel();syncNav();
  }
- function unmount(){if(!mounted)return;mounted=false;panel.hidden=false;panel.inert=false;for(const [child,marker] of entries.splice(0)){marker.replaceWith(child)}anchor.after(cta);scroll.remove();panel.remove();main.classList.remove('sh1203-look-ready');document.body.classList.remove('sh1203-look-active');main.style.removeProperty('--sh1203-header-bottom');main.style.removeProperty('--sh1203-viewport-bottom');}
+ function unmount(){if(!mounted)return;mounted=false;panel.hidden=false;panel.inert=false;
+  if(footerMarker){footerMarker.replaceWith(footer);footerMarker=null;}
+  if(dockMarker){dockMarker.replaceWith(dock);dockMarker=null;dock.hidden=false;dock.inert=false;}
+  document.body.classList.remove('sh1207-after-gallery','sh1207-overlay-active');for(const [child,marker] of entries.splice(0)){marker.replaceWith(child)}anchor.after(cta);scroll.remove();panel.remove();main.classList.remove('sh1203-look-ready');document.body.classList.remove('sh1203-look-active');main.style.removeProperty('--sh1203-header-bottom');main.style.removeProperty('--sh1203-viewport-bottom');}
  const sync=()=>narrow.matches?mount():unmount();narrow.addEventListener('change',sync);window.addEventListener('resize',layout,{passive:true});window.visualViewport?.addEventListener('resize',layout,{passive:true});const headerObserver=new ResizeObserver(layout);headerObserver.observe(header);sync();
  // The legacy script's window-scroll handler is not the gallery scroll owner.
  // On mobile Buy it now reveals the live measurement form when available.
  // The original enquiry link remains the fallback and desktop behavior.
- root.addEventListener('shaneryn:legacy-cleanup',()=>{unmount();narrow.removeEventListener('change',sync);window.removeEventListener('resize',layout);window.visualViewport?.removeEventListener('resize',layout);headerObserver.disconnect();galleryObserver.disconnect();panelObserver.disconnect();cancelAnimationFrame(frame);purchase?.removeEventListener('click',openMeasurement,{capture:true});inlinePurchase?.removeEventListener('click',openMeasurement,{capture:true});},{once:true});
+ root.addEventListener('shaneryn:legacy-cleanup',()=>{unmount();narrow.removeEventListener('change',sync);window.removeEventListener('resize',layout);window.visualViewport?.removeEventListener('resize',layout);headerObserver.disconnect();stateObserver.disconnect();document.removeEventListener('focusin',queue);document.removeEventListener('focusout',queue);galleryObserver.disconnect();panelObserver.disconnect();cancelAnimationFrame(frame);purchase?.removeEventListener('click',openMeasurement,{capture:true});inlinePurchase?.removeEventListener('click',openMeasurement,{capture:true});},{once:true});
 })();

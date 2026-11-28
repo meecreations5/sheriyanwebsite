@@ -36,21 +36,22 @@ export default async function LegacyPage({slug,activeProductId=null,curatedColle
  const customAccent=/^#[a-f0-9]{6}$/i.test(brandAccent)&&brandAccent.toLowerCase()!=='#c33583'?brandAccent:null;
  return <>
   {customAccent&&<style>{`:root{--accent:${customAccent};--ep-accent:${customAccent};--home-accent:${customAccent};--signature-magenta:${customAccent}}`}</style>}
-  {page.styles?.map((sheet,i)=><link rel="stylesheet" href={'/'+sheet} key={sheet+i}/>)}
+  {page.styles?.map((sheet,i)=><link rel="stylesheet" href={'/'+sheet+'?v=1208'} key={sheet+i}/>)}
   <link rel="stylesheet" href="/cms-bridges.css"/>
-  {slug==='index'&&<link rel="stylesheet" href="/shaneryn-v190-refinements.css"/>}
+  {slug==='index'&&<link rel="stylesheet" href="/shaneryn-v190-refinements.css?v=1208"/>}
   {slug==='bespoke'&&<link rel="stylesheet" href="/shaneryn-v1914-bespoke-borderless.css"/>}
   {(['collections','collection'].includes(slug))&&<link rel="stylesheet" href="/shaneryn-v1815-collection-prices.css"/>}
   {slug==='look'&&<link rel="stylesheet" href="/shaneryn-v1816-feedback-audit.css"/>}
-  <link rel="stylesheet" href="/shaneryn-final-v119.css?v=1206"/>
-  <link rel="stylesheet" href="/shaneryn-feedback-v1195.css"/>
+  <link rel="stylesheet" href="/shaneryn-final-v119.css?v=1207"/>
+  <link rel="stylesheet" href="/shaneryn-feedback-v1195.css?v=1207"/>
   <link rel="stylesheet" href="/shaneryn-v1196-page-consistency.css"/>
   {slug==='story'&&<link rel="stylesheet" href="/shaneryn-my-story-v1192.css"/>}
   {['index','accessories','look'].includes(slug)&&<link rel="stylesheet" href="/shaneryn-catalogue-v1193.css"/>}
   <link rel="stylesheet" href="/shaneryn-mobile-v120.css"/>
   <link rel="stylesheet" href="/shaneryn-mobile-v1202.css"/>
-  <link rel="stylesheet" href="/shaneryn-mobile-v1203.css"/>
-  <link rel="stylesheet" href="/shaneryn-typography-v1205.css?v=1206"/>
+  <link rel="stylesheet" href="/shaneryn-mobile-v1203.css?v=1207"/>
+  <link rel="stylesheet" href="/shaneryn-typography-v1205.css?v=1208"/>
+  <link rel="stylesheet" href="/shaneryn-forms-labels-v1208.css?v=1208"/>
   <div className="shaneryn-public-site" data-cms-page={slug} dangerouslySetInnerHTML={{__html:markup}} suppressHydrationWarning/>
   <LegacyScripts {...clientProps}/>
  </>

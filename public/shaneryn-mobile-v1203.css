@@ -24,11 +24,14 @@
  .sh1203-look-panel{min-width:0;position:relative;background:var(--ep-panel);color:var(--ep-ink);border-top:1px solid var(--ep-hair);padding:0;z-index:11}
  .sh1203-panel-details{display:block;width:100%;text-align:left;padding:8px 16px;min-height:44px;font:inherit;font-size:12px;background:transparent;color:inherit;border:0;border-bottom:1px solid var(--ep-hair);cursor:pointer}
  body[data-page="look"] main.sh1203-look-ready .sh1203-look-panel .ld-mobile-cta{position:static!important;inset:auto!important;display:flex!important;width:100%!important;opacity:1!important;visibility:visible!important;transform:none!important;pointer-events:auto!important;transition:none!important;box-shadow:none!important;border:0!important;box-sizing:border-box;min-height:64px}
- body[data-page="look"]:has(.sh1203-look-ready) :is(.v5-tabbar,.sh-pwa-install){display:none!important}
- body[data-page="look"]:has(.sh1203-look-ready) .site-footer{display:none!important}
+ body[data-page="look"]:has(.sh1203-look-ready):not(.sh1207-after-gallery) .sh-pwa-install{display:none!important}
+ body[data-page="look"] main.sh1203-look-ready>.v5-tabbar{position:static!important;inset:auto!important;transform:none!important;opacity:1!important;pointer-events:auto!important;width:100%;box-sizing:border-box;grid-row:2;z-index:12}
+ body[data-page="look"] main.sh1203-look-ready>.v5-tabbar[hidden]{display:none!important}
+ body[data-page="look"] main.sh1203-look-ready>.sh1203-look-panel{grid-row:2}
+ body[data-page="look"] main.sh1203-look-ready .site-footer{display:block!important;position:relative!important;width:100%!important;flex:none}
  body[data-page="look"]:has(.sh1203-look-ready).v5-input-focus .sh1203-look-panel{display:none!important}
  body[data-page="look"]:has(.sh1203-look-ready) .sh-consent-banner{bottom:calc(env(safe-area-inset-bottom,0px) + 10px)!important}
- body[data-page="look"]:has(.sh1203-look-ready):has(.sh-consent-banner) .sh1203-look-panel{visibility:hidden!important;pointer-events:none!important}
+ body[data-page="look"]:has(.sh1203-look-ready):has(:is(.sh-consent-banner,.sh-consent-scrim,dialog[open])) .sh1203-look-panel{visibility:hidden!important;pointer-events:none!important}
  body[data-page="look"]:has(.sh1203-look-ready).v47-menu-open main.sh1203-look-ready{visibility:hidden!important}
 }
 @media(max-width:767px){
@@ -44,3 +47,8 @@
 }
 @keyframes sh1204-panel-in{from{opacity:0}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){.sh1203-look-panel{animation:none!important}}
+
+@media(max-width:767px){
+ body[data-page="look"]:has(.sh1203-look-ready):has(:is(.sh-consent-banner,.sh-consent-scrim,dialog[open])) .v5-tabbar{visibility:hidden!important;pointer-events:none!important}
+ body[data-page="look"].sh1207-overlay-active .sh-pwa-install{visibility:hidden!important;pointer-events:none!important}
+}

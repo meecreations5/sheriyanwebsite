@@ -122,7 +122,7 @@ html[data-color-mode="inverse"] .ep-new-drop-full .new-drop-heading h1 {color:#f
 .ep-contact-panel>.ep-kicker {margin-top:65px}.ep-contact-panel>h1 {font:400 clamp(58px,5.6vw,96px)/1.03 var(--serif);margin:18px 0 14px;letter-spacing:-.05em}
 .ep-contact-panel>p {font:400 13px/1.9 var(--sans);color:var(--ep-sub);max-width:410px;margin-bottom:35px}
 .ep-contact-form label {display:flex;flex-direction:column;gap:10px;font-size:10px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--ep-sub);margin-bottom:21px}
-.ep-contact-form input,.ep-contact-form select,.ep-contact-form textarea {width:100%;border:0;border-bottom:1px solid var(--ep-hair);background:transparent;color:var(--ep-ink);border-radius:0;outline:0;padding:10px 0 12px;font-size:13px;letter-spacing:0;text-transform:none;font-weight:400}
+.ep-contact-form input,.ep-contact-form select,.ep-contact-form textarea {width:100%;border:0;border-bottom:1px solid var(--ep-hair);background:transparent;color:var(--ep-ink);border-radius:0;outline:0;padding:12px 16px;font-size:13px;letter-spacing:0;text-transform:none;font-weight:400}
 .ep-contact-form input::placeholder,.ep-contact-form textarea::placeholder {color:var(--ep-sub);opacity:.7}
 .ep-contact-form select option {background:var(--ep-panel);color:var(--ep-ink)}
 .ep-contact-form input:focus,.ep-contact-form textarea:focus,.ep-contact-form select:focus {border-color:var(--ep-accent);outline:0}

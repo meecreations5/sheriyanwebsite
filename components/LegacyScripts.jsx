@@ -27,7 +27,7 @@ export default function LegacyScripts({scripts,products,settings,collections,cur
   const files=[...new Set((scripts||[]).filter(src=>src&&!SKIP.has(src)))];
   if(page.slug==='bespoke'&&!files.includes('contact-v67.js'))files.push('contact-v67.js');
   files.push('cms-public-forms.js','cms-preview.js','shaneryn-final-v119.js','shaneryn-feedback-v1195.js','shaneryn-mobile-v120.js','shaneryn-mobile-v1202.js','shaneryn-mobile-v1203.js');
-  async function run(){for(const src of files){if(cancelled)break;await new Promise(resolve=>{const el=document.createElement('script');el.src='/'+src;el.dataset.cmsLegacy='true';el.async=false;el.onload=resolve;el.onerror=()=>{console.warn('Legacy script failed:',src);resolve()};document.body.appendChild(el);loaded.push(el)})}}
+  async function run(){for(const src of files){if(cancelled)break;await new Promise(resolve=>{const el=document.createElement('script');el.src='/'+src+(src==='shaneryn-mobile-v1203.js'?'?v=1207':'');el.dataset.cmsLegacy='true';el.async=false;el.onload=resolve;el.onerror=()=>{console.warn('Legacy script failed:',src);resolve()};document.body.appendChild(el);loaded.push(el)})}}
   run();
   const cmsPreview = new URLSearchParams(location.search).has('cmsPreview');
   if(!cmsPreview)recordEvent('page_view',{page_title:page.title,page_location:location.href});

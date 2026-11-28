@@ -1,3 +1,7 @@
+**V1.20.8:** Customer form spacing and semantic supporting labels. See `UPDATE_V1_20_8_FORM_TYPOGRAPHY.md`.
+
+**V1.20.7:** Gallery video fitting, contextual mobile dock/footer, and supporting labels. See `UPDATE_V1_20_7_GALLERY_NAVIGATION.md`.
+
 **V1.20.6:** Typography consistency, mobile hero and desktop video correction. See `UPDATE_V1_20_6_TYPOGRAPHY_CONSISTENCY.md`.
 
 **V1.19.8.1 review hotfix:** Equal Reject/Accept cookie controls, restored iOS PWA help theme, keyboard accessibility, and desktop-agent iPadOS install guidance. See `UPDATE_V1_19_8_1_AUDIT_HOTFIX.md`.

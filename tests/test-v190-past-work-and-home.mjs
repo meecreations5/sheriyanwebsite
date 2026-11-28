@@ -59,5 +59,5 @@ assert.match(css,/\.bespoke-visual > img\.bespoke-inset/);
 assert.match(css,/border: 0 !important/);
 assert.match(css,/#closure \.closure-v62-kicker em/);
 assert.match(css,/font-style: normal !important/);
-assert.match(legacy,/slug==='index'&&<link rel="stylesheet" href="\/shaneryn-v190-refinements\.css"/);
+assert.match(legacy,/slug==='index'&&<link rel="stylesheet" href="\/shaneryn-v190-refinements\.css(?:\?v=\d+)?"/);
 console.log('PASS V1.18.10: Past Work extras sanitize and persist, 17 originals preserved, public gallery and lightbox extend, home-only border and upright label overrides');

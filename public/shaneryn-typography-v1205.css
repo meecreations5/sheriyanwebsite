@@ -72,3 +72,9 @@ html body[data-page] .shaneryn-public-site :is(.ep-smallnote,.v49-measure-mode-h
 html body[data-page] .shaneryn-public-site :is(.shaneryn-my-story-role,.shaneryn-my-story-name,.ld-tagline) {font-family:var(--sans)!important;font-weight:400!important;font-size:var(--sh-sub-size)!important;line-height:1.45!important}
 html body[data-page] .shaneryn-public-site :is(.site-header a:not(.brand),.mobile-menu a,.mobile-menu button,.sh120-footer-toggle,.sh1203-panel-details) {font-family:var(--sans)!important;font-weight:400!important}
 html .sh-legal-page .sh-legal-main li {font-family:var(--sh-body-font,Lato,Arial),sans-serif;font-size:var(--sh-copy-size);font-weight:300;line-height:1.65}
+
+/* V1.20.7 semantic supporting labels, including dynamically edited CMS text. */
+html body[data-page] .shaneryn-public-site :is(.eyebrow,.ep-kicker,.v119-eyebrow,.ep-image-overline,.ld-sticky-kicker,.ld-interlude-kicker,.closure-v59-eyebrow,.closure-v62-kicker,.v119-final-quote .v119-quote-inner>span,.v64-stitch-label){
+ font-family:var(--sans)!important;font-weight:400!important;font-size:14px!important;line-height:1.5!important;letter-spacing:.12em!important;
+}
+@media(max-width:767px){html body[data-page] .shaneryn-public-site :is(.eyebrow,.ep-kicker,.v119-eyebrow,.ep-image-overline,.ld-sticky-kicker,.ld-interlude-kicker,.closure-v59-eyebrow,.closure-v62-kicker,.v119-final-quote .v119-quote-inner>span,.v64-stitch-label){font-size:12px!important}}

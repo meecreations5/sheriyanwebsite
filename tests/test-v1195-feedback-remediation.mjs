@@ -45,7 +45,7 @@ check(preview.includes('URL.createObjectURL')&&preview.includes('URL.revokeObjec
 const css=read('public/shaneryn-feedback-v1195.css');
 check(css.includes('.v119-horizontal-media{gap:30px!important;}'),'Detail photograph gap 30px');
 check(read('public/look-detail-v45.js').includes('class="v1195-details-heading">Details</h2>'),'Heading renamed Details');
-check(css.includes('font-size:24px!important')&&css.includes('font-size:60px!important'),'Desktop closing typography 24 and 60 px');
+check(css.includes('font-size:14px')&&css.includes('font-size:60px!important'),'Desktop closing typography updated supporting label and retained heading');
 check(css.includes('margin:28px 0 0 auto!important'),'Homepage Explore the Looks CTA right aligned');
 check(read('components/admin/CmsApp.jsx').includes('draft.referenceImage?.path')&&read('components/admin/CmsApp.jsx').includes('/api/admin/requests/reference/'),'CMS shows private reference image');
 check(read('components/LegacyScripts.jsx').includes('shaneryn-feedback-v1195.js')&&read('components/LegacyPage.jsx').includes('shaneryn-feedback-v1195.css'),'New frontend assets wired');
