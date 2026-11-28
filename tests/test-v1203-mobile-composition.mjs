@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const js=read('public/shaneryn-mobile-v1203.js'),css=read('public/shaneryn-mobile-v1203.css');
+assert.match(js,/scroll\.append\(child\)/);assert.match(js,/panel\.append\(detailsButton,cta\)/);
+assert.match(js,/marker\.replaceWith\(child\)/);assert.match(js,/anchor\.after\(cta\)/);
+assert.match(js,/visualViewport/);assert.match(js,/toggle\.click\(\);go\(measure\)/);
+assert.match(js,/textLength','470'/);assert.match(js,/photo\.cloneNode\(false\)/);
+assert.match(js,/signature\.cloneNode\(false\)/);assert.match(js,/getComputedStyle\(title\)\.fontFamily/);
+assert.match(css,/grid-template-rows:minmax\(0,1fr\) auto!important/);assert.match(css,/overflow-y:auto;overflow-x:hidden/);
+assert.match(css,/width:54%;height:46%/);assert.match(css,/\.sh1203-founder-cover\{display:none\}/);
+assert.match(read('components/LegacyPage.jsx'),/shaneryn-mobile-v1203.css/);assert.match(read('components/LegacyScripts.jsx'),/shaneryn-mobile-v1203.js/);
+assert.doesNotMatch(read('public/shaneryn-mobile-v1202.js'),/sh1202-gallery-active/);
+console.log('PASS V1.20.3 source: dedicated gallery scroll and stationary panel, responsive restoration, existing measurement form, editorial founder and integration');

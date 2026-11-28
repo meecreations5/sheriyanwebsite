@@ -102,3 +102,11 @@ renaming, dynamic filters and sitemap entries. Visible clothing and accessory
 collection pages require assigned visible items. Accessories now link back to
 canonical look URLs. Refer to `UPDATE_V1_19_7_DYNAMIC_CATALOGUE.md` for the
 publishing workflow, test coverage and remaining live checks.
+
+## V1.20.3 — Mobile gallery and founder correction
+
+See `UPDATE_V1_20_3_MOBILE_GALLERY_FOUNDER.md` for layout, behaviour and verification limits.
+
+## V1.20.4 — Final mobile refinements
+
+See `UPDATE_V1_20_4_FINAL_MOBILE.md`.

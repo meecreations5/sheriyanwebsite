@@ -48,6 +48,8 @@ export default async function LegacyPage({slug,activeProductId=null,curatedColle
   {slug==='story'&&<link rel="stylesheet" href="/shaneryn-my-story-v1192.css"/>}
   {['index','accessories','look'].includes(slug)&&<link rel="stylesheet" href="/shaneryn-catalogue-v1193.css"/>}
   <link rel="stylesheet" href="/shaneryn-mobile-v120.css"/>
+  <link rel="stylesheet" href="/shaneryn-mobile-v1202.css"/>
+  <link rel="stylesheet" href="/shaneryn-mobile-v1203.css"/>
   <div className="shaneryn-public-site" data-cms-page={slug} dangerouslySetInnerHTML={{__html:markup}} suppressHydrationWarning/>
   <LegacyScripts {...clientProps}/>
  </>

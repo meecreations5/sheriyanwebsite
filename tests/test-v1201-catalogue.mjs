@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const site=read('public/site.js');
+const fn=site.slice(site.indexOf('  function getFiltered()'),site.indexOf('  function renderLooks()'));
+const ctx=vm.createContext({lookData:[{id:'1',title:'Sunshine',cat:'Pant Sets',collectionIds:['summer']},{id:'2',title:'Midnight',cat:'Dresses',collectionIds:['evening']}],window:{SHANERYN_CURATED_COLLECTIONS:[{id:'summer',name:'Summer Edit'},{id:'evening',name:'Evening Edit'}]},activeCategory:'All',activeOccasion:'all',activeCollection:'all',searchText:'',sortOrder:'default'});
+vm.runInContext(fn,ctx);
+const ids=()=>Array.from(vm.runInContext('getFiltered()',ctx),p=>p.id);
+assert.deepEqual(ids(),['1','2']);ctx.activeCategory='Dresses';assert.deepEqual(ids(),['2']);ctx.activeCategory='All';ctx.searchText='summer edit';assert.deepEqual(ids(),['1']);ctx.searchText='';ctx.activeCollection='evening';assert.deepEqual(ids(),['2']);ctx.activeCollection='all';ctx.sortOrder='name';assert.deepEqual(ids(),['2','1']);ctx.searchText='missing';assert.deepEqual(ids(),[]);
+const css=read('public/shaneryn-mobile-v120.css'),mobile=read('public/shaneryn-mobile-v120.js');assert.ok(css.includes('grid-column:1/-1!important'));assert.ok(mobile.includes('document.body.append(panel)')&&mobile.includes('anchor.after(panel)'));assert.ok(!read('public/mobile-inner-v69.js').includes("panel.querySelector('#look-search')?.focus"));
+console.log('PASS V1.20.1 catalogue filtering, search, sorting, empty results and sheet source checks');

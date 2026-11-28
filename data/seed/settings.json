@@ -30,5 +30,9 @@
   "seo": {
     "siteName": "SHANERYN",
     "defaultDescription": "Explore SHANERYN luxury fashion collections and bespoke couture. Discover editorial looks, personal styling and customisation."
+  },
+  "measurementGuide": {
+    "desktop": "/assets/shaneryn-how-to-measure.png",
+    "mobile": "/assets/shaneryn-how-to-measure-mobile.png"
   }
 }

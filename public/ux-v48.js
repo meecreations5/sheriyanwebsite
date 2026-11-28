@@ -22,7 +22,7 @@
      if(stickyName)stickyName.textContent=n;
      if(mobileName)mobileName.textContent=n;
      if(stickyDescription)stickyDescription.textContent=look?`${look.cat} · ${look.tone||'As photographed'}`:'A considered silhouette';
-     if(mobileSize)mobileSize.textContent='Personal purchase enquiry';
+     if(mobileSize){const price=String(look?.price||'').trim();mobileSize.textContent=innerWidth<=767?[look?.cat,/^\d+(?:\.\d{1,2})?$/.test(price)?'₹'+Number(price).toLocaleString('en-IN'):price].filter(Boolean).join(' · '):'Personal purchase enquiry';}
      const swatch=$('#ld-colour-dot');if(swatch&&stickySwatch)stickySwatch.style.background=swatch.style.background;
      const pressed=mainSave?.getAttribute('aria-pressed')==='true';
      if(stickySave){stickySave.setAttribute('aria-pressed',String(pressed));stickySave.textContent=pressed?'♥':'♡';stickySave.setAttribute('aria-label',pressed?'Remove saved look':'Save this look');}
@@ -98,18 +98,18 @@
      const clear=document.createElement('button');clear.type='button';clear.id='v48-clear-filters';
      clear.className='v48-clear-filters';clear.textContent='Clear filters ×';
      clear.hidden=true;filters.append(clear);
-     function hasFilters(){return $('#look-search')?.value.trim() || select?.value!=='all' || $('[data-category][aria-pressed="true"]')?.dataset.category!=='All';}
+     function hasFilters(){return $('#look-search')?.value.trim() || (select&&select.value!=='all')||($('#sh120-collection')?.value||'all')!=='all'||($('#sh120-sort')?.value||'default')!=='default' || $('[data-category][aria-pressed="true"]')?.dataset.category!=='All';}
      function syncClear(){clear.hidden=!hasFilters();}
      function reset(){
        $('[data-category="All"]')?.click();
        if(search){search.value='';search.dispatchEvent(new Event('input',{bubbles:true}));}
-       if(select){select.value='all';select.dispatchEvent(new Event('change',{bubbles:true}));}
+       if(select){select.value='all';select.dispatchEvent(new Event('change',{bubbles:true}));}for(const [id,value] of [['#sh120-collection','all'],['#sh120-sort','default']]){const control=$(id);if(control){control.value=value;control.dispatchEvent(new Event('change',{bubbles:true}));}} 
        syncClear();
      }
      clear.addEventListener('click',reset);
      filters.addEventListener('click',()=>requestAnimationFrame(syncClear));
-     [search,select].forEach(el=>el?.addEventListener('input',syncClear));
-     select?.addEventListener('change',syncClear);
+     [search,select,$('#sh120-collection'),$('#sh120-sort')].forEach(el=>el?.addEventListener('input',syncClear));
+     select?.addEventListener('change',syncClear);$('#sh120-collection')?.addEventListener('change',syncClear);$('#sh120-sort')?.addEventListener('change',syncClear);
      const refreshEmpty=()=>{
        const empty=grid.querySelector('.empty-state');
        if(!empty||empty.querySelector('.v48-empty-reset'))return;

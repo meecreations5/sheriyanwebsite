@@ -1,0 +1,5 @@
+# V1.20.4 — Final mobile refinements
+
+- Mobile gallery panel remains fixed during photo/video scrolling and collapses as the gallery ends; it returns when scrolling back into the gallery. A stable boundary measured against the reserved panel height prevents oscillation. The same scroll container continues through product information, measurements and related looks so scroll ownership never changes mid-gesture. Inline purchase opens the existing measurement form when available; existing enquiry fallback remains.
+- Mobile founder caption removed. Shorter composition, refined portrait and signature placement, reduced gap to founder letter. Existing colours, fonts, images, text and desktop markup retained.
+- Existing source checks and URL checks passed. Chromium static seed fixture assertions passed at 320, 375, 390 and 430px for gallery panel hide/return and stationary position, founder caption omission and portrait visibility; measurement opening and desktop restoration at 1440px also passed. External network requests blocked; not a live CMS or physical-device test. Production build not run.

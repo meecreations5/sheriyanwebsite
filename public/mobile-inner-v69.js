@@ -37,7 +37,7 @@
         panel.classList.toggle('v69-is-open',!expanded);
         const symbol=control.querySelector('.v69-filter-symbol');
         if(symbol) symbol.textContent=expanded?'+':'−';
-        if(!expanded) panel.querySelector('#look-search')?.focus({preventScroll:true});
+        // Do not open the keyboard automatically; users can tap the search field.
       });
       // If browser restores a search/filter value on back navigation, reveal its controls.
       const search=panel.querySelector('#look-search');

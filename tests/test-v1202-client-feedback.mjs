@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const css=read('public/shaneryn-mobile-v1202.css'),js=read('public/shaneryn-mobile-v1202.js'),render=read('lib/render-page.js'),admin=read('components/admin/CmsApp.jsx'),api=read('lib/cms-server-api.js');
+const seed=JSON.parse(read('data/seed/settings.json'));
+for(const k of ['desktop','mobile'])assert.ok(existsSync(new URL('../public'+seed.measurementGuide[k],import.meta.url)));
+assert.notEqual(seed.measurementGuide.desktop,seed.measurementGuide.mobile);
+assert.match(api,/measurementGuide:\{desktop:safeImage\(p.measurementGuide\?\.desktop\),mobile:safeImage/);
+assert.match(admin,/Desktop measurement chart/);assert.match(admin,/Mobile measurement chart/);
+assert.match(render,/<picture><source media="\(max-width: 767px\)"/);assert.match(render,/patchResponsiveMeasurementGuide\(\$,page,settings\);/);assert.match(render,/\$\('#ld-measure-panel'\).prepend/);
+assert.match(css,/ld-gallery-grid\{display:grid!important;grid-template-columns:minmax\(0,1fr\)/);assert.match(css,/writing-mode:vertical-rl/);assert.match(css,/sh1202-gallery-active/);
+assert.match(js,/dialog.showModal\(\)/);assert.match(js,/source.currentSrc/);assert.match(js,/trigger\?\.focus/);
+assert.match(read('components/LegacyPage.jsx'),/shaneryn-mobile-v1202.css/);assert.match(read('components/LegacyScripts.jsx'),/shaneryn-mobile-v1202.js/);
+console.log('PASS V1.20.2 source checks: responsive chart assets, CMS persistence wiring, mobile gallery, founder, guide viewer and integration');

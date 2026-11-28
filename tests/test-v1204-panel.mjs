@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const js=read('public/shaneryn-mobile-v1203.js'),css=read('public/shaneryn-mobile-v1203.css');
+assert.match(js,/main\.getBoundingClientRect\(\)\.bottom-panelHeight/);
+assert.match(js,/galleryEnd<=boundary\+1/);
+assert.match(js,/panel\.hidden=hide;panel\.inert=hide/);
+assert.match(js,/inlinePurchase\?\.addEventListener/);
+assert.doesNotMatch(js,/cover\.append\(label\)/);
+assert.match(css,/\.sh1203-look-panel\[hidden\]\{display:none!important\}/);
+console.log('PASS V1.20.4 gallery boundary, inline purchase and mobile caption source checks');

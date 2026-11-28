@@ -62,3 +62,17 @@
 @media(prefers-reduced-motion:reduce){.sh120-nav,.sh120-target{scroll-behavior:auto!important}}
 @media(max-width:767px){.sh120-footer-heading{display:none}.sh120-filter-shade{font-size:0}.sh120-sort{width:100%;font-size:16px!important}.sh120-zoom-controls{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:5}body[data-page] .sh-pwa-install{position:fixed!important;bottom:calc(var(--v5-tab-total,76px) + 10px)!important;left:12px!important;margin:0!important}body.ld-mobile-cta-active .sh-pwa-install,body.v5-input-focus .sh-pwa-install,body.v47-menu-open .sh-pwa-install,body.sh120-filter-open .sh-pwa-install{visibility:hidden;pointer-events:none}}
 @media(max-width:767px){body[data-page="collections"] .cms-curated-grid{display:flex!important;overflow-x:auto!important;gap:10px!important;scroll-snap-type:x proximity}body[data-page="collections"] .cms-curated-grid>*{flex:0 0 44%;min-width:0;scroll-snap-align:start}body[data-page="look"] .ld-zoom-stage{overflow:hidden;height:calc(100% - 135px)}body[data-page="look"] #ld-zoom-image{touch-action:none}body[data-page] .site-header .brand img{max-width:100%}}
+
+/* V1.20.1: explicit contrast and single-column filter sheet. */
+@media(max-width:767px){
+ body[data-page="collections"] .filters{width:100%!important;margin-inline:0!important;padding:4px 0 10px!important;min-height:48px;align-items:center}
+ body[data-page="collections"] .filters .filter-btn{color:var(--v47-ink,#f4e9f1)!important;background:var(--v47-surface,#29212b)!important;border:1px solid var(--v47-line,#806b79)!important;opacity:1!important;visibility:visible!important;min-height:44px!important}
+ body[data-page="collections"] .filters .filter-btn[aria-pressed="true"]{background:#ead6e2!important;color:#251c26!important;border-color:#ead6e2!important}
+ body[data-page="collections"] #v69-filter-toggle:not([aria-hidden="true"]){display:flex!important;visibility:visible!important;opacity:1!important;color:var(--v47-ink,#f4e9f1)!important;border-color:var(--v47-line,#806b79)!important;min-height:44px}
+ body[data-page="collections"] #v69-filter-tools.v69-is-open{display:grid!important;grid-template-columns:minmax(0,1fr)!important;position:fixed!important;inset:auto 0 0!important;width:100%!important;box-sizing:border-box;z-index:10020!important;max-height:75dvh;overflow-y:auto;visibility:visible!important;opacity:1!important;background:var(--v47-surface,#29212b)!important;color:var(--v47-ink,#f4e9f1)!important}
+ body[data-page="collections"] #v69-filter-tools.v69-is-open>:not([hidden]){grid-column:1/-1!important;min-width:0!important}
+ body[data-page="collections"] #v69-filter-tools.v69-is-open :is(input,select,.sh120-filter-close){display:block!important;width:100%!important;min-height:48px!important;background:#f6edf3!important;color:#241c24!important;border:1px solid #aa8c9e!important;padding:10px 12px!important;opacity:1!important;visibility:visible!important}
+ body[data-page="collections"] #v69-filter-tools input::placeholder{color:#695761!important;opacity:1}
+ body[data-page="collections"] .sh120-filter-shade:not([hidden]){z-index:10019!important}
+ body[data-page="collections"] #v48-clear-filters[hidden]{display:none!important}
+}
