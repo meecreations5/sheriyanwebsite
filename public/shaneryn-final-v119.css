@@ -263,6 +263,11 @@ body[data-page="look"] .ld-media-tile.v119-primary-tile.ld-film-tile :is(video,i
   aspect-ratio:auto!important;
   object-fit:contain!important;
 }
+@media(min-width:851px){
+  body[data-page="look"] .ld-media-tile.v119-primary-tile.ld-film-tile {padding:0!important;overflow:hidden!important;position:relative!important;}
+  body[data-page="look"] .ld-media-tile.v119-primary-tile.ld-film-tile video {display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center!important;margin:0!important;padding:0!important;}
+}
+
 body[data-page="look"] .v119-detail-tile img,
 body[data-page="look"] .v119-accessory-tile img{
   width:100%!important;

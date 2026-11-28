@@ -1,0 +1,74 @@
+/* Public site only. Next/font supplies self-hosted font variables at build time. */
+html body[data-page] .shaneryn-public-site {
+  --serif: var(--sh-heading-font, 'Cormorant Garamond', Georgia), serif;
+  --sans: var(--sh-body-font, Lato, Arial), sans-serif;
+  --sh-copy-size: 18px;
+  --sh-sub-size: 20px;
+  font-family: var(--sans);
+  font-weight: 400;
+}
+/* Preserve the original decorative founder typography and wordmark fallback. */
+html body[data-page] .shaneryn-public-site :is(.sh1203-founder-type,.founder-v55-vertical-title,.brand,.footer-logo) {
+  --serif: 'Italiana','Bodoni MT','Didot','Times New Roman',serif;
+  font-family: var(--serif)!important;
+}
+html body[data-page] .shaneryn-public-site :is(h1,h2,h3):not(.founder-v55-vertical-title) {
+  font-family: var(--serif)!important;
+  font-weight: 500!important;
+  line-height: 1.12!important;
+  letter-spacing: -.015em!important;
+  overflow-wrap: break-word;
+}
+html body[data-page] .shaneryn-public-site h1:not(.founder-v55-vertical-title) {font-size:clamp(48px,5vw,64px)!important}
+html body[data-page] .shaneryn-public-site h2:not(.founder-v55-vertical-title) {font-size:clamp(38px,4vw,48px)!important}
+html body[data-page] .shaneryn-public-site h3 {font-size:clamp(24px,2.3vw,32px)!important}
+html body[data-page] .shaneryn-public-site :is(.ld-title-wrap h1,.ep-product-title) {font-size:clamp(36px,3.5vw,42px)!important}
+/* Prose excludes compact labels, prices, status and utility captions. */
+html body[data-page] .shaneryn-public-site :is(main p:not([class]),.hero-v54-description,.home-service-bespoke-copy blockquote,.ld-interlude-note,.ld-measure-contact-note,.v49-contact-clarity,.v51-film-note,.v67-social-note,.v63-gallery-note,.v119-final-quote p,.bodycopy,.hero-copy,.ld-description,.ld-accordions details p,.ld-product-detail-block p,.ld-product-detail-block li,.founder-letter p:not(.founder-lotsa),.shaneryn-my-story-paragraph,.ep-support-copy,.v49-contact-context,.v67-book-note,.v119-service-context,.modal-frame-copy p,.footer-brand p) {
+  font-family:var(--sans)!important;font-size:var(--sh-copy-size)!important;font-weight:300!important;line-height:1.65!important;letter-spacing:normal!important;text-transform:none!important;
+}
+html body[data-page] .shaneryn-public-site :is(.ld-tagline,.subheading,.subtitle,.ep-subtitle,.section-subheading) {
+  font-family:var(--sans)!important;font-size:var(--sh-sub-size)!important;font-weight:400!important;line-height:1.45!important;letter-spacing:normal!important;
+}
+html body[data-page] .shaneryn-public-site :is(.nav-primary a,.nav-right a,.hero-v54-cta,.underline-link,.sh1203-panel-buy,.sh120-footer-toggle,.outlined-btn,.filled-btn,.ld-request,.ld-save,.ep-text-link,.sh1203-panel-details,.footer-col a,.footer-col button,.ld-measure-toggle,.ld-product-detail-block summary,.ld-accordions summary) {
+  font-family:var(--sans)!important;font-size:14px!important;font-weight:400!important;letter-spacing:.035em!important;
+}
+html body[data-page] .shaneryn-public-site :is(form label,form legend,.ld-measure-fields-grid label) {font-family:var(--sans)!important;font-size:14px!important;font-weight:400!important;line-height:1.4!important;letter-spacing:.025em!important}
+html body[data-page] .shaneryn-public-site :is(input:not([type=checkbox]):not([type=radio]),textarea,select) {font-family:var(--sans)!important;font-size:16px!important;font-weight:400!important}
+html body[data-page] .shaneryn-public-site :is(.ld-photo-label,.ld-film-kicker,.v119-detail-tile span) {font-family:var(--sans)!important;font-size:12px!important;font-weight:400!important}
+html body[data-page] .shaneryn-public-site :is(.film-v4-quote,.script-word) {font-family:var(--serif)!important;font-style:italic;font-weight:400}
+/* Public standalone legal pages (not admin). */
+html .sh-legal-page {font-family:var(--sh-body-font,Lato,Arial),sans-serif;--sh-copy-size:18px}
+html .sh-legal-page .sh-legal-main :is(h1,h2){font-family:var(--sh-heading-font,Georgia),serif;font-weight:500;line-height:1.12}
+html .sh-legal-page .sh-legal-main p:not(.sh-legal-eyebrow):not(.sh-legal-updated){font-family:var(--sh-body-font,Lato,Arial),sans-serif;font-size:var(--sh-copy-size);font-weight:300;line-height:1.65}
+/* Desktop media sizing is owned by shaneryn-final-v119.css; mobile remains unchanged. */
+@media(max-width:767px){
+ html body[data-page] .shaneryn-public-site,html .sh-legal-page {--sh-copy-size:17px;--sh-sub-size:18px}
+ html body[data-page] .shaneryn-public-site h1:not(.founder-v55-vertical-title){font-size:clamp(36px,9vw,42px)!important}
+ html body[data-page] .shaneryn-public-site h2:not(.founder-v55-vertical-title){font-size:clamp(28px,7.5vw,34px)!important}
+ html body[data-page] .shaneryn-public-site h3{font-size:clamp(20px,5.5vw,24px)!important}
+ html body[data-page] .shaneryn-public-site :is(.ld-title-wrap h1,.ep-product-title){font-size:clamp(28px,8vw,32px)!important}
+ html body[data-page] .shaneryn-public-site .look-card h3{font-size:clamp(17px,4.8vw,21px)!important}
+ html body[data-page] .shaneryn-public-site .mobile-menu :is(a,button){font-family:var(--sans)!important;font-weight:400!important}
+}
+@media(max-width:360px){html body[data-page] .shaneryn-public-site,html .sh-legal-page{--sh-copy-size:16px}}
+/* The product title uses a stable ID in the legacy template. */
+html body[data-page="look"] .shaneryn-public-site #detail-title{font-size:clamp(36px,3.5vw,42px)!important;line-height:1.12!important;letter-spacing:-.015em!important}
+html body[data-page] .shaneryn-public-site h4{font-family:var(--sans)!important;font-weight:400!important}
+@media(max-width:767px){html body[data-page="look"] .shaneryn-public-site #detail-title{font-size:clamp(28px,8vw,32px)!important}}
+
+/* Explicit hero role: never classify the campaign headline as a subheading. */
+html body[data-page="home"] .shaneryn-public-site .hero-v54-single .hero-tagline {
+ font-family:var(--serif)!important;font-weight:500!important;line-height:1.12!important;
+ font-size:clamp(48px,5vw,64px)!important;letter-spacing:-.015em!important;white-space:normal!important;
+}
+html body[data-page="home"] .shaneryn-public-site .hero-v54-single .hero-tagline em {font-family:inherit!important;font-weight:inherit!important}
+@media(max-width:767px){
+ html body[data-page="home"] .shaneryn-public-site .hero-v54-single .hero-tagline {font-size:clamp(28px,8vw,32px)!important; margin:0 0 16px!important}
+ html body[data-page="home"] .shaneryn-public-site .hero-v54-single .hero-v54-cta {font-family:var(--sans)!important;font-size:13px!important;font-weight:400!important;min-height:44px!important;height:auto!important;width:fit-content!important;max-width:100%;padding:10px 16px!important;gap:16px!important;align-self:flex-start!important;line-height:1.35!important}
+}
+/* CMS text blocks and supporting copy use the same readable type scale. */
+html body[data-page] .shaneryn-public-site :is(.ep-smallnote,.v49-measure-mode-help,.v51-intent-hint,.v67-email-pending,.cv3-unit-hint,.ld-measure-contact-note,.v67-book-note) {font-family:var(--sans)!important;font-weight:300!important;font-size:var(--sh-copy-size)!important;line-height:1.65!important;letter-spacing:normal!important;text-transform:none!important}
+html body[data-page] .shaneryn-public-site :is(.shaneryn-my-story-role,.shaneryn-my-story-name,.ld-tagline) {font-family:var(--sans)!important;font-weight:400!important;font-size:var(--sh-sub-size)!important;line-height:1.45!important}
+html body[data-page] .shaneryn-public-site :is(.site-header a:not(.brand),.mobile-menu a,.mobile-menu button,.sh120-footer-toggle,.sh1203-panel-details) {font-family:var(--sans)!important;font-weight:400!important}
+html .sh-legal-page .sh-legal-main li {font-family:var(--sh-body-font,Lato,Arial),sans-serif;font-size:var(--sh-copy-size);font-weight:300;line-height:1.65}

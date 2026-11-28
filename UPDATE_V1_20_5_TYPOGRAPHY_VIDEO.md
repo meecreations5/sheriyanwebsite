@@ -1,0 +1,7 @@
+# V1.20.5 — Typography & Visual Refinement
+
+- Public typography uses Next.js next/font/google Cormorant Garamond 400/500 (normal and italic) and Lato 300/400/700. Fonts are downloaded and self-hosted by Next.js at build time. Build requires access to Google's font endpoints. Existing decorative DESIGNER type, logo and signature retain their original treatment. Admin is not restyled.
+- Descriptions use Lato 300, 18px desktop, 17px mobile, 16px at 360px and below; subheading styles use Lato 400. Headings, controls, form labels and inputs have public responsive overrides. Existing colours are unchanged.
+- Uploaded desktop product videos use object-fit:cover to remove CSS letterboxing. This preserves aspect ratio but can crop frame edges. Embedded bands may remain. Mobile gallery scroll and purchase panel logic are unchanged; external YouTube embeds retain their own player aspect treatment.
+- Existing source checks and URL checks passed. Added typography source checks passed. Static Chromium checks using seed markup and fallback font variables confirmed description sizing and weight at 1440/390/320px, and desktop cover/mobile contain rules. These checks do not verify real font download, live data, actual video playback or full production rendering.
+- Production build blocked by missing Next.js dependencies in the working environment. Verify npm install, npm run build and live staging on desktop and physical mobile before release. No Firebase migration is required.

@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const css=read('public/shaneryn-typography-v1205.css'), layout=read('app/layout.js');
+assert.match(layout,/Cormorant_Garamond\(\{/);
+assert.match(layout,/Lato\(\{[^\n]+weight:\['300','400','700'\]/);
+assert.match(css,/--sh-copy-size: 18px/);
+assert.match(css,/--sh-copy-size:17px/);
+assert.match(css,/--sh-copy-size:16px/);
+assert.match(css,/font-size:var\(--sh-copy-size\)!important;font-weight:300!important/);
+assert.match(css,/font-size:var\(--sh-sub-size\)!important;font-weight:400!important/);
+assert.match(css,/\.sh1203-founder-type,\.founder-v55-vertical-title/);
+assert.match(read('public/shaneryn-final-v119.css'),/@media\(min-width:851px\)[\s\S]+\.ld-film-tile video[^}]+object-fit:cover!important/);
+for(const p of ['components/LegacyPage.jsx','components/LegalShell.jsx'])assert.ok(read(p).includes('/shaneryn-typography-v1205.css'));
+console.log('PASS V1.20.5 typography sizes, font wiring, decorative type preservation, desktop video cover and stylesheet integration');

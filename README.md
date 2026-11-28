@@ -1,3 +1,5 @@
+**V1.20.6:** Typography consistency, mobile hero and desktop video correction. See `UPDATE_V1_20_6_TYPOGRAPHY_CONSISTENCY.md`.
+
 **V1.19.8.1 review hotfix:** Equal Reject/Accept cookie controls, restored iOS PWA help theme, keyboard accessibility, and desktop-agent iPadOS install guidance. See `UPDATE_V1_19_8_1_AUDIT_HOTFIX.md`.
 
 **V1.19.8:** Mobile PWA, consent-gated Firebase Analytics, Privacy/Cookies/Terms and consent preferences. See `UPDATE_V1_19_8_PWA_MOBILE_PRIVACY.md`.
@@ -110,3 +112,5 @@ See `UPDATE_V1_20_3_MOBILE_GALLERY_FOUNDER.md` for layout, behaviour and verific
 ## V1.20.4 — Final mobile refinements
 
 See `UPDATE_V1_20_4_FINAL_MOBILE.md`.
+
+**V1.20.5:** Public typography and desktop video alignment. See `UPDATE_V1_20_5_TYPOGRAPHY_VIDEO.md`.
